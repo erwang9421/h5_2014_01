@@ -1,0 +1,92 @@
+#nav {
+	z-index: 100;
+}
+#content {
+	width:97%;
+	left: 3%;
+	position: absolute;
+	border:none;
+}
+.content-right {
+	width: 100%;
+	height: 95%;
+}
+.content-main-title {
+	height: 5%;
+	width: 100%;
+	position: relative;
+}
+a:hover {
+	text-decoration: none;
+}
+.h4 {
+	text-indent:2.5%;
+	line-height:50px;
+	font-weight:bold;
+}
+.main-title {
+	bottom: 0;
+	position: absolute;
+	margin-left: 30px;
+}
+.main-title li {
+	float: left;
+}
+.book {
+	padding:20px 0;
+	height: 15%;
+}
+.htmleaf-container {
+	height: 80%;
+	width: 100%;
+}
+.bookname {
+	padding-left:2.5%;
+}
+.bookname input {
+	text-indent:10px;
+	height:40px;
+	font-size:14px;
+	background-color:#f2f2f2;
+	border:0px;
+}
+.bookauthor input {
+	text-indent:10px;
+	height:40px;
+	font-size:14px;
+	background-color:#f2f2f2;
+	border:0px;
+}
+.writetitle input {
+	text-indent:10px;
+	height:40px;
+	font-size:14px;
+	background-color:#f2f2f2;
+	border:0px;
+}
+.htmleaf-container .row{
+	padding: 0;
+	margin: 0;
+}
+.book span:last-child{
+	color:#da7c66;
+	padding-left:50px;
+	font-size:14px;
+}
+.bookauthor {
+	padding-left:70px;
+}
+.writetitle {
+	padding-left:90px;
+}
+.container {
+	width: 95%;
+}
+#nopadding {
+	position: relative;
+}
+.flower {
+	position:absolute;
+	right: 0;
+	top: -30px;
+}
