@@ -1,72 +1,102 @@
-#nav {
-	z-index: 100;
-}
+/*canvas里面 content样式*/
 #content {
+	height: 88%;
 	width:97%;
 	left: 3%;
-	overflow: auto;
 	position: absolute;
-	border:none;
+	overflow: auto;
 }
-.content-book-comments {
-	height:100%;
-	width:6003px;
-	overflow:hidden; 
-}
-.content-book-comment1{
-	display:block; 
-	float:left;
-	margin:0 35px;
-	width:332px;
-	height: 700px;
-	background-color: #f7f7f7;
-	border: 1px solid #dbdce0;
-}
-.content-book-comment1:first-child {
-	margin-left:10px;
-}
-.content-book-comment1:last-child {
-	margin-right:10px;
-}
+/*canvas里面 content样式里的首页简书样式*/
 .content-right {
-	width: 100%;
 	height: 100%;
+	width: 100%;
 	overflow:auto;
  	clear:both;	
 }
+.content-book-comments{
+	height: 100%;
+	width: 100%;
+	overflow:hidden;
+}
+.mCSB_horizontal > .mCSB_container{
+	margin-bottom: 0;
+	height: 100%;
+}
+.content-book-comment1{
+	width:5%;
+	height: 90%;
+	/*position: relative;*/
+	background-color: #f7f7f7;
+	border: 1px solid #dbdce0;
+	padding: 0.1% 0.1% 0.1% 0.1%;
+	margin: 0.35% 0.9% 0.4% 0.9%;
+	float: left;
+	display: block;
+}
+/*.content-book-comment1:first-child {
+	margin-left:1%;
+}*/
+/*.content-book-comment1:last-child {
+	margin-right:1%;
+}*/
+.book-comment1 .comment-more-btn {
+    padding-left: 1.2%;
+}
+.book-comment2 .comment-more-btn {
+     padding-left: 1.2%;
+}
+.book-comment3 .comment-more-btn {
+     padding-left: 1.2%;
+}
+.book-comment4 .comment-more-btn {
+     padding-left: 1.2%;
+}
+.book-comment5 .comment-more-btn {
+     padding-left: 1.2%;
+}
+.book-comment6 .comment-more-btn {
+     padding-left: 1.2%;
+}
 .comment-top {
-	height: 125px;
+	height: 25%;
 	width: 100%;
 	border-bottom: 1px solid #dbdce0;
-	padding: 17px 20px 0 20px;
+	padding: 2% 2% 0 5%;
+}
+.row1{
+	width: 100%;
+	height: 50%;
+}
+.row2{
+	width: 100%;
+	height: 50%;
 }
 .comment-photo {
 	border-radius:50%;
-	margin: 0 auto;
+	margin: 2% 2%;
 	display: block;
 	float: left;
-	}
+}
 .comment-msg1 {
 	float: left;
-	margin-left:9px;
+	margin-left:8%;
 }
 .comment-msg1 li{
 	color: #999;
-	font-size: 12px;
+	font-size: 0.9em;
 }
 .comment-msg1 li:first-child {
-	margin-bottom:7px;
+	margin-bottom:8%;
 }
 .comment-msg1 span{
-	padding-right: 18px;
 }
 .comment-msg2 {
-	margin-top: 15px;
+	margin-top: 1%;
 	display: block;
-	font-size: 12px;
+	font-size: 0.9em;
 }
 .comment-msg2 li:first-child {
-	margin-bottom: 3px;
+	margin-bottom: 5%;
 	color: #999;
 }
 .comment-msg2 li:first-child a {
@@ -76,23 +106,46 @@
 	color: #da7c66;
 }
 .comment-bottom {
-	padding: 17px 23px 0 23px;
+	height: 75%;
+	width: 100%;
+	padding: 3% 5% 0 5%;
 }
 .comment-bottom h3 {
-	font-size: 20px;
-	margin-top: 18px;
-	margin-bottom: 10px;
+	font-size: 1.5em;
 	text-align: center;
 	color: #da7c66;
+	height: 10%;
 }
 .comment-bottom p {
-	line-height: 25px;
+	line-height: 200%;
 	color: #666;
+	text-overflow:ellipsis;
+	/*white-space:nowrap;*/
+	width:100%;
+	overflow: hidden;
+	/*text-overflow:ellipsis;*/
+/*display:-webkit-box;
+-webkit-line-clamp:3;
+-webkit-box-orient:vertical;*/
+}
+@media screen and (min-height: 769px) { 
+.comment-bottom p {height: 320px} 
+}  
+@media screen and (max-height: 768px) { 
+.comment-bottom p {height: 310px} 
+}  
+@media screen and (max-height: 640px) { 
+.comment-bottom p {height: 260px} 
+}
+@media screen and (max-height: 614px) { 
+.comment-bottom p {height: 230px;} 
+} 
+@media screen and (max-height: 517px) { 
+.comment-bottom p {height: 170px;} 
 }
 .comment-more-btn {
-	bottom: 25px;
+	bottom: 10%;
 	margin: auto;
-	left: 37%;
 	position: absolute;
 }
 .comment-more-btn a{
@@ -101,4 +154,4 @@
 	color: #fff;
 	background-color: #da7c66;
 }
-
+ 

@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>未命名页面</title>
+    <title>index</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/headernav.css" />
+    <link rel="stylesheet" href="css/aside-nav.css" />
+    
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css"  />
+    
 </head>
 <body>
     <div id="container">
         <div id="canvas">
-            <div class="aside-nav toggle-nav">
+        	<div class="aside-nav toggle-nav">
                 <a href="#"><i class="icon-align-justify icon-large"></i></a>
             </div>
             <!--aside-nav end（触发弹出侧栏）-->
@@ -133,161 +136,193 @@
             <div id="content">
                 <div class="content-left"></div>
                 <div class="content-right">
-                <div class="content-book-comments">
-                    <div class="content-book-comment1">
-                        <div class="comment-top">
-                            <div class="row">
-                                <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
-                                <ul class="comment-msg1">
-                                    <li><span>MONO</span><span>2016-12-21 08:13</span></li>
-                                    <li>
-                                        阅读<span> 11</span>
-                                        评论<span> 2</span>
-                                        写作<span> 1</span>
-                                        收藏<span> 1</span>
-                                    </li>
-                                </ul>
+                    <div class="content-book-comments">
+                        <div class="content-book-comment1 book-comment1">
+                            <div class="comment-top">
+                                <div class="row1">
+                                    <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
+                                    <ul class="comment-msg1">
+                                        <li><span>MONO</span>&nbsp;&nbsp;&nbsp;<span>2016-12-21 08:13</span></li>
+                                        <li>
+                                            阅读<span> 11</span>
+                                            评论<span> 2</span>
+                                            写作<span> 1</span>
+                                            收藏<span> 1</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="row2">
+                                    <ul class="comment-msg2">
+                                        <li>标签：<a href="#">文学经典</a></li>
+                                        <li>评论图书：<a href="#">《西游记》</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="row">
-                                <ul class="comment-msg2">
-                                    <li>标签：<a href="#">文学经典</a></li>
-                                    <li>评论图书：<a href="#">《西游记》</a></li>
-                                </ul>
+                            <div class="comment-bottom">
+                                <h3>浅谈西游记</h3>
+                                <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
+                                《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
+                                <div class="comment-more-btn">
+                                    <a href="#">浏览全文</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="comment-bottom">
-                            <h3>浅谈西游记</h3>
-                            <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
-                            本书作者罗贯中为读者讲述了唐僧以及其他的三个徒弟一路上历尽艰险、降妖伏魔经历了九九八十一难取得了真经的故事。<br />《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
-                            <div class="comment-more-btn">
-                                <a href="#">浏览全文</a>
+                        </div><!--第一个书评-->
+                        <div class="content-book-comment1 book-comment2">
+                            <div class="comment-top">
+                                <div class="row1">
+                                    <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
+                                    <ul class="comment-msg1">
+                                        <li><span>MONO</span><span>2016-12-21 08:13</span></li>
+                                        <li>
+                                            阅读<span> 11</span>
+                                            评论<span> 2</span>
+                                            写作<span> 1</span>
+                                            收藏<span> 1</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="row2">
+                                    <ul class="comment-msg2">
+                                        <li>标签：<a href="#">文学经典</a></li>
+                                        <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                    </div><!--第一个书评-->
+                            <div class="comment-bottom">
+                                <h3>最孤独的魂外天游</h3>
+                               <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
+                                        《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
+                                <div class="comment-more-btn">
+                                    <a href="#">浏览全文</a>
+                                </div>
+                            </div>
+                        </div><!--第二个书评-->
+
+                        <div class="content-book-comment1 book-comment3">
+                            <div class="comment-top">
+                                <div class="row1">
+                                    <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
+                                    <ul class="comment-msg1">
+                                        <li><span>MONO</span><span>2016-12-21 08:13</span></li>
+                                        <li>
+                                            阅读<span> 11</span>
+                                            评论<span> 2</span>
+                                            写作<span> 1</span>
+                                            收藏<span> 1</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="row2">
+                                    <ul class="comment-msg2">
+                                        <li>标签：<a href="#">文学经典</a></li>
+                                        <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="comment-bottom">
+                                <h3>最孤独的魂外天游</h3>
+                               <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
+                                        《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
+                                <div class="comment-more-btn">
+                                    <a href="#">浏览全文</a>
+                                </div>
+                            </div>
+                        </div><!--第三个书评-->
+                        <div class="content-book-comment1 book-comment4">
+                            <div class="comment-top">
+                                <div class="row1">
+                                    <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
+                                    <ul class="comment-msg1">
+                                        <li><span>MONO</span><span>2016-12-21 08:13</span></li>
+                                        <li>
+                                            阅读<span> 11</span>
+                                            评论<span> 2</span>
+                                            写作<span> 1</span>
+                                            收藏<span> 1</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="row2">
+                                    <ul class="comment-msg2">
+                                        <li>标签：<a href="#">文学经典</a></li>
+                                        <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="comment-bottom">
+                                <h3>最孤独的魂外天游</h3>
+                               <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
+                                        《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
+                                <div class="comment-more-btn">
+                                    <a href="#">浏览全文</a>
+                                </div>
+                            </div>
+                        </div><!--第四个书评-->
+                        <div class="content-book-comment1 book-comment5">
+                            <div class="comment-top">
+                                <div class="row1">
+                                    <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
+                                    <ul class="comment-msg1">
+                                        <li><span>MONO</span><span>2016-12-21 08:13</span></li>
+                                        <li>
+                                            阅读<span> 11</span>
+                                            评论<span> 2</span>
+                                            写作<span> 1</span>
+                                            收藏<span> 1</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="row2">
+                                    <ul class="comment-msg2">
+                                        <li>标签：<a href="#">文学经典</a></li>
+                                        <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="comment-bottom">
+                                <h3>最孤独的魂外天游</h3>
+                               <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
+                                        《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
+                                <div class="comment-more-btn">
+                                    <a href="#">浏览全文</a>
+                                </div>
+                            </div>
+                        </div><!--第五个书评-->
+                        <div class="content-book-comment1 book-comment6">
+                            <div class="comment-top">
+                                <div class="row1">
+                                    <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
+                                    <ul class="comment-msg1">
+                                        <li><span>MONO</span><span>2016-12-21 08:13</span></li>
+                                        <li>
+                                            阅读<span> 11</span>
+                                            评论<span> 2</span>
+                                            写作<span> 1</span>
+                                            收藏<span> 1</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="row2">
+                                    <ul class="comment-msg2">
+                                        <li>标签：<a href="#">文学经典</a></li>
+                                        <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="comment-bottom">
+                                <h3>最孤独的魂外天游</h3>
+                               <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
+                                        《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
+                                <div class="comment-more-btn">
+                                    <a href="#">浏览全文</a>
+                                </div>
+                            </div>
+                        </div><!--第六个书评-->
 
 
-                    <div class="content-book-comment1">
-                        <div class="comment-top">
-                            <div class="row">
-                                <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
-                                <ul class="comment-msg1">
-                                    <li><span>MONO</span><span>2016-12-21 08:13</span></li>
-                                    <li>
-                                        阅读<span> 11</span>
-                                        评论<span> 2</span>
-                                        写作<span> 1</span>
-                                        收藏<span> 1</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="row">
-                                <ul class="comment-msg2">
-                                    <li>标签：<a href="#">文学经典</a></li>
-                                    <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="comment-bottom">
-                            <h3>最孤独的魂外天游</h3>
-                            <p>“世上没有完美的事物，唯有这样一些透明得让你忘记自己的时刻，能拥有这样的一瞬，便是天赐的幸福。”这么一句看似不起眼的话，夹杂在比利千头万绪的心潮起伏里，却拥有狠狠击中我的力道，甚至可以视之为这部《漫长的中场休息》之微型总结。这样的一瞬就是比利最孤独的魂游天外。<br />故事主要视角以19岁的比利•林恩为主，在伊拉克战场的硝烟炮火摸爬滚打一年多后，他所在的B班阴差阳错地迎来一次小小胜利，并因此机缘巧合地成为“美国英雄”，在感恩节回国探亲时期，他们进行了为期两周的“凯旋之旅”，然后继续前往伊拉克服完剩余11个月的兵役...</p>
-                            <div class="comment-more-btn">
-                                <a href="#">浏览全文</a>
-                            </div>
-                        </div>
-                    </div><!--第二个书评-->
+                    </div><!--bookscontainer结束-->
 
-                     <div class="content-book-comment1">
-                        <div class="comment-top">
-                            <div class="row">
-                                <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
-                                <ul class="comment-msg1">
-                                    <li><span>MONO</span><span>2016-12-21 08:13</span></li>
-                                    <li>
-                                        阅读<span> 11</span>
-                                        评论<span> 2</span>
-                                        写作<span> 1</span>
-                                        收藏<span> 1</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="row">
-                                <ul class="comment-msg2">
-                                    <li>标签：<a href="#">文学经典</a></li>
-                                    <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="comment-bottom">
-                            <h3>最孤独的魂外天游</h3>
-                            <p>“世上没有完美的事物，唯有这样一些透明得让你忘记自己的时刻，能拥有这样的一瞬，便是天赐的幸福。”这么一句看似不起眼的话，夹杂在比利千头万绪的心潮起伏里，却拥有狠狠击中我的力道，甚至可以视之为这部《漫长的中场休息》之微型总结。这样的一瞬就是比利最孤独的魂游天外。<br />故事主要视角以19岁的比利•林恩为主，在伊拉克战场的硝烟炮火摸爬滚打一年多后，他所在的B班阴差阳错地迎来一次小小胜利，并因此机缘巧合地成为“美国英雄”，在感恩节回国探亲时期，他们进行了为期两周的“凯旋之旅”，然后继续前往伊拉克服完剩余11个月的兵役...</p>
-                            <div class="comment-more-btn">
-                                <a href="#">浏览全文</a>
-                            </div>
-                        </div>
-                    </div><!--第二个书评-->
-
-
-                     <div class="content-book-comment1">
-                        <div class="comment-top">
-                            <div class="row">
-                                <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
-                                <ul class="comment-msg1">
-                                    <li><span>MONO</span><span>2016-12-21 08:13</span></li>
-                                    <li>
-                                        阅读<span> 11</span>
-                                        评论<span> 2</span>
-                                        写作<span> 1</span>
-                                        收藏<span> 1</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="row">
-                                <ul class="comment-msg2">
-                                    <li>标签：<a href="#">文学经典</a></li>
-                                    <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="comment-bottom">
-                            <h3>最孤独的魂外天游</h3>
-                            <p>“世上没有完美的事物，唯有这样一些透明得让你忘记自己的时刻，能拥有这样的一瞬，便是天赐的幸福。”这么一句看似不起眼的话，夹杂在比利千头万绪的心潮起伏里，却拥有狠狠击中我的力道，甚至可以视之为这部《漫长的中场休息》之微型总结。这样的一瞬就是比利最孤独的魂游天外。<br />故事主要视角以19岁的比利•林恩为主，在伊拉克战场的硝烟炮火摸爬滚打一年多后，他所在的B班阴差阳错地迎来一次小小胜利，并因此机缘巧合地成为“美国英雄”，在感恩节回国探亲时期，他们进行了为期两周的“凯旋之旅”，然后继续前往伊拉克服完剩余11个月的兵役...</p>
-                            <div class="comment-more-btn">
-                                <a href="#">浏览全文</a>
-                            </div>
-                        </div>
-                    </div><!--第二个书评-->
-
-                     <div class="content-book-comment1">
-                        <div class="comment-top">
-                            <div class="row">
-                                <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
-                                <ul class="comment-msg1">
-                                    <li><span>MONO</span><span>2016-12-21 08:13</span></li>
-                                    <li>
-                                        阅读<span> 11</span>
-                                        评论<span> 2</span>
-                                        写作<span> 1</span>
-                                        收藏<span> 1</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="row">
-                                <ul class="comment-msg2">
-                                    <li>标签：<a href="#">文学经典</a></li>
-                                    <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="comment-bottom">
-                            <h3>最孤独的魂外天游</h3>
-                            <p>“世上没有完美的事物，唯有这样一些透明得让你忘记自己的时刻，能拥有这样的一瞬，便是天赐的幸福。”这么一句看似不起眼的话，夹杂在比利千头万绪的心潮起伏里，却拥有狠狠击中我的力道，甚至可以视之为这部《漫长的中场休息》之微型总结。这样的一瞬就是比利最孤独的魂游天外。<br />故事主要视角以19岁的比利•林恩为主，在伊拉克战场的硝烟炮火摸爬滚打一年多后，他所在的B班阴差阳错地迎来一次小小胜利，并因此机缘巧合地成为“美国英雄”，在感恩节回国探亲时期，他们进行了为期两周的“凯旋之旅”，然后继续前往伊拉克服完剩余11个月的兵役...</p>
-                            <div class="comment-more-btn">
-                                <a href="#">浏览全文</a>
-                            </div>
-                        </div>
-                    </div><!--第二个书评-->
-                </div>   
-                </div>
+                </div><!-- content-book-comments-right结束 --> 
             </div><!-- content结束 --> 
 
 
@@ -296,9 +331,11 @@
             </footer>
         </div><!--canvas end-->
     </div><!--container end-->
+    
     <script src="http://www.jq22.com/jquery/1.9.1/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>    
+
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script>
         (function($){
