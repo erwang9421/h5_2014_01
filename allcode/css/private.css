@@ -22,7 +22,7 @@ body a{
 .content-left-top img{
 	height: 40%;
 	border-radius:50%;
-	margin: 8% 35% 1% 35%;
+	margin: 8% 35% 1% 31%;
 }
 .content-left-top span{
 	height: 20%;
@@ -33,7 +33,7 @@ body a{
 }
 .content-left-top-msg{
 	height: 40%;
-	font-size: 0.8em;
+	font-size: 0.9em;
 	text-align: center;
 	padding-top: 6px;
 }
@@ -207,72 +207,41 @@ body a{
 .scale2{
 	clear: both;
 	width: 90%;
-	padding: 0px 5%;
-	margin-top: 22%;
+	/*padding: 0px 5%;*/
+	margin-top: 25%;
+	/*margin-bottom: 0.2%;*/
 	float: left;
 }
 .scale2 input{
     font-size: 1em;
     margin-left: 3%;
-	padding: 1% 3%;
+	padding: 0.8% 3%;
 	border: 1px solid #da7c66;
 	background-color: #fff;
 	border-radius:0;
 	color: #da7c66;
-	width: 90%;
+	width: 91.5%;
+	text-align: center;
 }
 .scale2 img{
-	position: relative;
-	left:5%;
+	position: absolute;
+	left:84.5%;
 	border-radius:50%;
+	position: center;
 }
 .scale2 a{
 	float: left;
 	color: #fff;
 	text-align: center;
-	width: 5%;
-	padding: 0.6% 0.8%;
+	width: 5.5%;
+	padding: 0.6% 0.9%;
 	background-color: #da7c66;
 	border: 1px solid #da7c66;
-	border-radius:1.5em;
+	border-radius:0.3em;
 	position: absolute;
-	left: 88%;
+	left: 87.5%;
 	font-size: 1em;
 }
 .scale2 a:hover{
 	text-decoration: none;
 }
-
-/*.content-right-bottom-bottom{
-	width: 100%;
-	height: 20%;
-	clear: both;
-	position: relative;
-	margin-top:18%;
-}
-.content-right-bottom-bottom .input1{
-	margin-right: 20%;
-	padding: 0.8% 30%;
-	color: #da7c66;
-	border: 1px solid #da7c66;
-	background-color: #FAFAFA;
-	border-radius:0.2em;
-	float: left;
-}
-.content-right-bottom-bottom img{
-	position: absolute;
-	left: 82%;
-	height: 35%;
-	border-radius:50%;
-	float: left;
-}
-.content-right-bottom-bottom .input2{
-	position: absolute;
-	left:87%;
-	padding: 0.6% 2.7%;
-	color: #da7c66;
-	border: 1px solid #da7c66;
-	background-color: #FAFAFA;
-	border-radius:0.2em;
-	float: left;
-}*/
