@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52c848ea-252d-4eb0-a8a7-fef6e7418171" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/allcode/author_trend.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/allcode/css/aside-nav.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/allcode/css/author_trend.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/allcode/css/private.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/allcode/css/reset.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/allcode/css/scrollleftright.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/allcode/js/author_trend.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/allcode/js/jquery-2.0.0.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/allcode/private.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/allcode/css/index.css" afterPath="$PROJECT_DIR$/allcode/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/allcode/css/style.css" afterPath="$PROJECT_DIR$/allcode/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/allcode/index.html" afterPath="$PROJECT_DIR$/allcode/index.html" />
     </list>
     <ignored path="h5_2014_01.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,48 +24,7 @@
     <favorites_list name="h5_2014_01" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/allcode/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7030">
-              <caret line="370" column="9" selection-start-line="370" selection-start-column="9" selection-end-line="370" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/allcode/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2926">
-              <caret line="154" column="19" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/allcode/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1026">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aside-nav.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/allcode/css/aside-nav.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="265" column="22" selection-start-line="265" selection-start-column="22" selection-end-line="265" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -88,6 +35,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -235,7 +185,7 @@
       <updated>1478084570503</updated>
       <workItem from="1478084572776" duration="363000" />
       <workItem from="1478223241816" duration="33000" />
-      <workItem from="1480139090952" duration="689000" />
+      <workItem from="1480139090952" duration="1026000" />
     </task>
     <task id="LOCAL-00001" summary="zhaodnli">
       <created>1478084647853</created>
@@ -244,11 +194,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478084647853</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fengyu">
+      <created>1480139889227</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1480139889227</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1085000" />
+    <option name="totallyTimeSpent" value="1422000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="60" y="36" width="1238" height="740" extended-state="0" />
@@ -285,7 +242,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="zhaodnli" />
-    <option name="LAST_COMMIT_MESSAGE" value="zhaodnli" />
+    <MESSAGE value="fengyu" />
+    <option name="LAST_COMMIT_MESSAGE" value="fengyu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -318,18 +276,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/allcode/index.html">
+    <entry file="file://$PROJECT_DIR$/allcode/css/aside-nav.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7030">
-          <caret line="370" column="9" selection-start-line="370" selection-start-column="9" selection-end-line="370" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/allcode/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2926">
-          <caret line="154" column="19" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
+        <state relative-caret-position="-301">
+          <caret line="235" column="21" selection-start-line="235" selection-start-column="21" selection-end-line="235" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -342,10 +292,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/allcode/css/aside-nav.css">
+    <entry file="file://$PROJECT_DIR$/allcode/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="265" column="22" selection-start-line="265" selection-start-column="22" selection-end-line="265" selection-end-column="22" />
+        <state relative-caret-position="2926">
+          <caret line="154" column="19" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/allcode/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7030">
+          <caret line="370" column="9" selection-start-line="370" selection-start-column="9" selection-end-line="370" selection-end-column="9" />
           <folding />
         </state>
       </provider>
