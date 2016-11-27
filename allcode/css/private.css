@@ -4,9 +4,92 @@ body a{
 	bblr:expression(this.onFocus=this.blur());/*IE*/
 }
 .content-left{
+	width:15%;
+	height: 100%;
+	border-right: 1px #D4D4D4 solid;
+	background-color:#F5F5F5; 
+	float: left;
+}
+.content-left-top{
+	height: 230px;
+	border-bottom: 1px #D4D4D4 solid;
+	border-top: 1px #D4D4D4 solid;
+	background-color: #F5F5F5;
+}
+.content-left-top img{
+	margin:auto;
+	margin-top: 25px;
+	border-radius:50%;
+}
+#name{
+	color: #67B9FF;
+	text-align: center;
+}
+.content-left-top-msg{	
+	padding-top: 6px;
+    text-align:center;
+}
+.content-left-top-msg ul{
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+.content-left-top-msg ul:last-child{
+	margin-top: 15px;
+	font-size: 12px;
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+.content-left-top-msg ul li{
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+.content-left-top-msg a{
+	color: #5eb3ef;
+	font-size:12px;
+}
+.content-left-top-msg p{
+	color: #666;
+	font-size: 12px;
+	margin-top: 2px;
+	margin-left: 18px;
+	margin-right: 18px;
+	float: left;
+}
+.content-left-bottom{	
+    bottom: 0;
+    background-color: #F5F5F5;
+}
+.content-left-bottom p{
+	text-align: center;
+}
+#btn-top{
+	padding-top: 30px;
+}
+.content-left-bottom a{
+	color: #da7c66;
+	line-height:30px;
+	font-size:12px;
+	border:1px solid;
+	border-radius:9px;
+	padding:2px 12px;
+	border-color: #dcdcdc;
+}
+.content-left-bottom a:hover{
+	background-color: #da7c66;
+	color: #fff;
+	border:none;
+}
+#btn-bottom{
+	color: #fff;
+	background-color: #da7c66;
+	border:none;
+}
+/*.content-left{
 	width: 15%;
 	height: 100%;
-	/*border: 1 p x solid yellow;*/
 	overflow:hidden;
  	float: left;
  	background-color: #FAFAFA;
@@ -16,19 +99,17 @@ body a{
 .content-left-top{
 	width: 100%;
 	height: 36%;
-	/*border: 1 p x solid red;*/
 	border-bottom: 1px solid #F0F0F0;
 }
 .content-left-top img{
-	height: 40%;
 	border-radius:50%;
-	margin: 8% 35% 1% 31%;
+	margin: 8% 35% 1% 35%;
 }
 .content-left-top span{
 	height: 20%;
 	margin: 10% 45% 1% 45%;
 	color: #5eb3ef;
-	font-size: 0.8em;
+	font-size: 1em;
 	text-align: center;
 }
 .content-left-top-msg{
@@ -61,11 +142,9 @@ body a{
 .content-left-bottom{
 	width: 100%;
 	height: 64%;
-	/*border: 1px solid green;*/
 	font-size: 0.9em;
 	margin-top: 15%;
 	bottom: 0;
-    /*background-color: #F5F5F5;*/
 }
 .content-left-bottom p{
 	cursor: pointer;
@@ -84,9 +163,8 @@ body a{
 	background-color: #da7c66;
 	color: #fff;
 	border:none;
-}
-#btn-top{	
-	/*margin: 5% 25%;	*/
+}*/
+/*#btn-top{	
 	padding-top: 5%;
 }
 #btn-bottom{
@@ -94,7 +172,7 @@ body a{
 	color: #fff;
 	background-color: #da7c66;
 	border:none;
-}
+}*/
 /*right*/
 .content-right{
 	width: 85%;
@@ -103,17 +181,29 @@ body a{
 	overflow:hidden;
  	float: left;
  	background-color: #fff;
+ 	overflow: hidden;
 }
-.content-right-top{
+.content-right-top {
+	border:none;
+	right: 0;
+	width: 80%;
+	height: 60px;
+	line-height: 60px;
+	background-color:#fff;
+	z-index: 300;
+	position: fixed;
+}
+.content-right-top li {
+	float: left;
+}
+/*.content-right-top{
 	width: 100%;
 	height: 10%;
 	margin-left: 5%;
 	margin-right: 6%;
-	/*border: 1px solid green;*/
 	background-color: #fff;
 }
 .content-right-top ol{
-	/*color: #5eb3ef;*/
 	border:none;
 	right: 0;
 	width: 80%;
@@ -130,14 +220,16 @@ body a{
 .content-right-top ol a:hover{
 	text-decoration: none;
 	font-weight: bold;
-}
+}*/
 .content-right-bottom{
-	width: 90%;
+	width: 89.7%;
 	height: 83%;
 	margin-left: 5%;
 	margin-right: 6%;
+	margin-top: 88px;
 	border: 1px solid #F0F0F0; 
 	background-color: #FAFAFA;
+	/*overflow: hidden;*/
 }
 .content-right-bottom p{
 	color: #666;
@@ -206,40 +298,43 @@ body a{
 }
 .scale2{
 	clear: both;
-	width: 90%;
-	/*padding: 0px 5%;*/
-	margin-top: 25%;
-	/*margin-bottom: 0.2%;*/
+	width: 80%;
+	position: absolute;
+	bottom: 10%;
 	float: left;
+	overflow: hidden;
 }
 .scale2 input{
     font-size: 1em;
     margin-left: 3%;
-	padding: 0.8% 3%;
+	padding-top: 0.6%;
+	padding-bottom: 0.6%;
 	border: 1px solid #da7c66;
 	background-color: #fff;
 	border-radius:0;
 	color: #da7c66;
-	width: 91.5%;
+	width: 79%;
 	text-align: center;
 }
 .scale2 img{
 	position: absolute;
-	left:84.5%;
+	left:82.5%;
 	border-radius:50%;
 	position: center;
+	padding-top: 0.2%;
 }
 .scale2 a{
 	float: left;
 	color: #fff;
 	text-align: center;
 	width: 5.5%;
-	padding: 0.6% 0.9%;
+	padding-top: 0.6%;
+	padding-bottom: 0.6%;
 	background-color: #da7c66;
 	border: 1px solid #da7c66;
 	border-radius:0.3em;
 	position: absolute;
-	left: 87.5%;
+	left: 86.5%;
 	font-size: 1em;
 }
 .scale2 a:hover{

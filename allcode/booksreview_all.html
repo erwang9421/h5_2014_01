@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>标签页</title>
+    <title>他的全部书评</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,20 +9,13 @@
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/aside-nav.css" />
-    
-    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
-    <link rel="stylesheet" href="css/tags.css" />
-    <style type="text/css">
-        #content{
-            background-image: url(images/content_bg.png) repeat-x;
-        }
-    </style>
-    
+    <link rel="stylesheet" href="css/booksreview_all.css" />
+       
 </head>
 <body>
     <div id="container">
         <div id="canvas">
-        	<div class="aside-nav toggle-nav">
+            <div class="aside-nav toggle-nav">
                 <a href="#"><i class="icon-align-justify icon-large"></i></a>
             </div>
             <!--aside-nav end（触发弹出侧栏）-->
@@ -136,18 +129,42 @@
                 </div>
             </div>
             <!--侧导航内容 end-->
-            <!--content start-->
 
+            <!--content start-->
             <div id="content">
-                <div class="content-left"></div>
+                <div class="content-left">
+                    <div class="content-left-top">
+                        <p style="text-align: center;"><img src="images/1c.jpg" width="70" height="70" alt="用户头像"/></p>
+                        <a href="#" id="name"><p>fygd</p></a>
+                        <div class="content-left-top-msg">
+                            <ul>
+                                <li><a href="#">文章</a></li>
+                                <li><a href="#">粉丝</a></li>
+                                <li><a href="#">收藏</a></li>
+                                <li><a href="#">关注</a></li>
+                            </ul>
+                            <br />
+                            <ul>
+                                <li>20</a></li>
+                                <li>88</li>
+                                <li>56</li>
+                                <li>28</li>
+                            </ul>
+                        </div>
+                    </div><!-- content-left-top结束 --> 
+                    <div class="content-left-bottom">
+                        <p id="btn-top"><a href="#">写私信</a></p>
+                        <p><a href="#" id="btn-bottom">已关注</a></p>
+                    </div><!-- content-left-bottom结束 --> 
+                </div><!-- content-left结束 --> 
                 <div class="content-right">
                     <div class="content-right-top">
                         <ol> 
-                            <li><a href="#">标签</a></li> 
-                            <li>&nbsp;：&nbsp;</li>
-                            <li><a href="#" class="active">中国现代小说</a></li> 
+                            <li><a href="#">首页</a></li> 
+                            <li>&nbsp;/&nbsp;</li>
+                            <li><a href="#" class="active">他的收藏</a></li> 
                         </ol>
-                    </div>
+                    </div><!-- content-right-top结束 --> 
                     <div class="content-right-bottom">
                         <div class="content-book-comments">
                             <div class="content-book-comment1 book-comment1">
@@ -332,18 +349,16 @@
                             </div><!--第六个书评-->
                          
                         </div><!--bookscontainer容器结束-->
-                    </div><!--content-right-bottom结束-->
 
+                    </div><!-- content-right-bottom结束 --> 
                 </div><!-- content-right结束 --> 
             </div><!-- content结束 --> 
-
-
             <footer>
                 <p>copyright@hebeinormal university</p>
             </footer>
         </div><!--canvas end-->
     </div><!--container end-->
-    
+
     <script src="http://www.jq22.com/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>    

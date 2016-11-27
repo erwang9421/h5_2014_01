@@ -10,7 +10,7 @@
 .content-right {
     height: 100%;
     width: 100%;
-    overflow:auto;
+    overflow:hidden;
     clear:both; 
     /*border: 1px solid red;*/
 }
@@ -42,7 +42,7 @@
     width: 100%;
     overflow:auto;
     clear:both; 
-    /*border: 1px solid blue;*/
+    border: 1px solid blue;
     position: absolute;
 }
 .content-book-comments{
