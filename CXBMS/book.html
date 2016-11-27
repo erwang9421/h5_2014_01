@@ -1,0 +1,173 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>畅享书评后台管理系统-图书列表</title>
+<meta name="Copyright" content="Douco Design." />
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/jquery.autotextarea.js"></script>
+</head>
+<body>
+<div id="dcWrap"> <div id="dcHead">
+ <div id="head">
+  <div class="logo"><a href="index.html"><img src="images/1.png" alt="logo" height="30"></a></div>
+  <div class="nav">
+   <ul>畅享书评后台管理系统
+   </ul>
+   <ul class="navRight">
+    <li class="noRight"><a href="#">您好，admin</a>
+     
+    </li>
+   <li class="noRight"><a href="login.html">退出</a></li>
+   </ul>
+  </div>
+ </div>
+</div>
+<!-- dcHead 结束 --> 
+<div id="dcLeft"><div id="menu">
+ <ul class="top">
+  <li><a href="index.html"><i class="home"></i><em>首页</em></a></li>
+ </ul>
+
+<ul>
+  <li><a href="manager.html"><i class="manager"></i><em>管理员管理</em></a></li>
+ </ul>
+
+
+ <ul>
+  <li><a href="user.html"><i class="user"></i><em>用户列表</em></a></li>
+  <li><a href="adduser.html"><i class="page"></i><em>添加用户</em></a></li>
+ </ul>
+
+<ul>
+  <li><a href="comment.html"><i class="order"></i><em>评论管理</em></a></li>
+ </ul>
+<ul>
+  <li><a href="collect.html"><i class="plugin"></i><em>收藏管理</em></a></li>
+ </ul>
+ <ul>
+  <li><a href="letter.html"><i class="caseCat"></i><em>私信管理</em></a></li>
+ </ul>
+ <ul>
+  <li><a href="pushpraise.html"><i class="show"></i><em>点赞管理</em></a></li>
+ </ul>
+
+
+ <ul>
+  <li><a href="bookview.html"><i class="productCat"></i><em>书评列表</em></a></li>
+  <li><a href="addbookview.html"><i class="guestbook"></i><em>添加书评</em></a></li>
+ </ul>
+ <ul>
+  <li><a href="book.html"><i class="product"></i><em>图书列表</em></a></li>
+  <li><a href="addbook.html"><i class="articleCat"></i><em>添加图书</em></a></li>
+ </ul>
+  <ul>
+ <li><a href="payattention.html"><i class="pse"></i><em>我的关注</em></a></li>
+  <li><a href="payattentioned.html"><i class="pae"></i><em>关注我的</em></a></li>
+ </ul>
+  <ul>
+  <li><a href="tag.html"><i class="menuPage"></i><em>标签</em></a></li>
+  <li><a href="keyword.html"><i class="theme"></i><em>关键字</em></a></li>
+ </ul>
+</div></div>
+ <div id="dcMain">
+   <!-- 当前位置 -->
+<div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>图书列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+        <h3><a href="addbook.html?rec=add" class="actionBtn add">添加图书</a>图书列表</h3>
+   
+    <div id="list">
+    <form name="action" method="post" action="product.php?rec=action">
+    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+      <tr>
+        <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+        <th width="40" align="center">ID</th>
+        <th width="60" align="center">图书名称</th>
+        <th width="150" align="center">图书作者</th>
+        <th width="100" align="center">图书类型</th>
+        <th width="300" align="center">图书简介</th>
+       <th width="100" align="center">添加时间</th>
+        <th width="80" align="center">操作</th>
+      </tr>
+      <tr>
+        <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
+        <td align="center">5</td>
+        <td align="center"><a href="product.php?rec=edit&id=15">钢铁是怎样炼成的</a></td>
+        <td align="center"><a href="product.php?cat_id=3">尼古拉·奥斯特洛夫斯基</a></td>
+        <td align="center">长篇小说</td>
+        <td style="font-size:14px">小说通过记叙保尔·柯察金的成长道路告诉人们，一个人只有在革命的艰难困苦中战胜敌人也战胜自己，才会成长为钢铁战士。</td>
+        <td align="center">2013-06-26</td>
+        <td align="center">
+        <a href="editbook.html">编辑</a> | <a href="#">删除</a>
+        </td>
+      </tr>
+
+     <tr>
+        <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
+        <td align="center">4</td>
+        <td align="center"><a href="product.php?rec=edit&id=15">钢铁是怎样炼成的</a></td>
+        <td align="center"><a href="product.php?cat_id=3">尼古拉·奥斯特洛夫斯基</a></td>
+        <td align="center">长篇小说</td>
+        <td style="font-size:14px">小说通过记叙保尔·柯察金的成长道路告诉人们，一个人只有在革命的艰难困苦中战胜敌人也战胜自己，才会成长为钢铁战士。</td>
+        <td align="center">2013-06-26</td>
+        <td align="center">
+         <a href="editbook.html">编辑</a> | <a href="#">删除</a>
+       </td>
+      </tr>
+
+
+      <tr>
+        <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
+        <td align="center">3</td>
+        <td align="center"><a href="product.php?rec=edit&id=15">钢铁是怎样炼成的</a></td>
+        <td align="center"><a href="product.php?cat_id=3">尼古拉·奥斯特洛夫斯基</a></td>
+        <td align="center">长篇小说</td>
+        <td style="font-size:14px">小说通过记叙保尔·柯察金的成长道路告诉人们，一个人只有在革命的艰难困苦中战胜敌人也战胜自己，才会成长为钢铁战士。</td>
+        <td align="center">2013-06-26</td>
+        <td align="center">
+        <a href="editbook.html">编辑</a> | <a href="#">删除</a>
+        </td>
+      </tr>
+      <tr>
+        <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
+        <td align="center">2</td>
+        <td align="center"><a href="product.php?rec=edit&id=15">钢铁是怎样炼成的</a></td>
+        <td align="center"><a href="product.php?cat_id=3">尼古拉·奥斯特洛夫斯基</a></td>
+        <td align="center">长篇小说</td>
+        <td style="font-size:14px">小说通过记叙保尔·柯察金的成长道路告诉人们，一个人只有在革命的艰难困苦中战胜敌人也战胜自己，才会成长为钢铁战士。</td>
+        <td align="center">2013-06-26</td>
+        <td align="center">
+         <a href="editbook.html">编辑</a> | <a href="#">删除</a>
+        </td>
+      </tr>
+      <tr>
+        <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
+        <td align="center">1</td>
+        <td align="center"><a href="product.php?rec=edit&id=15">钢铁是怎样炼成的</a></td>
+        <td align="center"><a href="product.php?cat_id=3">尼古拉·奥斯特洛夫斯基</a></td>
+        <td align="center">长篇小说</td>
+        <td style="font-size:14px">小说通过记叙保尔·柯察金的成长道路告诉人们，一个人只有在革命的艰难困苦中战胜敌人也战胜自己，才会成长为钢铁战士。</td>
+        <td align="center">2013-06-26</td>
+        <td align="center">
+         <a href="editbook.html">编辑</a> | <a href="#">删除</a>
+        </td>
+      </tr>
+    </table>
+    <div class="action">
+    </form>
+    </div>
+    <div class="clear"></div>
+    <div class="pager">总计 5 个记录，共 1 页，当前第 1 页 | <a href="book.html">第一页</a> 上一页 下一页 <a href="book.html">最末页</a></div>               </div>
+ </div>
+ <div class="clear"></div>
+<div id="dcFooter">
+ <div id="footer">
+  <div class="line"></div>
+  <ul>
+      畅所欲言，享你所想  |  畅想书评网站后台管理系统
+  </ul>
+ </div>
+</div><!-- dcFooter 结束 -->
+<div class="clear"></div> </div>
+</body>
+</html>
