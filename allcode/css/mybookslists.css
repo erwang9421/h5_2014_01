@@ -99,7 +99,7 @@ body a{
  	overflow: hidden;
 }
 .content-right-left{
-	width:25%;
+	width:18%;
 	height:100%;
 	float:left;
 	padding:1em;
@@ -114,52 +114,35 @@ body a{
 }
 
 /*右侧书评列表部分*/
- .content-right-right{
-	float:left;
-	height: 92%;
-    width: 70%;
-    margin-top: 2%;
-    margin-left:20%;
-    overflow:hidden; 
+ .content-right-bottom{
+	height: 93%;
+    width: 100%;
+    overflow:auto;
+    clear:both; 
     position: absolute;
+    margin-left:18%;
 }
 .content-book-comments{
 	height: 100%;
 	width: 100%;
-	overflow:auto;
-	float: left;
+	overflow:hidden; 
+}
+.mCSB_horizontal > .mCSB_container{
+	margin-bottom: 0;
+	height: 100%;
 }
 .content-book-comment1{
-	width:25%;
-	height: 88%;
+	width:5%;
+	height: 90%;
 	background-color: #f7f7f7;
 	border: 1px solid #dbdce0;
+	padding: 0.1% 0.1% 0.1% 0.1%;
+	margin: 0.8% 0.7% 0.4% 0%;
+	float: left;
 	display: block;
-	margin-left: 5%;
-	margin-top: 3%;
-	/*float: left;*/
-	position: relative;
-	overflow: auto;
 }
 
-/*.book-comment1 .comment-more-btn {
-    left: 23%;
-}
-.book-comment2 .comment-more-btn {
-     left: 14%;
-}
-.book-comment3 .comment-more-btn {
-     left: 30%;
-}
-.book-comment4 .comment-more-btn {
-     left: 30%;
-}
-.book-comment5 .comment-more-btn {
-     left: 30%;
-}
-.book-comment6 .comment-more-btn {
-     left: 30%;
-}*/
+
 .comment-top {
 	height: 28%;
 	width: 100%;
@@ -245,10 +228,46 @@ body a{
 	bottom: 5%;
 	margin: auto;
 	position: absolute;
+	margin-left:1.4%;
 }
 .comment-more-btn a{
 	padding:6px 16px;
 	border-radius:4px;
 	color: #fff;
 	background-color: #da7c66;
+}
+.shortintroduction{
+	color:#999;
+}
+.viewtimes{
+	color:#999;
+}
+.sharetoothers{
+	color:#de8b78;
+	border: 1px solid #da7c66;
+	border-radius:10px;
+	padding-top:0.2em;
+	padding-bottom:0.2em;
+	padding-left:1em;
+	padding-right:1em;
+}
+.sharetoothers:hover{
+	color:#fff;
+	background-color:#de8b78;
+	border: 1px solid #da7c66;
+	border-radius:10px;
+	padding-top:0.2em;
+	padding-bottom:0.2em;
+	padding-left:1em;
+	padding-right:1em;
+}
+.shareleft{
+	float:left;
+}
+.shareright{
+	float:right;
+}
+.introduce{
+	clear:both;
+	margin-top:30%;
 }
