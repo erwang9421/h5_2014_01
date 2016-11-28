@@ -1,0 +1,263 @@
+body a{
+	outline-style: none;/*HH浏览器正常显示，去掉虚框*/
+	bblr:expression(this.onFocus=this.blur());/*IE*/
+}
+.content-left{
+	width:15%;
+	height: 100%;
+	border-right: 1px #D4D4D4 solid;
+	background-color:#F5F5F5; 
+	float: left;
+	z-index: 300px;
+	overflow: hidden;
+}
+.content-left-top{
+	height: 230px;
+	border-bottom: 1px #D4D4D4 solid;
+	border-top: 1px #D4D4D4 solid;
+	background-color: #F5F5F5;
+}
+.content-left-top img{
+	margin:auto;
+	margin-top: 25px;
+	border-radius:50%;
+}
+#name{
+	color: #67B9FF;
+	text-align: center;
+}
+.content-left-top-msg{	
+	padding-top: 6px;
+    text-align:center;
+}
+.content-left-top-msg ul{
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+.content-left-top-msg ul:last-child{
+	margin-top: 15px;
+	font-size: 12px;
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+.content-left-top-msg ul li{
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+.content-left-top-msg a{
+	color: #5eb3ef;
+	font-size:12px;
+}
+.content-left-top-msg p{
+	color: #666;
+	font-size: 12px;
+	margin-top: 2px;
+	margin-left: 18px;
+	margin-right: 18px;
+	float: left;
+}
+.content-left-bottom{	
+    bottom: 0;
+    background-color: #F5F5F5;
+}
+.content-left-bottom p{
+	text-align: center;
+}
+#btn-top{
+	padding-top: 30px;
+}
+.content-left-bottom a{
+	color: #da7c66;
+	line-height:30px;
+	font-size:12px;
+	border:1px solid;
+	border-radius:9px;
+	padding:2px 12px;
+	border-color: #dcdcdc;
+}
+.content-left-bottom a:hover{
+	background-color: #da7c66;
+	color: #fff;
+	border:none;
+}
+#btn-bottom{
+	color: #eeeeee;
+	background-color: #da7c66;
+	border:none;
+}
+/*右边*/
+.content-right{
+	width: 85%;
+	height: 100%;
+	border: 1px solid red;
+ 	float: left;
+ 	background-color: #fff;
+ 	overflow: hidden;
+}
+.content-right-top {
+	border:none;
+	right: 0;
+	width: 82.5%;
+	height: 8%;
+	line-height: 300%;
+	background-color:#fff;
+	z-index: 300;
+	position: fixed;
+	border: 1px solid gray;
+	margin-left: 17.5%;
+}
+.content-right-top li {
+	float: left;
+}
+/*右边下面*/
+.content-right-bottom{
+	clear:both;
+	height: 92%;
+    width: 82.5%;
+    margin-top: 4%;
+    overflow:hidden; 
+    border: 1px solid blue;
+    position: absolute;
+}
+.content-book-comments{
+	height: 100%;
+	width: 100%;
+	overflow:auto;
+	border:1px solid red;
+	float: left;
+}
+/*.mCSB_horizontal > .mCSB_container{
+	height: 98%;
+	border:1px solid yellow;
+}*/
+/*.mCSB_container{
+	margin-bottom: 0;
+	height: 95%;
+	border: 1px solid green;
+}*/
+.content-book-comment1{
+	width:25%;
+	height: 88%;
+	background-color: #f7f7f7;
+	border: 1px solid #dbdce0;
+	display: block;
+	margin-left: 5%;
+	margin-top: 3%;
+	/*float: left;*/
+	position: relative;
+	overflow: auto;
+}
+
+/*.book-comment1 .comment-more-btn {
+    left: 23%;
+}
+.book-comment2 .comment-more-btn {
+     left: 14%;
+}
+.book-comment3 .comment-more-btn {
+     left: 30%;
+}
+.book-comment4 .comment-more-btn {
+     left: 30%;
+}
+.book-comment5 .comment-more-btn {
+     left: 30%;
+}
+.book-comment6 .comment-more-btn {
+     left: 30%;
+}*/
+.comment-top {
+	height: 28%;
+	width: 100%;
+	border-bottom: 1px solid #dbdce0;
+	padding: 2% 2% 0 5%;
+}
+.row1{
+	width: 100%;
+	height: 50%;
+}
+.row2{
+	width: 100%;
+	height: 50%;
+}
+.comment-photo {
+	border-radius:50%;
+	margin: 2% 2%;
+	display: block;
+	float: left;
+}
+.comment-msg1 {
+	float: left;
+	margin-left:4%;
+}
+.comment-msg1 li{
+	color: #999;
+	font-size: 0.9em;
+}
+.comment-msg1 li:first-child {
+	margin-bottom:5%;
+}
+.comment-msg1 span{
+}
+.comment-msg2 {
+	margin-top: 1%;
+	display: block;
+	font-size: 0.9em;
+}
+.comment-msg2 li:first-child {
+	margin-bottom: 3%;
+	color: #999;
+}
+.comment-msg2 li:first-child a {
+	color: #999;
+}
+.comment-msg2 li:last-child {
+	color: #da7c66;
+}
+.comment-bottom {
+	height: 72%;
+	width: 100%;
+	padding: 3% 5% 0 5%;
+}
+.comment-bottom h3 {
+	font-size: 1.5em;
+	text-align: center;
+	color: #da7c66;
+	height: 5%;
+}
+.comment-bottom p {
+	line-height: 200%;
+	color: #666;
+	text-overflow:ellipsis;
+	width:100%;
+	overflow: hidden;
+}
+@media screen and (min-height: 769px) { 
+.comment-bottom p {height: 320px} 
+}  
+@media screen and (max-height: 768px) { 
+.comment-bottom p {height: 310px} 
+}  
+@media screen and (max-height: 638px) { 
+.comment-bottom p {height: 200px} 
+}
+@media screen and (max-height: 614px) { 
+.comment-bottom p {height: 230px;} 
+} 
+@media screen and (max-height: 517px) { 
+.comment-bottom p {height: 170px;} 
+}
+.comment-more-btn {
+	bottom: 5%;
+	margin: auto;
+	position: absolute;
+}
+.comment-more-btn a{
+	padding:6px 16px;
+	border-radius:4px;
+	color: #fff;
+	background-color: #da7c66;
+}
