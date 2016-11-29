@@ -110,6 +110,7 @@ body a{
 	margin-bottom:3em;
 }
 .content-right-left h4{
+	text-align:center;
 	color:#da7c66;
 }
 
@@ -241,8 +242,15 @@ body a{
 }
 .viewtimes{
 	color:#999;
+	float:right;
+	padding-top:0.2em;
+	padding-left:0.3em;
+}
+.viewimage{
+	float:right;
 }
 .sharetoothers{
+	font-size:0.2em;
 	color:#de8b78;
 	border: 1px solid #da7c66;
 	border-radius:10px;
@@ -252,6 +260,7 @@ body a{
 	padding-right:1em;
 }
 .sharetoothers:hover{
+	font-size:0.2em;
 	color:#fff;
 	background-color:#de8b78;
 	border: 1px solid #da7c66;
@@ -270,4 +279,8 @@ body a{
 .introduce{
 	clear:both;
 	margin-top:30%;
+}
+.editbtn{
+	margin-top:2em;
+	text-align:center;
 }
