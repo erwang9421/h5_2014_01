@@ -250,17 +250,17 @@ body a{
 	float:right;
 }
 .sharetoothers{
-	font-size:0.2em;
+	font-size:0.8em;
 	color:#de8b78;
 	border: 1px solid #da7c66;
-	border-radius:10px;
-	padding-top:0.2em;
-	padding-bottom:0.2em;
+	border-radius:9px;
+	padding-top:0.1em;
+	padding-bottom:0.1em;
 	padding-left:1em;
 	padding-right:1em;
 }
 .sharetoothers:hover{
-	font-size:0.2em;
+	font-size:0.8em;
 	color:#fff;
 	background-color:#de8b78;
 	border: 1px solid #da7c66;
