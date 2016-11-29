@@ -1,0 +1,279 @@
+#nav {
+	z-index: 100;
+}
+#content {
+	width:97%;
+	left: 3%;
+	height: 100%;
+	border:none;
+	overflow: auto;
+}
+.content-right {
+	width:100%;
+    overflow-y:auto;
+	background-color:#fcfcfc;
+	height:100%;
+	float: left;
+	position: relative;
+}
+.content-center {
+	border: 1px solid red;
+}
+.breadcrumb {
+	background-color:transparent;
+	padding-left: 0;
+	margin:15px 0;
+}
+.myphoto2 {
+	border-radius: 50%;
+	float: left;
+}
+.comment-msg1 {
+	float: left;
+	margin-left: 10px;
+	font-size: 12px;
+	color: #999;
+	margin-top: 4px;
+}
+.comment-msg1 li:last-child {
+	margin-top: 6px;
+}
+.comment-msg1 span {
+	padding-right: 16px;
+}
+.clear {
+	clear:both;
+}
+.comment-tag {
+	display: block;
+	color: #999;
+	font-size: 14px;
+	margin-top: 14px;
+}
+.rowmsg {
+	position: relative;
+}
+.col-md-6 {
+	padding: 0;
+}
+.btn {
+	float: right;
+	margin-left: 25px;
+	color: #da7c66;
+	padding:0 10px;
+	font-size: 12px;
+	border:1px solid #da7c66;
+	border-radius:12px;
+}
+.btn:hover{
+	color:#fff;
+	border:1px solid #f27b59;
+	background-color:#f27b59;
+}
+.three-btn .btn:last-child {
+	margin-left: 0;
+}
+.download {
+	margin-top: 36px;
+}
+.download .btn {
+	padding:0 10px;
+}
+.content-right .row {
+	margin-left:7px;
+	margin-right: 0;
+}
+.article h3 {
+	padding-top: 12px;
+	padding-bottom: 9px;
+	color:#da7c66;
+}
+.article p{
+	font-size: 14px;
+	color: #000;
+	line-height: 34px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.content-right .container-fluid {
+	margin-bottom: 46px;
+	padding-left: 0;
+	padding-right: 0;
+}
+.money {
+	margin: auto;
+	display: block;
+}
+.likebooksreview img {
+	margin-right: 2px;
+	margin-bottom: 1px;
+}
+.likebooksreview {
+	float: left;
+}
+footer {
+	position: static;
+	height: 35px;
+}
+/*.content-center {
+	width:100%;
+    overflow-y:auto;
+	background-color:#fff;
+	height:100%;
+	float: left;
+	position: relative;
+}*/
+/*
+#middlecontent{
+	margin-left:6%;
+	margin-right:5%;
+}
+h3{
+	color:#f27b59;
+	text-align:center;
+}
+#content p{
+	font-size:1.1em;
+}
+.collectbooksreview{
+	margin-right:30px;
+	color:#f27b59;
+	border:1px solid #f27b59;
+}
+.collectbooksreview:hover{
+	color:#fff;
+	border:1px solid #f27b59;
+	background-color:#f27b59;
+}
+.care{
+	color:#f27b59;
+	border:1px solid #f27b59;
+}
+.care:hover{
+	color:#fff;
+	border:1px solid #f27b59;
+	background-color:#f27b59;
+}
+.likebooksreview{
+	color:#f27b59;
+	border:1px solid #f27b59;
+}
+.likebooksreview:hover{
+	color:#fff;
+	border:1px solid #f27b59;
+	background-color:#f27b59;
+}
+#leftbutton{
+	float:left;
+}
+#rightshare{
+	float: right;
+}
+#rightshare a{
+	color:#f27b59;
+}
+#booksreviewtimes{
+	clear:both;
+}
+/* .pagination li a{
+	color:#000;
+}
+.pagination .active a{
+	border:1px solid #f27b59;
+	background-color:#f27b59;;
+} */
+/*#textarea{
+	width:90%;
+	border:1px solid #f27b59;
+}
+.bookreviewtext{
+	color:#fff;
+	background-color:#f27b59;
+	border:1px solid #f27b59;
+	font-size:1.3em;
+	margin-bottom:32px;
+	width:9%;
+	height:43px;
+}
+.bookreviewtext:hover{
+	color:#f27b59;
+	border:1px solid #f27b59;
+	background-color:#fff;
+
+}*/
+/* 阅读、评论、喜欢、收藏部分样式设置 */
+/*#thumbnailleft{
+	margin-right:1em;
+}
+#thumbnailright div a{
+	color:#999999;
+}
+#thumbnailright div a:hover{
+	color:#f27b59;
+}
+#thumbnailright div time{
+	color:#999999;
+	margin-left:1.5em;
+}
+#thumbnailright div span{
+	color:#999999;
+	margin-right:1.5em;
+}
+/* 本书简介按钮样式 */
+/*.thebookreview{
+	margin-left:30%;
+	margin-right:30px;
+	color:#f27b59;
+	border:1px solid #f27b59;
+}
+.thebookreview:hover{
+	color:#fff;
+	border:1px solid #f27b59;
+	background-color:#f27b59;
+}
+#bookstags{
+	margin-left:2em;
+}*/
+/* 打印按钮样式 */
+/*.print{
+	margin-left:610px;
+	margin-right:20px;
+	color:#f27b59;
+	border:1px solid #f27b59;
+}
+.print:hover{
+	color:#fff;
+	border:1px solid #f27b59;
+	background-color:#f27b59;
+}*/
+/* 下载按钮样式 */
+/*.download{
+	margin-right:0;
+	color:#f27b59;
+	border:1px solid #f27b59;
+}
+.download:hover{
+	color:#fff;
+	border:1px solid #f27b59;
+	background-color:#f27b59;
+}
+.bookname{
+	color:#f27b59;
+	margin-right:3em;
+}
+.bookname:hover{
+	color:#f27b59;
+	text-decoration:none;
+}
+.glyphicon-thumbs-up{
+	color:#f27b59;
+	margin-right:0.5em;
+}
+footer{
+	background-color:#eeeeee;
+}
+footer p{
+	color:gray;
+	text-align:center;
+
+}*/
