@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>登录页</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/登录页.js"></script>
+
+
+</head>
+<body>
+<div class="page" style="background-image: url(images/background1.jpg);">
+    <div class="header">
+        <button type="button" class="bt" >注册</button>
+    </div>
+    <div class="images"  >
+        <img src="images/text.png">
+    </div>
+    <div class="content" style="padding-top:10px;">
+        <div class="username" >
+            <input type="text" placeholder="用户名" placeholder-color:rgb(94,178,240) name="usename">
+        </div>
+        <div class="password" >
+            <input type="text"  placeholder="密码" name="password">
+        </div>
+        <div class="psd" style="padding-top:20px;" 	>
+
+            <input type="text"  placeholder="验证码" name="psd" style="width:180px;">
+            <span style="display:inline-block;height:32px;width:78px;background-color:#D0D0D0;color:rgb(94,178,240);	position: relative;
+
+              top: -1px;padding-top:5px;" >1234</span>
+
+            <div style="margin-left:-120px;padding-top:10px;">
+                <input name="" type="checkbox" value="" checked="checked" style="width:15px;height:12px;" >
+                <a style="color:rgb(94,178,240);font-size:small;">记住密码</a>
+                <a style="  color: red;font-size: small;">忘记密码？</a>
+            </div>
+            <div class="btn">
+                <button type="button"  onclick="test()" style="border-radius:8px;">登录</button>
+            </div>
+        </div>
+
+
+        <div class="footer" style="margin-top:20px;position: relative;left:-60px;">
+            <p style="font-size:small;display:inline;"> 其他登录：</p>
+            <div style="display:inline">
+                <img  src="images/wb.png">
+                <img  src="images/wx.png">
+                <img  src="images/qq.png">
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
+</html>

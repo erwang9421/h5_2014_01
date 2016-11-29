@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>我的信息-与我相关</title>
+    <title>修改个人信息</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/headernav.css" />
-    <link rel="stylesheet" href="css/relevant.css" />
+    <link rel="stylesheet" href="css/addmessage.css" />
     
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -176,124 +176,77 @@
                             </div>
                         </div>
                         <div class="function">
-                            <p id="distance"><a href="" id="click">与我相关</a></p>
-                            <p><a href="">草稿箱</a></p>
-                            <p><a href="">修改信息</a></p>
+                            <p id="distance"><a href="">与我相关</a></p>
+                            <p><a href="" >草稿箱</a></p>
+                            <p><a href="" id="click">修改信息</a></p>
                             <p><a href="">我的书单</a></p>
                         </div>
                     </div> 
                     <ul class="main-title">
                         <li><a href="#">首页</a></li>
                         <li>&nbsp;/&nbsp;</li>
-                        <li>与我相关</li>
+                        <li>修改个人信息</li>
                     </ul> 
-                    <div class="main">
+                    <div class="main">    
                         <div class="scale">
-                            <img src="images/myphoto.jpg" width="42" height="42" alt="用户头像">
-                            <p><a href="#" class="username">阿里里&nbsp;&nbsp;</a>赞了我的书评</p>
-                            <div class="fill">
-                                <p><a href="#">“最孤独的魂游天外”</a></p>
-                            </div>
-                            <p id="timer">2016-12-12&nbsp;15:54</p>
-                        </div>
-                        <div class="scale">
-                            <img src="images/myphoto.jpg" width="42" height="42" alt="用户头像">
-                            <p><a href="#" class="username">阿里里&nbsp;&nbsp;</a>赞了我的评论</p>
-                            <div class="fill">
-                                <p><a href="#">——做不大，是因为站得不够高</a></p>
-                                <p>我的评论：方太的儒道，的确是很多现代企业所缺失的软性的人文提升的重要方面，能够站得更高，才能长远视角。</p>
-                            </div>
-                            <p id="timer">2016-12-12&nbsp;15:54</p>
-                        </div>
-                        <div class="scale">
-                            <img src="images/myphoto.jpg" width="42" height="42" alt="用户头像">
-                            <p><a href="#" class="username">阿里里&nbsp;&nbsp;</a>评论了我的评论</p>
-                            <div class="fill">
-                                <div class="fill-1">
-                                    <p id="setc">没错</p>
-                                </div>
-                                <p><a href="#">——做不大，是因为站得不够高</a></p>
-                                <p>我的评论：方太的儒道，的确是很多现代企业所缺失的软性的人文提升的重要方面，能够站得更高，才能长远视角。</p>
-                                <div class="fill-2">
-                                    <p id="answer"><a href="#">回复</a></p>
-                                </div>
-                            </div>
-                            <p class="time">2016-12-12&nbsp;15:54</p>
-                        </div>
-                        <div class="scale">
-                            <img src="images/myphoto.jpg" width="42" height="42" alt="用户头像">
-                            <p><a href="#" class="username">阿里里&nbsp;&nbsp;</a>评论了我的书评</p>
-                            <div class="fill">
-                                <div class="fill-1">
-                                    <p id="setc">世上没有完美的事物，唯有这样一些透明得让你忘记自己的时刻，能拥有这样的一瞬，便是天赐的幸福——这一句真棒</p>
-                                </div>
-                                <p><a href="#">“最孤独的魂游天外”</a></p>
-                                <div class="fill-2">
-                                    <p id="answer"><a href="#">回复</a></p>
+                            <div class="operation">
+                                     <button type="submit">保存</button>
+                            </div>  
+                            <div class="scale-message">
+                                <form class="form-horizontal writeform" role="form">
+                                    <div class="form-group">
+                                        <label for="username" class="col-sm-2 control-label">用户名</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="username" placeholder="请输入用户名">
+                                        </div>
+                                        <a href="#">修改密码</a>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="userdetails" class="col-sm-2 control-label">简介：</label>
+                                        <div class="col-sm-6">
+                                            <textarea class="form-control" rows="7">你还没有填写简介呢~</textarea>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="selectphoto">
+                                    <img src="images/selectphoto.jpg" width="140" height="140" id="ImgPr" alt="默认头像" class="img-thumbnail">
+                                    <form role="form" class="selected-photo">
+                                        <div class="form-group">
+                                            <label for="exampleInputFile" class="sr-only"></label>
+                                            <a class="chooseimg" href="#"><input type="file" id="exampleInputFile"></a>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                            <p id="timer">2016-12-12&nbsp;15:54</p>
-                        </div>
-                        <div class="scale">
-                            <img src="images/myphoto.jpg" width="42" height="42" alt="用户头像">
-                            <p><a href="#" class="username">阿里里&nbsp;&nbsp;</a>评论了我的书评</p>
-                            <div class="fill">
-                                <div class="fill-1">
-                                    <p id="setc">世上没有完美的事物，唯有这样一些透明得让你忘记自己的时刻，能拥有这样的一瞬，便是天赐的幸福——这一句真棒</p>
-                                </div>
-                                <p><a href="#">“最孤独的魂游天外”</a></p>
-                                <div class="fill-2">
-                                    <p id="answer"><a href="#">回复</a></p>
-                                </div>
-                            </div>
-                            <p id="timer">2016-12-12&nbsp;15:54</p>
-                        </div>
-                        <div class="scale">
-                            <img src="images/myphoto.jpg" width="42" height="42" alt="用户头像">
-                            <p><a href="#" class="username">阿里里&nbsp;&nbsp;</a>赞了我的书评</p>
-                            <div class="fill">
-                                <p><a href="#">“最孤独的魂游天外”</a></p>
-                            </div>
-                            <p id="timer">2016-12-12&nbsp;15:54</p>
-                        </div>
-                        <div class="scale">
-                            <img src="images/myphoto.jpg" width="42" height="42" alt="用户头像">
-                            <p><a href="#" class="username">阿里里&nbsp;&nbsp;</a>评论了我的书评</p>
-                            <div class="fill">
-                                <div class="fill-1">
-                                    <p id="setc">世上没有完美的事物，唯有这样一些透明得让你忘记自己的时刻，能拥有这样的一瞬，便是天赐的幸福——这一句真棒</p>
-                                </div>
-                                <p><a href="#">“最孤独的魂游天外”</a></p>
-                                <div class="fill-2">
-                                    <p id="answer"><a href="#">回复</a></p>
-                                </div>
-                            </div>
-                            <p id="timer">2016-12-12&nbsp;15:54</p>
-                        </div>
-                        <div class="scale">
-                            <img src="images/myphoto.jpg" width="42" height="42" alt="用户头像">
-                            <p><a href="#" class="username">阿里里&nbsp;&nbsp;</a>评论了我的书评</p>
-                            <div class="fill">
-                                <div class="fill-1">
-                                    <p id="setc">世上没有完美的事物，唯有这样一些透明得让你忘记自己的时刻，能拥有这样的一瞬，便是天赐的幸福——这一句真棒</p>
-                                </div>
-                                <p><a href="#">“最孤独的魂游天外”</a></p>
-                                <div class="fill-2">
-                                    <p id="answer"><a href="#">回复</a></p>
-                                </div>
-                            </div>
-                            <p id="timer">2016-12-12&nbsp;15:54</p>
                         </div>
                     </div>
                 </div>
             </div><!-- content结束 --> 
-
-
             <footer>
                 <p>copyright@hebeinormal university</p>
             </footer>
         </div><!--canvas end-->
     </div><!--container end-->
+    <script>
+ $("#exampleInputFile").change(function() {
+        var $file = $(this);
+        var fileObj = $file[0];
+        var windowURL = window.URL || window.webkitURL;
+        var dataURL;
+        var $img = $("#ImgPr");
+        if(fileObj && fileObj.files && fileObj.files[0]){
+        dataURL = windowURL.createObjectURL(fileObj.files[0]);
+        $img.attr('src',dataURL);
+        }else{
+        dataURL = $file.val();
+        var imgObj = document.getElementById("ImgPr");
+        imgObj.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+        imgObj.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = dataURL;
+          
+        }
+    });
+</script>
+
 </body>
 </html>
 
@@ -315,9 +268,12 @@
 
 
 
+ 
 
 
 
 
 
-        
+
+
+
