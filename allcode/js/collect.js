@@ -7,7 +7,7 @@ window.onload=function(){
         var wHeight=document.documentElement.clientHeight;
         var wWidth=document.documentElement.clientWidth;
         var oBtn=document.getElementById("collectBook");
-        //点击修改密码按钮
+        //点击收藏书评按钮
         var oBtn2=document.getElementById("sugPost");
             //点击意见反馈按钮
         oBtn.onclick=function(){
