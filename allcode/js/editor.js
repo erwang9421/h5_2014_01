@@ -946,23 +946,6 @@ You should have received a copy of the GNU General Public License along with thi
 														$('#specialchar').remove();
 											}},
 
-							'save'      : { "text": "保存" ,
-											"default":"保存",
-
-
-											"commandname":null,
-											"custom":function(){
-												document.execCommand("save", null, null);
-											}},
-
-							'publish'   : { "text": "发表",
-											"default":"发表",
-
-											"commandname":null,
-											"custom":function(){
-												document.execCommand("publish", null, null);
-											}},
-
 							'source'	: { "text": "Source", 
 											"icon":"fa fa-code", 
 											"tooltip": "文本模式", 
