@@ -17,7 +17,6 @@
 	position: relative;
 }
 .content-center {
-	border: 1px solid red;
 }
 .breadcrumb {
 	background-color:transparent;
@@ -277,3 +276,22 @@ footer p{
 	text-align:center;
 
 }*/
+/* 评价按钮样式设置 */
+.bookreviewtextbtn{
+	color:#fff;
+	background-color:#da7c66;
+	padding-bottom:0px;
+	font-size:1em;
+	padding-top:0.3em;
+	padding-bottom:0.3em;
+	padding-left:1.5em;
+	padding-right:1.5em;
+	border-radius:3px;
+}
+textarea{
+	margin-top:0.3em;
+
+}
+.timeago{
+	color:#999;
+}
