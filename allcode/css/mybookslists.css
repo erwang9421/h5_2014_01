@@ -92,19 +92,18 @@ body a{
 }
 /*右边*/
 .content-right{
-	width: 85%;
+	width: 70%;
 	height: 100%;
- 	float: left;
  	background-color: #fff;
  	overflow: hidden;
 }
-.content-right-left{
-	width:18%;
+.content-left-right{
+	width:15%;
 	height:100%;
 	float:left;
 	padding:1em;
 	background-color:#fcfcfc;
-	border:1px solid #dbdce0;
+	border-right:1px solid #dbdce0;
 }
 .content-right-left h5{
 	margin-bottom:3em;
@@ -116,15 +115,13 @@ body a{
 
 /*右侧书评列表部分*/
  .content-right-bottom{
-	height: 93%;
+	height:100%;
     width: 100%;
     overflow:auto;
     clear:both; 
-    position: absolute;
-    margin-left:18%;
 }
 .content-book-comments{
-	height: 100%;
+	height: 98%;
 	width: 100%;
 	overflow:hidden; 
 }
@@ -137,13 +134,11 @@ body a{
 	height: 90%;
 	background-color: #f7f7f7;
 	border: 1px solid #dbdce0;
-	padding: 0.1% 0.1% 0.1% 0.1%;
-	margin: 0.8% 0.7% 0.4% 0%;
+	padding: 0.1% 0.1% 0.2% 0.1%;
+	margin: 0.2% 0.9% 0.2% 0.9%;
 	float: left;
 	display: block;
 }
-
-
 .comment-top {
 	height: 28%;
 	width: 100%;
@@ -226,10 +221,11 @@ body a{
 .comment-bottom p {height: 170px;} 
 }
 .comment-more-btn {
-	bottom: 5%;
+	/*bottom: 5%;
 	margin: auto;
 	position: absolute;
-	margin-left:1.4%;
+	margin-left:1.4%;*/
+	padding-left: 30%;
 }
 .comment-more-btn a{
 	padding:6px 16px;
