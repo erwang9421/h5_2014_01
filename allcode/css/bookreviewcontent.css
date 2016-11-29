@@ -295,3 +295,8 @@ textarea{
 .timeago{
 	color:#999;
 }
+.textarea{
+	width:100%;
+	overflow:auto;
+	word-break:break-all;
+}
