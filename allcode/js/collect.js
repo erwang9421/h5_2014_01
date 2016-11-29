@@ -26,7 +26,7 @@ window.onload=function(){
     document.body.appendChild(oMask);
     var cPass=document.createElement("div");
     cPass.id="collectB";
-    cPass.innerHTML="<div class='collectCon'><div id='collect'><h5>收藏</h5></div><div class='alert-collect'><p><img src='images/success.png'</p><br/><p id='colsuccess'>收藏成功^_^</p></div><div class='bookname'><p id='warning'><img src='images/warn.png' height='25' width='25'/>添加书单来管理你的收藏</p><p>我的书单：<input type='text' value='了解近代史必看的十本书'></p><input type='text' placeholder='&nbsp;&nbsp;&nbsp;创建新书单' id='newbook'></div><div class='alert-collect-footer'><a href='#' id='yes'>确定</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='#' id='no'>取消</a></div></div>";
+    cPass.innerHTML="<div class='collectCon'><div id='collect'><h5>收藏</h5></div><div class='alert-collect'><p><img src='images/success.png'</p><br/><p id='colsuccess'>收藏成功^_^</p></div><div class='bookname'><p id='warning'><img src='images/warn.png' height='25' width='25'/>添加书单来管理你的收藏</p><p>我的书单：<input type='text' value='了解近代史必看的十本书' id='book'></p><input type='text' placeholder='&nbsp;&nbsp;&nbsp;创建新书单' id='newbook'></div><div class='alert-collect-footer'><a href='#' id='yes'>确定</a>&nbsp;&nbsp;&nbsp;<a href='#' id='no'>取消</a></div></div>";
     document.body.appendChild(cPass);
 
 //获取收藏框的宽和高
