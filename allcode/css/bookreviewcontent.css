@@ -88,11 +88,11 @@
 	color:#da7c66;
 }
 .article p{
-	font-size: 14px;
+	font-size: 0.875em;
 	color: #000;
-	line-height: 34px;
-	padding-left: 30px;
-	padding-right: 30px;
+	line-height: 2.125em;
+	padding-left: 1.875em;
+	padding-right: 1.875em;
 }
 .content-right .container-fluid {
 	margin-bottom: 46px;
@@ -109,6 +109,7 @@
 }
 .likebooksreview {
 	float: left;
+	margin-left:0px;
 }
 footer {
 	position: static;
@@ -294,4 +295,25 @@ textarea{
 }
 .timeago{
 	color:#999;
+}
+.textarea{
+	width:100%;
+	overflow:auto;
+	word-break:break-all;
+}
+.sharebtn{
+	float:right;
+}
+.likebtn{
+	float:left;
+}
+.responsetoothers{
+	float:right;
+}
+
+.rightreviewbtn{
+	float:right;
+}
+.emoji{
+	float:right;
 }

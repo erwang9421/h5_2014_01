@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>未命名页面</title>
+    <title>书评内容页</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--网页图标-->
+    <link rel="shortcut icon" href="images/logo2.png" media="screen">
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -101,30 +103,30 @@
                                     <ul class="nav-second-menu">
                                         <li><a href="#">文学</a>
                                             <ul class="nav-third-menu">
-                                                <a href="#">文集</a>
-                                                <a href="#">纪实文学</a> 
-                                                <a href="#">文学理论</a>
-                                                <a href="#">中国古诗词</a>
-                                                <a href="#">戏剧</a></li>
-                                                <a href="#">文集中国现当代诗歌</a>
-                                                <a href="#">外国诗歌</a>
-                                                <a href="#">民间文学</a>
-                                                <a href="#">外国随笔</a>
-                                                <a href="#">中国古代随笔</a>
+                                                <li><a href="#">文集</a></li>
+                                                <li><a href="#">纪实文学</a></li>
+                                                <li><a href="#">文学理论</a></li>
+                                                <li><a href="#">中国古诗词</a></li>
+                                                <li><a href="#">戏剧</a></li>
+                                                <li><a href="#">文集中国现当代诗歌</a></li>
+                                                <li><a href="#">外国诗歌</a></li>
+                                                <li><a href="#">民间文学</a></li>
+                                                <li><a href="#">外国随笔</a></li>
+                                                <li><a href="#">中国古代随笔</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="#">小说</a>
                                             <ul class="nav-third-menu">
-                                                <a href="#">a</a>
-                                                <a href="#">b</a>
-                                                <a href="#">c</a>
-                                                <a href="#">d</a>
-                                                <a href="#">e</a>
-                                                <a href="#">f</a>
-                                                <a href="#">j</a>
-                                                <a href="#">h</a>
-                                                <a href="#">i</a>
-                                                <a href="#">g</a>
+                                                <li><a href="">a</a></li>
+                                                <li><a href="">b</a></li>
+                                                <li><a href="">c</a></li>
+                                                <li><a href="">d</a></li>
+                                                <li><a href="">e</a></li>
+                                                <li><a href="">f</a></li>
+                                                <li><a href="">j</a></li>
+                                                <li><a href="">h</a></li>
+                                                <li><a href="">i</a></li>
+                                                <li><a href="">g</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="#">哲学</a></li>
@@ -210,16 +212,19 @@
                                 <img src="images/money.png" alt="打赏" width="100px" height="auto" class="money" />
                                 <hr />
                                 <div class="row">
-                                    <div class="col-md-3 col-sm-3">
-                                        <button type="button" class="btn btn-default likebooksreview">
-                                           <img src="images/heart.png" width="11px" height="auto">喜欢
-                                        </button>
+                                    <div class="col-md-1">
+                                            <button type="button" class="btn btn-default likebooksreview">
+                                                <img src="images/heart.png" width="11px" height="auto">喜欢
+                                            </button>
                                     </div>
-                                    <div class="col-md-9 col-sm-9">
-                                        <a href="#"><span class="glyphicon glyphicon-link"></span>链接到书城</a>
-                                        <a href="#"><span class="glyphicon glyphicon-share"></span>分享到微博</a>
-                                        <a href="#"<span class="glyphicon glyphicon-share"></span>分享到QQ</a>
-                                    </div>
+                                    <div class="col-md-7"></div>
+                                    <div class="col-md-4">
+                                        <div class="sharebtn">
+                                            <a href="#"><span class="glyphicon glyphicon-link"></span>链接到书城</a>
+                                            <a href="#"><span class="glyphicon glyphicon-share"></span>分享到微博</a>
+                                            <a href="#"><span class="glyphicon glyphicon-share"></span>分享到QQ</a>
+                                        </div>
+                                        </div>
                                 </div>
                                 <!-- 对书评的评论部分 -->
                                 <!-- 评论数目 -->
@@ -236,11 +241,17 @@
                 </div>
                 <div class="col-md-11">
                     <div class="row">
-                        <div class="col-md-11"><textarea name="" id="" cols="110" rows="1"></textarea></div>
-                        <div class="col-md-1"><button class="btn btn-default bookreviewtextbtn">评价</button></div>
+                        <div class="col-md-9"><textarea name="" class="textarea" id="" cols="120" rows="1"></textarea></div>
+                        <div class="col-md-3">
+                            <div class="rightreviewbtn">
+                                <button class="btn btn-default bookreviewtextbtn">评价</button>
+                            </div>
+                            <div class="emoji">
+                                <a href=""><img src="images/emoji.png" alt=""></a>
+                            </div>
+                            </div>
                     </div>
                 </div>
-                
             </div>
             <ul class="list-group">
                 <li class="list-group-item">
@@ -260,8 +271,10 @@
                                 <time class="timeago">35分钟前</time>  
                             </div>
                             <div class="col-md-2">
-                                <a href=""><span class="glyphicon glyphicon-thumbs-up"></span></a>1  
-                                <a href=""><span>回复</span></a>
+                                <div class="responsetoothers">
+                                    <a href=""><span class="glyphicon glyphicon-thumbs-up"></span></a>1
+                                    <a href=""><span>回复</span></a>
+                                </div>
                             </div>
                     </div>
                 </li>
@@ -282,8 +295,10 @@
                                 <time class="timeago">35分钟前</time>  
                             </div>
                             <div class="col-md-2">
-                                <a href=""><span class="glyphicon glyphicon-thumbs-up"></span></a>1  
-                                <a href=""><span> 回复</span></a>
+                                <div class="responsetoothers">
+                                    <a href=""><span class="glyphicon glyphicon-thumbs-up"></span></a>1
+                                    <a href=""><span> 回复</span></a>
+                                </div>
                             </div>
                     </div>
                 </li>
@@ -304,9 +319,11 @@
                             <time class="timeago">35分钟前</time>  
                         </div>
                         <div class="col-md-2">
-                            <a href="">查看对话</a>
-                            <a href=""><span class="glyphicon glyphicon-thumbs-up"></span></a>1  
-                            <a href=""><span> 回复</span></a>
+                            <div class="responsetoothers">
+                                <a href="">查看对话</a>
+                                <a href=""><span class="glyphicon glyphicon-thumbs-up"></span></a>1
+                                <a href=""><span> 回复</span></a>
+                            </div>
                         </div>
                     </div>
                 </li>
