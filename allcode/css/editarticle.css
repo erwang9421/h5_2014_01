@@ -33,15 +33,15 @@ a:hover {
 	float: left;
 }
 .book {
-	padding:20px 0;
-	height: 15%;
+	padding:30px 0;
+	height: 80px;
 }
 .htmleaf-container {
 	height: 80%;
 	width: 100%;
 }
 .bookname {
-	padding-left:2.5%;
+	padding-left:4.9%;
 }
 .bookname input {
 	text-indent:10px;
