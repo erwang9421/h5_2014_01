@@ -26,7 +26,7 @@ function feedBack(){
 	//点击关闭按钮
 	var oClose=document.getElementById("yes");
 	var oClose2=document.getElementById("no");
-		//点击意见反馈框以外的区域也可以关闭登陆框
+		//点击意见反馈框以外的区域也可以关闭意见反馈框
 		oClose.onclick=oMask.onclick=function(){
                         document.body.removeChild(sPost);
                         document.body.removeChild(oMask);
