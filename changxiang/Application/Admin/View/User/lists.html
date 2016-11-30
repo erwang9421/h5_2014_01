@@ -1,0 +1,37 @@
+ <div id="dcMain">
+   <!-- 当前位置 -->
+<div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>用户列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+        <h3><a href="adduser.html?rec=add" class="actionBtn add">添加用户</a>用户列表</h3>
+  
+        <div id="list">
+    <form name="action" method="post" action="product.php?rec=action">
+    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+      <tr>
+        <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+        <th width="80" align="center">ID</th>
+        <th align="center">用户名</th>
+        <th width="250">用户类型</th>
+        <th width="250" align="center">邮箱</th>
+        <th width="200" align="center">添加日期</th>
+        <th width="80" align="center">操作</th>
+      </tr>
+
+
+ <volist name="user" id="vo">
+      <tr>
+        <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
+        <td align="center">5</td>
+        <td align="center"><a href="product.php?rec=edit&id=5">小明</a></td>
+        <td align="center"><input name='chkall' type='radio' id='chkall' onclick='selectcheckbox(this.form)' value='check'>普通用户&nbsp;
+        <input name='chkall' type='radio' id='chkall' onclick='selectcheckbox(this.form)' value='check'>书籍作家</td>
+        <td align="center">30139999@qq.com</a></td>
+        <td align="center">2013-06-26</td>
+        <td align="center">
+        <a href="edituser.html">编辑</a> | <a href="#">删除</a>
+        </td>
+      </tr>
+</volist>
+      </table>
+    </form>
+    </div>
+</div></div>
