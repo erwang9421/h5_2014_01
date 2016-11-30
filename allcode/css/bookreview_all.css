@@ -20,7 +20,7 @@
       
 }
 .introduction{
-	height: 200px;
+	height: 230px;
 	border-bottom: 1px #D4D4D4 solid;
 	border-top: 1px #D4D4D4 solid;
 	background-color: #F5F5F5;
@@ -74,26 +74,9 @@
 .function p{
 	text-align: center;
 }
-.function-top{
-	font-size: 0.8em;
-	line-height: 200%;
-	padding: 2% 5%;
-	/*text-align: left;*/
-	/*text-align: justify;*/
-}
-.function p:first-child{
-	text-align: justify;
-}
 #distance{
 	padding-top: 30px;
 }
-/*#distance span{
-	background-color: #5eb3ef;
-	color: #fff;
-	border-radius: 1.5em;
-	padding: 0.8% 1%;
-	margin-left: 1%;
-}*/
 .function a{
 	color: #da7c66;
 	line-height:30px;
@@ -134,7 +117,7 @@
 	z-index: 300;
 	position: fixed;
 	color: #666;
-	font-size: 1em;
+	font-size: 0.9em;
 	margin-left: 5%;
 }
 .content-right-top ol li{
@@ -144,7 +127,6 @@
 	text-decoration: none;
 	font-weight: bold;
 }
-
 /*右边下部他的所有书评*/
 .content-right-bottom{
 	height: 93%;
@@ -165,7 +147,7 @@
 }
 .content-book-comment1{
 	width:5%;
-	height: 92%;
+	height: 90%;
 	/*position: relative;*/
 	background-color: #f7f7f7;
 	border: 1px solid #dbdce0;
@@ -276,7 +258,7 @@
 .comment-bottom p {height: 310px} 
 }  
 @media screen and (max-height: 640px) { 
-.comment-bottom p {height: 230px} 
+.comment-bottom p {height: 220px} 
 }
 @media screen and (max-height: 614px) { 
 .comment-bottom p {height: 230px;} 
