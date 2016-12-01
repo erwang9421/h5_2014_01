@@ -1,0 +1,44 @@
+ <div id="dcMain">
+   <!-- 当前位置 -->
+<div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>网站管理员</strong> </div>   <div id="manager" class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+    <h3><a href="__MODULE__/Admin/manager" class="actionBtn">返回列表</a>网站管理员</h3>
+    <form action="" method="post">
+    <input type="hidden" name="id" id="{$manager.id}">
+    
+     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+      <tr>
+       <td width="100" align="center">管理员名称</td>
+       <td>
+        <input type="text" name="adminname" size="40" class="inpMain" value="{$manager.adminname}" />
+       </td>
+      </tr>
+      
+      <tr>
+       <td align="center">密码</td>
+       <td>
+        <input type="password" name="adminpass" size="40" class="inpMain" value="{$manager.adminpass}" />
+       </td>
+      </tr>
+      <tr>
+       <td align="center">确认密码</td>
+       <td>
+        <input type="password" name="adminrepass" size="40" class="inpMain" value="{$manager.adminrepass}" />
+       </td>
+      </tr>
+      <tr>
+       <td align="center">添加时间</td>
+       <td>
+        <input type="text" name="jointime" value="{$manager.jointime}" size="5" class="inpMain" />
+       </td>
+      </tr>
+      <tr>
+       <td></td>
+       <td>
+        <!-- <input type="hidden" name="token" value="5a58b748" /> -->
+        <input type="submit" name="submit" class="btn" value="提交" />
+       </td>
+      </tr>
+     </table>
+    </form>
+                 
+ </div>
