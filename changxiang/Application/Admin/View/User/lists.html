@@ -1,0 +1,51 @@
+ <div id="dcMain">
+        <!-- 当前位置 -->
+        <div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>用户列表</strong> </div>
+        <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+            <h3><a href="__MODULE__/User/adduser" class="actionBtn add">添加用户</a>用户列表</h3>
+
+            <div id="list">
+                <form name="action" method="post" action="#">
+                    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+                        <tr>
+                            <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+                            <th width="40" align="center">ID</th>
+                            <th align="center">用户名</th>
+                            <th width="250">用户类型</th>
+                            <th width="250" align="center">邮箱</th>
+                            <th width="200" align="center">添加日期</th>
+                            <th width="80" align="center">操作</th>
+                        </tr>
+                        <volist name="user" id="vo">
+                        <tr>
+                            <td align="center"><input type="checkbox" name="userid[]" value="{$vo.userid}" /></td>
+                            <td align="center">{$vo.userid}</td>
+                            <td align="center"><a href="product.php?rec=edit&id=5">{$vo.username}</a></td>
+                            <td align="center">书籍作家</td>
+                            <td align="center">{$vo.usermail}</td>
+                            <td align="center">2013-06-26</td>
+                            <td align="center">
+                                <a href="edituser?userid='{$vo['userid']}'">编辑</a> | <a href="delete?userid='{$vo['userid']}'">删除</a>
+                            </td>
+                        </tr>
+                        </volist>
+                    </table>
+                    <br/>
+                    <div class="input-group pull-left form">
+                        <button type="button" class="btn" style="background-color:#20B2AA;"> 批量删除</button>
+                    </div>
+                    <!-- <div class="action"> -->
+                </form>
+            </div>
+            <div class="clear"></div>
+
+            <!--  <ul class="pagination pull-right" style="float:left;margin-left:960px;">
+                 {$page}
+             </ul> -->
+
+            <div class="pager"><!-- 总计 5 个记录，共 1 页，当前第 1 页 |  -->
+                <!-- <a href="book.html">第一页</a> 上一页 下一页 <a href="book.html">最末页</a> -->
+                {$page}
+            </div> </div>
+ </div>
+ </form>
