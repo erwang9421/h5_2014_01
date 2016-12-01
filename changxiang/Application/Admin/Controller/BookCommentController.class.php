@@ -6,10 +6,13 @@ use Think\Controller;
 
 class BookCommentController extends Controller
 {
-    public function bookview(){
+    public function bookreview(){
         $this -> display();
     }
-    public function addbookview(){
+    public function addbookreview(){
         $this->display();
+    }
+    public function editbookreview(){
+        $this -> display();
     }
 }

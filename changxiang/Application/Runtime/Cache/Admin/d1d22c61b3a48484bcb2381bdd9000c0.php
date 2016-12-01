@@ -1,17 +1,19 @@
-<html>
+<?php if (!defined('THINK_PATH')) exit();?><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>畅享书评后台管理系统</title>
+<title>畅想书评后台管理系统-用户列表</title>
 <meta name="Copyright" content="Douco Design." />
-<link href="css/public.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/global.js"></script>
-<script type="text/javascript" src="js/jquery.autotextarea.js"></script>
+<link href="/changxiang/Public/end/css/public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/changxiang/Public/end/js/jquery.min.js"></script>
+<script type="text/javascript" src="/changxiang/Public/end/js/global.js"></script>
+<script type="text/javascript" src="/changxiang/Public/end/js/jquery.tab.js"></script>
+<script type="text/javascript" src="/changxiang/Public/end/js/jquery.autotextarea.js"></script>
+
 </head>
 <body>
 <div id="dcWrap"> <div id="dcHead">
  <div id="head">
-  <div class="logo"><a href="index.html"><img src="images/1.png" alt="logo" height="30"></a></div>
+  <div class="logo"><a href="index.html"><img src="/changxiang/Public/end/images/1.png" alt="logo" height="30"></a></div>
   <div class="nav">
    <ul>畅享书评后台管理系统
    </ul>
@@ -19,7 +21,7 @@
     <li class="noRight"><a href="#">您好，admin</a>
      
     </li>
-    <li class="noRight"><a href="login.html">退出</a></li>
+   <li class="noRight"><a href="login.html">退出</a></li>
    </ul>
   </div>
  </div>
@@ -36,8 +38,8 @@
 
 
  <ul>
-  <li><a href="user.html"><i class="user"></i><em>用户列表</em></a></li>
-  <li><a href="adduser.html"><i class="page"></i><em>添加用户</em></a></li>
+  <li><a href="/changxiang/index.php/Admin/User/lists"><i class="user"></i><em>用户列表</em></a></li>
+  <li><a href="/changxiang/index.php/Admin/User/adduser"><i class="page"></i><em>添加用户</em></a></li>
  </ul>
 
 <ul>
@@ -63,7 +65,7 @@
   <li><a href="addbook.html"><i class="articleCat"></i><em>添加图书</em></a></li>
  </ul>
   <ul>
- <li><a href="payattention.html"><i class="pse"></i><em>我的关注</em></a></li>
+  <li><a href="payattention.html"><i class="pse"></i><em>我的关注</em></a></li>
   <li><a href="payattentioned.html"><i class="pae"></i><em>关注我的</em></a></li>
  </ul>
   <ul>
@@ -71,11 +73,13 @@
   <li><a href="keyword.html"><i class="theme"></i><em>关键字</em></a></li>
  </ul>
 </div></div>
+
+
  <div id="dcMain">
    <!-- 当前位置 -->
 <div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>编辑书评</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-            <h3><a href="bookview.html" class="actionBtn">书评列表</a>编辑书评</h3>
-    <form action="bookview.html" method="post" enctype="multipart/form-data">
+            <h3><a href="bookreview.html" class="actionBtn">书评列表</a>编辑书评</h3>
+    <form action="bookreview.html" method="post" enctype="multipart/form-data">
      <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
       <tr>
        <td width="90" align="center">书评标题</td>
@@ -167,6 +171,8 @@
     </form>
            </div>
  </div>
+
+
  <div class="clear"></div>
 <div id="dcFooter">
  <div id="footer">
