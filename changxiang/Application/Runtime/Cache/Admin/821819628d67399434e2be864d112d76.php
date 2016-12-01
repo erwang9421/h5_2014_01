@@ -87,6 +87,7 @@
                         <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
                         <th align="center">评论图书</th>
                         <th align="center">图书作者</th>
+                        <th align="center">用户id</th>
                         <th align="center">书评标题</th>
                         <th align="center">书评内容</th>
                         <th align="center">发表时间</th>
@@ -96,77 +97,25 @@
                         <th align="center">喜欢量</th>
                         <th align="center">操作</th>
                     </tr>
-                    <tr>
-                        <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
-                        <td align="center">5</td>
-                        <td align="center">5</td>
-                        <td align="center">读钢铁是怎样炼成的</td>
-                        <td align="center">文学类</td>
-                        <td align="center">已发表</td>
-                        <td align="center">5</td>
-                        <td align="center">2013-06-26</td>
-                        <td align="center">
-                            <a href="editbookreview.html">编辑</a> | <a href="#">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
-                        <td align="center">4</td>
-                        <td align="center">4</td>
-                        <td align="center">读钢铁是怎样炼成的</td>
-                        <td align="center">文学类</td>
-                        <td align="center">已发表</td>
-                        <td align="center">4</td>
-                        <td align="center">2013-06-26</td>
-                        <td align="center">
-                            <a href="editbookreview.html">编辑</a> | <a href="#">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
-                        <td align="center">3</td>
-                        <td align="center">3</td>
-                        <td align="center">读钢铁是怎样炼成的</td>
-                        <td align="center">文学类</td>
-                        <td align="center">草稿箱</td>
-                        <td align="center">3</td>
-                        <td align="center">2013-06-26</td>
-                        <td align="center">
-                            <a href="editbookreview.html">编辑</a> | <a href="#">删除</a>
-                        </td>
-                    <tr>
-                        <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
-                        <td align="center">2</td>
-                        <td align="center">2</td>
-                        <td align="center">读钢铁是怎样炼成的</td>
-                        <td align="center">文学类</td>
-                        <td align="center">已删除</td>
-
-                        <td align="center">2</td>
-                        <td align="center">2013-06-26</td>
-                        <td align="center">
-                            <a href="editbookreview.html">编辑</a> | <a href="#">删除</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
-                        <td align="center">1</td>
-                        <td align="center">1</td>
-                        <td align="center">读钢铁是怎样炼成的</td>
-                        <td align="center">文学类</td>
-                        <td align="center">已发表</td>
-
-                        <td align="center">1</td>
-                        <td align="center">2013-06-26</td>
-                        <td align="center">
-                            <a href="editbookreview.html">编辑</a> | <a href="#">删除</a>
-                        </td>
-                    </tr>
-
-
+                    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                            <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
+                            <td align="center">C语言程序设计</td>
+                            <td align="center">黄术杰</td>
+                            <td align="center">1</td>
+                            <td align="center"><?php echo ($vo["title"]); ?></td>
+                            <td align="center"><?php echo ($vo["content"]); ?></td>
+                            <td align="center"><?php echo ($vo["publishtime"]); ?></td>
+                            <td align="center"><?php echo ($vo["collecttimes"]); ?></td>
+                            <td align="center"><?php echo ($vo["viewtimes"]); ?></td>
+                            <td align="center"><?php echo ($vo["commenttimes"]); ?></td>
+                            <td align="center"><?php echo ($vo["likequantity"]); ?></td>
+                            <td align="center">
+                                <a href="editbookreview.html">编辑</a> | <a href="/changxiang/index.php/Admin/BookComment/delbookreview/id/<?php echo ($vo["bookreviewid"]); ?>">删除</a>
+                            </td>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                 </table>
             </form>
+            <?php echo ($page); ?>
         </div>
 
 
