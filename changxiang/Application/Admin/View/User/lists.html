@@ -30,20 +30,22 @@
                         </tr>
                         </volist>
                     </table>
+                    <br/>
+                    <div class="input-group pull-left form">
+                        <button type="button" class="btn" style="background-color:#20B2AA;"> 批量删除</button>
+                    </div>
+                    <!-- <div class="action"> -->
                 </form>
             </div>
             <div class="clear"></div>
-            <div class="pager">总计 5 个记录，共 1 页，当前第 1 页 | <a href="product.php?page=1">第一页</a> 上一页 下一页 <a href="product.php?page=1">最末页</a></div>               </div>
-    </div>
-    <div class="clear"></div>
-    <div id="dcFooter">
-        <div id="footer">
-            <div class="line"></div>
-            <ul>
-                畅所欲言，享你所想  |  畅想书评网站后台管理系统
-            </ul>
-        </div>
-    </div><!-- dcFooter 结束 -->
-    <div class="clear"></div> </div>
-</body>
-</html>
+
+            <!--  <ul class="pagination pull-right" style="float:left;margin-left:960px;">
+                 {$page}
+             </ul> -->
+
+            <div class="pager"><!-- 总计 5 个记录，共 1 页，当前第 1 页 |  -->
+                <!-- <a href="book.html">第一页</a> 上一页 下一页 <a href="book.html">最末页</a> -->
+                {$page}
+            </div> </div>
+ </div>
+ </form>
