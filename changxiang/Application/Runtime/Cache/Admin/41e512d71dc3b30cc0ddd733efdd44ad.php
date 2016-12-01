@@ -88,38 +88,15 @@
        </td>
       </tr>
       <tr>
+          <td width="90" align="center">图书作者</td>
+             <td>
+                 <input type="text" name="name" value="" size="80" class="inpMain" />
+            </td>
+      </tr>
+      <tr>
        <td width="90" align="center">书评标题</td>
        <td>
         <input type="text" name="name" value="" size="80" class="inpMain" />
-       </td>
-      </tr>
-      <tr>
-       <td align="center">书评类型</td>
-       <td>
-        <select name="cat_id">
-         <option value="0">未分类</option>
-                  <option value="1">文学</option>
-                    <option value="10">- 文集</option>
-                    <option value="11">- 纪实文学</option>
-                    <option value="12">- 文学理论</option>
-                    <option value="13">- 中国古诗词</option>
-                    <option value="14">- 戏剧</option>
-                    <option value="15">- 文集中国现当代诗歌</option>
-                    <option value="16">- 外国诗歌</option>
-                    <option value="17">- 民间文学</option>
-                    <option value="18">- 外国随笔</option>
-                    <option value="19">- 中国古代随笔</option>
-                    <option value="2">小说</option>
-                    <option value="20">- a</option>
-                    <option value="21">- b</option>
-                    <option value="3">哲学</option>
-                    <option value="4">社会科学</option>
-                    <option value="5">文化</option>
-                    <option value="6">教育</option>
-                    <option value="7">艺术</option>
-                    <option value="8">自然科学</option>
-                    <option value="9">工业技术</option>
-          </select>
        </td>
       </tr>
       <tr>
@@ -132,11 +109,11 @@
        <td align="center" valign="top">书评内容</td>
        <td>
         <!-- KindEditor -->
-			<link rel="stylesheet" href="js/kindeditor/themes/default/default.css" />
-			<link rel="stylesheet" href="js/kindeditor/plugins/code/prettify.css" />
-			<script charset="utf-8" src="js/kindeditor/kindeditor.js"></script>
-			<script charset="utf-8" src="js/kindeditor/lang/zh_CN.js"></script>
-			<script charset="utf-8" src="js/kindeditor/plugins/code/prettify.js"></script>
+			<link rel="stylesheet" href="/changxiang/Public/end/js/kindeditor/themes/default/default.css" />
+			<link rel="stylesheet" href="/changxiang/Public/end/js/kindeditor/plugins/code/prettify.css" />
+			<script charset="utf-8" src="/changxiang/Public/end/js/kindeditor/kindeditor.js"></script>
+			<script charset="utf-8" src="/changxiang/Public/end/js/kindeditor/lang/zh_CN.js"></script>
+			<script charset="utf-8" src="/changxiang/Public/end/js/kindeditor/plugins/code/prettify.js"></script>
         <script>
 					KindEditor.ready(function(K) {
 						var editor1 = K.create('textarea[name="content"]', {
