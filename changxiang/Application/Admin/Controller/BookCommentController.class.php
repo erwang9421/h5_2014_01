@@ -33,6 +33,7 @@ class BookCommentController extends Controller
     public function delbookreview(){
         $id = isset($_GET['bookreviewid']) ? intval($_GET['bookreviewid']) : '';
         if ($id === '') {
+            echo $id;
             exit("未知的id");
         }
         if(M("bookreview")->delete($id)){
@@ -40,7 +41,35 @@ class BookCommentController extends Controller
         }
     }
     public function addbookreview(){
-        $this->display();
+        $this -> display();
+
+    }
+
+    //添加书评
+    public function doaddbookreview(){
+        if(!IS_POST){
+            exit("bad request");
+        }
+        else{
+            $booksModel = D('books');
+            if(!$booksModel -> create()){
+                $this ->error($booksModel -> getError());
+            }
+            else{
+                if($booksModel -> add()){
+                    //说明图书添加成功，接下来添加书评
+                    $this -> success("添加成功",U("BookComment/bookreview"));
+                }
+                else{
+                    $this -> error("添加失败");
+                }
+            }
+        }
+        //查询数据库中有无此图书（完全匹配查询方法）
+
+            //若有此图书，则找到获取到此图书的id，将此图书的id插入书评表中
+            //若无此图书，则将此图书插入到图书表中，根据图书名找到图书id，将此图书id插入书评表中。
+        //等值连接
     }
     public function editbookreview(){
         $this -> display();
