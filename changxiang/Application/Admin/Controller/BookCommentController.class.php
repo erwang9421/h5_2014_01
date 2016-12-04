@@ -6,9 +6,8 @@ use Think\Controller;
 
 class BookCommentController extends Controller
 {
-
+    //显示书评列表
     public function bookreview(){
-        //显示书评列表
         //实例化bookreview对象
         $bookReviewModel = M("bookreview");
         //实例化图书对象
@@ -25,14 +24,12 @@ class BookCommentController extends Controller
         $page -> setConfig('prev','前一页<<');
         $page -> setConfig('next','后一页>>');
         //进行分页数据查询，注意limit方法的参数要使用Page类的属性
-        $list = $bookReviewModel -> order(array('order','publishtime' => 'desc')) -> page($nowPage.',5') -> select();
-        //根据图书的id在图书表中查询图书名和图书作者
-        //读取当前数据对象
-        $data = $list -> data();
-        dump($data);
-//        $bookList = $bookModel -> field('bookname,bookauthor') -> select();
-//        dump($bookList);
-        exit;
+        //SQL语句:join连接两个表，inner join从两个表中查询数据
+        $sql = "select books.bookname,books.bookauthor,bookreview.userid,bookreview.title,bookreview.content,bookreview.publishtime from bookreview inner join books on bookreview.bookid = books.bookid order by bookreview.publishtime desc";
+        $list = $bookReviewModel -> page($nowPage.',5') -> query($sql);
+//        dump($list);
+//        exit;
+
         $show = $page -> show();//分页显示输出
         $this -> assign('page',$show);//赋值分页输出
         $this -> assign('list',$list);//赋值数据集
