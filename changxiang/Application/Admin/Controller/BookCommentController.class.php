@@ -6,8 +6,9 @@ use Think\Controller;
 
 class BookCommentController extends Controller
 {
-    //显示书评列表
+
     public function bookreview(){
+        //显示书评列表
         //实例化bookreview对象
         $bookReviewModel = M("bookreview");
         //实例化图书对象
