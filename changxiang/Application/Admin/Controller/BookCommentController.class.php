@@ -8,12 +8,15 @@ class BookCommentController extends Controller
 {
 
     public function bookreview(){
+        //显示书评列表
         //实例化bookreview对象
-        $bookModel = M("bookreview");
+        $bookReviewModel = M("bookreview");
+        //实例化图书对象
+        $bookModel = M("books");
         //导入分页类
         import('Org.Util.Page');
         //查询满足要求的总记录数
-        $count = $bookModel-> count();
+        $count = $bookReviewModel-> count();
         //实例化分页类，传入总记录数和每一页显示的记录数5
         $page = new \Think\Page($count,5);
         //进行分页数据查询 Page方法的参数的前面部分是当前的页数，使用$_GET['p']获取
@@ -22,7 +25,14 @@ class BookCommentController extends Controller
         $page -> setConfig('prev','前一页<<');
         $page -> setConfig('next','后一页>>');
         //进行分页数据查询，注意limit方法的参数要使用Page类的属性
-        $list = $bookModel -> order('publishtime desc') -> page($nowPage.',5') -> select();
+        $list = $bookReviewModel -> order(array('order','publishtime' => 'desc')) -> page($nowPage.',5') -> select();
+        //根据图书的id在图书表中查询图书名和图书作者
+        //读取当前数据对象
+        $data = $list -> data();
+        dump($data);
+//        $bookList = $bookModel -> field('bookname,bookauthor') -> select();
+//        dump($bookList);
+        exit;
         $show = $page -> show();//分页显示输出
         $this -> assign('page',$show);//赋值分页输出
         $this -> assign('list',$list);//赋值数据集
@@ -77,8 +87,10 @@ class BookCommentController extends Controller
                     $data['userid'] = I('userid');
                     $data['title'] = I('title');
                     $data['content'] = I('content');
-                    $data['publishtime'] = I('publishtime');
-                    if($bookReviewModel -> add($data)){
+                    //出版时间默认设置为当前时间
+                    $data['publishtime'] = date('Y-m-d H:i:s',time());
+                    //data方法直接生成要操作的数据对象，无需create方法或赋值方法生成数据对象
+                    if($bookReviewModel -> data($data) -> add()){
                         $this -> success("添加成功",U("BookComment/bookreview"));
                     }
                 }
