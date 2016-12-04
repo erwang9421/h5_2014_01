@@ -9,11 +9,11 @@ class BookCommentController extends Controller
 
     public function bookreview(){
         //实例化bookreview对象
-        $booksModel = M("bookreview");
+        $bookModel = M("bookreview");
         //导入分页类
         import('Org.Util.Page');
         //查询满足要求的总记录数
-        $count = $booksModel->count();
+        $count = $bookModel-> count();
         //实例化分页类，传入总记录数和每一页显示的记录数5
         $page = new \Think\Page($count,5);
         //进行分页数据查询 Page方法的参数的前面部分是当前的页数，使用$_GET['p']获取
@@ -22,7 +22,7 @@ class BookCommentController extends Controller
         $page -> setConfig('prev','前一页<<');
         $page -> setConfig('next','后一页>>');
         //进行分页数据查询，注意limit方法的参数要使用Page类的属性
-        $list = $booksModel -> order('publishtime desc') -> page($nowPage.',5') -> select();
+        $list = $bookModel -> order('publishtime desc') -> page($nowPage.',5') -> select();
         $show = $page -> show();//分页显示输出
         $this -> assign('page',$show);//赋值分页输出
         $this -> assign('list',$list);//赋值数据集
@@ -48,28 +48,45 @@ class BookCommentController extends Controller
     //添加书评
     public function doaddbookreview(){
         if(!IS_POST){
-            exit("bad request");
+            exit("错误的请求");
         }
         else{
-            $booksModel = D('books');
-            if(!$booksModel -> create()){
-                $this ->error($booksModel -> getError());
+            $bookModel = D('books');
+            if(!$bookModel -> create()){
+                $this ->error($bookModel -> getError());
             }
             else{
-                if($booksModel -> add()){
+                //查询数据库中是否存在这本书，如果存在，则查找图书id
+                //将图书id插入书评表中
+                //如果数据库中不存在这本书，则将这本书插入图书表，然后将图书id插入书评表
+
+                if($bookModel -> add()){
                     //说明图书添加成功，接下来添加书评
-                    $this -> success("添加成功",U("BookComment/bookreview"));
+                    //获取图书名
+                    $bookName = I('bookname');
+                    //获取图书名为$bookName的图书的bookid
+                    $bookId = $bookModel->getFieldBybookname("{$bookName}","bookid");
+//                   echo M()-> getLastSql();
+//                   var_dump($bookId);
+
+                    //将图书的id插入到书评表中
+                    //实例化bookreview模型对象
+
+                    $bookReviewModel = M('bookreview');
+                    $data['bookid'] = $bookId;
+                    $data['userid'] = I('userid');
+                    $data['title'] = I('title');
+                    $data['content'] = I('content');
+                    $data['publishtime'] = I('publishtime');
+                    if($bookReviewModel -> add($data)){
+                        $this -> success("添加成功",U("BookComment/bookreview"));
+                    }
                 }
                 else{
                     $this -> error("添加失败");
                 }
             }
         }
-        //查询数据库中有无此图书（完全匹配查询方法）
-
-            //若有此图书，则找到获取到此图书的id，将此图书的id插入书评表中
-            //若无此图书，则将此图书插入到图书表中，根据图书名找到图书id，将此图书id插入书评表中。
-        //等值连接
     }
     public function editbookreview(){
         $this -> display();
