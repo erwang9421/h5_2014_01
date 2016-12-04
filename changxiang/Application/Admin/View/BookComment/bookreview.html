@@ -15,25 +15,17 @@
                         <th align="center">书评标题</th>
                         <th align="center">书评内容</th>
                         <th align="center">发表时间</th>
-                        <th align="center">收藏量</th>
-                        <th align="center">浏览量</th>
-                        <th align="center">评论量</th>
-                        <th align="center">喜欢量</th>
                         <th align="center">操作</th>
                     </tr>
                     <volist name="list" id="vo">
                         <tr>
                             <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
-                            <td align="center">C语言程序设计</td>
-                            <td align="center">黄术杰</td>
-                            <td align="center">1</td>
+                            <td align="center">{$vo.bookname}</td>
+                            <td align="center">{$vo.bookauthor}</td>
+                            <td align="center">{$vo.userid}</td>
                             <td align="center">{$vo.title}</td>
                             <td align="center">{$vo.content}</td>
                             <td align="center">{$vo.publishtime}</td>
-                            <td align="center">{$vo.collecttimes}</td>
-                            <td align="center">{$vo.viewtimes}</td>
-                            <td align="center">{$vo.commenttimes}</td>
-                            <td align="center">{$vo.likequantity}</td>
                             <td align="center">
                                 <a href="editbookreview.html">编辑</a> | <a href="__MODULE__/BookComment/delbookreview/id/{$vo.bookreviewid}">删除</a>
                             </td>
