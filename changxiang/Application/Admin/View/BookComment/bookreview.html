@@ -1,0 +1,46 @@
+
+    <div id="dcMain">
+        <!-- 当前位置 -->
+        <div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>书评列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+        <h3><a href="addbookreview.html?rec=add" class="actionBtn add">添加书评</a>书评列表</h3>
+
+        <div id="list">
+            <form name="action" method="post" action="#">
+                <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+                    <tr>
+                        <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+                        <th align="center">评论图书</th>
+                        <th align="center">图书作者</th>
+                        <th align="center">用户id</th>
+                        <th align="center">书评标题</th>
+                        <th align="center">书评内容</th>
+                        <th align="center">发表时间</th>
+                        <th align="center">收藏量</th>
+                        <th align="center">浏览量</th>
+                        <th align="center">评论量</th>
+                        <th align="center">喜欢量</th>
+                        <th align="center">操作</th>
+                    </tr>
+                    <volist name="list" id="vo">
+                        <tr>
+                            <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
+                            <td align="center">C语言程序设计</td>
+                            <td align="center">黄术杰</td>
+                            <td align="center">1</td>
+                            <td align="center">{$vo.title}</td>
+                            <td align="center">{$vo.content}</td>
+                            <td align="center">{$vo.publishtime}</td>
+                            <td align="center">{$vo.collecttimes}</td>
+                            <td align="center">{$vo.viewtimes}</td>
+                            <td align="center">{$vo.commenttimes}</td>
+                            <td align="center">{$vo.likequantity}</td>
+                            <td align="center">
+                                <a href="editbookreview.html">编辑</a> | <a href="__MODULE__/BookComment/delbookreview/id/{$vo.bookreviewid}">删除</a>
+                            </td>
+                        </tr>
+                    </volist>
+                </table>
+            </form>
+            {$page}
+        </div>
+
