@@ -42,7 +42,7 @@
     width: 100%;
     overflow:auto;
     clear:both; 
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     position: absolute;
 }
 .content-book-comments{
