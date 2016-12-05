@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/headernav.css" />
     <link rel="stylesheet" href="css/book-fans.css">
+    <link rel="stylesheet" href="css/alert-feedback.css" />
     
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>    
+    <script src="js/custom.js"></script>
+    <script src="js/alert-feedback.js"></script>    
 
     <script type="text/javascript">
         if (navigator.appName=="Microsoft Internet Explorer") {
@@ -38,17 +40,17 @@
 <body>
     <div id="container">
         <div id="canvas">
-        	<div class="aside-nav toggle-nav">
+            <div class="aside-nav toggle-nav">
                 <a href="#"><i class="icon-align-justify icon-large"></i></a>
             </div>
             <!--aside-nav end（触发弹出侧栏）-->
             <header>
                 <nav class="top-nav">
-                    <img src="images/logo.png" width="115" class="logo" height="37" alt="logo" />
+                    <a href="index.html"><img src="images/logo.png" width="115" class="logo" height="37" alt="logo" /></a>
                     <label for="search"></label>
                     <input type="text" id="search" placeholder="输入标签、作者、关键字搜索"/>
                     <div class="header-right">
-                        <a href="#">写书评</a>
+                        <a href="editarticle.html">写书评</a>
                         <div class="myphoto dropdown">
                             <div class=" dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown">
                                 <img src="images/myphoto.jpg" width="35" height="35" alt="我的头像" /> 
@@ -71,10 +73,10 @@
                     <div class="row nav-msg">
                         <div class="col-md-10 col-md-offset-1">
                             <ul>
-                                <li><a href="#">文章</a></li>
+                                <li><a href="bookreview_all.html">文章</a></li>
                                 <li><a href="#">粉丝</a></li>
-                                <li><a href="#">收藏</a></li>
-                                <li><a href="#">关注</a></li>
+                                <li><a href="myCollect.html">收藏</a></li>
+                                <li><a href="attention.html">关注</a></li>
                             </ul>
                             <br />
                             <ul>
@@ -88,7 +90,7 @@
                     <div class="row">
                         <div class="col-md-4 col-md-offset-4">
                             <div class="nav-write-btn">
-                                <a href="#">写书评</a>
+                                <a href="editarticle.html">写书评</a>
                             </div>
                         </div>
                     </div>
@@ -96,7 +98,7 @@
                     <div class="row nav-menu">
                         <div class="col-md-12">
                             <ul class="pmVerticalRightOut" id="pmVerticalRightOut">
-                                <li><a href="#">首页</a></li>
+                                <li><a href="index.html">首页</a></li>
                                 <li class="nav-book-classify"><a href="#" >书评分类</a>
                                     <ul class="nav-second-menu">
                                         <li><a href="#">文学</a>
@@ -145,7 +147,7 @@
                     </div>
                     <div class="row">
                         <div class="nav-feedback-btn">
-                            <a href="#">意见反馈</a>
+                            <a href="#" id="sugPost">意见反馈</a>
                         </div>
                     </div>
 
@@ -162,10 +164,10 @@
                             <a href="#" id="name"><p>啊哈</p></a>
                             <div class="list">
                                 <ul>
-                                    <li><a href="#">文章</a></li>
+                                    <li><a href="bookreview_all.html">文章</a></li>
                                     <li><a href="#">粉丝</a></li>
-                                    <li><a href="#">收藏</a></li>
-                                    <li><a href="#">关注</a></li>
+                                    <li><a href="myCollect.html">收藏</a></li>
+                                    <li><a href="attention.html">关注</a></li>
                                 </ul>
                                 <ul>
                                     <li>20</li>
@@ -177,12 +179,12 @@
                         </div>
                         <div class="function-f">
                             <p>作家，出版长篇小说《三重门》创畅销记录，并成为一个优秀赛车手，是中国唯一一位拉力赛和场地赛双料年度冠军，2010年被《时代周刊》评选为100名影响世界人物之一，其自编自导的处女作电影《后会无期》于2014年2月已开机，《后会无期》现已上映，获得高于《小时代》票房。</p>
-                            <p><a href="#">写私信</a></p>
+                            <p><a href="private.html">写私信</a></p>
                             <p><a href="#" id="care">关注</a></p>
                         </div>
                     </div>
                     <ul class="main-title">
-                        <li><a href="#">首页</a></li>
+                        <li><a href="index.html">首页</a></li>
                         <li>&nbsp;/&nbsp;</li>
                         <li>我的粉丝</li>
                     </ul>     
