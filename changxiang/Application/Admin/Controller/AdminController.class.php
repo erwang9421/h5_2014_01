@@ -3,8 +3,31 @@ namespace Admin\Controller;
 use Think\Controller;
 class AdminController extends Controller{
 	public function login(){
-		$this->display();
+		if (IS_POST) {
+			$adminModel=M('Admin');
+			
+			$condition=array(
+				'adminname' => I("post.adminname"),
+				'adminpass' => I("post.adminpass")
+				);
+			$result=$adminModel->where($condition)->count();
+			if ($result>0) {
+				session("adminname",I("post.adminname"));
+				$this->success("登录成功",U("Index/index"));
+			}
+			else{
+				$this->error("用户名或密码不正确");
+			}
+		}
+		else{
+			$this->display();
+		}
 	}
+	// public function logout(){
+	// 	session('[destroy]');
+	// 	$this -> redirect('Admin/login');
+	// }
+	
 	public function manager(){
 		//分页  
         $managerModel=M("Admin"); 
@@ -15,7 +38,7 @@ class AdminController extends Controller{
         $page->setConfig('first','第一页');
         $page->setConfig('prev','前一页');
         $page->setConfig('next','后一页');
-        $manager=$managerModel->order('jointime desc')->page($nowPage.',4')->select();
+        $manager=$managerModel->order('jointime asc')->page($nowPage.',4')->select();
         $show=$page->show();
         $this->assign('page',$show);
         $this->assign("manager",$manager);
@@ -44,33 +67,37 @@ class AdminController extends Controller{
 	}
 	public function editmanager(){
 		$managerModel=D("admin");
-		$managerid=$_GET['managerId'];
-		$manager=$managerModel->find($managerid);
+		$id=$_GET['managerId'];
+		$manager=$managerModel->find($id);
 		$this->assign("manager",$manager);
-		//修改
-		if(IS_POST){
-			$model=D("admin");
-			$model->create();
-			// dump($model->create());
-			if($model->save()){
-				$this->success("修改成功",U("Admin/manager"));
-			}else{
-				// $this->error("修改失败",U("Admin/editmanager"));
-				$this->error($model->getError());
-			}
-		}
+		// dump($manager);
 
 		$this->display();
+	}
+	//修改
+	public function update(){
+		if (IS_POST) {
+			$model=M("Admin");
+			$model->create();
+			// dump($model->create());
+			if ($model->save()) {
+				$this->success("修改成功",U("Admin/manager"));
+			}
+			else{
+				$this->error($model->getError());
+			}
+		}	
 	}
 	//删除管理员
 	public function delete(){
 		//全部删除
         $id = $_GET['managerId'];
+        // dump($id);
         if(is_array($id)){
             foreach($id as $value){
                 M("Admin")->delete($value);
             }  
-            $this->success("删除成功！");
+            $this->success("批量删除成功！");
         } 
         //单个删除
         else{
