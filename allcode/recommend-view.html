@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>私信</title>
+    <title>推荐书评</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/aside-nav.css" />
-    <link rel="stylesheet" href="css/private.css" />
+    <link rel="stylesheet" href="css/headernav.css" />
+
+    <link rel="stylesheet" href="css/recommend-view.css">
     
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -39,7 +39,7 @@
 <body>
     <div id="container">
         <div id="canvas">
-            <div class="aside-nav toggle-nav">
+        	<div class="aside-nav toggle-nav">
                 <a href="#"><i class="icon-align-justify icon-large"></i></a>
             </div>
             <!--aside-nav end（触发弹出侧栏）-->
@@ -49,7 +49,7 @@
                     <label for="search"></label>
                     <input type="text" id="search" placeholder="输入标签、作者、关键字搜索"/>
                     <div class="header-right">
-                        <a href="editarticle.html">写书评</a>
+                        <a href="#">写书评</a>
                         <div class="myphoto dropdown">
                             <div class=" dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown">
                                 <img src="images/myphoto.jpg" width="35" height="35" alt="我的头像" /> 
@@ -72,10 +72,10 @@
                     <div class="row nav-msg">
                         <div class="col-md-10 col-md-offset-1">
                             <ul>
-                                <li><a href="myBookReview_all.html">文章</a></li>
-                                <li><a href="fans.html">粉丝</a></li>
-                                <li><a href="myCollect.html">收藏</a></li>
-                                <li><a href="attention.html">关注</a></li>
+                                <li><a href="#">文章</a></li>
+                                <li><a href="#">粉丝</a></li>
+                                <li><a href="#">收藏</a></li>
+                                <li><a href="#">关注</a></li>
                             </ul>
                             <br />
                             <ul>
@@ -89,7 +89,7 @@
                     <div class="row">
                         <div class="col-md-4 col-md-offset-4">
                             <div class="nav-write-btn">
-                                <a href="editarticle.html">写书评</a>
+                                <a href="#">写书评</a>
                             </div>
                         </div>
                     </div>
@@ -137,10 +137,10 @@
                                          <li><a href="#">工业技术</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="author_trend.html">作家专栏</a></li>
-                                <li><a href="recommendation.html">推荐书评</a></li>
-                                <li><a href="hot search.html">图书热榜</a></li>
-                                <li><a href="recommendation.html">推荐书单</a></li>
+                                <li><a href="#">作家专栏</a></li>
+                                <li><a href="#">推荐书评</a></li>
+                                <li><a href="#">图书热榜</a></li>
+                                <li><a href="#">推荐书单</a></li>
                             </ul>
                         </div>
                     </div>
@@ -154,63 +154,142 @@
             </div>
             <!--侧导航内容 end-->
             <!--content start-->
+
             <div id="content">
-                <div class="content-left">
-                    <div class="content-left-top">
-                        <p style="text-align: center;"><img src="images/1c.jpg" width="70" height="70" alt="用户头像"/></p>
-                        <a href="author_trend.html" id="name"><p>fygd</p></a>
-                        <div class="content-left-top-msg">
-                            <ul>
-                                <li><a href="bookreview_all.html">文章</a></li>
-                                <li><a href="fans.html">粉丝</a></li>
-                                <li><a href="collect.html">收藏</a></li>
-                                <li><a href="attention.html">关注</a></li>
-                            </ul>
-                            <br />
-                            <ul>
-                                <li>20</a></li>
-                                <li>88</li>
-                                <li>56</li>
-                                <li>28</li>
-                            </ul>
-                        </div>
-                    </div><!-- content-left-top结束 --> 
-                    <div class="content-left-bottom">
-                        <p id="btn-top"><a href="private.html">写私信</a></p>
-                        <p><a href="attention.html" id="btn-bottom">加关注</a></p>
-                    </div><!-- content-left-bottom结束 --> 
-                </div><!-- content-left结束 --> 
-                <div class="content-right">
-                    <div class="content-right-top">
-                        <ol> 
-                            <li><a href="index.html">首页</a></li> 
-                            <li>&nbsp;/&nbsp;</li>
-                            <li><a href="private.html" class="active">写私信</a></li> 
-                        </ol>
-                    </div><!-- content-right-top结束 --> 
-                    <div class="content-right-bottom">
-                        <div class="scale">
-                            <img src="images/myphoto.jpg" width="52" height="52" alt="消息头像">
-                            <p><a href="#">你好</a></p>
-                        </div>
-                        <div class="scale1">
-                            <p><a href="#">你好哈</a></p>
-                            <img src="images/1c.jpg" width="52" height="52" alt="消息头像">
-                        </div>
+                 <ul class="main-title">
+                        <li><a href="index.html">首页</a></li>
+                        <li>&nbsp;/&nbsp;</li>
+                        <li>推荐书评</li>
+                    </ul>     
+                    <div class="main">
+                            <div class="usermessage">
+                            <a href="bookreviewcontent.html">
+                            <p style="">一个最低限度的国学书目</a>
 
-                        <div class="scale2">
-                            <input value="输入消息" type="text">
-                            <img src="images/emoji.png" width="32" height="32" alt="消息头像">
-                            <a href="#">发送</a>
-                        </div>
+                             <div class="list-user">
+                                    <a href="#"><img src="images/eye.png" height="20"></a>
+                                    <p>12万</p>
+                                </div>
+                            </div>
 
-                    </div><!-- content-right-bottom结束 --> 
-                </div><!-- content-right结束 --> 
-            </div><!-- content结束 --> 
-            <footer>
+                            <div class="usermessage">
+                            <a href="bookreviewcontent.html">
+                            <p style="">一个最低限度的国学书目</a>
+
+                             <div class="list-user">
+                                    <a href="#"><img src="images/eye.png" height="20"></a>
+                                    <p>12万</p>
+                                </div>
+                            </div>
+
+                          <div class="usermessage">
+                            <a href="bookreviewcontent.html">
+                            <p style="">一个最低限度的国学书目</a>
+
+                             <div class="list-user">
+                                    <a href="#"><img src="images/eye.png" height="20"></a>
+                                    <p>12万</p>
+                                </div>
+                            </div>
+
+                          <div class="usermessage">
+                            <a href="bookreviewcontent.html">
+                            <p style="">一个最低限度的国学书目</a>
+
+                             <div class="list-user">
+                                    <a href="#"><img src="images/eye.png" height="20"></a>
+                                    <p>12万</p>
+                                </div>
+                            </div>
+
+                          <div class="usermessage">
+                            <a href="bookreviewcontent.html">
+                            <p style="">一个最低限度的国学书目</a>
+
+                             <div class="list-user">
+                                    <a href="#"><img src="images/eye.png" height="20"></a>
+                                    <p>12万</p>
+                                </div>
+                            </div>
+
+
+                           <div class="usermessage">
+                            <a href="bookreviewcontent.html">
+                            <p style="">一个最低限度的国学书目</a>
+
+                             <div class="list-user">
+                                    <a href="#"><img src="images/eye.png" height="20"></a>
+                                    <p>12万</p>
+                                </div>
+                            </div>
+
+
+                            <div class="usermessage">
+                            <a href="bookreviewcontent.html">
+                            <p style="">一个最低限度的国学书目</a>
+
+                             <div class="list-user">
+                                    <a href="#"><img src="images/eye.png" height="20"></a>
+                                    <p>12万</p>
+                                </div>
+                            </div>
+
+                            <div class="usermessage">
+                            <a href="bookreviewcontent.html">
+                            <p style="">一个最低限度的国学书目</a>
+
+                             <div class="list-user">
+                                    <a href="#"><img src="images/eye.png" height="20"></a>
+                                    <p>12万</p>
+                                </div>
+                            </div>
+
+                            <div class="usermessage">
+                            <a href="bookreviewcontent.html">
+                            <p style="">一个最低限度的国学书目</a>
+
+                             <div class="list-user">
+                                    <a href="#"><img src="images/eye.png" height="20"></a>
+                                    <p>12万</p>
+                                </div>
+                            </div>
+
+                            <div class="usermessage">
+                            <a href="bookreviewcontent.html">
+                            <p style="">一个最低限度的国学书目</a>
+
+                             <div class="list-user">
+                                    <a href="#"><img src="images/eye.png" height="20"></a>
+                                    <p>12万</p>
+                                </div>
+                            </div>
+                            <div class="usermessage">
+                            <a href="bookreviewcontent.html">
+                            <p style="">一个最低限度的国学书目</a>
+
+                             <div class="list-user">
+                                    <a href="#"><img src="images/eye.png" height="20"></a>
+                                    <p>12万</p>
+                                </div>
+                            </div>
+                            <div class="usermessage">
+                            <a href="bookreviewcontent.html">
+                            <p style="">一个最低限度的国学书目</a>
+
+                             <div class="list-user">
+                                    <a href="#"><img src="images/eye.png" height="20"></a>
+                                    <p>12万</p>
+                                </div>
+                            </div>
+               
+                </div>
+            </div><!-- content结束 -->
+           <footer>
                 <p>copyright@hebeinormal university</p>
             </footer>
         </div><!--canvas end-->
     </div><!--container end-->
 </body>
+
+</script>
 </html>

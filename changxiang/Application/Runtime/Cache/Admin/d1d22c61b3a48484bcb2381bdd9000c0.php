@@ -129,11 +129,11 @@
        <td align="center" valign="top">书评内容</td>
        <td>
         <!-- KindEditor -->
-			<link rel="stylesheet" href="js/kindeditor/themes/default/default.css" />
-			<link rel="stylesheet" href="js/kindeditor/plugins/code/prettify.css" />
-			<script charset="utf-8" src="js/kindeditor/kindeditor.js"></script>
-			<script charset="utf-8" src="js/kindeditor/lang/zh_CN.js"></script>
-			<script charset="utf-8" src="js/kindeditor/plugins/code/prettify.js"></script>
+			<link rel="stylesheet" href="/changxiang/Public/end/js/kindeditor/themes/default/default.css" />
+			<link rel="stylesheet" href="/changxiang/Public/end/js/kindeditor/plugins/code/prettify.css" />
+			<script charset="utf-8" src="/changxiang/Public/end/js/kindeditor/kindeditor.js"></script>
+			<script charset="utf-8" src="/changxiang/Public/end/js/kindeditor/lang/zh_CN.js"></script>
+			<script charset="utf-8" src="/changxiang/Public/end/js/kindeditor/plugins/code/prettify.js"></script>
         <script>
 					KindEditor.ready(function(K) {
 						var editor1 = K.create('textarea[name="content"]', {

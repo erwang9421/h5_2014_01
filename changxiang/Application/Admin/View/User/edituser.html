@@ -1,54 +1,64 @@
- <div id="dcMain">
-   <!-- 当前位置 -->
-<div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>编辑信息</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+<div id="dcMain">
+    <!-- 当前位置 -->
+    <div id="urHere"><a href="#">畅评首页</a><b>></b><strong>编辑信息</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
     <h3><a href="__MODULE__/User/lists" class="actionBtn">返回列表</a>编辑信息</h3>
-        <form action="" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="userid" value="{$data.userid}">
-     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
-      <tr>
-       <td width="90" align="center">用户名</td>
-       <td>
-        <input type="text" name="username" value="{$data.username}" size="80" class="inpMain" />
-       </td>
-      </tr>
-      <tr>
-       <td align="center">用户类型</td>
-       <td>
-        <select name="cat_id">
-         <option value="0">未分类</option>
-                          <option value="1">普通用户</option>
-                          <option value="2">书籍作家</option>        
-        </select>
-       </td>
-      </tr>
-      <tr>
-       <td align="center">手机号</td>
-       <td>
-        <input type="text" name="price" value="" size="40" class="inpMain" />
-       </td>
-      </tr>
+    <form action="" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="{$data.id}">
+        <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+            <tr>
+                <td width="90" align="center">用户名</td>
+                <td>
+                    <input type="text" name="username" value="{$data.username}" size="80" class="inpMain" />
+                </td>
+            </tr>
+            <tr>
+                <td width="90" align="center">密码</td>
+                <td>
+                    <input type="text" class="inpMain" placeholder="" name="pass" value="{$data.pass}">
+                </td>
+            </tr>
+            <tr>
+                <td align="center">用户类型</td>
+                <td>
+                    <select name="isauthor">
+                        <option value="">普通用户</option>
+                        <option value="2">书籍作家</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">身份证件照</td>
+                <td>
+                    <input type="file" name="idcard" enctype="multipart/form-data" value="{$data.idcard}"  size="38" class="inpFlie" />
 
-     <tr>
-       <td align="center">邮箱</td>
-       <td>
-        <input type="text" name="usermail" value="{$data.usermail}" size="50" class="inpMain" />
-       </td>
-      </tr>      
-      <tr>
-       <td align="center">头像</td>
-       <td>
-        <input type="file" name="userimage" value="{$data.userimage}" size="38" class="inpFlie" />
-        
-      </tr>
-      <tr>
-       <td></td>
-       <td>
-        <input type="hidden" name="token" value="21307217" />
-        <input type="hidden" name="id" value="">
-        <input name="submit" class="btn" type="submit" value="提交" />
-       </td>
-      </tr>
-     </table>
+            </tr>
+            <tr>
+                <td align="center">邮箱</td>
+                <td>
+                    <input type="text" name="email" value="{$data.email}" size="50" class="inpMain" />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">头像</td>
+                <td>
+                    <input type="file" name="photo" value="{$data.photo}" size="38" class="inpFlie" />
+
+            </tr>
+            <tr>
+                <td align="center">个人简介</td>
+                <td>
+                    <textarea name="introduction" value="{$data.introduction}" cols="60" rows="4" class="textArea" ></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="hidden" name="token" value="21307217" />
+                    <input type="hidden"  value="">
+                    <input name="submit" class="btn" type="submit" value="提交" />
+                </td>
+            </tr>
+        </table>
     </form>
-           </div>
- </div>
+</div>
+</div>

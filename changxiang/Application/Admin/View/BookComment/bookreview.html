@@ -9,85 +9,30 @@
                 <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
                     <tr>
                         <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
-                        <th width="80" align="center">ID</th>
-                        <th width="80" align="center">图书ID</th>
+                        <th align="center">评论图书</th>
+                        <th align="center">图书作者</th>
+                        <th align="center">用户id</th>
                         <th align="center">书评标题</th>
-                        <th width="100" align="center">书评类型</th>
-                        <th width="150">书评状态</th>
-                        <th width="80" align="center">用户ID</th>
-                        <th width="150" align="center">发表时间</th>
-                        <th width="100" align="center">操作</th>
+                        <th align="center">书评内容</th>
+                        <th align="center">发表时间</th>
+                        <th align="center">操作</th>
                     </tr>
-                    <tr>
-                        <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
-                        <td align="center">5</td>
-                        <td align="center">5</td>
-                        <td align="center">读钢铁是怎样炼成的</td>
-                        <td align="center">文学类</td>
-                        <td align="center">已发表</td>
-                        <td align="center">5</td>
-                        <td align="center">2013-06-26</td>
-                        <td align="center">
-                            <a href="editbookreview.html">编辑</a> | <a href="#">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
-                        <td align="center">4</td>
-                        <td align="center">4</td>
-                        <td align="center">读钢铁是怎样炼成的</td>
-                        <td align="center">文学类</td>
-                        <td align="center">已发表</td>
-                        <td align="center">4</td>
-                        <td align="center">2013-06-26</td>
-                        <td align="center">
-                            <a href="editbookreview.html">编辑</a> | <a href="#">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
-                        <td align="center">3</td>
-                        <td align="center">3</td>
-                        <td align="center">读钢铁是怎样炼成的</td>
-                        <td align="center">文学类</td>
-                        <td align="center">草稿箱</td>
-                        <td align="center">3</td>
-                        <td align="center">2013-06-26</td>
-                        <td align="center">
-                            <a href="editbookreview.html">编辑</a> | <a href="#">删除</a>
-                        </td>
-                    <tr>
-                        <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
-                        <td align="center">2</td>
-                        <td align="center">2</td>
-                        <td align="center">读钢铁是怎样炼成的</td>
-                        <td align="center">文学类</td>
-                        <td align="center">已删除</td>
-
-                        <td align="center">2</td>
-                        <td align="center">2013-06-26</td>
-                        <td align="center">
-                            <a href="editbookreview.html">编辑</a> | <a href="#">删除</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
-                        <td align="center">1</td>
-                        <td align="center">1</td>
-                        <td align="center">读钢铁是怎样炼成的</td>
-                        <td align="center">文学类</td>
-                        <td align="center">已发表</td>
-
-                        <td align="center">1</td>
-                        <td align="center">2013-06-26</td>
-                        <td align="center">
-                            <a href="editbookreview.html">编辑</a> | <a href="#">删除</a>
-                        </td>
-                    </tr>
-
-
+                    <volist name="list" id="vo">
+                        <tr>
+                            <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
+                            <td align="center">{$vo.bookname}</td>
+                            <td align="center">{$vo.bookauthor}</td>
+                            <td align="center">{$vo.userid}</td>
+                            <td align="center">{$vo.title}</td>
+                            <td align="center">{$vo.content}</td>
+                            <td align="center">{$vo.publishtime}</td>
+                            <td align="center">
+                                <a href="editbookreview.html">编辑</a> | <a href="__MODULE__/BookComment/delbookreview/id/{$vo.bookreviewid}">删除</a>
+                            </td>
+                        </tr>
+                    </volist>
                 </table>
             </form>
+            {$page}
         </div>
 
