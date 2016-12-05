@@ -3,10 +3,7 @@
 <div id="index" class="mainBox" style="padding-top:18px;height:auto!important;height:550px;min-height:550px;">
       <p style="font-size:20px">欢迎来到畅享书评网站后台管理系统<p><br/>
       <p>登陆次数：1<p><br/>
-      <p>上次登陆时间：2016-11-26 10:12:23<p><h3></h3>
-
-   
-   
+      <p>上次登陆时间：{:date('Y年m月d日 H:i:s')}<p><h3></h3>
    <div class="indexBox">
     <div class="boxTitle">服务器信息</div>
     <ul>
@@ -15,37 +12,46 @@
         <td width="100" valign="top">服务器计算机名</td>
         <td width="900" valign="top"> </td>
       </tr>
-      <tr>
+     <!--  <tr>
         <td valign="top">服务器IP地址</td>
-        <td valign="top"></td>
-      </tr>
+        <td valign="top">{:$_SERVER['HTTP_CLIENT_IP']}</td>
+      </tr> -->
       <tr>
-        <td valign="top">服务器域名</td>
-        <td valign="top"></td>
+        <td valign="top">服务器域名/IP</td>
+        <td valign="top">{:$_SERVER['SERVER_NAME']}</td>
       </tr>
       <tr>
         <td valign="top">服务器端口</td>
-        <td valign="top"></td>
+        <td valign="top">{:$_SERVER['SERVER_PORT']}</td>
       </tr>
       <tr>
         <td valign="top">服务器IIS版本</td>
-        <td valign="top"></td>
+        <td valign="top">{:$_SERVER['SERVER_ADDR']}</td>
       </tr>
       <tr>
         <td valign="top">服务器操作系统</td>
-        <td valign="top"></td>
+        <td valign="top">{:PHP_OS}</td>
+      </tr>
+      <tr>
+        <td valign="top">运行环境</td>
+        <td valign="top">{:$_SERVER['SERVER_SOFTWARE']}</td>
+      </tr>
+      <tr>
+        <td valign="top">上传附件限制</td>
+        <td valign="top">{:get_cfg_var("upload_max_filesize")}</td>
       </tr>
        <tr>
         <td valign="top">服务器脚本超过时间</td>
-        <td valign="top"></td>
+        <td valign="top">{:get_cfg_var('max_execution_time')}</td>
       </tr>
        <tr>
         <td valign="top">服务器语言种类</td>
-        <td valign="top"></td>
+        <td valign="top">{:$_SERVER['SERVER_LANG']}</td>
       </tr>
 
      </table>
     </ul>
    </div>
    </div>
-
+</div>
+</div> 
