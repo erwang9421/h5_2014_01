@@ -1,11 +1,11 @@
-<form action="__MODULE__/Books/delete" >
+<form action="__MODULE__/Books/deleteAll"  method="get">
  <div id="dcMain">
    <!-- 当前位置 -->
 <div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>图书列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-        <h3><a href="addbook" class="actionBtn add">添加图书</a>图书列表</h3>
+        <h3><a href="__MODULE__/Books/addbook" class="actionBtn add">添加图书</a>图书列表</h3>
    
     <div id="list">
-    <form name="action" method="post" >
+    <!-- <form name="action" method="post" > -->
     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
       <tr>
         <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
@@ -20,7 +20,7 @@
 
         <volist name="booklist" id="b">
             <tr>
-                <td align="center"><input type="checkbox" name="booksId[]" value="{$b.bookid}" /></td>
+                <td align="center"><input type="checkbox" name="booksId[]" value="{$b.bookid}" id='chkall' /></td>
                 <td align="center">{$b.bookid}</td>
                 <td align="center"><a href="product.php?rec=edit&id=15">{$b.bookname}</a></td>
                 <td align="center"><a href="product.php?cat_id=3">{$b.bookauthor}</a></td>
@@ -30,19 +30,25 @@
                 <td align="center">
                  <a href="__MODULE__/Books/editbook/booksId/{$b.bookid}">编辑</a> | <a href="__MODULE__/Books/delete/booksId/{$b.bookid}">删除</a>
                 </td>
-          </tr>
+            </tr>
         </volist>
+
+       <!--  <tr>
+            <td><button type="button" class="btn" style="background-color:#20B2AA;"> 批量删除</button></td>
+            <td></td>
+        </tr> -->
+        
       
     </table>
     <br/>
-    
-    <!-- <div class="action"> -->
-    </form>
-    </div>
-    <div class="clear"></div>
     <div class="input-group pull-left form">
         <button type="button" class="btn" style="background-color:#20B2AA;"> 批量删除</button>
     </div>
+
+    <!-- </form> -->
+    </div>
+    <div class="clear"></div>
+    
    <!--  <ul class="pagination pull-right" style="float:left;margin-left:960px;">
         {$page}              
     </ul> -->
