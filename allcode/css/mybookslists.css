@@ -2,6 +2,9 @@ body a{
 	outline-style: none;/*HH浏览器正常显示，去掉虚框*/
 	bblr:expression(this.onFocus=this.blur());/*IE*/
 }
+.nav-menu li a {
+	display: block;
+}
 .content-left{
 	width:15%;
 	height: 100%;

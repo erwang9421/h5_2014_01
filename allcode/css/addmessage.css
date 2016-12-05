@@ -141,7 +141,7 @@
 }
 .form-group label {
 	color: #5eb3ef;
-	font-size: 14px;
+	font-size: 0.9em;
 	font-weight: 400;
 }
 .scale-message {
@@ -171,12 +171,16 @@
 	float: right;
 
 }
+.edit-font {
+	font-size:30px;
+}
 
 
 
 /*修改密码弹出框样式*/
 #change h5{
-	font: 14px bolder '微软雅黑';
+	font-size: 14px;
+	font-family:'微软雅黑';
 	font-weight: bolder;
 	padding-left: 12px;
 }
