@@ -6,6 +6,9 @@
     /*position: absolute;*/
     /*overflow: auto;*/
 }
+.nav-menu li a {
+    display: block;
+}
 /*canvas里面 content样式里的首页简书样式*/
 .content-right {
     height: 100%;

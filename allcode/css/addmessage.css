@@ -141,7 +141,7 @@
 }
 .form-group label {
 	color: #5eb3ef;
-	font-size: 14px;
+	font-size: 0.9em;
 	font-weight: 400;
 }
 .scale-message {
@@ -171,6 +171,119 @@
 	float: right;
 
 }
+.edit-font {
+	font-size:30px;
+}
 
 
 
+/*修改密码弹出框样式*/
+#change h5{
+	font-size: 14px;
+	font-family:'微软雅黑';
+	font-weight: bolder;
+	padding-left: 12px;
+}
+#change{
+	height: 26px;
+	border-bottom: 1px #E4E4E4 solid;
+}
+.alert-content{
+	height: 195px;
+	border-bottom: 1px #E4E4E4 solid;
+	padding-top: 30px;
+}
+.alert-content p{
+	float: left;
+	color: #5eb3ef;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+#qpass{
+	margin-left: 50px;
+}
+#text-p{
+	position: absolute;
+	left: 58%;
+	color:#da7c66;
+}
+#pad{
+	padding-left: 84px;
+	padding-top: 10px;
+}
+.alert-content input{
+	float: left;
+	margin-left: 6px;
+	margin-top: 7px;
+	height: 24px;
+	border:1px #5eb3ef solid;
+}
+.alert-footer{
+	background-color: #D6D6D6;
+	height: 35px;
+}
+#yes{
+	background-color: #FD573C;
+	color: #fff;
+	border:1px #FD573C solid;
+	padding: 3px 6px;
+	border-radius:3px;
+	position: relative;
+	top: 20%;
+	margin-left: 200px;
+}
+#no{
+	color: #666;
+	background-color: #fff;
+	border:1px #666 solid;
+	padding: 3px 6px;
+	border-radius:3px;
+	position: relative;
+	top: 20%;
+	margin-right: 200px;
+}
+#mask{ 
+	background-color:#ccc;
+	opacity:0.5;
+	filter: alpha(opacity=50); 
+	position:absolute; 
+	left:0;
+	top:0;
+	z-index:1000;
+	}
+#changeP{ 
+	position:fixed;
+	z-index:1001;
+	}
+.passwordCon{ 
+	position:relative; 
+	width:500px;
+	height:270px;
+	background:#fff center center no-repeat;
+	border-top:4px #5EB2F0 solid;
+	}
+
+
+
+
+
+/*意见反馈弹出框样式*/
+#suggestion{ 
+	position:fixed;
+	z-index:1001;
+	}
+.suggestionCon{ 
+	position:relative; 
+	width:500px;
+	height:270px;
+	background:#fff center center no-repeat;
+	border-top:4px #5EB2F0 solid;
+	}
+#texta{
+	position: relative;
+	top: -5%;
+	left: 6%;
+    height: 150px;
+    width: 440px;
+    border:1px #D6D6D6 solid;
+	}

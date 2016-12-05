@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>我的信息-他的关注</title>
+    <title>我的信息-我的粉丝</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/headernav.css" />
-    <link rel="stylesheet" href="css/book-fans.css">
+    <link rel="stylesheet" href="css/myfans.css">
     
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -44,11 +44,11 @@
             <!--aside-nav end（触发弹出侧栏）-->
             <header>
                 <nav class="top-nav">
-                    <img src="images/logo.png" width="115" class="logo" height="37" alt="logo" />
+                    <a href="index.html"><img src="images/logo.png" width="115" class="logo" height="37" alt="logo" /></a>
                     <label for="search"></label>
                     <input type="text" id="search" placeholder="输入标签、作者、关键字搜索"/>
                     <div class="header-right">
-                        <a href="#">写书评</a>
+                        <a href="editarticle.html">写书评</a>
                         <div class="myphoto dropdown">
                             <div class=" dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown">
                                 <img src="images/myphoto.jpg" width="35" height="35" alt="我的头像" /> 
@@ -71,10 +71,10 @@
                     <div class="row nav-msg">
                         <div class="col-md-10 col-md-offset-1">
                             <ul>
-                                <li><a href="#">文章</a></li>
+                                <li><a href="myBookReview_all.html">文章</a></li>
                                 <li><a href="#">粉丝</a></li>
-                                <li><a href="#">收藏</a></li>
-                                <li><a href="#">关注</a></li>
+                                <li><a href="myCollect.html">收藏</a></li>
+                                <li><a href="attention.html">关注</a></li>
                             </ul>
                             <br />
                             <ul>
@@ -88,7 +88,7 @@
                     <div class="row">
                         <div class="col-md-4 col-md-offset-4">
                             <div class="nav-write-btn">
-                                <a href="#">写书评</a>
+                                <a href="editarticle.html">写书评</a>
                             </div>
                         </div>
                     </div>
@@ -96,24 +96,24 @@
                     <div class="row nav-menu">
                         <div class="col-md-12">
                             <ul class="pmVerticalRightOut" id="pmVerticalRightOut">
-                                <li><a href="#">首页</a></li>
+                                <li><a href="index.html">首页</a></li>
                                 <li class="nav-book-classify"><a href="#" >书评分类</a>
                                     <ul class="nav-second-menu">
-                                        <li><a href="#">文学</a>
+                                        <li><a href="tags.html">文学</a>
                                             <ul class="nav-third-menu">
-                                                <a href="#">文集</a>
-                                                <a href="#">纪实文学</a> 
-                                                <a href="#">文学理论</a>
-                                                <a href="#">中国古诗词</a>
-                                                <a href="#">戏剧</a></li>
-                                                <a href="#">文集中国现当代诗歌</a>
-                                                <a href="#">外国诗歌</a>
-                                                <a href="#">民间文学</a>
-                                                <a href="#">外国随笔</a>
-                                                <a href="#">中国古代随笔</a>
+                                                <a href="tags.html">文集</a>
+                                                <a href="tags.html">纪实文学</a>
+                                                <a href="tags.html">文学理论</a>
+                                                <a href="tags.html">中国古诗词</a>
+                                                <a href="tags.html">戏剧</a></li>
+                                                <a href="tags.html">文集中国现当代诗歌</a>
+                                                <a href="tags.html">外国诗歌</a>
+                                                <a href="tags.html">民间文学</a>
+                                                <a href="tags.html">外国随笔</a>
+                                                <a href="tags.html">中国古代随笔</a>
                                             </ul>
                                         </li>
-                                        <li><a href="#">小说</a>
+                                        <li><a href="tags.html">小说</a>
                                             <ul class="nav-third-menu">
                                                 <a href="#">a</a>
                                                 <a href="#">b</a>
@@ -127,19 +127,19 @@
                                                 <a href="#">g</a>
                                             </ul>
                                         </li>
-                                        <li><a href="#">哲学</a></li>
-                                        <li><a href="#">社会科学</a></li>
-                                        <li><a href="#">文化</a></li>
-                                        <li><a href="#">教育</a></li>
-                                        <li><a href="#">艺术</a></li>
-                                        <li><a href="#">自然科学</a></li>
-                                         <li><a href="#">工业技术</a></li>
+                                        <li><a href="tags.html">哲学</a></li>
+                                        <li><a href="tags.html">社会科学</a></li>
+                                        <li><a href="tags.html">文化</a></li>
+                                        <li><a href="tags.html">教育</a></li>
+                                        <li><a href="tags.html">艺术</a></li>
+                                        <li><a href="tags.html">自然科学</a></li>
+                                         <li><a href="tags.html">工业技术</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">作家专栏</a></li>
-                                <li><a href="#">推荐书评</a></li>
-                                <li><a href="#">图书热榜</a></li>
-                                <li><a href="#">推荐书单</a></li>
+                                <li><a href="myBookReview_all.html">作家专栏</a></li>
+                                <li><a href="recommendation.html">推荐书评</a></li>
+                                <li><a href="hot search.html">图书热榜</a></li>
+                                <li><a href="booklist.html">推荐书单</a></li>
                             </ul>
                         </div>
                     </div>
@@ -162,10 +162,10 @@
                             <a href="#" id="name"><p>啊哈</p></a>
                             <div class="list">
                                 <ul>
-                                    <li><a href="#">文章</a></li>
+                                    <li><a href="myBookReview_all.html">文章</a></li>
                                     <li><a href="#">粉丝</a></li>
-                                    <li><a href="#">收藏</a></li>
-                                    <li><a href="#">关注</a></li>
+                                    <li><a href="myCollect.html">收藏</a></li>
+                                    <li><a href="attention.html">关注</a></li>
                                 </ul>
                                 <ul>
                                     <li>20</li>
@@ -175,16 +175,17 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="function-f">
-                            <p>作家，出版长篇小说《三重门》创畅销记录，并成为一个优秀赛车手，是中国唯一一位拉力赛和场地赛双料年度冠军，2010年被《时代周刊》评选为100名影响世界人物之一，其自编自导的处女作电影《后会无期》于2014年2月已开机，《后会无期》现已上映，获得高于《小时代》票房。</p>
-                            <p><a href="#">写私信</a></p>
-                            <p><a href="#" id="care">关注</a></p>
+                        <div class="function">
+                            <p id="distance"><a href="#">与我相关</a></p>
+                            <p><a href="drafts.html">草稿箱</a></p>
+                            <p><a href="editmessage.html">修改信息</a></p>
+                            <p><a href="booklist.html">我的书单</a></p>
                         </div>
-                    </div>
+                    </div> 
                     <ul class="main-title">
-                        <li><a href="#">首页</a></li>
+                        <li><a href="index.html">首页</a></li>
                         <li>&nbsp;/&nbsp;</li>
-                        <li>他的关注</li>
+                        <li>我的粉丝</li>
                     </ul>     
                     <div class="main">
                             <div class="usermessage">
