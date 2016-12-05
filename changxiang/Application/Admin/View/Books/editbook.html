@@ -1,8 +1,8 @@
  <div id="dcMain">
    <!-- 当前位置 -->
 <div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>编辑图书</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-            <h3><a href="lists" class="actionBtn">图书列表</a>编辑图书</h3>
-    <form action="" method="post" enctype="multipart/form-data">
+            <h3><a href="__MODULE__/Books/lists" class="actionBtn">图书列表</a>编辑图书</h3>
+    <form action="__MODULE__/Books/update" method="post" enctype="multipart/form-data">
     <input type="hidden" name="bookid" value="{$books.bookid}">
 
      <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
@@ -40,12 +40,9 @@
                                     <option value="17">- 民间文学</option>
                                     <option value="18">- 外国随笔</option>
                                     <option value="19">- 中国古代随笔</option>
-
                                     <option value="2">小说</option>
                                     <option value="20">- a</option>
                                     <option value="21">- b</option>
-
-
                                     <option value="3">哲学</option>
                                     <option value="4">社会科学</option>
                                     <option value="5">文化</option>
@@ -71,8 +68,8 @@
       <tr>
        <td></td>
        <td>
-        <!-- <input type="hidden" name="token" value="25bfda40" />
-        <input type="hidden" name="cat_id" /> -->
+        <input type="hidden" name="token" value="25bfda40" />
+        <input type="hidden" name="cat_id" />
 
 
         <input name="submit" class="btn" type="submit" value="提交" />

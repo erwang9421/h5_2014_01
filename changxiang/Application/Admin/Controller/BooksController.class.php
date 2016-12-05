@@ -13,28 +13,29 @@ class BooksController extends Controller{
         $page->setConfig('prev','前一页');
         $page->setConfig('next','后一页');
         //进行分页数据查询，注意limit方法的参数要使用Page类的属性
-        $booklist=$books->order('addtime desc')->page($nowPage.',4')->select();
+        $booklist=$books->order('addtime asc')->page($nowPage.',4')->select();
         $show=$page->show();
         $this->assign('page',$show);
         $this->assign('booklist',$booklist);  
 
-        $booksModel=D("books");
-		$id=$_GET['booksId'];
-		$books=$booksModel->find($id);
-		$this->assign('books',$books);
+  //       $booksModel=D("books");
+		// $id=$_GET['booksId'];
+		// $books=$booksModel->find($id);
+		// $this->assign('books',$books);
 
-        $id=$_GET['booksId'];
+		$id=$_GET['booksId'];
         if(is_array($id)){
             foreach($id as $value){
-                M("Books")->delete($value);
+                M("books")->delete($value);
             }  
             $this->success("删除成功！");
         } 
         else{
-            if(M("Books")->delete($id)){
+            if(M("books")->delete($id)){
                 $this->success("删除成功！");
             }
-        }       
+        }       	   
+       
 
 		$this->display();
 	}
@@ -73,10 +74,15 @@ class BooksController extends Controller{
 		$books=$booksModel->find($id);
 		// $books=$booksModel->where("bookid = $id")->find();
 		$this->assign('books',$books);
+		$this->display();
 
+		
+		// $this->display();
+	}
+	public function update(){
 		if (IS_POST) {
 			$model=M("Books");
-			$a=$model->create();
+			$model->create();
 			if ($model->save()) {
 				$this->success("修改成功",U("Books/lists"));
 			}
@@ -84,7 +90,6 @@ class BooksController extends Controller{
 				$this->error($model->getError());
 			}
 		}	
-		$this->display();
 	}
 
 	//删除图书
@@ -103,6 +108,23 @@ class BooksController extends Controller{
                 $this->success("删除成功！");
             }
         }       
+    }
+    public function deleteAll(){
+    	$booksModel=M("Books");
+    	$id=$_GET['bookid'];
+    	$i=0;
+    	foreach ($id as $key => $value) {
+    		$it=$value;
+    		$where='bookid='.$it;
+    		$list[$i]=$booksModel->where($where)->delete();
+    		$i++;
+    	}
+    	if($list){
+    		$this->success("成功删除{$i}条",U('Books/lists'));
+    	}else{
+    		$this->error($booksModel->getError());
+    	}
+
     }
 
 
