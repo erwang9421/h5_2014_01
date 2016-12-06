@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>草稿箱</title>
+    <title>他的书单</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/headernav.css" />
-    <link rel="stylesheet" href="css/drafts.css" />
+    <link rel="stylesheet" href="css/booklist.css" />
     
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -38,7 +38,7 @@
 <body>
     <div id="container">
         <div id="canvas">
-        	<div class="aside-nav toggle-nav">
+            <div class="aside-nav toggle-nav">
                 <a href="#"><i class="icon-align-justify icon-large"></i></a>
             </div>
             <!--aside-nav end（触发弹出侧栏）-->
@@ -66,7 +66,7 @@
             <div id="nav">
                 <div class="nav-child">
                     <div class="row">
-                        <div class="col-md-6 col-md-offset-3"><a href="myBookReview_all.html"><img src="images/myphoto.jpg" width="74" height="74" alt="我的头像" class="nav-photo" /></a><span class="nav-username">mono</span></div>
+                        <div class="col-md-6 col-md-offset-3"><a href="#"><img src="images/myphoto.jpg" width="74" height="74" alt="我的头像" class="nav-photo" /></a><span class="nav-username">mono</span></div>
                     </div>
                     <div class="row nav-msg">
                         <div class="col-md-10 col-md-offset-1">
@@ -133,13 +133,13 @@
                                         <li><a href="tags.html">教育</a></li>
                                         <li><a href="tags.html">艺术</a></li>
                                         <li><a href="tags.html">自然科学</a></li>
-                                        <li><a href="tags.html">工业技术</a></li>
+                                         <li><a href="tags.html">工业技术</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="author_trend.html">作家专栏</a></li>
+                                <li><a href="myBookReview_all.html">作家专栏</a></li>
                                 <li><a href="recommendation.html">推荐书评</a></li>
                                 <li><a href="hot search.html">图书热榜</a></li>
-                                <li><a href="#">推荐书单</a></li>
+                                <li><a href="recommend-view.html">推荐书单</a></li>
                             </ul>
                         </div>
                     </div>
@@ -156,10 +156,10 @@
             <div id="content">
                 <div class="content-left"></div>
                 <div class="content-right">
-                    <div class="roler">
+                <div class="roler">
                         <div class="introduction">
-                            <p style="text-align: center;"><img src="images/myphoto.jpg" width="70" height="70" onclick="window.location.href='myBookReview_all.html'"
-                                                                alt="用户头像"/></p>
+                            <p style="text-align: center;"><img src="images/myphoto.jpg" width="70" height="70" alt="用户头像" onclick="window.location.href='myBookReview_all.html'"
+                            /></p>
                             <a href="#" id="name"><p>啊哈</p></a>
                             <div class="list">
                                 <ul>
@@ -178,126 +178,70 @@
                         </div>
                         <div class="function">
                             <p id="distance"><a href="relevant.html">与我相关</a></p>
-                            <p><a href="#" id="click">草稿箱</a></p>
+                            <p><a href="drafts.html">草稿箱</a></p>
                             <p><a href="editmessage.html">修改信息</a></p>
-                            <p><a href="booklist.html">我的书单</a></p>
+                            <p><a href="#" id="click">我的书单</a></p>
                         </div>
-                    </div> 
-                    <ul class="main-title">
-                        <li><a href="index.html">首页</a></li>
-                        <li>&nbsp;/&nbsp;</li>
-                        <li>草稿箱</li>
-                    </ul> 
-                    <div class="main">
-                        <div class="scale">
-                            <div class="scale-top">
-                                <ul>
-                                    <li>评论图书：<a href="tagbook.html">《漫长的中场休息》</a></li>
-                                    <li>作者：<a href="#">本·方登</a></li>
-                                </ul>   
-                                <div class="operation">
-                                    <a href="#">删除</a>
-                                    <a href="editarticle.html">编辑</a>
-                                </div>
-                            </div>
-                            <div class="scale-content"><a href="bookreviewcontent.html">"最孤独的魂外天游"</a></div>
-                        </div>
-                        <div class="scale">
-                            <div class="scale-top">
-                                <ul>
-                                    <li>评论图书：<a href="tagbook.html">《漫长的中场休息》</a></li>
-                                    <li>作者：<a href="#">本·方登</a></li>
-                                </ul>   
-                                <div class="operation">
-                                    <a href="#">删除</a>
-                                    <a href="editarticle.html">编辑</a>
-                                </div>
-                            </div>
-                            <div class="scale-content"><a href="bookreviewcontent.html">"最孤独的魂外天游"</a></div>
-                        </div>
-                        <div class="scale">
-                            <div class="scale-top">
-                                <ul>
-                                    <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
-                                    <li>作者：<a href="#">本·方登</a></li>
-                                </ul>   
-                                <div class="operation">
-                                    <a href="#">删除</a>
-                                    <a href="editarticle.html">编辑</a>
-                                </div>
-                            </div>
-                            <div class="scale-content"><a href="bookreviewcontent.html">"最孤独的魂外天游"</a></div>
-                        </div><!--  scale第三个 -->
-                        <div class="scale">
-                            <div class="scale-top">
-                                <ul>
-                                    <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
-                                    <li>作者：<a href="#">本·方登</a></li>
-                                </ul>   
-                                <div class="operation">
-                                    <a href="#">删除</a>
-                                    <a href="#">编辑</a>
-                                </div>
-                            </div>
-                            <div class="scale-content"><a href="bookreviewcontent.html">"最孤独的魂外天游"</a></div>
-                        </div><!--  scale第4个 -->
-                        <div class="scale">
-                            <div class="scale-top">
-                                <ul>
-                                    <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
-                                    <li>作者：<a href="#">本·方登</a></li>
-                                </ul>   
-                                <div class="operation">
-                                    <a href="#">删除</a>
-                                    <a href="#">编辑</a>
-                                </div>
-                            </div>
-                            <div class="scale-content"><a href="#">"最孤独的魂外天游"</a></div>
-                        </div><!--  scale第5个 -->
-                        <div class="scale">
-                            <div class="scale-top">
-                                <ul>
-                                    <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
-                                    <li>作者：<a href="#">本·方登</a></li>
-                                </ul>   
-                                <div class="operation">
-                                    <a href="#">删除</a>
-                                    <a href="#">编辑</a>
-                                </div>
-                            </div>
-                            <div class="scale-content"><a href="#">"最孤独的魂外天游"</a></div>
-                        </div><!--  scale第6个 -->
-                        <div class="scale">
-                            <div class="scale-top">
-                                <ul>
-                                    <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
-                                    <li>作者：<a href="#">本·方登</a></li>
-                                </ul>   
-                                <div class="operation">
-                                    <a href="#">删除</a>
-                                    <a href="#">编辑</a>
-                                </div>
-                            </div>
-                            <div class="scale-content"><a href="#">"最孤独的魂外天游"</a></div>
-                        </div><!--  scale第7个 -->
-                        <div class="scale">
-                            <div class="scale-top">
-                                <ul>
-                                    <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
-                                    <li>作者：<a href="#">本·方登</a></li>
-                                </ul>   
-                                <div class="operation">
-                                    <a href="#">删除</a>
-                                    <a href="#">编辑</a>
-                                </div>
-                            </div>
-                            <div class="scale-content"><a href="#">"最孤独的魂外天游"</a></div>
-                        </div><!--  scale第8个 -->
-                        <!-- 分页 -->
-                    </div>
                 </div>
-            </div><!-- content结束 --> 
+                <p class="main-title">我的书单</p>
+                <div class="main">
+                    <div class="scale">
+                        <div class="scale-left">
+                            <a href="#">未加标签</a>
+                        </div>
+                        <div class="scale-right">
+                        <a href="mybookslists.html">最热50本外国文学作品</a>
+                        <img src="images/close.png" alt="删除按钮" width="20" height="20" />
+                        </div>
+                    </div>
+
+                    <div class="scale">
+                        <div class="scale-left">
+                            <a href="mybookslists.html">未加标签</a>
+                             <img src="images/close.png" alt="删除按钮" width="20" height="20" />
+                        </div>
+                        <div class="scale-right">
+                        <a href="mybookslists.html">最热50本外国文学作品</a>
+                        <img src="images/close.png" alt="删除按钮" width="20" height="20" />
+                        </div>
+                    </div>
+
+                    <div class="scale">
+                        <div class="scale-left">
+                            <a  href="mybookslists.html">未加标签</a>
+                             <img src="images/close.png" alt="删除按钮" width="20" height="20" />
+                        </div>
+                        <div class="scale-right">
+                        <a href="mybookslists.html">最热50本外国文学作品</a>
+                        <img src="images/close.png" alt="删除按钮" width="20" height="20" />
+                        </div>
+                    </div>
+
+                    <div class="scale">
+                        <div class="scale-left">
+                            <a href="mybookslists.html">未加标签</a>
+                             <img src="images/close.png" alt="删除按钮" width="20" height="20" />
+                        </div>
+                        <div class="scale-right">
+                        <a href="mybookslists.html">最热50本外国文学作品</a>
+                        <img src="images/close.png" alt="删除按钮" width="20" height="20" />
+                        </div>
+                    </div>
+                </div> <!--main结束-->
+            </div>
+        </div><!-- content结束 -->a
+
+            <footer>
+                <p>copyright@hebeinormal university</p>
+            </footer>
         </div><!--canvas end-->
     </div><!--container end-->
 </body>
 </html>
+
+
+
+
+
+
+
