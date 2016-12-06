@@ -19,6 +19,7 @@
                     </tr>
                     <volist name="list" id="vo">
                         <tr>
+
                             <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
                             <td align="center">{$vo.bookname}</td>
                             <td align="center">{$vo.bookauthor}</td>
@@ -27,7 +28,7 @@
                             <td align="center">{$vo.content}</td>
                             <td align="center">{$vo.publishtime}</td>
                             <td align="center">
-                                <a href="editbookreview.html">编辑</a> | <a href="__MODULE__/BookComment/delbookreview/id/{$vo.bookreviewid}">删除</a>
+                                <a href="__MODULE__/BookComment/editbookreview/bookreviewid/{$vo.bookreviewid}">编辑</a> | <a href="__MODULE__/BookComment/delbookreview/bookreviewid/{$vo.bookreviewid}">删除</a>
                             </td>
                         </tr>
                     </volist>
