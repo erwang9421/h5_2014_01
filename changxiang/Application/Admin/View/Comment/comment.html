@@ -2,7 +2,6 @@
    <!-- 当前位置 -->
 <div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>评论管理</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
         <h3><a href="addcomment.html?rec=add" class="actionBtn add">添加评论</a>评论列表</h3>
-    
         <div id="list">
     <form name="action" method="post" action="product.php?rec=action">
     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
@@ -15,64 +14,24 @@
        <th width="300" align="center">评论时间</th>
         <th width="350" align="center">操作</th>
       </tr>
-      <tr>
-        <td align="center"><input type="checkbox" name="checkbox[]" value="5" /></td>
-        <td align="center">5</td>
-        <td align="center">5</td>
-        <td align="center">5</td>
-        <td><p style="font-size:14px">沙发</p></td>
-        <td align="center">2013-06-26 17:34:12</td>
-        <td align="center">
-         <a href="editcomment.html">编辑</a> | <a href="#">删除</a>
-      </td>
-      </tr>
-    <tr>
-        <td align="center"><input type="checkbox" name="checkbox[]" value="4" /></td>
-        <td align="center">4</td>
-        <td align="center">4</td>
-        <td align="center">4</td>
-        <td><p style="font-size:14px">写的很好</p></td>
-         <td align="center">2013-06-26 17:34:12</td>
-        <td align="center">
-        <a href="editcomment.html">编辑</a> | <a href="#">删除</a>
-      </td>
-      </tr>
-     <tr>
-        <td align="center"><input type="checkbox" name="checkbox[]" value="3" /></td>
-        <td align="center">3</td>
-        <td align="center">3</td>
-        <td align="center">3</td>
-        <td><p style="font-size:14px">这是一篇质量很高的书评</p></td>
-        <td align="center">2013-06-26 17:34:12</td>
-        <td align="center">
-         <a href="editcomment.html">编辑</a> | <a href="#">删除</a>
-      </td>
-      </tr>
-     <tr>
-        <td align="center"><input type="checkbox" name="checkbox[]" value="2" /></td>
-        <td align="center">2</td>
-        <td align="center">2</td>
-        <td align="center">2</td>
-        <td><p style="font-size:14px">沙发</p></td>
-         <td align="center">2013-06-26 17:34:12</td>
-        <td align="center">
-         <a href="editcomment.html">编辑</a> | <a href="#">删除</a>
-      </tr>
-          
-       <tr>
-        <td align="center"><input type="checkbox" name="checkbox[]" value="1" /></td>
-        <td align="center">1</td>
-        <td align="center">1</td>
-        <td align="center">1</td>
-        <td><p style="font-size:14px">沙发</p></td>
-         <td align="center">2013-06-26 17:34:12</td>
-        <td align="center">
-        <a href="editcomment.html">编辑</a> | <a href="#">删除</a>
-      </td>
-      </tr>
+      <volist name="list" id="vo">
+          <tr>
+              <td align="center"><input type="checkbox" name="checkbox[]" value="5" /></td>
+              <td align="center">{$vo.commentid}</td>
+              <td align="center">{$vo.commentuserid}</td>
+              <td align="center">{$vo.bookreviewid}</td>
+              <td><p style="font-size:14px">{$vo.commentcontent}</p></td>
+              <td align="center">{$vo.commenttime}</td>
+              <td align="center">
+                  <a href="editcomment.html">编辑</a> | <a href="#">删除</a>
+              </td>
+          </tr>
+      </volist>
     </table>
     </form>
     </div>
-    <div class="clear"></div>
-    <div class="pager">总计 5 个记录，共 1 页，当前第 1 页 | <a href="comment.html">第一页</a> 上一页 下一页 <a href="comment.html">最末页</a></div>               </div>
+
+    <!--分页效果-->
+     {$page}
+ </div>
  </div>
