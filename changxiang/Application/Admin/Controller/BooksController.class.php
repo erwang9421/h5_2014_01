@@ -2,6 +2,12 @@
 namespace Admin\Controller;
 use Think\Controller;
 class BooksController extends Controller{
+	public function __construct(){
+    	parent::__construct();
+    	if (!isLogin()) {
+    		$this->error("请先登录",U("Admin/login"));
+    	}
+    }
 	public function lists(){
 		//分页
 		$books=M('Books');
@@ -16,26 +22,7 @@ class BooksController extends Controller{
         $booklist=$books->order('addtime asc')->page($nowPage.',4')->select();
         $show=$page->show();
         $this->assign('page',$show);
-        $this->assign('booklist',$booklist);  
-
-  //       $booksModel=D("books");
-		// $id=$_GET['booksId'];
-		// $books=$booksModel->find($id);
-		// $this->assign('books',$books);
-
-		$id=$_GET['booksId'];
-        if(is_array($id)){
-            foreach($id as $value){
-                M("books")->delete($value);
-            }  
-            $this->success("删除成功！");
-        } 
-        else{
-            if(M("books")->delete($id)){
-                $this->success("删除成功！");
-            }
-        }       	   
-       
+        $this->assign('booklist',$booklist);        	   
 
 		$this->display();
 	}
@@ -109,23 +96,23 @@ class BooksController extends Controller{
             }
         }       
     }
-    public function deleteAll(){
-    	$booksModel=M("Books");
-    	$id=$_GET['bookid'];
-    	$i=0;
-    	foreach ($id as $key => $value) {
-    		$it=$value;
-    		$where='bookid='.$it;
-    		$list[$i]=$booksModel->where($where)->delete();
-    		$i++;
-    	}
-    	if($list){
-    		$this->success("成功删除{$i}条",U('Books/lists'));
-    	}else{
-    		$this->error($booksModel->getError());
-    	}
+    // public function deleteAll(){
+    // 	$booksModel=M("Books");
+    // 	$id=$_GET['bookid'];
+    // 	$i=0;
+    // 	foreach ($id as $key => $value) {
+    // 		$it=$value;
+    // 		$where='bookid='.$it;
+    // 		$list[$i]=$booksModel->where($where)->delete();
+    // 		$i++;
+    // 	}
+    // 	if($list){
+    // 		$this->success("成功删除{$i}条",U('Books/lists'));
+    // 	}else{
+    // 		$this->error($booksModel->getError());
+    // 	}
 
-    }
+    // }
 
 
 
