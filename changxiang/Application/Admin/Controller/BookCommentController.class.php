@@ -101,6 +101,7 @@ class BookCommentController extends Controller
     public function editbookreview($bookreviewid){
         if (IS_POST) {
             dump($bookreviewid);
+            exit;
             //点击保存，发送POST请求时
             //实例化books模型
 //            $booksModel = M('books');
