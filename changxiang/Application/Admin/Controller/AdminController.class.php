@@ -11,6 +11,7 @@ class AdminController extends Controller{
 				'adminpass' => I("post.adminpass")
 				);
 			$result=$adminModel->where($condition)->count();
+			dump($result);
 			if ($result>0) {
 				session("adminname",I("post.adminname"));
 				$this->success("登录成功",U("Index/index"));
