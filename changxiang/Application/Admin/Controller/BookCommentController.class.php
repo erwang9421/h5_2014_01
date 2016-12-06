@@ -26,8 +26,8 @@ class BookCommentController extends Controller
         $page -> setConfig('next','后一页>>');
         //进行分页数据查询，注意limit方法的参数要使用Page类的属性
         //SQL语句:join连接两个表，inner join从两个表中查询数据
-        $sql = "select books.bookname,books.bookauthor,bookreview.userid,bookreview.title,bookreview.content,bookreview.publishtime from bookreview inner join books on bookreview.bookid = books.bookid order by bookreview.publishtime desc";
-        $list = $bookReviewModel -> page($nowPage.',5') -> query($sql);
+        $sql = "select books.bookname,books.bookauthor,bookreview.userid,bookreview.bookreviewid,bookreview.title,bookreview.content,bookreview.publishtime from bookreview inner join books on bookreview.bookid = books.bookid order by bookreview.publishtime desc";
+        $list = $bookReviewModel  -> page($nowPage.',5') -> query($sql) ;
 //        dump($list);
 //        exit;
 
@@ -98,7 +98,53 @@ class BookCommentController extends Controller
             }
         }
     }
-    public function editbookreview(){
-        $this -> display();
+    public function editbookreview($bookreviewid){
+        if (IS_POST) {
+            dump($bookreviewid);
+            //点击保存，发送POST请求时
+            //实例化books模型
+//            $booksModel = M('books');
+//            $result = $booksModel -> save();
+//            if ($result === FALSE) {
+//                echo '保存失败';
+//            }
+//            else if($result === 0)  {
+//                echo '未更改';
+//            }
+//            dump($result);
+//            dump($booksModel -> create());
+//            echo M()-> getLastSql();
+            //实例化bookreview模型
+            $bookreviewModel = M('bookreview');
+            $books = M('books');
+//            $bookreviewModel -> create();
+//            dump($bookreviewModel -> create());
+//            dump($bookreviewModel -> save());
+//            exit;
+//            $result = $bookreviewModel -> join('books ON bookreview.bookid = books.bookid') -> find($bookreviewid);
+//            dump($result);
+//            exit;
+//            $result->create();
+//            dump($result);
+//            dump($result->save());
+//            exit;
+//            if($result->save()){
+//                $this->success("修改成功", U("BookComment/bookreview"));
+//            }
+        }
+        else{
+           //没有发送post请求时
+            if($bookreviewid === ""){
+                exit("错误的bookreviewid");
+            }
+            //实例化bookreview模型对象
+            $bookreviewModel = M('bookreview');
+//            连接图书表和书评表
+//            bookreview inner join books on bookreview.bookid = books.bookid
+            $result = $bookreviewModel -> join('books ON bookreview.bookid = books.bookid') -> find($bookreviewid);
+
+            $this -> assign("result",$result);
+            $this -> display();
+        }
     }
 }

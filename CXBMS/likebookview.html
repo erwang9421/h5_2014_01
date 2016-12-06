@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>畅享书评后台管理系统-关键字管理</title>
+<title>畅享书评后台管理系统-喜欢管理</title>
 <meta name="Copyright" content="Douco Design." />
 <link href="css/public.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -66,50 +66,53 @@
  <li><a href="payattention.html"><i class="pse"></i><em>我的关注</em></a></li>
   <li><a href="payattentioned.html"><i class="pae"></i><em>关注我的</em></a></li>
  </ul>
-  <ul>
-  <li><a href="tag.html"><i class="menuPage"></i><em>标签</em></a></li>
-  <li><a href="keyword.html"><i class="theme"></i><em>关键字</em></a></li>
- </ul>
+    <ul>
+        <li><a href="tag.html"><i class="menuPage"></i><em>标签</em></a></li>
+    </ul>
+    <ul>
+        <li><a href="likebookview.html"><i class="theme"></i><em>喜欢书评</em></a></li>
+    </ul>
+    <ul>
+        <li><a href="bookviewtag.html"><i class="nav"></i><em>书评标签</em></a></li>
+    </ul>
 </div></div>
  <div id="dcMain">
    <!-- 当前位置 -->
-<div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>关键字管理</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-        <h3><tr>
-       <td>
-        <input type="text" name="unique_id" value="" size="40" class="inpMain" />
-       </td>
-      </tr> <input name="submit" class="btn" type="submit" value="添加关键字" /></h3>
-
+<div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>喜欢书评管理</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+       <h3><a href="addlikebookview.html?rec=add" class="actionBtn add">添加喜欢</a>喜欢书评列表</h3>
 
    
     <div id="list">
-    <h3><td align="center">关键字列表</td></h3>
+
     <form name="action" method="post" action="product.php?rec=action">
     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
       <tr>
-        <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
-        <th width="40" align="center">ID</th>
-        <th width="160" align="center">关键字名称</th>
-       <th width="200" align="center">添加日期</th>
-        <th width="100" align="center">操作</th>
+        <th align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+        <th align="center">ID</th>
+        <th align="center">用户ID</th>
+        <th align="center">书评标题</th>
+        <th align="center">喜欢时间</th>
+        <th align="center">操作</th>
       </tr>
       <tr>
         <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
         <td align="center">5</td>
+        <td align="center">5</td>
         <td align="center"><a href="product.php?rec=edit&id=15">钢铁是怎样炼成的</a></td>
         <td align="center">2013-06-26</td>
         <td align="center">
-       <a href="editkeyword.html">编辑</a> | <a href="#">删除</a>
+       <a href="editlikebookview.html">编辑</a> | <a href="#">删除</a>
         </td>
       </tr>
 
      <tr>
         <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
         <td align="center">4</td>
+        <td align="center">5</td>
         <td align="center"><a href="product.php?rec=edit&id=15">钢铁是怎样炼成的</a></td>
         <td align="center">2013-06-26</td>
         <td align="center">
-         <a href="editkeyword.html">编辑</a> | <a href="#">删除</a>
+         <a href="editlikebookview.html">编辑</a> | <a href="#">删除</a>
        </td>
       </tr>
 
@@ -117,28 +120,31 @@
       <tr>
         <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
         <td align="center">3</td>
+        <td align="center">5</td>
         <td align="center"><a href="product.php?rec=edit&id=15">钢铁是怎样炼成的</a></td>
         <td align="center">2013-06-26</td>
         <td align="center">
-       <a href="editkeyword.html">编辑</a> | <a href="#">删除</a>
+       <a href="editlikebookview.html">编辑</a> | <a href="#">删除</a>
         </td>
       </tr>
       <tr>
         <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
         <td align="center">2</td>
+        <td align="center">5</td>
         <td align="center"><a href="product.php?rec=edit&id=15">钢铁是怎样炼成的</a></td>
         <td align="center">2013-06-26</td>
         <td align="center">
-        <a href="editkeyword.html">编辑</a> | <a href="#">删除</a>
+        <a href="editlikebookview.html">编辑</a> | <a href="#">删除</a>
         </td>
       </tr>
       <tr>
         <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
         <td align="center">1</td>
+        <td align="center">5</td>
         <td align="center"><a href="product.php?rec=edit&id=15">钢铁是怎样炼成的</a></td>
         <td align="center">2013-06-26</td>
         <td align="center">
-         <a href="editkeyword.html">编辑</a> | <a href="#">删除</a>
+         <a href="editlikebookview.html">编辑</a> | <a href="#">删除</a>
         </td>
       </tr>
     </table>
