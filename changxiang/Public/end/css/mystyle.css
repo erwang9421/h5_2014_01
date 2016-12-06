@@ -1,5 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
+body{
+	background: url("../images/background.jpg");
+}
 .navbar-logo {
     font-weight: bold;
     font-size: 24px;
@@ -116,7 +119,7 @@ width:85%;
 
 }
 .red{
-	color:#red;
+	color:red;
 	font-size:16px;
 	font-family:"微软雅黑"
 	}
