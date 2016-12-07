@@ -13,7 +13,7 @@ class ZanController extends Controller {
 		$this->assign('Zan',$Zan);
 
 		$booksModel=D("Zan");
-		$id=$_GET['booksId'];
+		$id=$_GET['unique_id'];
 		$Zan=$booksModel->find($id);
 		$this->assign('Zan',$Zan);
 		$this->display();
@@ -23,7 +23,7 @@ class ZanController extends Controller {
         if (!IS_POST) {
 			exit("bad request请求");
 		}
-		$ZanModel=D("books");
+		$ZanModel=D("pushpraise");
 		if (!$ZanModel->create()) {
 			$this->error($ZanModel->getError());
 		}
