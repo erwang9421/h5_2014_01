@@ -13,13 +13,12 @@
     <form name="action" method="post" action="">
     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
       <tr>
-        <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
-        <th width="80" align="center">ID</th>
-        <th align="center">用户ID</th>
-         <th width="300" align="center">关注ID</th>
-        <th width="300">关注状态</th>
-       <th width="300" align="center">关注时间</th>
-        <th width="200" align="center">操作</th>
+          <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+          <th align="center">ID</th>
+          <th align="center">用户名</th>
+          <th align="center">粉丝名</th>
+          <th  align="center">关注时间</th>
+          <th align="center">操作</th>
       </tr>
 
 
@@ -29,7 +28,6 @@
                 <td align="center">{$f.connectionid}</td>
                 <td align="center"><a href="product.php?rec=edit&id=15">{$f.userid}</a></td>
                 <td align="center"><a href="product.php?cat_id=3">{$f.fanid}</a></td>
-                <td align="center">{$f.payattentiontype}</td>
              <!--    <td style="font-size:14px">{$b.bookcontent|mb_substr=0,66,'utf-8'}</td> -->
                 <td align="center">{$f.attentiontime}</td>
                 <td align="center">
