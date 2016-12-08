@@ -116,191 +116,9 @@ footer {
 	position: static;
 	height: 35px;
 }
-/*.content-center {
-	width:100%;
-    overflow-y:auto;
-	background-color:#fff;
-	height:100%;
-	float: left;
-	position: relative;
-}*/
-/*
-#middlecontent{
-	margin-left:6%;
-	margin-right:5%;
-}
-h3{
-	color:#f27b59;
-	text-align:center;
-}
-#content p{
-	font-size:1.1em;
-}
-.collectbooksreview{
-	margin-right:30px;
-	color:#f27b59;
-	border:1px solid #f27b59;
-}
-.collectbooksreview:hover{
-	color:#fff;
-	border:1px solid #f27b59;
-	background-color:#f27b59;
-}
-.care{
-	color:#f27b59;
-	border:1px solid #f27b59;
-}
-.care:hover{
-	color:#fff;
-	border:1px solid #f27b59;
-	background-color:#f27b59;
-}
-.likebooksreview{
-	color:#f27b59;
-	border:1px solid #f27b59;
-}
-.likebooksreview:hover{
-	color:#fff;
-	border:1px solid #f27b59;
-	background-color:#f27b59;
-}
-#leftbutton{
-	float:left;
-}
-#rightshare{
-	float: right;
-}
-#rightshare a{
-	color:#f27b59;
-}
-#booksreviewtimes{
-	clear:both;
-}
-/* .pagination li a{
-	color:#000;
-}
-.pagination .active a{
-	border:1px solid #f27b59;
-	background-color:#f27b59;;
-} */
-/*#textarea{
-	width:90%;
-	border:1px solid #f27b59;
-}
-.bookreviewtext{
-	color:#fff;
-	background-color:#f27b59;
-	border:1px solid #f27b59;
-	font-size:1.3em;
-	margin-bottom:32px;
-	width:9%;
-	height:43px;
-}
-.bookreviewtext:hover{
-	color:#f27b59;
-	border:1px solid #f27b59;
-	background-color:#fff;
 
-}*/
-/* 阅读、评论、喜欢、收藏部分样式设置 */
-/*#thumbnailleft{
-	margin-right:1em;
-}
-#thumbnailright div a{
-	color:#999999;
-}
-#thumbnailright div a:hover{
-	color:#f27b59;
-}
-#thumbnailright div time{
-	color:#999999;
-	margin-left:1.5em;
-}
-#thumbnailright div span{
-	color:#999999;
-	margin-right:1.5em;
-}
-/* 本书简介按钮样式 */
-/*.thebookreview{
-	margin-left:30%;
-	margin-right:30px;
-	color:#f27b59;
-	border:1px solid #f27b59;
-}
-.thebookreview:hover{
-	color:#fff;
-	border:1px solid #f27b59;
-	background-color:#f27b59;
-}
-#bookstags{
-	margin-left:2em;
-}*/
-/* 打印按钮样式 */
-/*.print{
-	margin-left:610px;
-	margin-right:20px;
-	color:#f27b59;
-	border:1px solid #f27b59;
-}
-.print:hover{
-	color:#fff;
-	border:1px solid #f27b59;
-	background-color:#f27b59;
-}*/
-/* 下载按钮样式 */
-/*.download{
-	margin-right:0;
-	color:#f27b59;
-	border:1px solid #f27b59;
-}
-.download:hover{
-	color:#fff;
-	border:1px solid #f27b59;
-	background-color:#f27b59;
-}
-.bookname{
-	color:#f27b59;
-	margin-right:3em;
-}
-.bookname:hover{
-	color:#f27b59;
-	text-decoration:none;
-}
-.glyphicon-thumbs-up{
-	color:#f27b59;
-	margin-right:0.5em;
-}
-footer{
-	background-color:#eeeeee;
-}
-footer p{
-	color:gray;
-	text-align:center;
-
-}*/
-/* 评价按钮样式设置 */
-.bookreviewtextbtn{
-	color:#fff;
-	background-color:#da7c66;
-	padding-bottom:0px;
-	font-size:1em;
-	padding-top:0.3em;
-	padding-bottom:0.3em;
-	padding-left:1.5em;
-	padding-right:1.5em;
-	border-radius:3px;
-}
-textarea{
-	margin-top:0.3em;
-
-}
 .timeago{
 	color:#999;
-}
-.textarea{
-	width:100%;
-	overflow:auto;
-	word-break:break-all;
 }
 .sharebtn{
 	float:right;
@@ -313,9 +131,6 @@ textarea{
 }
 
 .rightreviewbtn{
-	float:right;
-}
-.emoji{
 	float:right;
 }
 
@@ -616,3 +431,64 @@ textarea{
 	color: #fff;
 	background-color: #da7c66;
 }
+nav{
+	text-align:center;
+}
+.reviewtimes{
+	margin-top:1em;
+	margin-bottom:1.5em;
+}
+
+.userphoto .emoji{
+margin-right:0;
+}
+/*评价按钮*/
+.reviewbtn{
+	float:right;
+	color:#fff;
+	background-color:#da7c66;
+	border-radius:3px;
+	font-size:1em;
+	padding-top:0.3em;
+	padding-bottom:0.3em;
+	padding-left:1.5em;
+	padding-right:1.5em;
+}
+.reviewbtn:hover{
+	float:right;
+	color:#fff;
+	background-color:#da7c66;
+	border-radius:3px;
+	font-size:1em;
+	padding-top:0.3em;
+	padding-bottom:0.3em;
+	padding-left:1.5em;
+	padding-right:1.5em;
+}
+/*评论输入框样式*/
+.userphoto input{
+	width:70%;
+}
+.userphoto a img{
+	background-color:#fff;
+	border-radius:50%;
+	margin-right:4em;
+	margin-left:0;
+}
+.reviewleft{
+	float:left;
+	border:1px solid red;
+	width:15%;
+}
+.reviewright{
+	float:right;
+	width:85%;
+	border:1px solid red;
+}
+.author{
+	float: right;
+}
+.otheruserphoto{
+	border-radius:50%;
+}
+
