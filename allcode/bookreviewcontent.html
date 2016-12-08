@@ -41,7 +41,7 @@
         }
     </script>
 </head>
-<body>
+<body style="overflow:visible;overflow-y:hidden">
     <div id="container">
         <div id="canvas">
         	<div class="aside-nav toggle-nav">
@@ -164,7 +164,7 @@
                     <!--真正的内容部分-->
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-10 col-md-offset-1 content-center">
+                            <div class="col-md-10 col-md-offset-1  content-center">
                                 <div class="row">
                                     <ul class="breadcrumb">
                                      <li><a href="#">首页</a></li>
@@ -180,20 +180,27 @@
                                             <li>
                                                 阅读<span> 11</span>
                                                 评论<span> 2</span>
-                                                写作<span> 1</span>
+                                                喜欢<span> 1</span>
                                                 收藏<span> 1</span>
                                             </li>
                                         </ul>
                                         <div class="clear"></div> 
                                         <div class="comment-tag">
-                                                <span>标签：</span>
-                                                <a href="tags.html">中国现代小说</a>
+                                                <div>
+                                                    <span>图书分类：</span>
+                                                    <a href="tags.html">外国文学</a>
+                                                </div>
+                                                <div class="book">
+                                                    <span>评论图书：《漫长的中场休息》</span>
+                                                    <span class="bookauthor">作者：本方登</span>
+                                                </div>
                                         </div>
+
                                     </div>
                                     <div class="col-md-6 col-sm-6 three-btn">
                                         <button type="button" class="btn btn-default care" id="concern">关注</button>
                                         <button type="button" class="btn btn-default collectbooksreview" id="collectBook">收藏书评</button>
-                                        <button class="btn btn-default thebookreview">本书简介</button>
+                                        <button class="btn btn-default thebookreview" id="bookSummary">本书简介</button>
                                         <div class="clear"></div> 
                                         <div class="download">
                                             <button type="button" class="btn btn-default">下载</button>
@@ -233,109 +240,97 @@
                                 </div>
                                 <!-- 对书评的评论部分 -->
                                 <!-- 评论数目 -->
-                                <div class="row">
+                                <div class="row reviewtimes">
                                     <div class="col-md-12">
                                         <span>10条评论</span>
                                     </div>
                                 </div>
+                                <!--评论内容输入框-->
                                 <div class="row">
-                <div class="col-md-1">
-                    <div class="myphoto">
-                        <a href=""><img src="images/myphoto.jpg" width="35" height="35" alt="我的头像" /></a>
-                    </div>
-                </div>
-                <div class="col-md-11">
-                    <div class="row">
-                        <div class="col-md-9"><textarea name="" class="textarea" id="" cols="120" rows="1"></textarea></div>
-                        <div class="col-md-3">
-                            <div class="rightreviewbtn">
-                                <button class="btn btn-default bookreviewtextbtn">评价</button>
-                            </div>
-                            <div class="emoji">
-                                <a href=""><img src="images/emoji.png" alt=""></a>
-                            </div>
-                            </div>
-                    </div>
-                </div>
-            </div>
+                                    <!--用户头像-->
+                                    <div class="userphoto">
+                                        <a href=""><img src="images/myphoto.jpg" alt="" width="35" height="35"></a>
+                                        <!--输入框-->
+                                        <input type="text" value="">
+                                        <a href=""><img src="images/emoji.png" alt="" width="20" height="20" class="emoji"></a>
+                                        <!--评价按钮-->
+                                        <a href="" class="reviewbtn">评价</a>
+                                    </div>
+                                </div>
+                                <!--评论内容部分-->
             <ul class="list-group">
                 <li class="list-group-item">
                     <div class="row">
-                        <div class="col-md-1">
-                            <div class="myphoto">
-                                <a href=""><img src="images/myphoto.jpg" width="35" height="35" alt="我的头像" /></a>
-                            </div>
+                        <div class="reviewleft">
+                                <a href=""><img src="images/myphoto.jpg" class="otheruserphoto" width="35" height="35" alt="我的头像" /></a>
+                                <div class="author">
+                                    <a href="">阿念:</a>
+                                </div>
                         </div>
-                        <div class="col-md-11">
-                            <a href="">阿念</a>：<span>一本美国的超级小说，低配版加现在时的《了不起的盖茨比》。当美国梦由个人梦转化为国家梦时，牵扯到的就不止是美国人了。李安的电影方向应该与原著不同，所以更期待电影的是技术。</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-9">
-                                <time class="timeago">35分钟前</time>  
-                            </div>
-                            <div class="col-md-2">
-                                <div class="responsetoothers">
-                                    <a href=""><span class="glyphicon glyphicon-thumbs-up"></span></a>1
-                                    <a href=""><span>回复</span></a>
+                        <div class="reviewright">
+                            <p>一本美国的超级小说，低配版加现在时的《了不起的盖茨比》。当美国梦由个人梦转化为国家梦时，牵扯到的就不止是美国人了。李安的电影方向应该与原著不同，所以更期待电影的是技术。</p>
+                            <div>
+                                <div class="timeagoleft">
+                                    <span>35分钟前</span>
+                                </div>
+                                <div class="timeagoright">
+                                    <img src="images/delsupport.png" alt="">
+                                    <span>1</span>
+                                    <a href="">回复</a>
                                 </div>
                             </div>
+                        </div>
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="row">
-                        <div class="col-md-1">
-                            <div class="myphoto">
-                                <a href=""><img src="images/myphoto.jpg" width="35" height="35" alt="我的头像" /></a>
+                        <div class="reviewleft">
+                            <a href=""><img src="images/myphoto.jpg" class="otheruserphoto" width="35" height="35" alt="我的头像" /></a>
+                            <div class="author">
+                                <a href="">阿念:</a>
                             </div>
                         </div>
-                        <div class="col-md-11">
-                            <a href="">阿念</a>：<span>一本美国的超级小说，低配版加现在时的《了不起的盖茨比》。当美国梦由个人梦转化为国家梦时，牵扯到的就不止是美国人了。李安的电影方向应该与原著不同，所以更期待电影的是技术。</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-9">
-                                <time class="timeago">35分钟前</time>  
-                            </div>
-                            <div class="col-md-2">
-                                <div class="responsetoothers">
-                                    <a href=""><span class="glyphicon glyphicon-thumbs-up"></span></a>1
-                                    <a href=""><span> 回复</span></a>
+                        <div class="reviewright">
+                            <p>一本美国的超级小说，低配版加现在时的《了不起的盖茨比》。当美国梦由个人梦转化为国家梦时，牵扯到的就不止是美国人了。李安的电影方向应该与原著不同，所以更期待电影的是技术。</p>
+                            <div>
+                                <div class="timeagoleft">
+                                    <span>35分钟前</span>
+                                </div>
+                                <div class="timeagoright">
+                                    <img src="images/delsupport.png" alt="">
+                                    <span>1</span>
+                                    <a href="">回复</a>
                                 </div>
                             </div>
+                        </div>
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="row">
-                        <div class="col-md-1">
-                            <div class="myphoto">
-                                <a href=""><img src="images/myphoto.jpg" width="35" height="35" alt="我的头像" /></a>
+                        <div class="reviewleft">
+                            <a href=""><img src="images/myphoto.jpg" class="otheruserphoto" width="35" height="35" alt="我的头像" /></a>
+                            <div class="author">
+                                <a href="">阿念:</a>
                             </div>
                         </div>
-                        <div class="col-md-11">
-                            <a href="">阿念</a>：<span>一本美国的超级小说，低配版加现在时的《了不起的盖茨比》。当美国梦由个人梦转化为国家梦时，牵扯到的就不止是美国人了。李安的电影方向应该与原著不同，所以更期待电影的是技术。</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-9">
-                            <time class="timeago">35分钟前</time>  
-                        </div>
-                        <div class="col-md-2">
-                            <div class="responsetoothers">
-                                <a href="">查看对话</a>
-                                <a href=""><span class="glyphicon glyphicon-thumbs-up"></span></a>1
-                                <a href=""><span> 回复</span></a>
+                        <div class="reviewright">
+                            <p>一本美国的超级小说，低配版加现在时的《了不起的盖茨比》。当美国梦由个人梦转化为国家梦时，牵扯到的就不止是美国人了。李安的电影方向应该与原著不同，所以更期待电影的是技术。</p>
+                            <div>
+                                <div class="timeagoleft">
+                                    <span>35分钟前</span>
+                                </div>
+                                <div class="timeagoright">
+                                    <img src="images/delsupport.png" alt="">
+                                    <span>1</span>
+                                    <a href="">回复</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </li>
             </ul>
             <div class="row">
-                <div class="col-md-5"></div>
-                <div class="col-md-6">
+
                     <nav>
                       <ul class="pagination">
                         <li><a href="">&laquo;</a></li>
@@ -347,14 +342,14 @@
                         <li><a href="">&raquo;</a></li>
                       </ul>
                     </nav>
-                </div>
+
             </div>
                             </div> <!--content center end-->
                         </div><!--row end-->
                         <footer>
                         <p>copyright@hebeinormal university</p>
                         </footer>
-                    </div><!-- container-fluid -->  
+                    </div><!-- container-fluid -->
                 </div><!--contnet rigt end-->
             </div><!-- content结束 --> 
 
