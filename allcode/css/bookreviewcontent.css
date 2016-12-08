@@ -477,18 +477,34 @@ margin-right:0;
 }
 .reviewleft{
 	float:left;
-	border:1px solid red;
-	width:15%;
+	width:10%;
 }
 .reviewright{
 	float:right;
-	width:85%;
-	border:1px solid red;
+	width:90%;
 }
 .author{
 	float: right;
 }
+.author a{
+	color:#5eb3ef;
+}
+.author a:hover{
+	color:#da7c66;
+}
 .otheruserphoto{
 	border-radius:50%;
 }
-
+.timeagoleft{
+	float:left;
+}
+.timeagoright{
+	float:right;
+}
+.timeagoright a{
+	margin-left:2em;
+	color:#333;
+}
+.timeagoright a:hover{
+	color:#da7c66;
+}
