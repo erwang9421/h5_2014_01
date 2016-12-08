@@ -611,11 +611,11 @@
                     "commandname":"underline",
                     "custom":null },
 
-                'strikeout': { "text": "Strikeout",
-                    "icon":"fa fa-strikethrough",
-                    "tooltip": "删除线",
-                    "commandname":"strikeThrough",
-                    "custom":null },
+                /*'strikeout': { "text": "Strikeout",
+                 "icon":"fa fa-strikethrough",
+                 "tooltip": "删除线",
+                 "commandname":"strikeThrough",
+                 "custom":null },*/
 
                 'ol'		: { "text": "N",
                     "icon": "fa fa-list-ol",
@@ -876,11 +876,11 @@
                         oPrntWin.document.close();
                     }},
 
-                'rm_format'	: { "text": "Remove format",
-                    "icon":"fa fa-eraser",
-                    "tooltip": "清除格式",
-                    "commandname":"removeformat",
-                    "custom":null },
+                /*'rm_format'	: { "text": "Remove format",
+                 "icon":"fa fa-eraser",
+                 "tooltip": "清除格式",
+                 "commandname":"removeformat",
+                 "custom":null },*/
 
                 'select_all': { "text": "Select all",
                     "icon":"fa fa-file-text",
@@ -977,8 +977,8 @@
                 'fonteffects' : ['fonts', 'styles', 'font_size'],
                 'actions' : ['undo', 'redo'],
                 'insertoptions' : ['insert_link', 'unlink', 'insert_img'/*, 'insert_table'*/],
-                'extraeffects' : ['strikeout', 'hr_line', 'splchars'],
-                'advancedoptions' : ['print', 'rm_format', 'select_all', 'source'],
+                'extraeffects' : [/*'strikeout',*/ 'hr_line', 'splchars'],
+                'advancedoptions' : ['print', /*'rm_format'*/'select_all', 'source'],
                 'screeneffects' : ['togglescreen']
                 /* 'save':['save'],
                  'publish':['publish']*/
@@ -1013,13 +1013,13 @@
                 'hr_line':true,
                 'block_quote':true,
                 'source':true,
-                'strikeout':true,
+                /*'strikeout':true,*/
                 'indent':true,
                 'outdent':true,
                 'fonts':fonts,
                 'styles':styles,
                 'print':true,
-                'rm_format':true,
+                /*'rm_format':true,*/
                 'status_bar':true,
                 'font_size':fontsizes,
                 /*'color':colors,*/
