@@ -50,6 +50,12 @@ a:hover {
 	background-color:#f2f2f2;
 	border:0px;
 }
+.type {
+	height:40px;width:150px;background-color:#f2f2f2;border:0;text-indent:10px;
+	height:40px;
+	font-size:14px;
+	color:#AAAAAA;
+}
 .bookauthor input {
 	text-indent:10px;
 	height:40px;
@@ -70,14 +76,14 @@ a:hover {
 }
 .book span:last-child{
 	color:#da7c66;
-	padding-left:50px;
+	padding-left:20px;
 	font-size:14px;
 }
 .bookauthor {
-	padding-left:70px;
+	padding-left:50px;
 }
 .writetitle {
-	padding-left:70px;
+	padding-left:50px;
 }
 .container {
 	width: 95%;
