@@ -127,3 +127,37 @@
 	position: relative;
 	left: -17%;
 }
+
+
+#bSummary{ 
+	position:fixed;
+	z-index:1001;
+	}
+.bookSummaryCon{
+	position:relative; 
+	width:520px;
+	height:630px;
+	background:#da7c66 center center no-repeat;
+	border-radius: 3%;
+	}
+#close{
+	position: absolute;
+	top: 1%;
+	right: 1%;
+	float: right;
+}
+.summaryContent{
+	position: absolute;
+	top: 6%;
+	left: 2%;
+	width: 500px;
+	height: 580px;
+}
+.summaryContent p{
+	position: relative;
+	top: 5%;
+	margin: 0 20px;
+	line-height: 24px;
+	font-size: 14px;
+	color: #fff;
+}
