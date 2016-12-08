@@ -66,27 +66,37 @@
 	margin-right: 18px;
 	float: left;
 }
-.function-f p{
-	font-size: 12px;
+.function{	
+    bottom: 0;
+    background-color: #F5F5F5;
+}
+.function p{
 	text-align: center;
 }
-.function-f p:first-child{
-	padding: 5% 11%;
+.function-top{
+	font-size: 0.8em;
 	line-height: 200%;
-	font-size: 12px;
-	text-align: center;
+	padding: 2% 7%;
 }
-.function-f a{
+.function p:first-child{
+	text-align: justify;
+}
+#distance{
+	padding-top: 30px;
+}
+.function a{
 	color: #da7c66;
+	line-height:30px;
 	font-size:12px;
-	border:1px  #dcdcdc solid;
+	border:1px solid;
 	border-radius:9px;
 	padding:2px 12px;
+	border-color: #dcdcdc;
 }
-.function-f a:hover{
+.function a:hover{
 	background-color: #da7c66;
 	color: #fff;
-	text-decoration: none;
+	border:none;
 }
 #care:hover{
 	background-color: #da7c66; 
