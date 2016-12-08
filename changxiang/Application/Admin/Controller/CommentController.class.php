@@ -17,6 +17,14 @@ class CommentController extends Controller {
         $page -> setConfig('first','第一页');
         $page -> setConfig('prev','前一页<<');
         $page -> setConfig('next','后一页>>');
+        //实例化users模型对象
+        $usersModel = M('users');
+        //将用户表和评论表进行关联
+        dump($usersModel);
+        exit;
+        $list = $commentsModel -> join('users ON comments.commentuserid = users.id') -> order('commenttime desc') -> page($nowPage.',5') -> select();
+
+        $this -> assign("result",$result);
         //进行分页数据查询，注意limit方法的参数要使用Page类的属性
         $list = $commentsModel -> order('commenttime desc') -> page($nowPage.',5') -> select();
         $show = $page -> show();//分页显示输出
