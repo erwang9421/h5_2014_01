@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/headernav.css" />
 
-    <link href="css/font-awesnome.mi.css" rel="stylesheet">
+    <link href="http://libs.useso.com/js/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
     <link  type="text/css" rel="stylesheet" href="css/editor.css"/>
     <link  type="text/css" rel="stylesheet" href="css/editarticle.css" />
+    <link rel="stylesheet" href="css/alert-feedback.css">
+
 
 
     <script src="js/jquery.js"></script>
@@ -50,7 +52,7 @@
         <!--aside-nav end（触发弹出侧栏）-->
         <header>
             <nav class="top-nav">
-                <img src="images/logo.png" width="115" class="logo" height="37" alt="logo" />
+                <a href="index.html"><img src="images/logo.png" width="115" class="logo" height="37" alt="logo" /></a>
                 <label for="search"></label>
                 <input type="text" id="search" placeholder="输入标签、作者、关键字搜索"/>
                 <div class="header-right">
@@ -61,7 +63,7 @@
                             <span>mono</span>
                         </div>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">账号设置</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="editmessage.html">账号设置</a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">退出</a></li>
                         </ul>
                     </div>
@@ -72,15 +74,15 @@
         <div id="nav">
             <div class="nav-child">
                 <div class="row">
-                    <div class="col-md-6 col-md-offset-3"><a href="#"><img src="images/myphoto.jpg" width="74" height="74" alt="我的头像" class="nav-photo" /></a><span class="nav-username">mono</span></div>
+                    <div class="col-md-6 col-md-offset-3"><a href="myBookReview_all.html"><img src="images/myphoto.jpg" width="74" height="74" alt="我的头像" class="nav-photo" /></a><span class="nav-username">mono</span></div>
                 </div>
                 <div class="row nav-msg">
                     <div class="col-md-10 col-md-offset-1">
                         <ul>
-                            <li><a href="#">文章</a></li>
-                            <li><a href="#">粉丝</a></li>
-                            <li><a href="#">收藏</a></li>
-                            <li><a href="#">关注</a></li>
+                            <li><a href="myBookReview_all.html">文章</a></li>
+                            <li><a href="fans.html">粉丝</a></li>
+                            <li><a href="myCollect.html">收藏</a></li>
+                            <li><a href="attention.html">关注</a></li>
                         </ul>
                         <br />
                         <ul>
@@ -94,7 +96,7 @@
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4">
                         <div class="nav-write-btn">
-                            <a href="#">写书评</a>
+                            <a href="editarticle.html">写书评</a>
                         </div>
                     </div>
                 </div>
@@ -105,21 +107,21 @@
                             <li><a href="index.html">首页</a></li>
                             <li class="nav-book-classify"><a href="#" >书评分类</a>
                                 <ul class="nav-second-menu">
-                                    <li><a href="#">文学</a>
+                                    <li><a href="tags.html">文学</a>
                                         <ul class="nav-third-menu">
-                                            <a href="#">文集</a>
-                                            <a href="#">纪实文学</a>
-                                            <a href="#">文学理论</a>
-                                            <a href="#">中国古诗词</a>
-                                            <a href="#">戏剧</a></li>
-                                            <a href="#">文集中国现当代诗歌</a>
-                                            <a href="#">外国诗歌</a>
-                                            <a href="#">民间文学</a>
-                                            <a href="#">外国随笔</a>
-                                            <a href="#">中国古代随笔</a>
+                                            <a href="tags.html">文集</a>
+                                            <a href="tags.html">纪实文学</a>
+                                            <a href="tags.html">文学理论</a>
+                                            <a href="tags.html">中国古诗词</a>
+                                            <a href="tags.html">戏剧</a></li>
+                                            <a href="tags.html">文集中国现当代诗歌</a>
+                                            <a href="tags.html">外国诗歌</a>
+                                            <a href="tags.html">民间文学</a>
+                                            <a href="tags.html">外国随笔</a>
+                                            <a href="tags.html">中国古代随笔</a>
                                         </ul>
                                     </li>
-                                    <li><a href="#">小说</a>
+                                    <li><a href="tags.html">小说</a>
                                         <ul class="nav-third-menu">
                                             <a href="#">a</a>
                                             <a href="#">b</a>
@@ -133,24 +135,25 @@
                                             <a href="#">g</a>
                                         </ul>
                                     </li>
-                                    <li><a href="#">哲学</a></li>
-                                    <li><a href="#">社会科学</a></li>
-                                    <li><a href="#">文化</a></li>
-                                    <li><a href="#">教育</a></li>
-                                    <li><a href="#">艺术</a></li>
-                                    <li><a href="#">自然科学</a></li>
-                                    <li><a href="#">工业技术</a></li>
+                                    <li><a href="tags.html">哲学</a></li>
+                                    <li><a href="tags.html">社会科学</a></li>
+                                    <li><a href="tags.html">文化</a></li>
+                                    <li><a href="tags.html">教育</a></li>
+                                    <li><a href="tags.html">艺术</a></li>
+                                    <li><a href="tags.html">自然科学</a></li>
+                                    <li><a href="tags.html">工业技术</a></li>
                                 </ul>
                             </li>
                             <li><a href="author_trend.html">作家专栏</a></li>
                             <li><a href="recommendation.html">推荐书评</a></li>
                             <li><a href="hot search.html">图书热榜</a></li>
+                            <li><a href="recommendbooklists.html">推荐书单</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="row">
                     <div class="nav-feedback-btn">
-                        <a href="#">意见反馈</a>
+                        <a href="#" id="sugPost" hidefocus="true">意见反馈</a>
                     </div>
                 </div>
 
@@ -172,43 +175,13 @@
                         <span class="bookname">
                             <input type="text" class="inputtext" size="20px"  placeholder="图书名称" >
                         </span>
-
-                    <span align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                        <select class="type">
-                            <option value="0">图书类型</option>
-                                <option value="1">文学</option>
-                                <option value="10">- 文集</option>
-                                <option value="11">- 纪实文学</option>
-                                <option value="12">- 文学理论</option>
-                                <option value="13">- 中国古诗词</option>
-                                <option value="14">- 戏剧</option>
-                                <option value="15">- 文集中国现当代诗歌</option>
-                                <option value="16">- 外国诗歌</option>
-                                <option value="17">- 民间文学</option>
-                                <option value="18">- 外国随笔</option>
-                                <option value="19">- 中国古代随笔</option>
-                                <option value="2">小说</option>
-                                <option value="20">- a</option>
-                                <option value="21">- b</option>
-                                <option value="3">哲学</option>
-                                <option value="4">社会科学</option>
-                                <option value="5">文化</option>
-                                <option value="6">教育</option>
-                                <option value="7">艺术</option>
-                                <option value="8">自然科学</option>
-                                <option value="9">工业技术</option>
-                        </select>
-                        </span>
-
                     <span class="bookauthor">
                              <input type="text" class="inputtext" size="20px"  placeholder="图书作者" >
                         </span>
                     <span class="writetitle">
                             <input type="text"  class="inputtext" size="20px"  placeholder="文章标题" >
                         </span>
-                    <tr>
-
-                        <span href="#">[图书名称、图书作者、文章标题必填]</span>
+                    <span href="#">[图书名称、图书作者、文章标题必填]</span>
                 </div>
                 <div class="htmleaf-container">
                     <div class="container-fluid">
@@ -247,7 +220,9 @@
         </footer>
     </div><!--canvas end-->
 </div><!--container end-->
+<script src="js/alert-feedback.js"></script>
 <script src="js/1editor.js"></script>
+
 <script src="js/editor.js"></script>
 <script type="text/javascript">
     $(document).ready( function() {

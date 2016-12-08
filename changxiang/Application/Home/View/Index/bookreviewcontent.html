@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>书评内容页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--网页图标-->
+    <link rel="shortcut icon" href="images/logo2.png" media="screen">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/headernav.css" />
+    <link rel="stylesheet" href="css/bookreviewcontent.css" />
+    <link rel="stylesheet" href="css/collect.css" />
+
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/collect.js"></script>
+
+
+    <script type="text/javascript">
+        if (navigator.appName=="Microsoft Internet Explorer") {
+             function fPmVerticalRightOut() {
+                 var getItem = document.getElementById("pmVerticalRightOut").getElementsByTagName("li");
+                 for (var i=0; i<getItem.length; i++) {
+                     getItem[i].onmouseover=function() { 
+                         if(     this.className=="nav-second-menu"){
+                             this.className="nav-second-menuIe";
+                         }
+                     }
+                     getItem[i].onmouseout=function() { 
+                         if(     this.className=="nav-second-menuIe"){
+                             this.className="nav-second-menu";
+                         }
+                     }
+                 }
+             }
+             window.onload=fPmVerticalRightOut;
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="canvas">
+        	<div class="aside-nav toggle-nav">
+                <a href="#"><i class="icon-align-justify icon-large"></i></a>
+            </div>
+            <!--aside-nav end（触发弹出侧栏）-->
+            <header>
+                <nav class="top-nav">
+                    <a href="index.html"><img src="images/logo.png" width="115" class="logo" height="37" alt="logo" /></a>
+                    <label for="search"></label>
+                    <input type="text" id="search" placeholder="输入标签、作者、关键字搜索"/>
+                    <div class="header-right">
+                        <a href="#">写书评</a>
+                        <div class="myphoto dropdown">
+                            <div class=" dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown">
+                                <img src="images/myphoto.jpg" width="35" height="35" alt="我的头像" /> 
+                                <span>mono</span>
+                            </div>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">账号设置</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">退出</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header><!--header end-->
+            <!--侧导航内容 start-->
+            <div id="nav">
+                <div class="nav-child">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3"><a href="#"><img src="images/myphoto.jpg" width="74" height="74" alt="我的头像" class="nav-photo" /></a><span class="nav-username">mono</span></div>
+                    </div>
+                    <div class="row nav-msg">
+                        <div class="col-md-10 col-md-offset-1">
+                            <ul>
+                                <li><a href="#">文章</a></li>
+                                <li><a href="#">粉丝</a></li>
+                                <li><a href="#">收藏</a></li>
+                                <li><a href="#">关注</a></li>
+                            </ul>
+                            <br />
+                            <ul>
+                                <li>20</li>
+                                <li>5</li>
+                                <li>56</li>
+                                <li>1</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4">
+                            <div class="nav-write-btn">
+                                <a href="#">写书评</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row nav-menu">
+                        <div class="col-md-12">
+                            <ul class="pmVerticalRightOut" id="pmVerticalRightOut">
+                                <li><a href="index.html">首页</a></li>
+                                <li class="nav-book-classify"><a href="#" >书评分类</a>
+                                    <ul class="nav-second-menu">
+                                        <li><a href="#">文学</a>
+                                            <ul class="nav-third-menu">
+                                                <li><a href="#">文集</a></li>
+                                                <li><a href="#">纪实文学</a></li>
+                                                <li><a href="#">文学理论</a></li>
+                                                <li><a href="#">中国古诗词</a></li>
+                                                <li><a href="#">戏剧</a></li>
+                                                <li><a href="#">文集中国现当代诗歌</a></li>
+                                                <li><a href="#">外国诗歌</a></li>
+                                                <li><a href="#">民间文学</a></li>
+                                                <li><a href="#">外国随笔</a></li>
+                                                <li><a href="#">中国古代随笔</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">小说</a>
+                                            <ul class="nav-third-menu">
+                                                <li><a href="">a</a></li>
+                                                <li><a href="">b</a></li>
+                                                <li><a href="">c</a></li>
+                                                <li><a href="">d</a></li>
+                                                <li><a href="">e</a></li>
+                                                <li><a href="">f</a></li>
+                                                <li><a href="">j</a></li>
+                                                <li><a href="">h</a></li>
+                                                <li><a href="">i</a></li>
+                                                <li><a href="">g</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">哲学</a></li>
+                                        <li><a href="#">社会科学</a></li>
+                                        <li><a href="#">文化</a></li>
+                                        <li><a href="#">教育</a></li>
+                                        <li><a href="#">艺术</a></li>
+                                        <li><a href="#">自然科学</a></li>
+                                         <li><a href="#">工业技术</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">作家专栏</a></li>
+                                <li><a href="#">推荐书评</a></li>
+                                <li><a href="#">图书热榜</a></li>
+                                <li><a href="#">推荐书单</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="nav-feedback-btn">
+                            <a href="#" id="sugPost" hidefocus="true">意见反馈</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--侧导航内容 end-->
+            <!--content start-->
+            <div id="content">
+                <div class="content-right">
+                    <!--真正的内容部分-->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1 content-center">
+                                <div class="row">
+                                    <ul class="breadcrumb">
+                                     <li><a href="#">首页</a></li>
+                                    <li class="active">书评内容</li>
+                                    </ul>  
+                                </div>
+                                <div class="row rowmsg">
+                                    <div class="col-md-6 col-sm-6">
+                                        <a href="bookreview_all.html">
+                                        <img src="images/myphoto.jpg" class="myphoto2" alt="用户头像" width="44" height="44" /></a>
+                                        <ul class="comment-msg1">
+                                            <li><span>MONO</span><span>2016-12-21 08:13</span></li>
+                                            <li>
+                                                阅读<span> 11</span>
+                                                评论<span> 2</span>
+                                                写作<span> 1</span>
+                                                收藏<span> 1</span>
+                                            </li>
+                                        </ul>
+                                        <div class="clear"></div> 
+                                        <div class="comment-tag">
+                                                <span>标签：</span>
+                                                <a href="tags.html">中国现代小说</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 three-btn">
+                                        <button type="button" class="btn btn-default care" id="concern">关注</button>
+                                        <button type="button" class="btn btn-default collectbooksreview" id="collectBook">收藏书评</button>
+                                        <button class="btn btn-default thebookreview">本书简介</button>
+                                        <div class="clear"></div> 
+                                        <div class="download">
+                                            <button type="button" class="btn btn-default">下载</button>
+                                            <button class="btn btn-default">打印</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="article">
+                                    <h3>最孤独的魂游天外</h3>
+                                    <div>
+                                    <p>“世上没有完美的事物，唯有这样一些透明得让你忘记自己的时刻，能拥有这样的一瞬，便是天赐的幸福。”这么一句看似不起眼的话，夹杂在比利千头万绪的心潮起伏里，却拥有狠狠击中我的力道，甚至可以视之为这部《漫长的中场休息》之微型总结。这样的一瞬就是比利最孤独的魂游天外。</p>
+                                    <p>故事主要视角以19岁的比利•林恩为主，在伊拉克战场的硝烟炮火摸爬滚打一年多后，他所在的B班阴差阳错地迎来一次小小胜利，并因此机缘巧合地成为“美国英雄”，在感恩节回国探亲时期，他们进行了为期两周的“凯旋之旅”，然后继续前往伊拉克服完剩余11个月的兵役。主体情节发生在德克萨斯体育场内，达拉斯牛仔队主场迎战芝加哥熊队。按照美式橄榄球比赛规则，比赛分为四节，每节15分钟，第一、二节称为上半场，第三、四节称为下半场，上下半场之间有12分钟（大学赛20分钟）的中场休息。在这有限的十几分钟之内，何谓“漫长”？ 书名蕴含的相悖逻辑，基本指明了作品暗藏的时间脉络，也是最具亮点之处。整本书正面叙述的物理时间，只囊括一个白天，而这一天作为时间轴上的原点与核心，却吸附了无数往事，每扯开一缕思绪的线索，记忆之海便荡漾出无垠涟漪，通过章节之间的自然空白，巧妙回归时间原点，结尾实现完美闭合。于是，在这单一的场景中，时间绵延，空间扩增，通过“中场休息”这一横截面剖析出小至比利参军的前因后果、性格形成、家庭背景，大到整个美国社会的众生纷纭，着力一个微观层面，描摹社会全景与人物群像，是谓见微知著。作者在时间线上下功夫，打破线性叙事的基本结构，一方面顺应现代文艺作品的风潮，不再拘泥于古典叙事的窠臼，一方面也是沿袭了自《追忆似水年华》以来的意识流路线，以恒河一沙粒窥无限往生，更为著名的例子有詹姆斯•乔伊斯的《尤利西斯》、弗吉尼亚・伍尔夫 的《达洛维夫人》和伊恩•麦克尤恩的《星期六》，都是一天之内的脑海风暴与思想旅行。
+                                    </p>
+                                    <p>当然，相对于这几本煌煌名著的厚重甚至不无艰涩，《漫长的中场休息》毫无迟滞感，读来异常畅快，长句甚少，表达方式更贴合21世纪的读者心态，颇有阅读快感。作者语言功底不俗，饱含想象力的比喻精妙而准确，常予我深深认同感。如描述富翁诺姆及其家族的惺惺作态：“他们像是串在一条电线上的钥匙，丁零当啷、火花四溅地极力推销自己。”描写拉拉队美女激情澎湃的一刻：“胸骨升起、膨胀，脸和脖子绽放出姹紫嫣红的花。”而比利的姐姐凯瑟琳则形容“自己的生活就像一首悲惨的乡村歌曲”，这些不张扬的、大大小小的明喻暗喻，在德克萨斯的阴冷冬日里，是奋力挤破乌云的惨淡阳光，让阴霾的以往、未知的未来，看起来不那么绝望。比利和B班队员的对话充满恶俗粗鲁的揶揄和挤兑，以比利之眼望到的周遭也尽是龌龊人群，然而一旦落到比利的心理层面，语言就变得细腻柔软，让人忍不住对这个满脑性幻想的毛头小子生出疼惜。</p>
+                                    <p>比利出生于工薪阶层，家里有独立房子，父亲是小有名气的电台主持人，在为出车祸而遭抛弃的姐姐大打出手后，为免遭牢狱之苦而参军的愣头青，经历了人生的转折。每日体会真枪实弹从耳边“嗖嗖”而过，“杀戮”这个字眼从书面落实到刺眼的血红色，比利的身心在短时间内发酵成熟，尤其是队友施鲁姆的牺牲，从心灵到生理，他经受了巨大震荡。他开始明白：“灵魂是一种看得见摸得着的东西。”他急需有精神导师引导他，好好“和他谈论死亡、悲痛和灵魂的宿命”，他想明白“神秘、敬畏、深切的悲与痛”究竟是怎么一回事。出于从小所受的教育影响，他一开始找到牧师倾吐心事，很快就发现自己的痛苦心事不过是牧师用来炫耀其教育技巧的资本；准备将B班经历改编成电影的制作人艾伯特也在考虑范围之内，但过于世故，难以成为交心的人；他也曾在心里对一向淡漠的父亲低头，希望现在失去说话功能的父亲能在心里为儿子留一个柔软的角落，像每一部励志电影里那样，父与子在经历战火和伤痛后，从内心深处互相原谅了对方，拥抱在一起，然而坐在轮椅里的父亲依旧用冷酷而轻蔑的眼神拒绝交流；他甚至还考虑过对B班的灵魂人物——麦克少校推心置腹，希望他以“简单粗暴而实用的智慧”消解掉些许自己心头的苦恼，但比利无法破解与长官交流的密码。最终，他仍是蜷缩在壳里的蜗牛，在亮如白昼的德克萨斯体育场里继续做孤独的梦。</p>
+                                    <p>其实，比利欲倾诉心事的那些对象，自己本身也有各自的性格缺陷。牧师不过是打着宗教幌子的谋私利的混蛋，根本无意于解决比利的烦恼。艾伯特将好莱坞神话吹得神乎其神，如雷贯耳的句型名字在舌尖打转，他在商业机器和普通人之间扮演着桥梁的角色，什么都不信任，用天真的冷酷和世故的无邪这两种对立的姿态在自己外围建筑了一座城堡。父亲在比利的成长生涯中，是一个缺席的角色，他用中产阶级时髦快活的语气谈论右翼主义，对待家人冷漠，却不妨碍婚外情的滋生。而比利的队友们也无一不拥有问题父亲，瘾君子、通缉犯、制毒者……他们要么是弃儿，要么是孤儿，选择上战场似乎是最佳选择。这些形形色色的人物，以只言片语或侧面提及的形式栩栩屹立在文字间，构成911后美国主流社会的全景。在两个星期的“凯旋之旅”中，比利见识到太多狂热的呼声，他们的神态、穿着、言语甚至麻木微笑的咧嘴角度都几乎如出一辙，美国梦从未消匿，在21世纪以全新的面目重新掀起民众盲目乐观的热潮。这些精英人偶像是一个模子里捏出来的，“男人看上去睿智，轻松，人到中年依旧保持着良好的身材，透着成功人士与生俱来的自信与优雅。头发保养得很好，皱纹也恰到好处。女人们身材姣好，皮肤晒成了国际化的古铜色。饱满紧致，犹如蛋奶酥。”他们是布什政府坚定的拥趸，在公共场合负责露出八颗牙的微笑，伸出热情的手，以触摸到“美国英雄”为跻身时髦活动的标识，这是一种身份的象征，是一种站队，是庞大的政治商业体制中每一颗螺丝拧紧后产生的合力。比利身处风暴中心，周围迷狂的人群、纸醉金迷的中场秀现场像《香水》中闻香而狂的人群，为表现比利在这场夸张变形的假面舞会上灵魂脱壳，行文风格也采用了大胆的形式，让耳边流过的豪言壮语出现断续、空白、分行、错乱，在视觉上就能达到情感共振。</p>
+                                    <p>这场举国欢腾的中场秀是伊拉克战场的镜面复刻，是一面扭曲失真的照妖镜，上流社会谋利益，中产阶级看热闹，战争及其炮制出的英雄成为人人追逐的掘金桶，而比利只想吞一粒布洛芬片治愈该死的头痛，只想有人为他的离去真心难过，只想遭遇一次刻骨铭心的爱情，他奋不顾身地抓住一个爱情泡沫，他“朝一个充满希望的无名之地飞去，周围的一切都往后退。他感觉自己摆脱了物理学定义的速度，正身处未来。”他终于在中场秀结束时，感受到了平衡和心灵秩序带来的喜悦，即使明白再也不会和此刻真心怜惜的她相见，他终于踏上了通向人生真谛的桥梁——而这一切，都是在一瞬间发生的，并不需要等到长大才实现。此刻，冰雪飞舞，泪水横流，他相信覆盖着国旗的施鲁姆也一定明白他了。</p>
+                                    </div>
+                                </div>
+                                <img src="images/money.png" alt="打赏" width="100px" height="auto" class="money" />
+                                <hr />
+                                <div class="row">
+                                    <div class="col-md-1">
+                                            <button type="button" class="btn btn-default likebooksreview">
+                                                <img src="images/heart.png" width="11px" height="auto">喜欢
+                                            </button>
+                                    </div>
+                                    <div class="col-md-7"></div>
+                                    <div class="col-md-4">
+                                        <div class="sharebtn">
+                                            <a href="#"><span class="glyphicon glyphicon-link"></span>链接到书城</a>
+                                            <a href="#"><span class="glyphicon glyphicon-share"></span>分享到微博</a>
+                                            <a href="#"><span class="glyphicon glyphicon-share"></span>分享到QQ</a>
+                                        </div>
+                                        </div>
+                                </div>
+                                <!-- 对书评的评论部分 -->
+                                <!-- 评论数目 -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <span>10条评论</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                <div class="col-md-1">
+                    <div class="myphoto">
+                        <a href=""><img src="images/myphoto.jpg" width="35" height="35" alt="我的头像" /></a>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <div class="row">
+                        <div class="col-md-9"><textarea name="" class="textarea" id="" cols="120" rows="1"></textarea></div>
+                        <div class="col-md-3">
+                            <div class="rightreviewbtn">
+                                <button class="btn btn-default bookreviewtextbtn">评价</button>
+                            </div>
+                            <div class="emoji">
+                                <a href=""><img src="images/emoji.png" alt=""></a>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="myphoto">
+                                <a href=""><img src="images/myphoto.jpg" width="35" height="35" alt="我的头像" /></a>
+                            </div>
+                        </div>
+                        <div class="col-md-11">
+                            <a href="">阿念</a>：<span>一本美国的超级小说，低配版加现在时的《了不起的盖茨比》。当美国梦由个人梦转化为国家梦时，牵扯到的就不止是美国人了。李安的电影方向应该与原著不同，所以更期待电影的是技术。</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-9">
+                                <time class="timeago">35分钟前</time>  
+                            </div>
+                            <div class="col-md-2">
+                                <div class="responsetoothers">
+                                    <a href=""><span class="glyphicon glyphicon-thumbs-up"></span></a>1
+                                    <a href=""><span>回复</span></a>
+                                </div>
+                            </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="myphoto">
+                                <a href=""><img src="images/myphoto.jpg" width="35" height="35" alt="我的头像" /></a>
+                            </div>
+                        </div>
+                        <div class="col-md-11">
+                            <a href="">阿念</a>：<span>一本美国的超级小说，低配版加现在时的《了不起的盖茨比》。当美国梦由个人梦转化为国家梦时，牵扯到的就不止是美国人了。李安的电影方向应该与原著不同，所以更期待电影的是技术。</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-9">
+                                <time class="timeago">35分钟前</time>  
+                            </div>
+                            <div class="col-md-2">
+                                <div class="responsetoothers">
+                                    <a href=""><span class="glyphicon glyphicon-thumbs-up"></span></a>1
+                                    <a href=""><span> 回复</span></a>
+                                </div>
+                            </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="myphoto">
+                                <a href=""><img src="images/myphoto.jpg" width="35" height="35" alt="我的头像" /></a>
+                            </div>
+                        </div>
+                        <div class="col-md-11">
+                            <a href="">阿念</a>：<span>一本美国的超级小说，低配版加现在时的《了不起的盖茨比》。当美国梦由个人梦转化为国家梦时，牵扯到的就不止是美国人了。李安的电影方向应该与原著不同，所以更期待电影的是技术。</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-9">
+                            <time class="timeago">35分钟前</time>  
+                        </div>
+                        <div class="col-md-2">
+                            <div class="responsetoothers">
+                                <a href="">查看对话</a>
+                                <a href=""><span class="glyphicon glyphicon-thumbs-up"></span></a>1
+                                <a href=""><span> 回复</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-6">
+                    <nav>
+                      <ul class="pagination">
+                        <li><a href="">&laquo;</a></li>
+                        <li class="active"><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li><a href="">&raquo;</a></li>
+                      </ul>
+                    </nav>
+                </div>
+            </div>
+                            </div> <!--content center end-->
+                        </div><!--row end-->
+                        <footer>
+                        <p>copyright@hebeinormal university</p>
+                        </footer>
+                    </div><!-- container-fluid -->  
+                </div><!--contnet rigt end-->
+            </div><!-- content结束 --> 
+
+
+            
+        </div><!--canvas end-->
+    </div><!--container end-->
+</body>
+</html>

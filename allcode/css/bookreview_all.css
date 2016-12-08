@@ -20,7 +20,7 @@
       
 }
 .introduction{
-	height: 230px;
+	height: 200px;
 	border-bottom: 1px #D4D4D4 solid;
 	border-top: 1px #D4D4D4 solid;
 	background-color: #F5F5F5;
@@ -73,6 +73,14 @@
 }
 .function p{
 	text-align: center;
+}
+.function-top{
+	font-size: 0.8em;
+	line-height: 200%;
+	padding: 2% 7%;
+}
+.function p:first-child{
+	text-align: justify;
 }
 #distance{
 	padding-top: 30px;
