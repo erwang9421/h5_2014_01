@@ -94,11 +94,22 @@
 	padding:2px 12px;
 	border-color: #dcdcdc;
 }
-.function a:hover{
+.function .optioned {
 	background-color: #da7c66;
 	color: #fff;
 	border:none;
 }
+.function p:first-child a:hover{
+	background-color: #da7c66;
+	color: #fff;
+	border:none;
+}
+.function p:last-child a:hover{
+	background-color: #da7c66;
+	color: #fff;
+	border:none;
+}
+
 /*content右边*/
 /*canvas里面 content样式里的首页简书样式*/
 .content-right {
