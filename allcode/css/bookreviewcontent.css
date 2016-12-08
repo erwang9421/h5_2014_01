@@ -38,7 +38,7 @@
 	margin-top: 6px;
 }
 .comment-msg1 span {
-	padding-right: 16px;
+	padding-right: 1em;
 }
 .clear {
 	clear:both;
@@ -48,6 +48,12 @@
 	color: #999;
 	font-size: 14px;
 	margin-top: 14px;
+}
+.book{
+	margin-top:0.5em;
+}
+.bookauthor{
+	margin-left:3em;
 }
 .rowmsg {
 	position: relative;
@@ -73,7 +79,7 @@
 	margin-left: 0;
 }
 .download {
-	margin-top: 36px;
+	margin-top:5em;
 }
 .download .btn {
 	padding:0 10px;
