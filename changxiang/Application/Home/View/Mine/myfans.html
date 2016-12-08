@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>我的信息-我的粉丝</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/headernav.css" />
+    <link rel="stylesheet" href="css/myfans.css">
+    <link rel="stylesheet" href="css/alert-feedback.css">
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/alert-feedback.js"></script>
+
+    <script type="text/javascript">
+        if (navigator.appName=="Microsoft Internet Explorer") {
+             function fPmVerticalRightOut() {
+                 var getItem = document.getElementById("pmVerticalRightOut").getElementsByTagName("li");
+                 for (var i=0; i<getItem.length; i++) {
+                     getItem[i].onmouseover=function() { 
+                         if(     this.className=="nav-second-menu"){
+                             this.className="nav-second-menuIe";
+                         }
+                     }
+                     getItem[i].onmouseout=function() { 
+                         if(     this.className=="nav-second-menuIe"){
+                             this.className="nav-second-menu";
+                         }
+                     }
+                 }
+             }
+             window.onload=fPmVerticalRightOut;
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="canvas">
+        	<div class="aside-nav toggle-nav">
+                <a href="#"><i class="icon-align-justify icon-large"></i></a>
+            </div>
+            <!--aside-nav end（触发弹出侧栏）-->
+            <header>
+                <nav class="top-nav">
+                    <a href="index.html"><img src="images/logo.png" width="115" class="logo" height="37" alt="logo" /></a>
+                    <label for="search"></label>
+                    <input type="text" id="search" placeholder="输入标签、作者、关键字搜索"/>
+                    <div class="header-right">
+                        <a href="editarticle.html">写书评</a>
+                        <div class="myphoto dropdown">
+                            <div class=" dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown">
+                                <img src="images/myphoto.jpg" width="35" height="35" alt="我的头像" /> 
+                                <span>mono</span>
+                            </div>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">账号设置</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">退出</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header><!--header end-->
+            <!--侧导航内容 start-->
+            <div id="nav">
+                <div class="nav-child">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3"><a href="myBookReview_all.html"><img src="images/myphoto.jpg" width="74" height="74" alt="我的头像" class="nav-photo" /></a><span class="nav-username">mono</span></div>
+                    </div>
+                    <div class="row nav-msg">
+                        <div class="col-md-10 col-md-offset-1">
+                            <ul>
+                                <li><a href="myBookReview_all.html">文章</a></li>
+                                <li><a href="#">粉丝</a></li>
+                                <li><a href="myCollect.html">收藏</a></li>
+                                <li><a href="attention.html">关注</a></li>
+                            </ul>
+                            <br />
+                            <ul>
+                                <li>20</li>
+                                <li>5</li>
+                                <li>56</li>
+                                <li>1</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4">
+                            <div class="nav-write-btn">
+                                <a href="editarticle.html">写书评</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row nav-menu">
+                        <div class="col-md-12">
+                            <ul class="pmVerticalRightOut" id="pmVerticalRightOut">
+                                <li><a href="index.html">首页</a></li>
+                                <li class="nav-book-classify"><a href="#" >书评分类</a>
+                                    <ul class="nav-second-menu">
+                                        <li><a href="tags.html">文学</a>
+                                            <ul class="nav-third-menu">
+                                                <a href="tags.html">文集</a>
+                                                <a href="tags.html">纪实文学</a>
+                                                <a href="tags.html">文学理论</a>
+                                                <a href="tags.html">中国古诗词</a>
+                                                <a href="tags.html">戏剧</a></li>
+                                                <a href="tags.html">文集中国现当代诗歌</a>
+                                                <a href="tags.html">外国诗歌</a>
+                                                <a href="tags.html">民间文学</a>
+                                                <a href="tags.html">外国随笔</a>
+                                                <a href="tags.html">中国古代随笔</a>
+                                            </ul>
+                                        </li>
+                                        <li><a href="tags.html">小说</a>
+                                            <ul class="nav-third-menu">
+                                                <a href="#">a</a>
+                                                <a href="#">b</a>
+                                                <a href="#">c</a>
+                                                <a href="#">d</a>
+                                                <a href="#">e</a>
+                                                <a href="#">f</a>
+                                                <a href="#">j</a>
+                                                <a href="#">h</a>
+                                                <a href="#">i</a>
+                                                <a href="#">g</a>
+                                            </ul>
+                                        </li>
+                                        <li><a href="tags.html">哲学</a></li>
+                                        <li><a href="tags.html">社会科学</a></li>
+                                        <li><a href="tags.html">文化</a></li>
+                                        <li><a href="tags.html">教育</a></li>
+                                        <li><a href="tags.html">艺术</a></li>
+                                        <li><a href="tags.html">自然科学</a></li>
+                                         <li><a href="tags.html">工业技术</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="myBookReview_all.html">作家专栏</a></li>
+                                <li><a href="recommendation.html">推荐书评</a></li>
+                                <li><a href="hot search.html">图书热榜</a></li>
+                                <li><a href="recommendbooklists.html">推荐书单</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="nav-feedback-btn">
+                            <a href="#" id="sugPost" hidefocus="true">意见反馈</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--侧导航内容 end-->
+            <!--content start-->
+            <div id="content">
+                <div class="content-left"></div>
+                <div class="content-right">
+                    <div class="roler">
+                        <div class="introduction">
+                            <p style="text-align: center;"><a href="bookreview_all.html"><img src="images/myphoto.jpg" width="70" height="70" alt="用户头像"/></a></p>
+                            <a href="#" id="name"><p>啊哈</p></a>
+                            <div class="list">
+                                <ul>
+                                    <li><a href="myBookReview_all.html">文章</a></li>
+                                    <li><a href="#">粉丝</a></li>
+                                    <li><a href="myCollect.html">收藏</a></li>
+                                    <li><a href="myattention.html">关注</a></li>
+                                </ul>
+                                <ul>
+                                    <li>20</li>
+                                    <li>5</li>
+                                    <li>56</li>
+                                    <li>1</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="function">
+                            <p id="distance"><a href="relevant.html">与我相关</a></p>
+                            <p><a href="drafts.html">草稿箱</a></p>
+                            <p><a href="editmessage.html">修改信息</a></p>
+                            <p><a href="booklist.html">我的书单</a></p>
+                        </div>
+                    </div> 
+                    <ul class="main-title">
+                        <li><a href="index.html">首页</a></li>
+                        <li>&nbsp;/&nbsp;</li>
+                        <li>我的粉丝</li>
+                    </ul>     
+                    <div class="main">
+                            <div class="usermessage">
+                                <p style="text-align: center;"><a href="bookreview_all.html"><img src="images/myphoto.jpg" width="60" height="60" alt="用户头像"/></a></p>
+                                <a href="#" id="uname">科科</a>
+                                <div class="list-user">
+                                    <a href="bookreview_all.html">文章</a>
+                                    <a href="fans.html">粉丝</a>
+                                    <a href="collect.html">收藏</a>
+                                    <a href="attention.html">关注</a>
+                                    <br/>
+                                    <p>20</p>
+                                    <p>5</p>
+                                    <p>56</p>
+                                    <p>3</p>
+                                    <br/>
+                                    <div class="ad">
+                                        <a href="#">+关注</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="usermessage">
+                                <p style="text-align: center;"><a href="bookreview_all.html"><img src="images/myphoto.jpg" width="60" height="60" alt="用户头像"/></a></p>
+                                <a href="#" id="uname">科科</a>
+                                <div class="list-user">
+                                    <a href="bookreview_all.html">文章</a>
+                                    <a href="fans.html">粉丝</a>
+                                    <a href="collect.html">收藏</a>
+                                    <a href="attention.html">关注</a>
+                                    <br/>
+                                    <p>20</p>
+                                    <p>5</p>
+                                    <p>56</p>
+                                    <p>3</p>
+                                    <br/>
+                                    <div class="ad">
+                                        <a href="#">+关注</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="usermessage">
+                                <p style="text-align: center;"><a href="bookreview_all.html"><img src="images/myphoto.jpg" width="60" height="60" alt="用户头像"/></a></p>
+                                <a href="#" id="uname">科科</a>
+                                <div class="list-user">
+                                    <a href="bookreview_all.html">文章</a>
+                                    <a href="fans.html">粉丝</a>
+                                    <a href="collect.html">收藏</a>
+                                    <a href="attention.html">关注</a>
+                                    <br/>
+                                    <p>20</p>
+                                    <p>5</p>
+                                    <p>56</p>
+                                    <p>3</p>
+                                    <br/>
+                                    <div class="ad">
+                                        <a href="#">+关注</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="usermessage">
+                                <p style="text-align: center;"><a href="bookreview_all.html"><img src="images/myphoto.jpg" width="60" height="60" alt="用户头像"/></a></p>
+                                <a href="#" id="uname">科科</a>
+                                <div class="list-user">
+                                    <a href="bookreview_all.html">文章</a>
+                                    <a href="fans.html">粉丝</a>
+                                    <a href="collect.html">收藏</a>
+                                    <a href="attention.html">关注</a>
+                                    <br/>
+                                    <p>20</p>
+                                    <p>5</p>
+                                    <p>56</p>
+                                    <p>3</p>
+                                    <br/>
+                                    <div class="ad">
+                                        <a href="#">+关注</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="usermessage">
+                                <p style="text-align: center;"><a href="bookreview_all.html"><img src="images/myphoto.jpg" width="60" height="60" alt="用户头像"/></a></p>
+                                <a href="#" id="uname">科科</a>
+                                <div class="list-user">
+                                    <a href="bookreview_all.html">文章</a>
+                                    <a href="fans.html">粉丝</a>
+                                    <a href="collect.html">收藏</a>
+                                    <a href="attention.html">关注</a>
+                                    <br/>
+                                    <p>20</p>
+                                    <p>5</p>
+                                    <p>56</p>
+                                    <p>3</p>
+                                    <br/>
+                                    <div class="ad">
+                                        <a href="#">+关注</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="usermessage">
+                                <p style="text-align: center;"><a href="bookreview_all.html"><img src="images/myphoto.jpg" width="60" height="60" alt="用户头像"/></a></p>
+                                <a href="#" id="uname">科科</a>
+                                <div class="list-user">
+                                    <a href="bookreview_all.html">文章</a>
+                                    <a href="fans.html">粉丝</a>
+                                    <a href="collect.html">收藏</a>
+                                    <a href="attention.html">关注</a>
+                                    <br/>
+                                    <p>20</p>
+                                    <p>5</p>
+                                    <p>56</p>
+                                    <p>3</p>
+                                    <br/>
+                                    <div class="ad">
+                                        <a href="#">+关注</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="usermessage">
+                                <p style="text-align: center;"><a href="bookreview_all.html"><img src="images/myphoto.jpg" width="60" height="60" alt="用户头像"/></a></p>
+                                <a href="#" id="uname">科科</a>
+                                <div class="list-user">
+                                    <a href="bookreview_all.html">文章</a>
+                                    <a href="fans.html">粉丝</a>
+                                    <a href="collect.html">收藏</a>
+                                    <a href="attention.html">关注</a>
+                                    <br/>
+                                    <p>20</p>
+                                    <p>5</p>
+                                    <p>56</p>
+                                    <p>3</p>
+                                    <br/>
+                                    <div class="ad">
+                                        <a href="#">+关注</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="usermessage">
+                                <p style="text-align: center;"><a href="bookreview_all.html"><img src="images/myphoto.jpg" width="60" height="60" alt="用户头像"/></a></p>
+                                <a href="#" id="uname">科科</a>
+                                <div class="list-user">
+                                    <a href="bookreview_all.html">文章</a>
+                                    <a href="fans.html">粉丝</a>
+                                    <a href="collect.html">收藏</a>
+                                    <a href="attention.html">关注</a>
+                                    <br/>
+                                    <p>20</p>
+                                    <p>5</p>
+                                    <p>56</p>
+                                    <p>3</p>
+                                    <br/>
+                                    <div class="ad">
+                                        <a href="#">+关注</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="usermessage">
+                                <p style="text-align: center;"><a href="bookreview_all.html"><img src="images/myphoto.jpg" width="60" height="60" alt="用户头像"/></a></p>
+                                <a href="#" id="uname">科科</a>
+                                <div class="list-user">
+                                    <a href="bookreview_all.html">文章</a>
+                                    <a href="fans.html">粉丝</a>
+                                    <a href="collect.html">收藏</a>
+                                    <a href="attention.html">关注</a>
+                                    <br/>
+                                    <p>20</p>
+                                    <p>5</p>
+                                    <p>56</p>
+                                    <p>3</p>
+                                    <br/>
+                                    <div class="ad">
+                                        <a href="#">+关注</a>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div><!-- content结束 --> 
+            <footer>
+                <p>copyright@hebeinormal university</p>
+            </footer>
+        </div><!--canvas end-->
+    </div><!--container end-->
+</body>
+</html>
