@@ -1,0 +1,16 @@
+.content-book-comments-right {
+	top: 7%;
+	height: 100%;
+	width: 97%;
+	border: 1px solid black;
+	float: left;
+}
+.books_container{
+	height: 100%;
+	width: 900%;
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	box-sizing:border-box;
+	border: 2px solid blue;
+	/*overflow:hidden;*/
+}

@@ -20,7 +20,7 @@
       
 }
 .introduction{
-	height: 200px;
+	height: 230px;
 	border-bottom: 1px #D4D4D4 solid;
 	border-top: 1px #D4D4D4 solid;
 	background-color: #F5F5F5;
@@ -74,14 +74,6 @@
 .function p{
 	text-align: center;
 }
-.function-top{
-	font-size: 0.8em;
-	line-height: 200%;
-	padding: 2% 7%;
-}
-.function p:first-child{
-	text-align: justify;
-}
 #distance{
 	padding-top: 30px;
 }
@@ -94,22 +86,11 @@
 	padding:2px 12px;
 	border-color: #dcdcdc;
 }
-.function .optioned {
+.function a:hover{
 	background-color: #da7c66;
 	color: #fff;
 	border:none;
 }
-.function p:first-child a:hover{
-	background-color: #da7c66;
-	color: #fff;
-	border:none;
-}
-.function p:last-child a:hover{
-	background-color: #da7c66;
-	color: #fff;
-	border:none;
-}
-
 /*content右边*/
 /*canvas里面 content样式里的首页简书样式*/
 .content-right {
@@ -166,7 +147,7 @@
 }
 .content-book-comment1{
 	width:5%;
-	height: 90%;
+	height: 92%;
 	/*position: relative;*/
 	background-color: #f7f7f7;
 	border: 1px solid #dbdce0;
@@ -221,11 +202,23 @@
 }
 .comment-msg1 {
 	float: left;
-	margin-left:8%;
+	margin-left:5%;
+	position: relative;
+}
+.close{
+	margin-left: 4.5%;
+	/*display: none;*/
+	float: left;
+	position: absolute;
+}
+.close:hover{
+	display: block;
+	position: absolute;
 }
 .comment-msg1 li{
 	color: #999;
 	font-size: 0.9em;
+	/*margin-top: 2%;*/
 }
 .comment-msg1 li:first-child {
 	margin-bottom:8%;
@@ -246,6 +239,7 @@
 }
 .comment-msg2 li:last-child {
 	color: #da7c66;
+	margin-top: 3%;
 }
 .comment-bottom {
 	height: 75%;
@@ -276,7 +270,7 @@
 @media screen and (max-height: 768px) { 
 .comment-bottom p {height: 310px} 
 }  
-@media screen and (max-height: 640px) { 
+@media screen and (max-height: 638px) { 
 .comment-bottom p {height: 220px} 
 }
 @media screen and (max-height: 614px) { 

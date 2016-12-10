@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* CSS Document */	
+#nav {
+	z-index: 100;
+}
+#content {
+	width:97%;
+	left: 3%;
+	position: absolute;
+	border:none;
+}
+.content-right {
+	width: 100%;
+	height: 100%;
+}
+.roler{
+	width:15%;
+	height: 100%;
+	border-right: 1px #D4D4D4 solid;
+	background-color:#F5F5F5; 
+	float: left;
+}
+.introduction{
+	height: 230px;
+	border-bottom: 1px #D4D4D4 solid;
+	border-top: 1px #D4D4D4 solid;
+	background-color: #F5F5F5;
+}
+.introduction img{
+	margin:auto;
+	margin-top: 25px;
+	border-radius:50%;
+}
+#name{
+	color: #67B9FF;
+	text-align: center;
+}
+.list{	
+	padding-top: 6px;
+    text-align:center;
+}
+.list ul{
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+.list ul:last-child{
+	margin-top: 15px;
+	font-size: 12px;
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+.list ul li{
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+.list a{
+	color: #5eb3ef;
+	font-size:12px;
+}
+.list p{
+	color: #666;
+	font-size: 12px;
+	margin-top: 2px;
+	margin-left: 18px;
+	margin-right: 18px;
+	float: left;
+}
+.function{	
+    bottom: 0;
+    background-color: #F5F5F5;
+}
+.function p{
+	text-align: center;
+}
+#distance{
+	padding-top: 30px;
+}
+.function a{
+	color: #da7c66;
+	line-height:30px;
+	font-size:12px;
+	border:1px solid;
+	border-radius:9px;
+	padding:2px 12px;
+	border-color: #dcdcdc;
+}
+.function a:hover{
+	background-color: #da7c66;
+	color: #fff;
+	border:none;
+}
+#click{
+	color: #fff;
+	background-color: #da7c66;
+	border:none;
+}
+.main-title {
+	border:none;
+	right: 0;
+	width: 80%;
+	height: 60px;
+	line-height: 60px;
+	background-color:#fff;
+	z-index: 300;
+	position: fixed;
+}
+.main{
+	width:85%;
+    overflow-y:auto;
+	padding-top:5%;
+	background-color:#fff;
+	height:100%;
+	float: left;
+	position: relative;
+}
+.main-title li {
+	float: left;
+}
+.main p{
+	color: #666;
+	font-size: 14px;
+    margin: 15px 3%;
+}
+.scale{
+	width: 90%;
+	margin: 10px 5% 30px 5% ;
+	height: 55px;
+	position: relative;
+}
+.scale-left, .scale-right {
+	width: 40%;
+	background-color: rgb(247,247,247);
+	height: 55px;
+	line-height: 55px;
+}
+.scale-left {
+	margin-left:6%;
+	float: left;
+    position: relative;
+}
+.scale-left a, .scale-right a{
+	width: 100%;
+	display: block;
+	height: 55px;
+	line-height: 60px;
+	text-align: center;
+}
+.scale-right {
+	margin-right:6%;
+	float: right;
+	position: relative;
+}
+.scale-right img , .scale-left img {
+	display: none;
+	position: absolute;
+}
+.scale-left a:hover {
+	text-decoration: none;
+}
+.scale-right a:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+.scale-left:hover img {
+	display: block;
+	float: right;
+	position: absolute;
+	right: 9px;
+	top: 9px;
+	z-index: 4;
+}
+.scale-right:hover img {
+	display: block;
+	float: right;
+	position: absolute;
+	right: 9px;
+	top: 9px;
+	z-index: 4;
+}
+.scale:last-child {
+	margin-bottom: 250px;
+}

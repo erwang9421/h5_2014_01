@@ -1,9 +1,9 @@
 <div id="dcMain">
     <!-- 当前位置 -->
     <div id="urHere"><a href="#">畅评首页</a><b>></b><strong>编辑信息</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-    <h3><a href="__MODULE__/User/lists" class="actionBtn">返回列表</a>编辑信息</h3>
+    <h3><a href="__MODULE__/Author/lists" class="actionBtn">返回列表</a>编辑信息</h3>
     <form action="" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="{$data.id}">
+        <input type="hidden" name="authorid" value="{$data.authorid}">
         <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
             <tr>
                 <td width="90" align="center">用户名</td>
@@ -18,6 +18,12 @@
                 </td>
             </tr>
             <tr>
+                <td align="center">身份证件照</td>
+                <td>
+                    <input type="file" name="idcard" enctype="multipart/form-data" value="{$data.idcard}"  size="38" class="inpFlie" />
+
+            </tr>
+            <tr>
                 <td align="center">邮箱</td>
                 <td>
                     <input type="text" name="email" value="{$data.email}" size="50" class="inpMain" />
@@ -26,7 +32,7 @@
             <tr>
                 <td align="center">头像</td>
                 <td>
-                    <input type="file" name="userimage" value="{$data.userimage}" size="38" class="inpFlie" />
+                    <input type="file" name="authorimage" value="{$data.authorimage}" size="38" class="inpFlie" />
 
             </tr>
             <tr>

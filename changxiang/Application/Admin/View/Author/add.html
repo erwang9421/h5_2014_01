@@ -1,11 +1,9 @@
 <div id="dcMain">
  <!-- 当前位置 -->
- <div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>添加用户</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
- <h3><a href="__MODULE__/User/lists" class="actionBtn">用户列表</a>添加用户</h3>
- <form action="__MODULE__/User/doAdd" method="post" enctype="multipart/form-data">
-  <input type="hidden" name="id" value="">
+ <div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>添加作家</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+ <h3><a href="__MODULE__/Author/lists" class="actionBtn">作家列表</a>添加作家</h3>
+ <form action="__MODULE__/Author/doAdd" method="post" enctype="multipart/form-data">
   <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
-
    <tr>
     <td width="90" align="center">用户名</td>
     <td id="nameParent">
@@ -18,6 +16,13 @@
      <input type="text" class="inpMain" placeholder="" name="pass">
     </td>
    </tr>
+   <tr>
+   <tr>
+    <td align="center">身份证件照</td>
+    <td>
+     <input type="file" name="idcard" size="38" class="inpFlie"  multiple="multiple"/>
+
+   </tr>
    <td align="center">邮箱</td>
    <td id="emailParent">
     <input type="text" name="email" value="" size="50" id="Email" class="inpMain" onblur="isEmail(document.getElementById('Email').value);">
@@ -26,7 +31,7 @@
    <tr>
     <td align="center">头像</td>
     <td>
-     <input type="file" name="userimage" size="38" class="inpFlie" />
+     <input type="file" name="authorimage" size="38" class="inpFlie" />
 
    </tr>
    <tr>
@@ -35,8 +40,6 @@
      <textarea name="introduction" cols="60" rows="4" class="textArea" ></textarea>
     </td>
    </tr>
-
-
    <tr>
     <td></td>
     <td>
