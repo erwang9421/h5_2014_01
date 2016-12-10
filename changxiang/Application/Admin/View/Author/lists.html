@@ -2,7 +2,7 @@
     <!-- 当前位置 -->
     <div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>用户列表</strong> </div>
     <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-        <h3><a href="__MODULE__/User/adduser" class="actionBtn add">添加用户</a>用户列表</h3>
+        <h3><a href="__MODULE__/Author/add" class="actionBtn add">添加作家</a>作家列表</h3>
 
         <div id="list">
             <form name="action" method="post" action="">
@@ -14,6 +14,7 @@
                         <th align="center">用户名</th>
                         <th align="center">密码</th>
                         <th  align="center">邮箱</th>
+                        <th  align="center">身份证件照</th>
                         <th  align="center">个人简介</th>
                         <th  align="center">关注数</th>
                         <th  align="center">粉丝数</th>
@@ -22,21 +23,22 @@
                         <th  align="center">头像</th>
                         <th width="80" align="center">操作</th>
                     </tr>
-                    <volist name="user" id="vo">
+                    <volist name="author" id="vo">
                         <tr>
                             <td align="center"><input type="checkbox" name="id[]" value="{$vo.id}" class="checkbox" id="id[]" /></td>
-                            <td align="center">{$vo.id}</td>
+                            <td align="center">{$vo.authorid}</td>
                             <td align="center"><a href="product.php?rec=edit&id=5">{$vo.username}</a></td>
                             <td align="center">{$vo.pass|mb_substr=0,13,'utf-8'}</td>
                             <td align="center">{$vo.email|mb_substr=0,15,'utf-8'}</td>
+                            <td align="center">{$vo.idcard|mb_substr=0,10,'utf-8'}</td>
                             <td align="center">{$vo.introduction|mb_substr=0,10,'utf-8'}</td>
                             <td align="center">{$vo.attention}</td>
                             <td align="center">{$vo.fan}</td>
                             <td align="center">{$vo.collection}</td>
                             <td align="center">{$vo.bookreview}</td>
-                            <td align="center">{$vo.userimage|mb_substr=0,16,'utf-8'}</td>
+                            <td align="center">{$vo.authorimage|mb_substr=0,16,'utf-8'}</td>
                             <td align="center">
-                                <a href="__MODULE__/User/edituser?id='{$vo['id']}'">编辑</a> | <a href="__MODULE__/User/delete?id='{$vo['id']}'">删除</a>
+                                <a href="__MODULE__/Author/edit?id='{$vo['authorid']}'">编辑</a> | <a href="__MODULE__/Author/delete?id='{$vo['authorid']}'">删除</a>
                             </td>
                         </tr>
                     </volist>

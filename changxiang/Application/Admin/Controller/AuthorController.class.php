@@ -1,20 +1,12 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class UserController extends Controller {
+class AuthorController extends Controller {
     public function __construct(){
  		parent::__construct();
- 		/*if(!isLogin())
- 		{
- 			$this->error("请先登录","Admin/login");
- 		}*/
- 		/*if(get_username())
- 		{
- 			$sessionName=get_username();
- 		}*/
  	}
 
- 	public function adduser(){
+ 	public function add(){
 		$this->display();
 	}
 
@@ -26,20 +18,19 @@ class UserController extends Controller {
             $upload->maxSize=3145728 ;// 设置附件上传大小
             $upload->exts=array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
             $upload->rootPath  = THINK_PATH; // 设置附件上传根目录
-            $upload->savePath  ='../Public/uploads/userimage/'; // 设置附件上传（子）目录
+            $upload->savePath  ='../Public/uploads/authorimage/'; // 设置附件上传（子）目录
             // 上传文件 
             $info   =   $upload->upload();
             if(!$info) {// 上传错误提示错误信息
                 $this->error($upload->getError());
-            }
-            else{
-                    //实例化模型类 格式 [资源://][模块/]模型
-                $userModel = D("users");
-                $authorModel = M("author");
-                $data = $userModel -> create();
-                if (!$data) {  //创建对象
-                    $this->error($userModel->getError());
-                }
+            }else{// 上传成功
+        		//实例化模型类 格式 [资源://][模块/]模型
+        		$authorModel = D("author");
+                $userModel = M("users");
+                $data = $authorModel->create();
+        		if (!$data) {  //创建对象
+        			$this->error($authorModel->getError());
+        		}
                 $email=$_POST['email'];
                 $username=$_POST['username'];
                 $map['username'] =$username;
@@ -56,42 +47,43 @@ class UserController extends Controller {
                 {
                     $this->error('邮箱已被使用');
                 }
-                $data['userimage']=$info['userimage']['savepath'].$info['userimage']['savename']; 
-                if ($userModel->add($data)) { //写入数据库
-                    $this->success("添加成功！", U("lists"));            
-                }
-                else {
-                    $this->error("添加失败！");
-                }
+                //设置thumb字段属性(目录+名字)  
+                $data['idcard']=$info['idcard']['savepath'].$info['idcard']['savename']; 
+                $data['authorimage']=$info['authorimage']['savepath'].$info['authorimage']['savename'];   
+
+        		if ($authorModel->add($data)) { //写入数据库
+        			$this->success("添加成功！", U("lists"));
+        		}
+        		else {
+        			$this->error("添加失败！");
+        		}
             }
-        		
     	}
 
 	    public function lists() {
             //分页
-            $usermodel=M('users');
+            $authorModel=M('author');
             import('Org.Util.Page');
-            $count=$usermodel->count();
+            $count=$authorModel->count();
             $page=new \Think\Page($count,3);
             $nowPage=isset($_GET['p'])?intval($_GET['p']):1;
             $page->setConfig('first','第一页');
             $page->setConfig('prev','前一页');
             $page->setConfig('next','后一页');
             //进行分页数据查询，注意limit方法的参数要使用Page类的属性
-            $user=$usermodel->order('id desc')->page($nowPage.',9')->select();
-            /*$user['attention]'=*/
+            $author=$authorModel->order('authorid desc')->page($nowPage.',9')->select();
             $show=$page->show();
             $this->assign('page',$show);
-            $this->assign('user', $user);  //传值到模板
+            $this->assign('author', $author);  //传值到模板
             $this->display();
         }
 
-    	public function edituser() {
+    	public function edit() {
             if (isset($_POST['submit'])) {
-                $usermodel = D("users");
-                if($usermodel->create()) //创建对象
+                $authorModel = D("author");
+                if($authorModel->create()) //创建对象
                 {
-                    if($usermodel->save()){ //修改操作
+                    if($authorModel->save()){ //修改操作
                         $this->success("修改成功", U("lists"));
                     }
                     else
@@ -101,7 +93,7 @@ class UserController extends Controller {
                 }
                 else
                 {
-                    $this->error($usermodel->getError());
+                    $this->error($authorModel->getError());
                 }
             }
             else {
@@ -111,38 +103,35 @@ class UserController extends Controller {
                     exit("bad param!");
                 }
 
-                 $data = D("Users")->where("id=$id")->find();
+                $data = M("author")->where("authorid=$id")->find();
                 $this->assign("data", $data);
                 $this->display();
             }
         }
 
 
-        //删除用户
+        //删除图书
         public function delete() {
             //全部删除
-            $userModel = M("Users");
+            $authorModel = M("author");
             $id = $_GET['id'];
             if(is_array($id)){
                 foreach($id as $value){
-                    M("Users")->delete($value);
+                    M("author")->delete($value);
                 }
                 $this->success("用户删除成功",U("lists"));
             }
             //单个删除
             else{
-                if($userModel->where("id=$id")->delete())
+                if($authorModel->where("authorid=$id")->delete())
                     {
                         $this->success("用户删除成功",U("lists"));
                     }
                 else
                     {
-                        $this->error($userModel->geterror());
+                        $this->error($authorModel->geterror());
                     }
             }
         }
-
-
-       
 
 }

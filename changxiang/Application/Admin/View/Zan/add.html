@@ -1,0 +1,36 @@
+ <div id="dcMain">
+   <!-- 当前位置 -->
+<div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>添加点赞</strong> </div>
+  <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+    <h3><a href="__MODULE__/Zan/lists" class="actionBtn">点赞列表</a>添加点赞</h3>
+    <form action="__MODULE__/Zan/add" method="post">
+     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+      <tr>
+       <td width="80" align="center">点赞者</td>
+       <td>
+        <input type="text" name="supportuserid" value="" size="40" class="inpMain"  />
+       </td>
+      </tr>
+      <tr>
+       <td align="center">被赞人</td>
+       <td>
+        <input type="text" name="commentid" value="" size="40" class="inpMain"  />
+       </td>
+      </tr>
+      <tr>
+       <td align="center">点赞时间</td>
+       <td>
+        <input type="text" name="publishname" value="<?php echo date('Y-m-d H:i:s',time());?>" size="5" class="inpMain"/>
+       </td>
+      </tr>
+      <tr>
+       <td></td>
+       <td>
+        <input type="hidden" name="token" value="25bfda40" />
+        <input type="hidden" name="cat_id" value="" />
+        <input name="submit" class="btn" type="submit" value="提交" />
+       </td>
+      </tr>
+     </table>
+    </form>
+ </div>
