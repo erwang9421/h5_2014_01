@@ -21,7 +21,7 @@
 .breadcrumb {
 	background-color:transparent;
 	padding-left: 0;
-	margin:15px 0;
+	margin:1em 0;
 }
 .myphoto2 {
 	border-radius: 50%;
@@ -29,13 +29,13 @@
 }
 .comment-msg1 {
 	float: left;
-	margin-left: 10px;
-	font-size: 12px;
+	margin-left: 0.625em;
+	font-size: 0.75em;
 	color: #999;
-	margin-top: 4px;
+	margin-top: 0.25em;
 }
 .comment-msg1 li:last-child {
-	margin-top: 6px;
+	margin-top: 0.375em;
 }
 .comment-msg1 span {
 	padding-right: 1em;
@@ -46,8 +46,8 @@
 .comment-tag {
 	display: block;
 	color: #999;
-	font-size: 14px;
-	margin-top: 14px;
+	font-size: 1em;
+	margin-top: 0.875em;
 }
 .book{
 	margin-top:0.5em;
@@ -63,12 +63,12 @@
 }
 .btn {
 	float: right;
-	margin-left: 25px;
+	margin-left: 1.5625em;
 	color: #da7c66;
-	padding:0 10px;
-	font-size: 12px;
+	padding:0 0.625em;
+	font-size: 1em;
 	border:1px solid #da7c66;
-	border-radius:12px;
+	border-radius:0.75em;
 }
 .btn:hover{
 	color:#fff;
@@ -95,7 +95,7 @@
 	color:#da7c66;
 }
 .article p{
-	font-size: 0.875em;
+	font-size: 1em;
 	color: #000;
 	line-height: 2.125em;
 	padding-left: 1.875em;
@@ -119,8 +119,9 @@
 	margin-left:0px;
 }
 footer {
-	position: static;
-	height: 35px;
+	position: fixed;
+	bottom:0;
+	height: 3em;
 }
 
 .timeago{
@@ -220,8 +221,6 @@ footer {
 	font-size: 0.8em;
 	line-height: 200%;
 	padding: 2% 5%;
-	/*text-align: left;*/
-	/*text-align: justify;*/
 }
 .function p:first-child{
 	text-align: justify;
@@ -229,13 +228,6 @@ footer {
 #distance{
 	padding-top: 30px;
 }
-/*#distance span{
-	background-color: #5eb3ef;
-	color: #fff;
-	border-radius: 1.5em;
-	padding: 0.8% 1%;
-	margin-left: 1%;
-}*/
 .function a{
 	color: #da7c66;
 	line-height:30px;
@@ -266,8 +258,6 @@ footer {
 .content-right-top{
 	width: 100%;
 	height: 7%;
-	/*border: 1px solid green;*/
-	/*background-color: #FAFAFA;*/
 }
 .content-right-top ol{
 	left: 15%;
@@ -292,8 +282,7 @@ footer {
 	height: 93%;
     width: 100%;
     overflow:auto;
-    clear:both; 
-    /*border: 1px solid blue;*/
+    clear:both;
     position: absolute;
 }
 .content-book-comments{
@@ -308,7 +297,6 @@ footer {
 .content-book-comment1{
 	width:5%;
 	height: 92%;
-	/*position: relative;*/
 	background-color: #f7f7f7;
 	border: 1px solid #dbdce0;
 	padding: 0.1% 0.1% 0.1% 0.1%;
@@ -316,12 +304,6 @@ footer {
 	float: left;
 	display: block;
 }
-/*.content-book-comment1:first-child {
-	margin-left:1%;
-}*/
-/*.content-book-comment1:last-child {
-	margin-right:1%;
-}*/
 .book-comment1 .comment-more-btn {
     padding-left: 1.2%;
 }
@@ -407,9 +389,6 @@ footer {
 	width:100%;
 	overflow: hidden;
 	text-overflow:ellipsis;
-/*display:-webkit-box;
--webkit-line-clamp:3;
--webkit-box-orient:vertical;*/
 }
 @media screen and (min-height: 769px) { 
 .comment-bottom p {height: 320px} 
@@ -479,7 +458,7 @@ margin-right:0;
 	background-color:#fff;
 	border-radius:50%;
 	margin-right:4em;
-	margin-left:0;
+	margin-left:1.5em;
 }
 .reviewleft{
 	float:left;
