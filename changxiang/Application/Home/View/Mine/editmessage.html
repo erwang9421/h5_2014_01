@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/headernav.css" />
     <link rel="stylesheet" href="css/addmessage.css" />
-    <link rel="stylesheet" href="css/alert-feedback.css">
+    <link rel="stylesheet" href="css/passwordchange-alert.css">
 
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
-    <script src="js/alert-feedback.js"></script>
+    <script src="js/passwordchange-alert.js"></script>
 
     <script type="text/javascript">
         if (navigator.appName=="Microsoft Internet Explorer") {
@@ -179,6 +179,7 @@
                             </div>
                         </div>
                         <div class="function">
+                        <p class="function-top">作家，出版长篇小说《三重门》，创畅销纪录，并成 为一个优秀赛车手，是中国唯一一位拉力赛和场地赛 双料年度冠军。2010年被《时代周刊》评选为100名影响世界人物之一。其自编自导的处女座电影《后会无期》于2014年2月已开机.</p>
                             <p id="distance"><a href="relevant.html">与我相关</a></p>
                             <p><a href="drafts.html" >草稿箱</a></p>
                             <p><a href="" id="click">修改信息</a></p>
@@ -202,12 +203,12 @@
                                         <div class="col-sm-6">
                                             <input type="text" class="form-control" id="username" placeholder="请输入用户名">
                                         </div>
-                                        <a href="#">修改密码</a>
+                                        <a href="#" id="changePassword" hidefocus="true">修改密码</a>
                                     </div>
                                     <div class="form-group">
                                         <label for="userdetails" class="col-sm-4 col-md-3 control-label">简介：</label>
                                         <div class="col-sm-6">
-                                            <textarea class="form-control" rows="7">你还没有填写简介呢~</textarea>
+                                            <textarea class="form-control" rows="7" placeholder="你还没有填写简介呢~"></textarea>
                                         </div>
                                     </div>
                                 </form>
