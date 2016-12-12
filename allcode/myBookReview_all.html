@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
     <link rel="stylesheet" href="css/myBookReview_all.css" />
     <link rel="stylesheet" href="css/alert-feedback.css">
-
+    <link rel="stylesheet" href="css/alert-delete.css">
 
 </head>
 <body>
@@ -174,8 +174,8 @@
                     <div class="content-right-bottom">
                         <div class="content-book-comments">
                             <div class="content-book-comment1 book-comment1">
-                                <img src="images/close.png" alt="删除我的文章书评" width="20" height="20" class="close">
-                                 <img src="images/close.png" alt="删除我的文章书评" width="20" height="20" class="close">
+                                <img src="images/close.png" alt="删除我的文章书评" width="20" height="20" class="close" onclick="bookCollect()">
+                                 <img src="images/close.png" alt="删除我的文章书评" width="20" height="20" class="close" onclick="bookCollect()">
                                 <div class="comment-top">
                                     <div class="row1">
                                         <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
@@ -206,7 +206,7 @@
                                 </div>
                             </div><!--第一个书评-->
                             <div class="content-book-comment1 book-comment2">
-                                 <img src="images/close.png" alt="删除我的文章书评" width="20" height="20" class="close">
+                                 <img src="images/close.png" alt="删除我的文章书评" width="20" height="20" class="close" onclick="bookCollect()">
                                 <div class="comment-top">
                                     <div class="row1">
                                         <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
@@ -238,7 +238,7 @@
                             </div><!--第二个书评-->
 
                             <div class="content-book-comment1 book-comment3">
-                                 <img src="images/close.png" alt="删除我的文章书评" width="20" height="20" class="close">
+                                 <img src="images/close.png" alt="删除我的文章书评" width="20" height="20" class="close" onclick="bookCollect()">
                                 <div class="comment-top">
                                     <div class="row1">
                                         <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
@@ -269,7 +269,7 @@
                                 </div>
                             </div><!--第三个书评-->
                             <div class="content-book-comment1 book-comment4">
-                                 <img src="images/close.png" alt="删除我的文章书评" width="20" height="20" class="close">
+                                 <img src="images/close.png" alt="删除我的文章书评" width="20" height="20" class="close" onclick="bookCollect()">
                                 <div class="comment-top">
                                     <div class="row1">
                                         <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
@@ -300,7 +300,7 @@
                                 </div>
                             </div><!--第四个书评-->
                             <div class="content-book-comment1 book-comment5">
-                                 <img src="images/close.png" alt="删除我的文章书评" width="20" height="20" class="close">
+                                 <img src="images/close.png" alt="删除我的文章书评" width="20" height="20" class="close" onclick="bookCollect()">
                                 <div class="comment-top">
                                     <div class="row1">
                                         <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
@@ -331,7 +331,7 @@
                                 </div>
                             </div><!--第五个书评-->
                             <div class="content-book-comment1 book-comment6">
-                                 <img src="images/close.png" alt="删除我的文章书评" width="20" height="20" class="close">
+                                 <img src="images/close.png" alt="删除我的文章书评" width="20" height="20" class="close" onclick="bookCollect()">
                                 <div class="comment-top">
                                     <div class="row1">
                                         <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
@@ -413,6 +413,86 @@
              }
              window.onload=fPmVerticalRightOut;
         }
+    </script>
+    <script type="text/javascript">
+        var sWidth=document.body.scrollWidth;
+        var sHeight=document.body.scrollHeight;
+
+        //获取页面的可视区域高度和宽度
+        var wHeight=document.documentElement.clientHeight;
+        var wWidth=document.documentElement.clientWidth;
+        function bookCollect(){
+
+            var oMask=document.createElement("div");
+            oMask.id="mask";
+            oMask.style.height=sHeight+"px";
+            oMask.style.width=sWidth+"px";
+            document.body.appendChild(oMask);
+            var cPass=document.createElement("div");
+            cPass.id="collectB";
+            cPass.innerHTML="<div class='collectCon'><div class='alert-collect'><p><img src='images/？.png'</p><br/><p id='colsuccess'>确实要取消关注吗？</p></div><div class='alert-collect-footer' ><button id='y'> 确定</button><button  id='n'>取消</button></div>";
+            document.body.appendChild(cPass);
+
+
+//获取收藏框的宽和高
+            var dHeight=cPass.offsetHeight;
+            var dWidth=cPass.offsetWidth;
+            //设置收藏框的left和top
+            cPass.style.top=wHeight/2-dHeight/2+"px";
+            cPass.style.left=wWidth/2-dWidth/2+"px";
+//点击关闭按钮
+            var oClose=document.getElementById("y");
+            var oClose2=document.getElementById("n");
+
+            //点击收藏框以外的区域也可以关闭登陆框
+            oClose.onclick=function(){
+                console.log(111111)
+                sucess();
+                return false;
+            };
+            oClose2.onclick=oMask.onclick=function(){
+                document.body.removeChild(cPass);
+                document.body.removeChild(oMask);
+            };
+            function  sucess(){
+                console.log(33333)
+                var pass=document.getElementById("collectB");
+                var Mask=document.getElementById("mask");
+                document.body.removeChild(pass);
+                document.body.removeChild(Mask);
+
+                console.log(4444)
+
+                var oMask2=document.createElement("div");
+                oMask2.id="mask1";
+                oMask2.style.height=sHeight+"px";
+                oMask2.style.width=sWidth+"px";
+                document.body.appendChild(oMask2);
+
+                var Pass=document.createElement("div");
+                Pass.id="collectc";
+                Pass.innerHTML="<div  id='yes1' >  <div class='alert-collect1'><p><img  src='images/success.png'></p><br/><p id='colsuccess1'>文章删除成功\(^o^)/</p></div><div class='alert-collect-footer1'><button id='yes2'>确定</button></div></div>";
+
+                document.body.appendChild(Pass);
+                var dHeight=Pass.offsetHeight;
+                var dWidth=Pass.offsetWidth;
+                //设置收藏框的left和top
+                Pass.style.top=wHeight/2-dHeight/2+"px";
+                Pass.style.left=wWidth/2-dWidth/2+"px";
+//点击关闭按钮
+                var Close=document.getElementById("yes1");
+
+
+                //点击收藏框以外的区域也可以关闭登陆框
+                Close.onclick=function(){
+                    document.body.removeChild(Pass);
+
+                };
+                console.log(4555)
+            };
+
+
+        };
     </script>
 </body>
 </html>
