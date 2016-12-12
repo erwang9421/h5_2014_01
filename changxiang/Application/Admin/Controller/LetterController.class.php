@@ -2,6 +2,12 @@
 namespace Admin\Controller;
 use Think\Controller;
 class LetterController extends Controller{
+    public function __construct(){
+        parent::__construct();
+        if (!isLogin()) {
+            $this->error("请先登录",U("Admin/login"));
+        }
+    }
 	public function letter(){
 		$letterModel=M("messages");
 
@@ -13,10 +19,13 @@ class LetterController extends Controller{
         $page->setConfig('prev','前一页');
         $page->setConfig('next','后一页');
 
-        $letter=$letterModel->order('messagetime asc')->page($nowPage.',4')->select();
-        $show=$page->show();
-        $this->assign('page',$show);
+        $letter=$letterModel->join('users ON messages.receiveuserid=users.id')
+        // ->join('users ON messages.senduserid=users.id')
+        ->order('messagetime desc')->page($nowPage.',4')->select();
 
+        $show=$page->show();
+
+        $this->assign('page',$show);
         $this->assign("letter",$letter);
 	  
 
@@ -37,6 +46,18 @@ class LetterController extends Controller{
                 $this->success("删除成功！");
             }
         }       
+    }
+    //查看详情
+    public function editletter(){
+        $letterModel=D("messages");
+        $id=$_GET['letterId'];
+
+        $letter=$letterModel->join('users ON messages.receiveuserid=users.id')->find($id);
+
+        // $like=$likeModel->find($id);
+        $this->assign('letter',$letter);
+
+        $this->display();
     }
 
 
