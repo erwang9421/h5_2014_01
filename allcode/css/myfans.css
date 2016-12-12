@@ -73,6 +73,14 @@
 .function p{
 	text-align: center;
 }
+.function-top{
+	font-size: 0.8em;
+	line-height: 180%;
+	padding: 2% 7%;
+}
+.function p:first-child{
+	text-align: justify;
+}
 #distance{
 	padding-top: 30px;
 }
