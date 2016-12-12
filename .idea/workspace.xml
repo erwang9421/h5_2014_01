@@ -1,29 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52c848ea-252d-4eb0-a8a7-fef6e7418171" name="Default" comment="提交thinkphp后台 user、zan、author、bookcommenttag模块">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/AuthorController.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/BookCommentTagController.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/Model/AuthorModel.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/Author/add.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/Author/edit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/Author/lists.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/BookCommentTag/lists.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/BookCommentTag/read.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/Zan/add.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/Zan/edit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/Zan/lists.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/Zan/editpushpraise.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/Zan/pushpraise.html" afterPath="" />
+    <list default="true" id="52c848ea-252d-4eb0-a8a7-fef6e7418171" name="Default" comment="添加所有页面意见反馈弹出窗">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/UserController.class.php" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/UserController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/ZanController.class.php" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/ZanController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/Model/ZanModel.class.php" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/Model/ZanModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/User/adduser.html" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/User/adduser.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/User/edituser.html" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/User/edituser.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/User/lists.html" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/User/lists.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/layout.html" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/allcode/bookreviewcontent.html" afterPath="$PROJECT_DIR$/allcode/bookreviewcontent.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/allcode/css/bookreviewcontent.css" afterPath="$PROJECT_DIR$/allcode/css/bookreviewcontent.css" />
     </list>
+    <list id="975ea999-5c71-40e0-9de0-b9fe3c37ccf6" name="Failed commit: Default" comment="修改侧栏的书评分类中的栏目" />
     <ignored path="h5_2014_01.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -45,110 +28,7 @@
     <favorites_list name="h5_2014_01" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="hot search.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changxiang/Public/front/css/hot search.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7696">
-              <caret line="296" column="1" selection-start-line="296" selection-start-column="1" selection-end-line="296" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reset.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changxiang/Public/front/css/reset.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="relevant.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changxiang/Public/front/css/relevant.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5148">
-              <caret line="198" column="1" selection-start-line="198" selection-start-column="1" selection-end-line="198" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="drafts.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changxiang/Public/front/css/drafts.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4446">
-              <caret line="171" column="1" selection-start-line="171" selection-start-column="1" selection-end-line="171" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editor.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changxiang/Public/front/css/editor.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4758">
-              <caret line="183" column="15" selection-start-line="183" selection-start-column="15" selection-end-line="183" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.mCustomScrollbar.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changxiang/Public/front/css/jquery.mCustomScrollbar.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4264">
-              <caret line="164" column="46" selection-start-line="164" selection-start-column="46" selection-end-line="164" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bookreviewcontent.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/allcode/bookreviewcontent.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="75" column="19" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/changxiang/Application/Admin/View/layout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changxiang/Application/Admin/View/Zan/add.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-208">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changxiang/Application/Admin/View/Zan/edit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -168,9 +48,11 @@
       <list>
         <option value="$PROJECT_DIR$/zhaodanli.html" />
         <option value="$PROJECT_DIR$/allcode/css/index.css" />
+        <option value="$PROJECT_DIR$/allcode/css/bookreviewcontent.css" />
         <option value="$PROJECT_DIR$/changxiang/Application/Admin/Controller/BookcommentController.php" />
         <option value="$PROJECT_DIR$/changxiang/Application/Admin/Controller/BookCommentController.class.php" />
         <option value="$PROJECT_DIR$/allcode/css/addmessage.css" />
+        <option value="$PROJECT_DIR$/allcode/bookreviewcontent.html" />
         <option value="$PROJECT_DIR$/allcode/addmessage.html" />
         <option value="$PROJECT_DIR$/allcode/personal register.html" />
         <option value="$PROJECT_DIR$/allcode/css/unlogindex.css" />
@@ -203,10 +85,6 @@
         <option value="$PROJECT_DIR$/allcode/author-registerend.html" />
         <option value="$PROJECT_DIR$/allcode/hot search.html" />
         <option value="$PROJECT_DIR$/allcode/index.html" />
-        <option value="$PROJECT_DIR$/allcode/css/bookreviewcontent.css" />
-        <option value="$PROJECT_DIR$/allcode/bookreviewcontent.html" />
-        <option value="$PROJECT_DIR$/changxiang/Application/Admin/View/Zan/add.html" />
-        <option value="$PROJECT_DIR$/changxiang/Application/Admin/View/layout.html" />
       </list>
     </option>
   </component>
@@ -220,8 +98,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1456" />
-    <option name="height" value="876" />
+    <option name="width" value="1378" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -248,87 +126,32 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
+              <option name="myItemId" value="changxiang-books" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
+              <option name="myItemId" value="changxiang-books" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
+              <option name="myItemId" value="changxiang-books" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
+              <option name="myItemId" value="changxiang-books" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="changxiang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="changxiang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="changxiang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
+              <option name="myItemId" value="changxiang-books" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -338,6 +161,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -345,7 +169,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="G:" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -428,8 +252,9 @@
       <workItem from="1481073309999" duration="3265000" />
       <workItem from="1481108967758" duration="187000" />
       <workItem from="1481109708371" duration="4257000" />
-      <workItem from="1481155803245" duration="4938000" />
-      <workItem from="1481360308284" duration="1338000" />
+      <workItem from="1481155987022" duration="13928000" />
+      <workItem from="1481200478969" duration="1144000" />
+      <workItem from="1481369329925" duration="134000" />
     </task>
     <task id="LOCAL-00001" summary="zhaodnli">
       <created>1478084647853</created>
@@ -522,39 +347,158 @@
       <option name="project" value="LOCAL" />
       <updated>1481076270244</updated>
     </task>
-    <task id="LOCAL-00014" summary="添加所有页面意见反馈弹出窗">
-      <created>1481160632489</created>
+    <task id="LOCAL-00014" summary="前台弹出窗页面修改">
+      <created>1481158225051</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1481160632489</updated>
+      <updated>1481158225051</updated>
     </task>
-    <task id="LOCAL-00015" summary="添加thinkphp前台框架">
-      <created>1481185665567</created>
+    <task id="LOCAL-00015" summary="添加所有页面意见反馈弹出窗">
+      <created>1481158954598</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1481185665567</updated>
+      <updated>1481158954598</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="添加所有页面意见反馈弹出窗">
+      <created>1481159539760</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1481159539760</updated>
+    </task>
+    <task id="LOCAL-00017" summary="前台页面链接">
+      <created>1481161064618</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1481161064618</updated>
+    </task>
+    <task id="LOCAL-00018" summary="添加所有页面意见反馈弹出窗">
+      <created>1481161258544</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1481161258544</updated>
+    </task>
+    <task id="LOCAL-00019" summary="添加所有页面意见反馈弹出窗">
+      <created>1481161591807</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1481161591807</updated>
+    </task>
+    <task id="LOCAL-00020" summary="页面链接修改">
+      <created>1481162016548</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1481162016548</updated>
+    </task>
+    <task id="LOCAL-00021" summary="链接修改">
+      <created>1481162474224</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1481162474224</updated>
+    </task>
+    <task id="LOCAL-00022" summary="链接修改">
+      <created>1481163273698</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1481163273698</updated>
+    </task>
+    <task id="LOCAL-00023" summary="链接修改 样式修改">
+      <created>1481164645458</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1481164645458</updated>
+    </task>
+    <task id="LOCAL-00024" summary="链接修改 样式修改">
+      <created>1481165497113</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1481165497113</updated>
+    </task>
+    <task id="LOCAL-00025" summary="链接修改 样式修改">
+      <created>1481165997446</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1481165997446</updated>
+    </task>
+    <task id="LOCAL-00026" summary="添加所有页面意见反馈弹出窗">
+      <created>1481177853930</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1481177853930</updated>
+    </task>
+    <task id="LOCAL-00027" summary="添加所有页面意见反馈弹出窗">
+      <created>1481178051443</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1481178051443</updated>
+    </task>
+    <task id="LOCAL-00028" summary="图书简介">
+      <created>1481183297516</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1481183297516</updated>
+    </task>
+    <task id="LOCAL-00029" summary="链接修改 样式修改">
+      <created>1481184383997</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1481184383997</updated>
+    </task>
+    <task id="LOCAL-00030" summary="链接修改 样式修改">
+      <created>1481185366332</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1481185366332</updated>
+    </task>
+    <task id="LOCAL-00031" summary="链接修改 样式修改">
+      <created>1481187186142</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1481187186142</updated>
+    </task>
+    <task id="LOCAL-00032" summary="链接修改 样式修改">
+      <created>1481188654187</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1481188654187</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46260000" />
+    <option name="totallyTimeSpent" value="53640000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21865672" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28198433" sideWeight="0.49444443" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30156657" sideWeight="0.5083333" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3093995" sideWeight="0.49166667" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3420622" sideWeight="0.49166667" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28198433" sideWeight="0.49444443" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -586,16 +530,71 @@
     <MESSAGE value="修改图书热榜页面" />
     <MESSAGE value="添加超链接" />
     <MESSAGE value="修改侧栏的书评分类中的栏目" />
+    <MESSAGE value="前台弹出窗页面修改" />
+    <MESSAGE value="前台页面链接" />
+    <MESSAGE value="页面链接修改" />
+    <MESSAGE value="链接修改" />
     <MESSAGE value="添加所有页面意见反馈弹出窗" />
-    <MESSAGE value="添加thinkphp前台框架" />
-    <MESSAGE value="提交thinkphp后台 user、zan、author、bookcommenttag模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交thinkphp后台 user、zan、author、bookcommenttag模块" />
+    <MESSAGE value="图书简介" />
+    <MESSAGE value="链接修改 样式修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="链接修改 样式修改" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/allcode/bookreviewcontent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/allcode/css/bookreviewcontent.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6004">
+          <caret line="316" column="7" selection-start-line="316" selection-start-column="7" selection-end-line="316" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/allcode/bookreviewcontent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhaodanli.html" />
+    <entry file="file://$PROJECT_DIR$/zhaodanli.html" />
+    <entry file="file://$PROJECT_DIR$/allcode/css/aside-nav.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-301">
+          <caret line="235" column="21" selection-start-line="235" selection-start-column="21" selection-end-line="235" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/allcode/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1026">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/allcode/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2926">
+          <caret line="154" column="19" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/allcode/css/bookreviewcontent.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6004">
+          <caret line="316" column="7" selection-start-line="316" selection-start-column="7" selection-end-line="316" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/changxiang/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -614,6 +613,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changxiang/Application/Admin/View/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -808,158 +814,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/allcode/author_trend.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8189">
+        <state relative-caret-position="11206">
           <caret line="431" column="48" selection-start-line="431" selection-start-column="48" selection-end-line="431" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/allcode/attention.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="416">
           <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/allcode/myCollect.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6061">
+        <state relative-caret-position="8294">
           <caret line="319" column="56" selection-start-line="319" selection-start-column="56" selection-end-line="319" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/allcode/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
+        <state relative-caret-position="130">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/allcode/personal  information.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7448">
+        <state relative-caret-position="5607">
           <caret line="392" column="15" selection-start-line="392" selection-start-column="15" selection-end-line="392" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/allcode/personal register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
+        <state relative-caret-position="338">
           <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/allcode/writer register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1102">
+        <state relative-caret-position="187">
           <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/allcode/author-registerend.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
+        <state relative-caret-position="78">
           <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/allcode/hot search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2622">
+        <state relative-caret-position="312">
           <caret line="138" column="36" selection-start-line="138" selection-start-column="36" selection-end-line="139" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/allcode/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="212" column="51" selection-start-line="212" selection-start-column="51" selection-end-line="212" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changxiang/Application/Admin/Controller/CommentController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/allcode/css/bookreviewcontent.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changxiang/Public/front/css/default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changxiang/Public/front/css/jquery.mCustomScrollbar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4264">
-          <caret line="164" column="46" selection-start-line="164" selection-start-column="46" selection-end-line="164" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="903">
+          <caret line="223" column="75" selection-start-line="223" selection-start-column="75" selection-end-line="223" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/allcode/bookreviewcontent.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="75" column="19" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changxiang/Public/front/images/bookreviewcontent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5720">
-          <caret line="220" column="52" selection-start-line="220" selection-start-column="52" selection-end-line="220" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changxiang/Public/front/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1742">
-          <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changxiang/Application/Admin/View/Zan/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-208">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changxiang/Public/front/css/alert-feedback.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changxiang/Application/Admin/View/Zan/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changxiang/Application/Admin/View/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="26">
+          <caret line="52" column="122" selection-start-line="52" selection-start-column="122" selection-end-line="52" selection-end-column="122" />
         </state>
       </provider>
     </entry>
