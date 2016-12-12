@@ -65,6 +65,11 @@ body a{
 .content-left-bottom p{
 	text-align: center;
 }
+.function-top{
+	font-size: 0.8em;
+	line-height: 180%;
+	padding: 2% 8%;
+}
 #btn-top{
 	padding-top: 30px;
 }
