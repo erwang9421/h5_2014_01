@@ -70,6 +70,14 @@
     bottom: 0;
     background-color: #F5F5F5;
 }
+.function-top{
+	font-size: 0.8em;
+	line-height: 180%;
+	padding: 2% 7%;
+}
+.function p:first-child{
+	text-align: justify;
+}
 .function p{
 	text-align: center;
 }
