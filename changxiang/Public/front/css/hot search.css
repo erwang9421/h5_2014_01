@@ -54,10 +54,10 @@ body {
 }
 .momo{ margin-left:5px;
     width:50px;
-    border: 0;
+    border: 0px;
     background-color:#F5F5F5;
     padding-top:1px;
-    font-size:18px;
+    font-size：18px;
 }
 .time{ width: 18%;
     border: 0px;
@@ -106,7 +106,7 @@ body {
     border:0px;
     background-color:#F5F5F5;
     padding-top:1px;
-    font-size:18px;
+    font-size：18px;
 }
 .time1{ width: 18%;
     border: 0px;
@@ -198,7 +198,7 @@ body {
     border:0px;
     background-color:#F5F5F5;
     padding-top:1px;
-    font-size:18px;
+    font-size：18px;
 }
 .time2{width:150px;
     border:0px;
@@ -251,7 +251,7 @@ body {
     border:0px;
     background-color:#F5F5F5;
     padding-top:1px;
-    font-size:18px;
+    font-size：18px;
 }
 .time3{width:150px;
     border:0px;
@@ -290,11 +290,10 @@ p.small {
     left: 4.5%;
     top: 10%;
 }
-.recommend {
+.recommend{
     padding-top: 40px;
     position: relative;
     left: 2.5%;
-}
 
 .bottom{
 

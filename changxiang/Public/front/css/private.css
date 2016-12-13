@@ -11,7 +11,7 @@ body a{
 	float: left;
 }
 .content-left-top{
-	height: 230px;
+	height: 200px;
 	border-bottom: 1px #D4D4D4 solid;
 	border-top: 1px #D4D4D4 solid;
 	background-color: #F5F5F5;
@@ -64,6 +64,11 @@ body a{
 }
 .content-left-bottom p{
 	text-align: center;
+}
+.function-top{
+	font-size: 0.8em;
+	line-height: 180%;
+	padding: 2% 8%;
 }
 #btn-top{
 	padding-top: 30px;
