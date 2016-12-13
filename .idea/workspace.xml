@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52c848ea-252d-4eb0-a8a7-fef6e7418171" name="Default" comment="修改layout.html">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/BookCommentTag/lists.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/BookCommentTag/read.html" />
+    <list default="true" id="52c848ea-252d-4eb0-a8a7-fef6e7418171" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/Comment/add.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/Comment/edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/Comment/lists.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/Comment/addcomment.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/Comment/comment.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/Comment/editcomment.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/Author/add.html" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/Author/add.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/Author/edit.html" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/Author/edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/Author/lists.html" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/Author/lists.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/User/edituser.html" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/User/edituser.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/User/lists.html" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/User/lists.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/Zan/add.html" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/Zan/add.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/Zan/lists.html" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/Zan/lists.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/AuthorController.class.php" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/AuthorController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/UserController.class.php" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/UserController.class.php" />
     </list>
     <list id="975ea999-5c71-40e0-9de0-b9fe3c37ccf6" name="Failed commit: Default" comment="修改侧栏的书评分类中的栏目" />
     <ignored path="h5_2014_01.iws" />
@@ -36,16 +35,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="author-registerend.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changxiang/Application/Home/View/Login/author-registerend.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/changxiang/Application/Home/View/Login/login.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -76,7 +65,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lists.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lists.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/changxiang/Application/Admin/View/User/lists.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1092">
@@ -84,6 +73,26 @@
               <folding>
                 <element signature="n#style#0;n#button#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changxiang/Application/Admin/View/layout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="61" column="39" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentController.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/changxiang/Application/Admin/Controller/CommentController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -189,6 +198,8 @@
         <option value="$PROJECT_DIR$/changxiang/Application/Home/View/Index/index.html" />
         <option value="$PROJECT_DIR$/changxiang/Application/Home/View/layout.html" />
         <option value="$PROJECT_DIR$/changxiang/Application/Admin/View/User/lists.html" />
+        <option value="$PROJECT_DIR$/changxiang/Application/Admin/View/layout.html" />
+        <option value="$PROJECT_DIR$/changxiang/Application/Admin/Controller/CommentController.class.php" />
       </list>
     </option>
   </component>
@@ -200,10 +211,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1456" />
-    <option name="height" value="876" />
+    <option name="x" value="45" />
+    <option name="y" value="97" />
+    <option name="width" value="1349" />
+    <option name="height" value="665" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -330,6 +341,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="h5_2014_01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="h5_2014_01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="changxiang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -428,7 +465,7 @@
       <workItem from="1481529106170" duration="905000" />
       <workItem from="1481543844257" duration="1818000" />
       <workItem from="1481589489518" duration="2300000" />
-      <workItem from="1481606036710" duration="340000" />
+      <workItem from="1481606036710" duration="2212000" />
     </task>
     <task id="LOCAL-00001" summary="zhaodnli">
       <created>1478084647853</created>
@@ -675,34 +712,55 @@
       <option name="project" value="LOCAL" />
       <updated>1481596557748</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="thinkphp后台 author/bookcommenttag/user/zan 页面重新上传">
+      <created>1481606431644</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1481606431644</updated>
+    </task>
+    <task id="LOCAL-00037" summary="修改后台layout部分内容">
+      <created>1481606727347</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1481606727347</updated>
+    </task>
+    <task id="LOCAL-00038" summary="修改commentcontroller.class.php">
+      <created>1481609152148</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1481609152148</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59003000" />
+    <option name="totallyTimeSpent" value="60875000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="0" />
+    <frame x="45" y="97" width="1349" height="665" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21805556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23555888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30156657" sideWeight="0.5083333" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34203655" sideWeight="0.49166667" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26306307" sideWeight="0.49166667" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28198433" sideWeight="0.49444443" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -755,20 +813,16 @@
     <MESSAGE value="私信控制器fy" />
     <MESSAGE value="在public/front/css里修改了editarticle文件" />
     <MESSAGE value="修改layout.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改layout.html" />
+    <MESSAGE value="thinkphp后台 author/bookcommenttag/user/zan 页面重新上传" />
+    <MESSAGE value="修改后台layout部分内容" />
+    <MESSAGE value="修改commentcontroller.class.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改commentcontroller.class.php" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/changxiang/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/changxiang/Application/Admin/Controller/BookCommentController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -780,13 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changxiang/Application/Admin/View/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1127,6 +1174,22 @@
           <folding>
             <element signature="n#style#0;n#button#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changxiang/Application/Admin/View/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="61" column="39" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changxiang/Application/Admin/Controller/CommentController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
