@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="52c848ea-252d-4eb0-a8a7-fef6e7418171" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/CommentController.class.php" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/CommentController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/Comment/lists.html" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/Comment/lists.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/layout.html" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/layout.html" />
     </list>
     <list id="975ea999-5c71-40e0-9de0-b9fe3c37ccf6" name="Failed commit: Default" comment="修改侧栏的书评分类中的栏目" />
     <ignored path="h5_2014_01.iws" />
@@ -207,8 +204,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-70" />
-    <option name="y" value="142" />
+    <option name="x" value="-33" />
+    <option name="y" value="159" />
     <option name="width" value="1460" />
     <option name="height" value="665" />
   </component>
@@ -491,7 +488,7 @@
       <workItem from="1481529106170" duration="905000" />
       <workItem from="1481543844257" duration="1818000" />
       <workItem from="1481589489518" duration="2300000" />
-      <workItem from="1481606036710" duration="4985000" />
+      <workItem from="1481606036710" duration="6232000" />
     </task>
     <task id="LOCAL-00001" summary="zhaodnli">
       <created>1478084647853</created>
@@ -773,14 +770,21 @@
       <option name="project" value="LOCAL" />
       <updated>1481614632566</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="修改后台部分页面">
+      <created>1481618607558</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1481618607559</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63648000" />
+    <option name="totallyTimeSpent" value="64895000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-70" y="142" width="1460" height="665" extended-state="0" />
+    <frame x="-33" y="159" width="1460" height="665" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17728531" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
