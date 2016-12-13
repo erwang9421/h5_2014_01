@@ -9,8 +9,8 @@ class BooksController extends Controller{
     	}
     }
 	public function lists(){
-		//分页
 		$books=M('Books');
+		//分页
         import('Org.Util.Page');
         $count=$books->count();
         $page=new \Think\Page($count,4);
@@ -18,8 +18,14 @@ class BooksController extends Controller{
         $page->setConfig('first','第一页');
         $page->setConfig('prev','前一页');
         $page->setConfig('next','后一页');
-        //进行分页数据查询，注意limit方法的参数要使用Page类的属性
-        $booklist=$books->order('addtime asc')->page($nowPage.',4')->select();
+
+// $booklist=$books->join(array('books ON bcconnection.bookid = books.bookid','bookscategories ON bcconnection.bcid = bookscategories.bcid'))->order('addtime asc')->page($nowPage.',4')->select();
+		$booklist=$books->join('bookscategories ON books.bcid = bookscategories.bcid')
+		->order('books.addtime desc')->page($nowPage.',4')->select();
+		// dump($booklist);
+		// exit();
+		// distinct(true)重复字段 group('bcname')重复字段合并
+
         $show=$page->show();
         $this->assign('page',$show);
         $this->assign('booklist',$booklist);        	   
@@ -28,9 +34,10 @@ class BooksController extends Controller{
 	}
 
 	public function addbook(){
-		$tagsModel=M('Tags');
-		$tags=$tagsModel->select();
-		$this->assign('tags',$tags);
+		$tags=M('Bookscategories');
+		$taglist=$tags->join('books ON bookscategories.bcid = books.bcid')
+		->order('pid asc')->group('typebcname')->select();
+		$this->assign('tags',$taglist);
 
 		$this->display();
 	}
@@ -39,46 +46,86 @@ class BooksController extends Controller{
 		if (!IS_POST) {
 			exit("bad request请求");
 		}
-		$booksModel=D("books");
-		if (!$booksModel->create()) {
-			$this->error($booksModel->getError());
-		}
-		if ($booksModel->add()) {
-		    $this->success("添加成功",U("Books/lists"));
+		$booksModel=M('Books');
+		$book=$booksModel->create();
+		if($booksModel->add($data)){
+			$this->success('添加成功',U("Books/lists"));
 		}else{
-			$this->error("添加失败");
+			$this->error('数据添加失败');
 		}
-		
 	}
+	public function doAdd1(){
+		if (!IS_POST) {
+			exit("bad request请求");
+		}
+		else{
+			$booksModel=D('bookscategories');
+			// $booksModel=D('books')->join('bookscategories ON books.bcid = bookscategories.bcid')
+			// ->group('typebcname');
+			if(!$booksModel->create()){
+                $this->error($booksModel->getError());
+            }else{
+            	if ($booksModel->add()) {
+                    $bookType = I('typebcname');
+                    $bcId = $booksModel->getFieldBytypebcname("{$bookType}","bcid");
+                    // $pId=$booksModel->getFieldBypid("{$bookType}","pid");
+
+                    // $books=M("Books b")->join('bookscategories c ON b.bcid = c.bcid')->select();
+                    $books=M("Books");
+                    $data['bcid'] = $bcId;
+                    // $data['typebcname']=$books->join('bookscategories ON books.bcid=bookscategories.bcid')->field('typebcname')->find();
+                    // dump($data['typebcname']);
+                    // $data['pid']=$pId;
+                    $data['bookname'] = I('bookname');
+                    $data['bookauthor'] = I('bookauthor');
+                    $data['bookcontent'] = I('bookcontent');
+                    $data['addtime'] = date('Y-m-d H:i:s',time());
+                    // dump($data);
+                    if($books -> data($data) -> add()){
+                        $this -> success("添加成功",U("Books/lists"));
+                    }
+            	}else{
+            		$this->error("添加失败");
+            	}
+            }
+		}
+	}
+
+
 	//编辑修改图书
 	public function editbook(){
-		$tagsModel=D('tags');
-		$tags=$tagsModel->select();
-		$this->assign('tags',$tags);
+		// $tags=M('Bookscategories');
+		// $taglist=$tags->join('books ON bookscategories.bcid = books.bcid')
+		// ->select();
 
-		$booksModel=D("books");
-		$id=$_GET['booksId'];
+		$booksModel=M("Books");
+		// $id=$_GET['booksId'];
+		$id=I('booksId');
+		$taglist=$booksModel
+		->join('bookscategories ON books.bcid = bookscategories.bcid')
+		->select();
 		$books=$booksModel->find($id);
-		// $books=$booksModel->where("bookid = $id")->find();
-		$this->assign('books',$books);
-		$this->display();
-
 		
-		// $this->display();
+		$this->assign('data',$taglist);
+		$this->assign('books',$books);
+
+		$this->display();
 	}
 	public function update(){
 		if (IS_POST) {
-			$model=M("Books");
-			$model->create();
-			if ($model->save()) {
-				$this->success("修改成功",U("Books/lists"));
+			$model=M("books");
+			// $id=$_GET['booksId'];
+			$id=I('bcid');
+			$data=$model->create();
+			dump($data);
+			if ($model->where("bcid=".$id)->save($data)) {
+				$this -> success("数据更新成功",U("Books/lists"));
 			}
 			else{
 				$this->error($model->getError());
 			}
 		}	
 	}
-
 	//删除图书
 	public function delete(){
 		//全部删除
