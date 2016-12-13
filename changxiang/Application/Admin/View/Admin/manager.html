@@ -1,8 +1,7 @@
-<form action="__MODULE__/Admin/delete" > 
  <div id="dcMain">
    <!-- 当前位置 -->
-<div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>网站管理员</strong> </div>   <div id="manager" class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-    <h3><a href="__MODULE__/Admin/addmanager" class="actionBtn">添加管理员</a>网站管理员</h3>
+<div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>网站管理员</strong> </div>   <div id="manager" class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+    <h3>网站管理员</h3>
         <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
      <tr>
      <th align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
@@ -13,32 +12,26 @@
       <th align="center">最后登录时间</th>
       <th align="center">操作</th>
      </tr>
-     <volist name="manager" id="m">
+     <volist name="manager" id="m" offset="0" length='1'>
       <tr>
       <td align="center"><input type="checkbox" name="managerId[]" value="{$m.adminid}" /></td>
       <td align="center">{$m.adminid}</td>
       <td>{$m.adminname}</td>
       <td align="center">{$m.jointime}</td>
-      <td align="center">{$m.logintime}</td>
-      <td align="center"><a href="__MODULE__/Admin/editmanager/managerId/{$m.adminid}">编辑</a> | <a href="__MODULE__/Admin/delete/managerId/{$m.adminid}">删除</a></td>
+      <td align="center">{:date('Y-m-d H:i:s')}</td>
+      <td align="center"><a href="__MODULE__/Admin/editmanager/managerId/{$m.adminid}">编辑</a></td>
      </tr>
      </volist>
-      <!-- <tr>
-      <td align="center"><a href="addmanager.html?rec=edit&id=1">编辑</a> | <a href="manager.html?rec=del&id=1">删除</a></td>
-     </tr> -->
+     
     </table>
-        <br/>
-        <div class="input-group pull-left form">
-            <button type="submit" class="btn btn-danger" style="background-color:#20B2AA;"> 批量删除</button>
-        </div>
         <div class="clear"></div>
-        <div class="pager"><!-- 总计 5 个记录，共 1 页，当前第 1 页 |  
+        <div class="pager">
+            <!-- 总计 5 个记录，共 1 页，当前第 1 页 |
         <a href="book.html">第一页</a> 上一页 下一页 <a href="book.html">最末页</a>-->
           {$page}     
         </div> 
                       
 
-</div></div></form>
-
+</div></div>
 
  
