@@ -5,5 +5,7 @@ return array(
     'DB_HOST'               =>  'localhost', // 服务器地址
     'DB_NAME'               =>  'cxbookreview',  // 数据库名
     'DB_USER'               =>  'root',      // 用户名
-    'DB_PWD'                =>  '123456'         // 密码
+    'DB_PWD'                =>  '123456' ,      // 密码
+    // 'DB_PORT'  				=>	'10'			//端口
+    'SESSION_AUTO_START'    =>  true      //是否开启session
 );

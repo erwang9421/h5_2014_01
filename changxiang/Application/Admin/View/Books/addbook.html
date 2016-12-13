@@ -1,6 +1,6 @@
  <div id="dcMain">
    <!-- 当前位置 -->
-<div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>添加图书</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+<div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>添加图书</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
             <h3><a href="__MODULE__/Books/lists" class="actionBtn">图书列表</a>添加图书</h3>
     <form method="post" action="__MODULE__/Books/doAdd" enctype="multipart/form-data">
     
@@ -23,32 +23,11 @@
       <tr>
        <td align="center">图书类型</td>
        <td>
-        <select name="cat_id">
-         <option value="0">未分类</option>
+        <select name="bcid">
+         <!-- <option value="0">未分类</option> -->
               <volist name="tags" id="t">
-                <option value="10">- {$t.tagname}</option>
+                <option value="{$t.bcid}">- {$t.typebcname}</option>
               </volist>
-                           <!-- <option value="1">文学</option>
-                                    <option value="10">- 文集</option>
-                                    <option value="11">- 纪实文学</option>
-                                    <option value="12">- 文学理论</option>
-                                    <option value="13">- 中国古诗词</option>
-                                    <option value="14">- 戏剧</option>
-                                    <option value="15">- 文集中国现当代诗歌</option>
-                                    <option value="16">- 外国诗歌</option>
-                                    <option value="17">- 民间文学</option>
-                                    <option value="18">- 外国随笔</option>
-                                    <option value="19">- 中国古代随笔</option>
-                                    <option value="2">小说</option>
-                                    <option value="20">- a</option>
-                                    <option value="21">- b</option>
-                                    <option value="3">哲学</option>
-                                    <option value="4">社会科学</option>
-                                    <option value="5">文化</option>
-                                    <option value="6">教育</option>
-                                    <option value="7">艺术</option>
-                                    <option value="8">自然科学</option>
-                                    <option value="9">工业技术</option> -->
                           </select>
        </td>
       </tr>
@@ -61,7 +40,7 @@
       <tr>
        <td align="center">添加时间</td>
        <td>
-        <input type="text" name="addtime" size="5" class="inpMain"  />
+        <input type="text" name="addtime" value="{:date('Y-m-d H:i:s')}" size="5" class="inpMain"  />
        </td>
       </tr>
       <tr>
