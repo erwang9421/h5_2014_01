@@ -1,0 +1,39 @@
+ <div id="dcMain">
+   <!-- 当前位置 -->
+<div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>查看私信</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+            <h3><a href="__MODULE__/Letter/letter" class="actionBtn">私信列表</a>查看私信</h3>
+    <form action="" method="post">
+    <input type="hidden" name="messageid" value="{$letter.messageid}">
+
+     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+      <tr>
+       <td width="80" align="center">接收用户名</td>
+       <td>
+        <input type="text" name="username" value="{$letter.username}" size="40" class="inpMain" />
+       </td>
+      </tr> 
+      <tr>
+       <td width="80" align="center">发送用户名</td>
+       <td>
+        <input type="text" name="username" value="{$letter.username}" size="40" class="inpMain" />
+       </td>
+      </tr>      
+      <tr>
+       <td align="center">私信内容</td>
+       <td>
+        <input type="text" name="content" value="{$letter.content}" size="5" class="inpMain" />
+       </td>
+      </tr>
+
+
+       <tr>
+       <td align="center">私信时间</td>
+       <td>
+        <input type="text" name="messagetime" value="{$letter.messagetime}" size="5" class="inpMain" />
+       </td>
+      </tr>
+      
+     </table>
+    </form>
+ </div>
+ </div>

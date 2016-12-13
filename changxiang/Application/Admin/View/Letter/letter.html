@@ -1,6 +1,7 @@
+ <form action="__MODULE__/Letter/delete" method="get">
  <div id="dcMain">
    <!-- 当前位置 -->
-<div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>私信列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+<div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>私信列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
         <h3>私信列表</h3>
    
     <div id="list">
@@ -9,74 +10,37 @@
       <tr>
         <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
         <th width="40" align="center">ID</th>
-        <th width="90" align="center">用户1ID</th>
-        <th width="90" align="center">用户2ID</th>
+        <th width="90" align="center">接收用户名</th>
+        <th width="90" align="center">发送用户名</th>
         <th width="300" align="center">私信内容</th>
        <th width="100" align="center">私信时间</th>
         <th width="80" align="center">操作</th>
       </tr>
-      <tr>
-        <td align="center"><input type="checkbox" name="checkbox[]" value="5" /></td>
-        <td align="center">5</td>
-        <td align="center">小明</td>
-        <td align="center">小华</td>
-        <td style="font-size:14px">小说通过记叙保尔·柯察金的成长道路告诉人们，一个人只有在革命的艰难困苦中战胜敌人也战胜自己，才会成长为钢铁战士。</td>
-        <td align="center">2013-06-26 23:12:42</td>
+      <volist name="letter" id="l">
+        <tr>
+        <td align="center"><input type="checkbox" name="letterId[]" value="{$l.messageid}" /></td>
+        <td align="center">{$l.messageid}</td>
+        <td align="center">{$l.username}</td>
+        <td align="center">{$l.username}</td>
+        <td style="font-size:14px">{$l.content|mb_substr=0,18,'utf-8'}</td>
+        <td align="center">{$l.messagetime}</td>
         <td align="center">
-        <a href="#">编辑</a> | <a href="#">删除</a>
+        <a href="__MODULE__/Letter/editletter/letterId/{$l.messageid}">查看</a> | <a href="__MODULE__/Letter/delete/letterId/{$l.messageid}">删除</a>
         </td>
       </tr>
+      </volist>
 
-     <tr>
-        <td align="center"><input type="checkbox" name="checkbox[]" value="4" /></td>
-        <td align="center">5</td>
-        <td align="center">小明</td>
-        <td align="center">小华</td>
-        <td style="font-size:14px">小说通过记叙保尔·柯察金的成长道路告诉人们，一个人只有在革命的艰难困苦中战胜敌人也战胜自己，才会成长为钢铁战士。</td>
-        <td align="center">2013-06-26 23:12:42</td>
-        <td align="center">
-        <a href="#">编辑</a> | <a href="#">删除</a>
-        </td>
-      </tr>
-
-
-      <tr>
-        <td align="center"><input type="checkbox" name="checkbox[]" value="3" /></td>
-        <td align="center">5</td>
-        <td align="center">小明</td>
-        <td align="center">小华</td>
-        <td style="font-size:14px">小说通过记叙保尔·柯察金的成长道路告诉人们，一个人只有在革命的艰难困苦中战胜敌人也战胜自己，才会成长为钢铁战士。</td>
-        <td align="center">2013-06-26 23:12:42</td>
-        <td align="center">
-        <a href="#">编辑</a> | <a href="#">删除</a>
-        </td>
-      </tr>
-      <tr>
-      <tr>
-        <td align="center"><input type="checkbox" name="checkbox[]" value="2" /></td>
-        <td align="center">5</td>
-        <td align="center">小明</td>
-        <td align="center">小华</td>
-        <td style="font-size:14px">小说通过记叙保尔·柯察金的成长道路告诉人们，一个人只有在革命的艰难困苦中战胜敌人也战胜自己，才会成长为钢铁战士。</td>
-        <td align="center">2013-06-26 23:12:42</td>
-        <td align="center">
-        <a href="#">编辑</a> | <a href="#">删除</a>
-        </td>
-      </tr>
-      <tr>
-        <td align="center"><input type="checkbox" name="checkbox[]" value="1" /></td>
-        <td align="center">5</td>
-        <td align="center">小明</td>
-        <td align="center">小华</td>
-        <td style="font-size:14px">小说通过记叙保尔·柯察金的成长道路告诉人们，一个人只有在革命的艰难困苦中战胜敌人也战胜自己，才会成长为钢铁战士。</td>
-        <td align="center">2013-06-26 23:12:42</td>
-        <td align="center">
-        <a href="#">编辑</a> | <a href="#">删除</a>
-        </td>
-      </tr>
     </table>
+    <div class="action"></div>
     </form>
     </div>
+    <br/>
+    <div class="input-group pull-left form">
+        <button type="submit" class="btn" style="background-color:#20B2AA;"> 批量删除</button>
+    </div>
     <div class="clear"></div>
-    <div class="pager">总计 5 个记录，共 1 页，当前第 1 页 | <a href="letter.html">第一页</a> 上一页 下一页 <a href="letter.html">最末页</a></div>               </div>
+    <div class="pager"><!-- 总计 5 个记录，共 1 页，当前第 1 页 | <a href="letter.html">第一页</a> 上一页 下一页 <a href="letter.html">最末页</a> -->
+    {$page}
+    </div>               </div>
  </div>
+ </form>
