@@ -38,7 +38,7 @@ class BookCategoryController extends Controller{
             }
         }       
     }
-    //编辑修改
+    //编辑修改图书分类
     public function editbookcategory(){
     	$tagsModel=D("bookscategories");
 		$id=$_GET['tagId'];

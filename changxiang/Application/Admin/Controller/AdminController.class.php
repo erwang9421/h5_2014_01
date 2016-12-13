@@ -3,6 +3,7 @@ namespace Admin\Controller;
 use Think\Controller;
 class AdminController extends Controller{
 	public function login(){
+		//后台登录
 		if (IS_POST) {
 			$adminModel=M('Admin');
 			
@@ -24,7 +25,7 @@ class AdminController extends Controller{
 			$this->display();
 		}
 	}
-	
+	//管理员列表
 	public function manager(){
         $managerModel=M("Admin"); 
         $manager=$managerModel->select();
@@ -32,6 +33,7 @@ class AdminController extends Controller{
 
 		$this->display();
 	}
+	//修改管理员信息
 	public function editmanager(){
 		$managerModel=D("admin");
 		$id=$_GET['managerId'];
