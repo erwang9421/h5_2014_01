@@ -1,68 +1,41 @@
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>畅享书评后台管理系统-标签管理</title>
-    <meta name="Copyright" content="Douco Design." />
-    <link href="__PUBLIC__/end/css/public.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="__PUBLIC__/end/js/jquery.min.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/end/js/global.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/end/js/jquery.autotextarea.js"></script>
-</head>
-<body>
-
-<!-- dcHead 结束 -->
-<div id="dcLeft"><div id="menu">
-
-</div></div>
-<div id="dcMain">
-    <!-- 当前位置 -->
-    <div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>标签管理</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-    <h3>
-        <form action="__MODULE__/Tag/addtag" method="post">
-            <tr>
-                <td>
-                    <input type="text" name="tagname" value="" size="40" class="inpMain" />
-                </td>
-            </tr> <input name="submit" class="btn" type="submit" value="添加标签" /></h3>
-    </form>
+<form action="__MODULE__/Tag/delete"  method="get">
+ <div id="dcMain">
+   <!-- 当前位置 -->
+<div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>书评标签管理</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+<h3><!--<a href="__MODULE__/Tag/addtag" class="actionBtn add"> 添加书评标签 </a>-->书评标签列表</h3>
     <div id="list">
-        <h3><td align="center">标签列表</td></h3>
-        <form name="action" method="post" action="product.php?rec=action">
-            <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
-                <tr>
-                    <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
-                    <th width="40" align="center">ID</th>
-                    <th width="160" align="center">标签名称</th>
-                    <th width="200" align="center">添加日期</th>
-                    <th width="100" align="center">操作</th>
-                </tr>
-                <volist name="list" id="vo" >
-                    <tr>
-                        <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
-                        <td align="center" name="tagid" >{$vo.tagid}</td>
-                        <td align="center" name="tagname">{$vo.tagname}</td>
-                        <td align="center">2013-06-26</td>
-                        <td align="center">
-                            <a href="edittag.html">编辑</a> | <a href="#">删除</a>
-                        </td>
-                    </tr>
-                </volist>
-            </table>
-            <div class="action"></div>
-        </form>
+    <form name="action" method="post" action="">
+    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+      <tr>
+        <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+        <th width="40" align="center">ID</th>
+        <th width="160" align="center">书评标签</th>
+        <th width="160" align="center">用户名</th>
+        <th width="160" align="center">书评标签简介</th>
+        <th width="200" align="center">添加日期</th>
+        <th width="100" align="center">操作</th>
+      </tr>
+      <volist name="tag" id="t">
+        <tr>
+        <td align="center"><input type="checkbox" name="tagId[]" value="{$t.tagid}" /></td>
+        <td align="center">{$t.tagid}</td>
+        <td align="center">{$t.tagname}</td>
+        <td align="center">{$t.username}</td>
+        <td align="center">{$t.tagintroduction|mb_substr=0,8,'utf-8'}</td>  
+        <td align="center">{$t.tagtime}</td>
+        <td align="center">
+        <a href="__MODULE__/Tag/edittag/tagId/{$t.tagid}">查看</a> | <a href="__MODULE__/Tag/delete/tagId/{$t.tagid}">删除</a>
+        </td>
+      </tr>
+      </volist>
+    </table>
+    <br/>
+    <div class="input-group pull-left form">
+        <button type="submit" class="btn" style="background-color:#20B2AA;"> 批量删除</button>
     </div>
     <div class="clear"></div>
-    <div class="pager">总计 5 个记录，共 1 页，当前第 1 页 | <a href="tag.html">第一页</a> 上一页 下一页 <a href="tag.html">最末页</a></div>               </div>
-</div>
-<div class="clear"></div>
-<div id="dcFooter">
-    <div id="footer">
-        <div class="line"></div>
-        <ul>
-            畅所欲言，享你所想  |  畅想书评网站后台管理系统
-        </ul>
-    </div>
-</div><!-- dcFooter 结束 -->
-<div class="clear"></div> </div>
-</body>
-</html>
+    <div class="pager">
+    {$page}
+    </div>              </form> </div>
+ </div>
+</div> </form>
