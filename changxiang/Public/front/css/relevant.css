@@ -19,7 +19,7 @@
 	float: left;
 }
 .introduction{
-	height: 230px;
+	height: 200px;
 	border-bottom: 1px #D4D4D4 solid;
 	border-top: 1px #D4D4D4 solid;
 	background-color: #F5F5F5;
@@ -69,6 +69,14 @@
 .function{	
     bottom: 0;
     background-color: #F5F5F5;
+}
+.function-top{
+	font-size: 0.8em;
+	line-height: 180%;
+	padding: 2% 7%;
+}
+.function p:first-child{
+	text-align: justify;
 }
 .function p{
 	text-align: center;
@@ -196,4 +204,4 @@
 }
 .scale:last-child {
 	margin-bottom: 250px;
-}
+};
