@@ -26,7 +26,7 @@ class BookCommentController extends Controller
         $page -> setConfig('next','后一页>>');
         //进行分页数据查询，注意limit方法的参数要使用Page类的属性
         //SQL语句:join连接两个表，inner join从两个表中查询数据
-        $sql = "select books.bookname,books.bookauthor,bookreview.userid,bookreview.bookreviewid,bookreview.title,bookreview.content,bookreview.publishtime from bookreview inner join books on bookreview.bookid = books.bookid order by bookreview.publishtime desc";
+        $sql = "select books.bookid,books.bookname,books.bookauthor,bookreview.userid,bookreview.bookreviewid,bookreview.title,bookreview.content,bookreview.publishtime from bookreview inner join books on bookreview.bookid = books.bookid order by bookreview.publishtime desc";
         $list = $bookReviewModel  -> page($nowPage.',5') -> query($sql) ;
 //        dump($list);
 //        exit;
@@ -98,10 +98,8 @@ class BookCommentController extends Controller
             }
         }
     }
-    public function editbookreview($bookreviewid){
+    public function editbookreview($bookreviewid, $bookid){
         if (IS_POST) {
-            dump($bookreviewid);
-            exit;
             //点击保存，发送POST请求时
             //实例化books模型
 //            $booksModel = M('books');
@@ -118,7 +116,12 @@ class BookCommentController extends Controller
             //实例化bookreview模型
             $bookreviewModel = M('bookreview');
             $books = M('books');
-//            $bookreviewModel -> create();
+            $bookreviewModel -> create($_POST,0);
+            $books -> create($_POST,0);
+            if($bookreviewModel -> save() && $books -> save()) {
+                   $this->success("修改成功", U("BookComment/bookreview"));
+            }
+
 //            dump($bookreviewModel -> create());
 //            dump($bookreviewModel -> save());
 //            exit;
@@ -129,6 +132,7 @@ class BookCommentController extends Controller
 //            dump($result);
 //            dump($result->save());
 //            exit;
+
 //            if($result->save()){
 //                $this->success("修改成功", U("BookComment/bookreview"));
 //            }
