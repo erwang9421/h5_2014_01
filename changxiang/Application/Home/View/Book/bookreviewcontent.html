@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="__PUBLIC__/front/css/headernav.css" />
     <link rel="stylesheet" href="__PUBLIC__/front/css/bookreviewcontent.css" />
     <link rel="stylesheet" href="__PUBLIC__/front/css/collect.css" />
-    <link rel="stylesheet" href="__PUBLIC__/front/css/shang.css" />
 
     <script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.3.min.js"> </script>
 
@@ -183,7 +182,7 @@
                                     <ul class="comment-msg1">
                                         <li><span>MONO</span><span>2016-12-21 08:13</span></li>
                                         <li>
-                                            阅读<span> 11</span>
+                                            阅读<span name="viewtimes">{$info.viewtimes}</span>
                                             评论<span> 2</span>
                                             喜欢<span> 1</span>
                                             收藏<span> 1</span>
@@ -264,9 +263,9 @@
                                 <div class="col-md-7"></div>
                                 <div class="col-md-4">
                                     <div class="sharebtn">
-                                        <a href="#"><span class="glyphicon glyphicon-link"></span>链接到书城</a>
-                                        <a href="#"><span class="glyphicon glyphicon-share"></span>分享到微博</a>
-                                        <a href="#"><span class="glyphicon glyphicon-share"></span>分享到QQ</a>
+                                        <div class="bdsharebuttonbox">
+                                            <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -392,7 +391,7 @@
 
     </div><!--canvas end-->
 </div><!--container end-->
-</body>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion="+~(-new Date()/36e5)];</script>
 <script type="text/javascript">
     $(function() {
         $(".pay_item").click(function() {
@@ -407,4 +406,5 @@
         $(".shang_box").fadeToggle();
     }
 </script>
+</body>
 </html>

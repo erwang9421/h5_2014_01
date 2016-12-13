@@ -5,7 +5,7 @@
         <h3><a href="__MODULE__/User/adduser" class="actionBtn add">添加用户</a>用户列表</h3>
 
         <div id="list">
-            <form name="action" method="post" action="">
+            <form action="__MODULE__/User/delete">
 
                 <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
                     <tr>
@@ -24,7 +24,7 @@
                     </tr>
                     <volist name="user" id="vo">
                         <tr>
-                            <td align="center"><input type="checkbox" name="id[]" value="{$vo.id}" class="checkbox" id="id[]" /></td>
+                            <td align="center"><input type="checkbox" name="id[]" value="{$vo.id}" class="checkbox" /></td>
                             <td align="center">{$vo.id}</td>
                             <td align="center"><a href="product.php?rec=edit&id=5">{$vo.username}</a></td>
                             <td align="center">{$vo.pass|mb_substr=0,13,'utf-8'}</td>
@@ -36,14 +36,14 @@
                             <td align="center">{$vo.bookreview}</td>
                             <td align="center">{$vo.userimage|mb_substr=0,16,'utf-8'}</td>
                             <td align="center">
-                                <a href="__MODULE__/User/edituser?id='{$vo['id']}'">编辑</a> | <a href="__MODULE__/User/delete?id='{$vo['id']}'">删除</a>
+                                <a href="__MODULE__/User/edituser?id='{$vo['id']}'">编辑</a> | <a href="__MODULE__/User/delete?id='{$vo['id']}'">删除</a> | <a href="__MODULE__/User/close?id='{$vo['id']}'">禁言</a>
                             </td>
                         </tr>
                     </volist>
                 </table>
                 <br/>
                 <div class="input-group pull-left form">
-                    <button type="button" class="btn" style="background-color:#20B2AA;">批量删除</button>
+                    <button type="submit" class="btn btn-danger" style="background-color:#20B2AA;"> 批量删除</button>
                 </div>
                 <!-- <div class="action"> -->
             </form>

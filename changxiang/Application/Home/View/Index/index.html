@@ -211,4 +211,47 @@
                     </div><!--bookscontainer结束-->
 
                 </div><!-- content-right结束 --> 
-            </div><!-- content结束 --> 
+            </div><!-- content结束 -->
+<footer>
+    <p>copyright@hebeinormal university</p>
+</footer>
+</div><!--canvas end-->
+</div><!--container end-->
+<script src="__PUBLIC__/front/js/bootstrap.min.js"></script>
+<script src="__PUBLIC__/front/js/custom.js"></script>
+<script src="__PUBLIC__/front/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+    (function($){
+        $(window).load(function(){
+            $(".content-right").mCustomScrollbar({
+                horizontalScroll:true,
+                scrollButtons:{
+                    enable:true,
+                },
+                theme:"dark-thin"
+            });
+        });
+    })(jQuery);
+</script>
+<script type="text/javascript">
+    if (navigator.appName=="Microsoft Internet Explorer") {
+        function fPmVerticalRightOut() {
+            var getItem = document.getElementById("pmVerticalRightOut").getElementsByTagName("li");
+            for (var i=0; i<getItem.length; i++) {
+                getItem[i].onmouseover=function() {
+                    if(     this.className=="nav-second-menu"){
+                        this.className="nav-second-menuIe";
+                    }
+                }
+                getItem[i].onmouseout=function() {
+                    if(     this.className=="nav-second-menuIe"){
+                        this.className="nav-second-menu";
+                    }
+                }
+            }
+        }
+        window.onload=fPmVerticalRightOut;
+    }
+</script>
+</body>
+</html>

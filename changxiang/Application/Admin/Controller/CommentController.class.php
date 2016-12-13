@@ -3,7 +3,7 @@ namespace Admin\Controller;
 use Think\Controller;
 class CommentController extends Controller {
     //评论列表
-    public function comment(){
+    public function lists(){
         //实例化comments模型对象
         $commentsModel = M('comments');
         //导入分页类
@@ -20,10 +20,6 @@ class CommentController extends Controller {
         //实例化users模型对象
         $usersModel = M('users');
         //将用户表和评论表进行关联
-        dump($usersModel);
-        exit;
-        $list = $commentsModel -> join('users ON comments.commentuserid = users.id') -> order('commenttime desc') -> page($nowPage.',5') -> select();
-
         $this -> assign("result",$result);
         //进行分页数据查询，注意limit方法的参数要使用Page类的属性
         $list = $commentsModel -> order('commenttime desc') -> page($nowPage.',5') -> select();
@@ -33,8 +29,7 @@ class CommentController extends Controller {
         $this -> display();//输出模板
     }
     //添加评论
-    public function addcomment(){
-
+    public function add(){
         $this -> display();
     }
     //添加评论页面点击提交调用doAdd方法
@@ -44,12 +39,14 @@ class CommentController extends Controller {
         }
         else{
             $commentsModel=D("comments");
-            if(!$commentsModel->create()){
+            $data = $commentsModel->create();
+            if(!$data){
                 $this->error($commentsModel -> getError());
             }
             else{
-                if($commentsModel -> add()){
-                    $this->success("添加成功",U("Comments/comment"));
+              /*  $data['commenttime'] = time();*/
+                if($commentsModel -> add($data)){
+                    $this->success("添加成功",U("lists"));
                 }
                 else{
                     $this -> error("添加失败");
@@ -58,8 +55,40 @@ class CommentController extends Controller {
         }
     }
     //编辑评论
-    public function editcomment(){
-        $this -> display();
+    public function edit(){
+        $id=$_GET['id'];
+        if ($id == '') {
+            exit("bad param!");
+        }
+
+        $data = M("comments")->where("commentid=$id")->find();
+        $this->assign("data", $data);
+        $this->display();
     }
+
+
+    //删除评论
+        public function delete() {
+            //全部删除
+            $commentModel = M("comments");
+            $id = $_GET['id'];
+            if(is_array($id)){
+                foreach($id as $value){
+                    M("comments")->delete($value);
+                }
+                $this->success("评论删除成功",U("lists"));
+            }
+            //单个删除
+            else{
+                if($commentModel->where("commentid=$id")->delete())
+                    {
+                        $this->success("评论删除成功",U("lists"));
+                    }
+                else
+                    {
+                        $this->error($commentModel->geterror());
+                    }
+            }
+        }
 
 }
