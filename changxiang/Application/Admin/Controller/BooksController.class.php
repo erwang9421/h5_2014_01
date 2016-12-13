@@ -2,6 +2,7 @@
 namespace Admin\Controller;
 use Think\Controller;
 class BooksController extends Controller{
+	//判断是否登录
 	public function __construct(){
     	parent::__construct();
     	if (!isLogin()) {
@@ -54,50 +55,8 @@ class BooksController extends Controller{
 			$this->error('数据添加失败');
 		}
 	}
-	public function doAdd1(){
-		if (!IS_POST) {
-			exit("bad request请求");
-		}
-		else{
-			$booksModel=D('bookscategories');
-			// $booksModel=D('books')->join('bookscategories ON books.bcid = bookscategories.bcid')
-			// ->group('typebcname');
-			if(!$booksModel->create()){
-                $this->error($booksModel->getError());
-            }else{
-            	if ($booksModel->add()) {
-                    $bookType = I('typebcname');
-                    $bcId = $booksModel->getFieldBytypebcname("{$bookType}","bcid");
-                    // $pId=$booksModel->getFieldBypid("{$bookType}","pid");
-
-                    // $books=M("Books b")->join('bookscategories c ON b.bcid = c.bcid')->select();
-                    $books=M("Books");
-                    $data['bcid'] = $bcId;
-                    // $data['typebcname']=$books->join('bookscategories ON books.bcid=bookscategories.bcid')->field('typebcname')->find();
-                    // dump($data['typebcname']);
-                    // $data['pid']=$pId;
-                    $data['bookname'] = I('bookname');
-                    $data['bookauthor'] = I('bookauthor');
-                    $data['bookcontent'] = I('bookcontent');
-                    $data['addtime'] = date('Y-m-d H:i:s',time());
-                    // dump($data);
-                    if($books -> data($data) -> add()){
-                        $this -> success("添加成功",U("Books/lists"));
-                    }
-            	}else{
-            		$this->error("添加失败");
-            	}
-            }
-		}
-	}
-
-
 	//编辑修改图书
 	public function editbook(){
-		// $tags=M('Bookscategories');
-		// $taglist=$tags->join('books ON bookscategories.bcid = books.bcid')
-		// ->select();
-
 		$booksModel=M("Books");
 		// $id=$_GET['booksId'];
 		$id=I('booksId');
