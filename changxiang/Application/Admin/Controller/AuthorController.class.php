@@ -3,11 +3,8 @@ namespace Admin\Controller;
 use Think\Controller;
 class AuthorController extends Controller {
     public function __construct(){
-            parent::__construct();
-              if (!isLogin()) {
-                  $this->error("请先登录",U("Admin/login"));
-              }
-    }
+ 		parent::__construct();
+ 	}
 
  	public function add(){
 		$this->display();
@@ -22,8 +19,11 @@ class AuthorController extends Controller {
             $upload->exts=array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
             $upload->rootPath  = THINK_PATH; // 设置附件上传根目录
             $upload->savePath  ='../Public/uploads/authorimage/'; // 设置附件上传（子）目录
+            $upload->savePath  ='../Public/uploads/authorimage/'; // 设置附件上传（子）目录
             // 上传文件 
             $info   =   $upload->upload();
+          /*  dump($info);
+            exit();*/
             if(!$info) {// 上传错误提示错误信息
                 $this->error($upload->getError());
             }else{// 上传成功
@@ -51,8 +51,29 @@ class AuthorController extends Controller {
                     $this->error('邮箱已被使用');
                 }
                 //设置thumb字段属性(目录+名字)  
-                $data['idcard']=$info['idcard']['savepath'].$info['idcard']['savename']; 
-                $data['authorimage']=$info['authorimage']['savepath'].$info['authorimage']['savename'];   
+                foreach($info as $file){
+                    if($file['key']=='idcard')
+                    {
+                        $path = substr($file['savepath'], 9);
+                        $string = $path.$file['savename'];
+                        $i.=$string.',';
+                    }
+                    if($file['key']=='authorimage')
+                    {
+                        $path = substr($file['savepath'], 9);
+/*                      $file['savepath'] = '../Public/uploads/authorimage/image/';*/
+                        $string1 = $path.$file['savename'];
+                        $j.=$string1.',';
+                    }
+                }
+                $a = substr($i, 0, -1) ;
+                $b = substr($j, 0, -1) ;
+                dump($a);
+                dump($b);
+         
+                //设置thumb字段属性(目录+名字)
+               $data['idcard']=$a;
+               $data['authorimage']=$b;
 
         		if ($authorModel->add($data)) { //写入数据库
         			$this->success("添加成功！", U("lists"));
@@ -122,7 +143,7 @@ class AuthorController extends Controller {
                 foreach($id as $value){
                     M("author")->delete($value);
                 }
-                $this->success("批量删除成功",U("lists"));
+                $this->success("用户删除成功",U("lists"));
             }
             //单个删除
             else{
