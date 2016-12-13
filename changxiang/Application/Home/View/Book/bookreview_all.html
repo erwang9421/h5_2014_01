@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/bookreview_all.css" />
     <link rel="stylesheet" href="css/alert-feedback.css">
 
+
 </head>
 <body>
     <div id="container">
@@ -144,7 +145,7 @@
                                     <li><a href="bookreview_all.html">文章</a></li>
                                     <li><a href="fans.html">粉丝</a></li>
                                     <li><a href="collect.html">收藏</a></li>
-                                    <li><a href="attention.html" >关注</a></li>
+                                    <li><a href="attention.html">关注</a></li>
                                 </ul>
                                 <ul>
                                     <li>20</li>
@@ -155,8 +156,9 @@
                             </div>
                         </div>
                         <div class="function">
+                            <p class="function-top">作家，出版长篇小说《三重门》，创畅销纪录，并成 为一个优秀赛车手，是中国唯一一位拉力赛和场地赛 双料年度冠军。2010年被《时代周刊》评选为100名影响世界人物之一。其自编自导的处女座电影《后会无期》于2014年2月已开机.</p>
                             <p id="distance"><a href="private.html">写私信</a></p>
-                            <p><a href="#" id="payattention">加关注</a></p>
+                            <p><a href="fans.html" id="care">关注</a></p>
                             <p><a href="userbooklist.html">他的书单</a></p>
                         </div>
                     </div>
@@ -403,27 +405,6 @@
                  }
              }
              window.onload=fPmVerticalRightOut;
-        }
-    </script>
-    <script type="text/javascript">
-        var payattention = document.getElementById('payattention');
-        
-        payattention.onclick = function (){
-        var backgroundColor = window.getComputedStyle ? window.getComputedStyle(payattention,null).backgroundColor : payattention.currentStyle.backgroundColor;
-        var color = window.getComputedStyle ? window.getComputedStyle(payattention,null).color : payattention.currentStyle.color;
-        var border = window.getComputedStyle ? window.getComputedStyle(payattention,null).border : payattention.currentStyle.border;    
-
-
-            if(color == 'rgb(255, 255, 255)' && border == '')
-            {
-                    this.className='';
-            }
-            else {
-                    this.className="optioned";
-                    this.innerHTML="已关注";
-
-            }
-            
         }
     </script>
 </body>
