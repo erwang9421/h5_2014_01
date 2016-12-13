@@ -10,7 +10,7 @@
 }
 .content-right {
 	width:100%;
-    overflow-y:auto;
+	overflow-y:auto;
 	background-color:#fcfcfc;
 	height:100%;
 	float: left;
@@ -151,16 +151,16 @@ footer {
 	left: 3%;
 	position: absolute;
 	overflow: auto;
-    border: 0px;
+	border: 0px;
 }
 /*content左边*/
 .content-left{
 	width:15%;
 	height: 100%;
 	border-right: 1px #D4D4D4 solid;
-	background-color:#F5F5F5; 
+	background-color:#F5F5F5;
 	float: left;
-      
+
 }
 .introduction{
 	height: 200px;
@@ -177,9 +177,9 @@ footer {
 	color: #67B9FF;
 	text-align: center;
 }
-.list{	
+.list{
 	padding-top: 6px;
-    text-align:center;
+	text-align:center;
 }
 .list ul{
 	width: 80%;
@@ -210,9 +210,9 @@ footer {
 	margin-right: 18px;
 	float: left;
 }
-.function{	
-    bottom: 0;
-    background-color: #F5F5F5;
+.function{
+	bottom: 0;
+	background-color: #F5F5F5;
 }
 .function p{
 	text-align: center;
@@ -248,11 +248,11 @@ footer {
 	width: 100%;
 	height: 97%;
 	overflow:auto;
- 	clear:both;
-    padding-left: 0px;
-    display: inline;
- 	position: absolute;    
-    top: 10px;
+	clear:both;
+	padding-left: 0px;
+	display: inline;
+	position: absolute;
+	top: 10px;
 }
 /*右边上部面包屑*/
 .content-right-top{
@@ -280,15 +280,15 @@ footer {
 /*右边下部他的所有书评*/
 .content-right-bottom{
 	height: 93%;
-    width: 100%;
-    overflow:auto;
-    clear:both;
-    position: absolute;
+	width: 100%;
+	overflow:auto;
+	clear:both;
+	position: absolute;
 }
 .content-book-comments{
 	height: 100%;
 	width: 100%;
-	overflow:hidden;     
+	overflow:hidden;
 }
 .mCSB_horizontal > .mCSB_container{
 	margin-bottom: 0;
@@ -305,22 +305,22 @@ footer {
 	display: block;
 }
 .book-comment1 .comment-more-btn {
-    padding-left: 1.2%;
+	padding-left: 1.2%;
 }
 .book-comment2 .comment-more-btn {
-     padding-left: 1.2%;
+	padding-left: 1.2%;
 }
 .book-comment3 .comment-more-btn {
-     padding-left: 1.2%;
+	padding-left: 1.2%;
 }
 .book-comment4 .comment-more-btn {
-     padding-left: 1.2%;
+	padding-left: 1.2%;
 }
 .book-comment5 .comment-more-btn {
-     padding-left: 1.2%;
+	padding-left: 1.2%;
 }
 .book-comment6 .comment-more-btn {
-     padding-left: 1.2%;
+	padding-left: 1.2%;
 }
 .comment-top {
 	height: 25%;
@@ -390,20 +390,20 @@ footer {
 	overflow: hidden;
 	text-overflow:ellipsis;
 }
-@media screen and (min-height: 769px) { 
-.comment-bottom p {height: 320px} 
-}  
-@media screen and (max-height: 768px) { 
-.comment-bottom p {height: 310px} 
-}  
-@media screen and (max-height: 640px) { 
-.comment-bottom p {height: 230px} 
+@media screen and (min-height: 769px) {
+	.comment-bottom p {height: 320px}
 }
-@media screen and (max-height: 614px) { 
-.comment-bottom p {height: 230px;} 
-} 
-@media screen and (max-height: 517px) { 
-.comment-bottom p {height: 170px;} 
+@media screen and (max-height: 768px) {
+	.comment-bottom p {height: 310px}
+}
+@media screen and (max-height: 640px) {
+	.comment-bottom p {height: 230px}
+}
+@media screen and (max-height: 614px) {
+	.comment-bottom p {height: 230px;}
+}
+@media screen and (max-height: 517px) {
+	.comment-bottom p {height: 170px;}
 }
 .comment-more-btn {
 	bottom: 10%;
@@ -425,7 +425,7 @@ nav{
 }
 
 .userphoto .emoji{
-margin-right:0;
+	margin-right:0;
 }
 /*评价按钮*/
 .reviewbtn{
