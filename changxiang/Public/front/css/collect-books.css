@@ -1,4 +1,4 @@
-﻿#nav {
+#nav {
 	z-index: 100;
 }
 /*canvas里面 content样式*/
@@ -76,8 +76,10 @@
 }
 .function-top{
 	font-size: 0.8em;
-	line-height: 180%;
+	line-height: 200%;
 	padding: 2% 7%;
+	/*text-align: left;*/
+	/*text-align: justify;*/
 }
 .function p:first-child{
 	text-align: justify;
@@ -137,28 +139,12 @@
 }
 .content-right-top ol li{
 	float: left;
-	/*width: 5%;*/
-	width: 5%;
 }
 .content-right-top ol a:hover{
 	text-decoration: none;
 	font-weight: bold;
 }
-.tag{
-	padding: 4% 6%;
-	border-radius:4px;
-	color: #fff;
-	background-color: #da7c66;
-	font-size: 0.8em;
-}
-.tags{
-	color: #000000;
-	padding: 0.3% 0.4%;
-	border-radius:4px;
-	border: 1px solid #d2d2d2;
-	font-size: 0.8em;
-	margin-left: 0.2%;
-}
+
 /*右边下部他的所有书评*/
 .content-right-bottom{
 	height: 93%;
@@ -179,7 +165,7 @@
 }
 .content-book-comment1{
 	width:5%;
-	height: 90%;
+	height: 92%;
 	/*position: relative;*/
 	background-color: #f7f7f7;
 	border: 1px solid #dbdce0;
@@ -290,7 +276,7 @@
 .comment-bottom p {height: 310px} 
 }  
 @media screen and (max-height: 640px) { 
-.comment-bottom p {height: 260px} 
+.comment-bottom p {height: 230px} 
 }
 @media screen and (max-height: 614px) { 
 .comment-bottom p {height: 230px;} 
