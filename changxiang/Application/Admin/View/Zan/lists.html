@@ -4,7 +4,7 @@
        <h3><!-- <a href="__MODULE__/Zan/add" class="actionBtn add">添加赞</a -->点赞列表</h3>
     
         <div id="list">
-    <form name="action" method="post" action="">
+    <form action="__MODULE__/Zan/delete">
     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
       <tr>
         <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
@@ -16,7 +16,7 @@
       </tr>
       <volist name="support" id="vo">
       <tr>
-        <td align="center"><input type="checkbox" name="supportid[]" value="{$vo.supportid}" class="checkbox" id="supportid[]" /></td>
+        <td align="center"><input type="checkbox" name="id[]" value="{$vo.supportid}" class="checkbox" /></td>
         <td align="center">{$vo.supportid}</td>
         <td align="center">{$vo.commentname}</td>
         <td align="center">{$vo.supportusername}</td>
@@ -29,7 +29,7 @@
     </table>
                 <br/>
                 <div class="input-group pull-left form">
-                    <button type="button" class="btn" style="background-color:#20B2AA;">批量删除</button>
+                    <button type="submit" class="btn" style="background-color:#20B2AA;">批量删除</button>
                 </div>
                 <!-- <div class="action"> -->
             </form>

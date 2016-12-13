@@ -1,0 +1,45 @@
+
+    <div id="dcMain">
+        <!-- 当前位置 -->
+        <div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>书评列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+        <h3><!-- <a href="__MODULE__/BookCommentTag/add" class="actionBtn add">添加书评标签</a> -->书评标签列表</h3>
+
+        <div id="list">
+            <form name="action" method="post" action="#">
+                <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+                    <tr>
+                        <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+                        <th align="center">用户名</th>
+                        <th align="center">标签名</th>
+                        <th align="center">标签简介</th>
+                        <th align="center">标签添加时间</th>
+                        <th align="center">操作</th>
+                    </tr>
+                    <volist name="tag" id="vo">
+                        <tr>
+
+                            <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
+                            <td align="center">{$vo.username|mb_substr=0,10,'utf-8'}</td>
+                            <td align="center">{$vo.tagname|mb_substr=0,10,'utf-8'}</td>
+                            <td align="center">{$vo.tagintroduction|mb_substr=0,10,'utf-8'}</td>
+                            <td align="center">{$vo.tagtime|mb_substr=0,15,'utf-8'}</td>
+                            <td align="center">
+                                <a href="__MODULE__/BookCommentTag/read?id='{$vo['tagid']}'">查看</a> | <a href="__MODULE__/BookCommentTag/delete?id='{$vo['tagid']}'">删除</a>
+                            </td>
+                        </tr>
+                    </volist>
+               </table>
+                <br/>
+                <div class="input-group pull-left form">
+                    <button type="button" class="btn" style="background-color:#20B2AA;">批量删除</button>
+                </div>
+                <!-- <div class="action"> -->
+            </form>
+        </div>
+        <div class="clear"></div>
+        <div class="pager">
+            {$page}
+        </div>
+    </div>
+</div>
+</form>
