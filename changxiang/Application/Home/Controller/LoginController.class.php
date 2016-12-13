@@ -4,7 +4,7 @@
         class LoginController extends Controller {
 
 
-        public function personal register(){
+        public function personal_register(){
         $this->display();
         }
         }
