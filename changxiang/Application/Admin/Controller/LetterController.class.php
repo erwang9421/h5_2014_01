@@ -2,6 +2,7 @@
 namespace Admin\Controller;
 use Think\Controller;
 class LetterController extends Controller{
+    //判断是否登录
     public function __construct(){
         parent::__construct();
         if (!isLogin()) {

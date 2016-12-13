@@ -2,7 +2,15 @@
 namespace Admin\Controller;
 use Think\Controller;
 class TagController extends Controller{
-	public function tag(){
+    //判断是否登录
+	public function __construct(){
+        parent::__construct();
+        if (!isLogin()) {
+            $this->error("请先登录",U("Admin/login"));
+        }
+    }
+    //书评标签列表
+    public function tag(){
 		$tagModel=M("Tags");
 
         import('Org.Util.Page');
@@ -13,15 +21,29 @@ class TagController extends Controller{
         $page->setConfig('prev','前一页');
         $page->setConfig('next','后一页');
 
-        $tag=$tagModel->order('tagtime asc')->page($nowPage.',4')->select();
-        $show=$page->show();
-        $this->assign('page',$show);
+        $tag=$tagModel->join('users ON tags.userid=users.id')
+        ->order('tagtime desc')->page($nowPage.',4')->select();
 
+        $show=$page->show();
+
+        $this->assign('page',$show);
         $this->assign("tag",$tag);
+	  
 
 		$this->display();
 	}
-	public function delete(){
+	//查看详情
+    public function edittag(){
+        $tagModel=D("tags");
+        $id=$_GET['tagId'];
+
+        $tag=$tagModel->join('users ON tags.userid=users.id')->find($id);
+
+        $this->assign('tag',$tag);
+
+        $this->display();
+    }
+    public function delete(){
 		//全部删除
         $id = $_GET['tagId'];
         if(is_array($id)){
@@ -37,40 +59,13 @@ class TagController extends Controller{
             }
         }       
     }
-    //编辑修改
-    public function edittag(){
-    	$tagsModel=D("tags");
-		$id=$_GET['tagId'];
-		$tags=$tagsModel->find($id);
-		$this->assign('tags',$tags);
-
-    	$this->display();
-    }
-    public function update(){
-		if (IS_POST) {
-			$model=M("Tags");
-			$model->create();
-			if ($model->save()) {
-				$this->success("修改成功",U("Tag/tag"));
-			}
-			else{
-				$this->error($model->getError());
-			}
-		}	
-	}
+    //添加
 	public function addtag(){
-		$tagsModel=M('Tags');
-		$tags=$tagsModel->select();
-		$this->assign('tags',$tags);
-
+		
 		$this->display();
 	}
-	//添加标签
+	//添加书评标签
 	public function doAdd(){
-		$tagsModel=M('Tags');
-		$tags=$tagsModel->select();
-		$this->assign('tags',$tags);
-
 		if (!IS_POST) {
 			exit("bad request请求");
 		}
@@ -83,8 +78,10 @@ class TagController extends Controller{
 		}else{
 			$this->error("添加失败");
 		}
-		
+
 	}
+
+
 
 
 }
