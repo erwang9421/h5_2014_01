@@ -1,7 +1,7 @@
 <form action="__MODULE__/Books/delete"  method="get">
  <div id="dcMain">
    <!-- 当前位置 -->
-<div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>图书列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+<div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>图书列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
         <h3><a href="__MODULE__/Books/addbook" class="actionBtn add">添加图书</a>图书列表</h3>
    
     <div id="list">
@@ -24,7 +24,7 @@
                 <td align="center">{$b.bookid}</td>
                 <td align="center"><a href="product.php?rec=edit&id=15">{$b.bookname}</a></td>
                 <td align="center"><a href="product.php?cat_id=3">{$b.bookauthor}</a></td>
-                <td align="center">{$b.booktype}</td>
+                <td align="center">{$b.typebcname}</td>
                 <td style="font-size:14px">{$b.bookcontent|mb_substr=0,66,'utf-8'}</td>
                 <td align="center">{$b.addtime}</td>
                 <td align="center">
@@ -32,29 +32,15 @@
                 </td>
             </tr>
         </volist>
-
-       <!--  <tr>
-            <td><button type="button" class="btn" style="background-color:#20B2AA;"> 批量删除</button></td>
-            <td></td>
-        </tr> -->
-        
       
     </table>
     <br/>
     <div class="input-group pull-left form">
         <button type="submit" class="btn" style="background-color:#20B2AA;"> 批量删除</button>
     </div>
-
-    <!-- </form> -->
     </div>
     <div class="clear"></div>
-    
-   <!--  <ul class="pagination pull-right" style="float:left;margin-left:960px;">
-        {$page}              
-    </ul> -->
-
-    <div class="pager"><!-- 总计 5 个记录，共 1 页，当前第 1 页 |  -->
-    <!-- <a href="book.html">第一页</a> 上一页 下一页 <a href="book.html">最末页</a> -->
+    <div class="pager">
     {$page}     
     </div>               </div>
  </div>
