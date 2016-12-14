@@ -4,15 +4,14 @@ use Think\Controller;
 class UserController extends Controller {
     public function __construct(){
  		parent::__construct();
- 		if(!isLogin())
+ 		/*if(!isLogin())
  		{
  			$this->error("请先登录","Admin/login");
- 		}
+ 		}*/
  		/*if(get_username())
  		{
  			$sessionName=get_username();
  		}*/
-        
  	}
 
  	public function adduser(){
@@ -122,16 +121,16 @@ class UserController extends Controller {
         //删除用户
         public function delete() {
             //全部删除
+            $userModel = M("Users");
             $id = $_GET['id'];
             if(is_array($id)){
                 foreach($id as $value){
-                    D("users")->delete($value);
-                }  
-                $this->success("批量删除成功！",U("lists"));
-            } 
+                    M("Users")->delete($value);
+                }
+                $this->success("用户删除成功",U("lists"));
+            }
             //单个删除
             else{
-                $userModel = D("users");
                 if($userModel->where("id=$id")->delete())
                     {
                         $this->success("用户删除成功",U("lists"));
@@ -141,10 +140,6 @@ class UserController extends Controller {
                         $this->error($userModel->geterror());
                     }
             }
-        }
-
-        public function close() {
-            
         }
 
 
