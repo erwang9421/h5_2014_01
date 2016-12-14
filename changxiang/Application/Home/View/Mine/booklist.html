@@ -4,17 +4,17 @@
     <title>我的书单</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/headernav.css" />
-    <link rel="stylesheet" href="css/booklist.css" />
-    <link rel="stylesheet" href="css/alert-feedback.css">
-    
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/alert-feedback.js"></script>
+    <link href="__PUBLIC__/front/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/front/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="__PUBLIC__/front/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/front/css/headernav.css" />
+    <link rel="stylesheet" href="__PUBLIC__/front/css/booklist.css" />
+    <link rel="stylesheet" href="__PUBLIC__/front/css/alert-feedback.css">
+    <link rel="stylesheet" href="__PUBLIC__/front/css/alert-delete.css">
+    <script src="__PUBLIC__/front/js/jquery.js"></script>
+    <script src="__PUBLIC__/front/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/front/js/custom.js"></script>
+    <script src="__PUBLIC__/front/js/alert-feedback.js"></script>
 
     <script type="text/javascript">
         if (navigator.appName=="Microsoft Internet Explorer") {
@@ -37,138 +37,22 @@
         }
     </script>
 </head>
-<body>
-    <div id="container">
-        <div id="canvas">
-            <div class="aside-nav toggle-nav">
-                <a href="#"><i class="icon-align-justify icon-large"></i></a>
-            </div>
-            <!--aside-nav end（触发弹出侧栏）-->
-            <header>
-                <nav class="top-nav">
-                    <a href="index.html"><img src="images/logo.png" width="115" class="logo" height="37" alt="logo" /></a>
-                    <label for="search"></label>
-                    <input type="text" id="search" placeholder="输入标签、作者、关键字搜索"/>
-                    <div class="header-right">
-                        <a href="editarticle.html">写书评</a>
-                        <div class="myphoto dropdown">
-                            <div class=" dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown">
-                                <img src="images/myphoto.jpg" width="35" height="35" alt="我的头像" /> 
-                                <span>mono</span>
-                            </div>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="editmessage.html">账号设置</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">退出</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </header><!--header end-->
-            <!--侧导航内容 start-->
-            <div id="nav">
-                <div class="nav-child">
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-3"><a href="myBookReview_all.html"><img src="images/myphoto.jpg" width="74" height="74" alt="我的头像" class="nav-photo" /></a><span class="nav-username">mono</span></div>
-                    </div>
-                    <div class="row nav-msg">
-                        <div class="col-md-10 col-md-offset-1">
-                            <ul>
-                                <li><a href="myBookReview_all.html">文章</a></li>
-                                <li><a href="fans.html">粉丝</a></li>
-                                <li><a href="myCollect.html">收藏</a></li>
-                                <li><a href="attention.html">关注</a></li>
-                            </ul>
-                            <br />
-                            <ul>
-                                <li>20</li>
-                                <li>5</li>
-                                <li>56</li>
-                                <li>1</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4 col-md-offset-4">
-                            <div class="nav-write-btn">
-                                <a href="editarticle.html">写书评</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row nav-menu">
-                        <div class="col-md-12">
-                            <ul class="pmVerticalRightOut" id="pmVerticalRightOut">
-                                <li><a href="index.html">首页</a></li>
-                                <li class="nav-book-classify"><a href="#" >书评分类</a>
-                                    <ul class="nav-second-menu">
-                                        <li><a href="tags.html">文学</a>
-                                            <ul class="nav-third-menu">
-                                                <a href="tags.html">文集</a>
-                                                <a href="tags.html">纪实文学</a>
-                                                <a href="tags.html">文学理论</a>
-                                                <a href="tags.html">中国古诗词</a>
-                                                <a href="tags.html">戏剧</a></li>
-                                                <a href="tags.html">文集中国现当代诗歌</a>
-                                                <a href="tags.html">外国诗歌</a>
-                                                <a href="tags.html">民间文学</a>
-                                                <a href="tags.html">外国随笔</a>
-                                                <a href="tags.html">中国古代随笔</a>
-                                            </ul>
-                                        </li>
-                                        <li><a href="tags.html">小说</a>
-                                            <ul class="nav-third-menu">
-                                                <a href="#">a</a>
-                                                <a href="#">b</a>
-                                                <a href="#">c</a>
-                                                <a href="#">d</a>
-                                                <a href="#">e</a>
-                                                <a href="#">f</a>
-                                                <a href="#">j</a>
-                                                <a href="#">h</a>
-                                                <a href="#">i</a>
-                                                <a href="#">g</a>
-                                            </ul>
-                                        </li>
-                                        <li><a href="tags.html">哲学</a></li>
-                                        <li><a href="tags.html">社会科学</a></li>
-                                        <li><a href="tags.html">文化</a></li>
-                                        <li><a href="tags.html">教育</a></li>
-                                        <li><a href="tags.html">艺术</a></li>
-                                        <li><a href="tags.html">自然科学</a></li>
-                                         <li><a href="tags.html">工业技术</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="myBookReview_all.html">作家专栏</a></li>
-                                <li><a href="recommendation.html">推荐书评</a></li>
-                                <li><a href="hot search.html">图书热榜</a></li>
-                                <li><a href="recommendbooklists.html">推荐书单</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="nav-feedback-btn">
-                            <a href="#" id="sugPost" hidefocus="true">意见反馈</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!--侧导航内容 end-->
+           <!--侧导航内容 end-->
             <!--content start-->
             <div id="content">
                 <div class="content-left"></div>
                 <div class="content-right">
                 <div class="roler">
                         <div class="introduction">
-                            <p style="text-align: center;"><img src="images/myphoto.jpg" width="70" height="70" alt="用户头像" onclick="window.location.href='myBookReview_all.html'"
+                            <p style="text-align: center;"><img src="__PUBLIC__/front/images/myphoto.jpg" width="70" height="70" alt="用户头像" onclick="window.location.href='__MODULE__/Mine/myBookReview_all'"
                             /></p>
                             <a href="#" id="name"><p>啊哈</p></a>
                             <div class="list">
                                 <ul>
-                                    <li><a href="myBookReview_all.html">文章</a></li>
-                                    <li><a href="fans.html">粉丝</a></li>
-                                    <li><a href="myCollect.html">收藏</a></li>
-                                    <li><a href="attention.html">关注</a></li>
+                                    <li><a href="__MODULE__/Mine/myBookReview_all">文章</a></li>
+                                    <li><a href="__MODULE__/Other/fans">粉丝</a></li>
+                                    <li><a href="__MODULE__/Mine/myCollect">收藏</a></li>
+                                    <li><a href="__MODULE__/Other/attention">关注</a></li>
                                 </ul>
                                 <ul>
                                     <li>20</li>
@@ -180,56 +64,39 @@
                         </div>
                         <div class="function">
                         <p class="function-top">作家，出版长篇小说《三重门》，创畅销纪录，并成 为一个优秀赛车手，是中国唯一一位拉力赛和场地赛 双料年度冠军。2010年被《时代周刊》评选为100名影响世界人物之一。其自编自导的处女座电影《后会无期》于2014年2月已开机.</p>
-                            <p id="distance"><a href="relevant.html">与我相关</a></p>
-                            <p><a href="drafts.html">草稿箱</a></p>
-                            <p><a href="editmessage.html">修改信息</a></p>
-                            <p><a href="#" id="click">我的书单</a></p>
+                            <p id="distance"><a href="__MODULE__/Mine/relevant">与我相关</a></p>
+                            <p><a href="__MODULE__/Mine/drafts">草稿箱</a></p>
+                            <p><a href="__MODULE__/Mine/editmessage">修改信息</a></p>
+                            <p><a href="__MODULE__/Mine/mybookslists" id="click">我的书单</a></p>
                         </div>
                 </div>
                 <p class="main-title">我的书单</p>
                 <div class="main">
-                    <div class="scale">
+                    <!-- <div class="scale">
                         <div class="scale-left">
                             <a href="#">未加标签</a>
                         </div>
                         <div class="scale-right">
                         <a href="mybookslists.html">最热50本外国文学作品</a>
-                        <img src="images/close.png" alt="删除按钮" width="20" height="20" />
+                        <img src="__PUBLIC__/front/images/close.png" alt="删除按钮" width="20" height="20" onclick="bookCollect()" />
                         </div>
-                    </div>
+                    </div> -->
+                    <volist name="tags" id="t">
+                        <div class="scale">
+                            <div class="scale-left">
+                                <a href="__MODULE__/Mine/mybookslists">{$t.tagname}</a>
+                                 <img src="__PUBLIC__/front/images/close.png" alt="删除按钮" width="20" height="20" onclick="bookCollect()" />
+                            </div>
+                            <div class="scale-right">
+                            <a href="__MODULE__/Mine/mybookslists">{$t.tagintroduction}</a>
+                            <img src="__PUBLIC__/front/images/close.png" alt="删除按钮" width="20" height="20"  onclick="bookCollect()"/>
+                            </div>
+                        </div>
+                    </volist>
 
-                    <div class="scale">
-                        <div class="scale-left">
-                            <a href="mybookslists.html">未加标签</a>
-                             <img src="images/close.png" alt="删除按钮" width="20" height="20" />
-                        </div>
-                        <div class="scale-right">
-                        <a href="mybookslists.html">最热50本外国文学作品</a>
-                        <img src="images/close.png" alt="删除按钮" width="20" height="20" />
-                        </div>
-                    </div>
+                    
 
-                    <div class="scale">
-                        <div class="scale-left">
-                            <a  href="mybookslists.html">未加标签</a>
-                             <img src="images/close.png" alt="删除按钮" width="20" height="20" />
-                        </div>
-                        <div class="scale-right">
-                        <a href="mybookslists.html">最热50本外国文学作品</a>
-                        <img src="images/close.png" alt="删除按钮" width="20" height="20" />
-                        </div>
-                    </div>
-
-                    <div class="scale">
-                        <div class="scale-left">
-                            <a href="mybookslists.html">未加标签</a>
-                             <img src="images/close.png" alt="删除按钮" width="20" height="20" />
-                        </div>
-                        <div class="scale-right">
-                        <a href="mybookslists.html">最热50本外国文学作品</a>
-                        <img src="images/close.png" alt="删除按钮" width="20" height="20" />
-                        </div>
-                    </div>
+                   
                 </div> <!--main结束-->
             </div>
         </div><!-- content结束 -->a
@@ -240,6 +107,90 @@
         </div><!--canvas end-->
     </div><!--container end-->
 </body>
+
+<script type="text/javascript">
+    var sWidth=document.body.scrollWidth;
+    var sHeight=document.body.scrollHeight;
+
+    //获取页面的可视区域高度和宽度
+    var wHeight=document.documentElement.clientHeight;
+    var wWidth=document.documentElement.clientWidth;
+    function bookCollect(){
+
+        var oMask=document.createElement("div");
+        oMask.id="mask";
+        oMask.style.height=sHeight+"px";
+        oMask.style.width=sWidth+"px";
+        document.body.appendChild(oMask);
+        var cPass=document.createElement("div");
+        cPass.id="collectB";
+        cPass.innerHTML="<div class='collectCon'><div class='alert-collect'><p><img src='__PUBLIC__/front/images/？.png'</p><br/><p id='colsuccess'>确实要删除书签吗？</p></div><div class='alert-collect-footer' ><button id='y'> 确定</button><button  id='n'>取消</button></div>";
+        document.body.appendChild(cPass);
+
+
+//获取收藏框的宽和高
+        var dHeight=cPass.offsetHeight;
+        var dWidth=cPass.offsetWidth;
+        //设置收藏框的left和top
+        cPass.style.top=wHeight/2-dHeight/2+"px";
+        cPass.style.left=wWidth/2-dWidth/2+"px";
+//点击关闭按钮
+        var oClose=document.getElementById("y");
+        var oClose2=document.getElementById("n");
+
+        //点击收藏框以外的区域也可以关闭登陆框
+        oClose.onclick=function(){
+            console.log(111111)
+            sucess();
+            return false;
+        };
+        oClose2.onclick=oMask.onclick=function(){
+            document.body.removeChild(cPass);
+            document.body.removeChild(oMask);
+        };
+        function  sucess(){
+            console.log(33333)
+            var pass=document.getElementById("collectB");
+            var Mask=document.getElementById("mask");
+            document.body.removeChild(pass);
+            document.body.removeChild(Mask);
+
+            console.log(4444)
+
+            var oMask2=document.createElement("div");
+            oMask2.id="mask1";
+            oMask2.style.height=sHeight+"px";
+            oMask2.style.width=sWidth+"px";
+            document.body.appendChild(oMask2);
+
+            var Pass=document.createElement("div");
+            Pass.id="collectc";
+            Pass.innerHTML="<div  id='yes1' >  <div class='alert-collect1'><p><img  src='__PUBLIC__/front/images/success.png'></p><br/><p id='colsuccess1'>文章删除成功\(^o^)/</p></div><div class='alert-collect-footer1'><button id='yes2'>确定</button></div></div>";
+
+            document.body.appendChild(Pass);
+            var dHeight=Pass.offsetHeight;
+            var dWidth=Pass.offsetWidth;
+            //设置收藏框的left和top
+            Pass.style.top=wHeight/2-dHeight/2+"px";
+            Pass.style.left=wWidth/2-dWidth/2+"px";
+//点击关闭按钮
+            var Close=document.getElementById("yes1");
+
+
+            //点击收藏框以外的区域也可以关闭登陆框
+            Close.onclick=function(){
+                document.body.removeChild(Pass);
+
+            };
+            console.log(4555)
+        };
+
+
+    };
+</script>
+
+
+
 </html>
 
 
