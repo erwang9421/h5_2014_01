@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52c848ea-252d-4eb0-a8a7-fef6e7418171" name="Default" comment="添加前台thinkphp的html页面">
+    <list default="true" id="52c848ea-252d-4eb0-a8a7-fef6e7418171" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/BookCommentTagController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Public/front/css/shang.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/changxiang/Application/Home/View/Login/writer register.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/allcode/css/shang.css" afterPath="$PROJECT_DIR$/allcode/css/shang.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/AuthorController.class.php" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/AuthorController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/CommentController.class.php" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/CommentController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/UserController.class.php" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/UserController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/Comment/lists.html" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/Comment/lists.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/layout.html" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/addmessage.html" afterPath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/addmessage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/booklist.html" afterPath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/booklist.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/myBookReview_all.html" afterPath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/myBookReview_all.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/myCollect.html" afterPath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/myCollect.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/myattention.html" afterPath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/myattention.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/myfans.html" afterPath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/myfans.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Public/front/css/bookreviewcontent.css" afterPath="$PROJECT_DIR$/changxiang/Public/front/css/bookreviewcontent.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Public/front/css/collect.css" afterPath="$PROJECT_DIR$/changxiang/Public/front/css/collect.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Public/front/css/headernav.css" afterPath="$PROJECT_DIR$/changxiang/Public/front/css/headernav.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Public/front/css/style.css" afterPath="$PROJECT_DIR$/changxiang/Public/front/css/style.css" />
     </list>
     <list id="975ea999-5c71-40e0-9de0-b9fe3c37ccf6" name="Failed commit: Default" comment="修改侧栏的书评分类中的栏目" />
     <ignored path="h5_2014_01.iws" />
@@ -100,10 +119,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-14" />
-    <option name="y" value="72" />
-    <option name="width" value="1371" />
-    <option name="height" value="753" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -229,6 +248,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="h5_2014_01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="h5_2014_01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="changxiang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -240,7 +289,6 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
-    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -331,8 +379,8 @@
       <workItem from="1481589489518" duration="2300000" />
       <workItem from="1481606036710" duration="2212000" />
       <workItem from="1481619212183" duration="508000" />
-      <workItem from="1481626279102" duration="1349000" />
-      <workItem from="1481698064394" duration="271000" />
+      <workItem from="1481626279102" duration="631000" />
+      <workItem from="1481675919872" duration="49000" />
     </task>
     <task id="LOCAL-00001" summary="zhaodnli">
       <created>1478084647853</created>
@@ -600,31 +648,17 @@
       <option name="project" value="LOCAL" />
       <updated>1481609152148</updated>
     </task>
-    <task id="LOCAL-00039" summary="添加前台thinkphp的html页面">
-      <created>1481629023880</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1481629023880</updated>
-    </task>
-    <task id="LOCAL-00040" summary="添加前台thinkphp的html页面">
-      <created>1481698281612</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1481698281612</updated>
-    </task>
-    <option name="localTasksCounter" value="41" />
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63003000" />
+    <option name="totallyTimeSpent" value="62063000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-14" y="72" width="1371" height="753" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2191882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23426062" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30156657" sideWeight="0.5083333" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26242235" sideWeight="0.49166667" order="8" side_tool="false" content_ui="tabs" />
@@ -697,8 +731,7 @@
     <MESSAGE value="thinkphp后台 author/bookcommenttag/user/zan 页面重新上传" />
     <MESSAGE value="修改后台layout部分内容" />
     <MESSAGE value="修改commentcontroller.class.php" />
-    <MESSAGE value="添加前台thinkphp的html页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加前台thinkphp的html页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改commentcontroller.class.php" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1024,6 +1057,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
           <caret line="254" column="9" selection-start-line="254" selection-start-column="9" selection-end-line="254" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
