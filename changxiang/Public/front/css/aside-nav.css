@@ -62,16 +62,41 @@ a:hover {
 .row {
 	margin-left: -7px;
 }
+.unlogstatus {
+	display: none;
+	float:right;
+	margin-left:25px;
+}
+.unlogstatus a{
+	border:none;
+}
+.unlogstatus2 {
+	height: 51px;
+	width: 100%;
+	margin-top: 100px;
+	margin-bottom: 13px;
+	display: none;
+}
+.unlogstatus2 a{
+	text-align: center;
+	display:block;
+	margin: auto;
+}
+/*.unlogstatus3 {
+	height: 37px;
+	width: 100%;
+	display: hidden;
+}*/
 .nav-photo {
+	display: block;
 	border-radius:50%;
 	margin: 0 auto;
-	display: block;
 	margin-top: 60px;
 	cursor: pointer;/*显示小手*/
 }
 .nav-username {
-	text-align: center;
 	display: block;
+	text-align: center;
 	margin-top: 13px;
 	font-size: 12px;
 	color: rgb(219,124,102);
@@ -80,7 +105,9 @@ a:hover {
 	margin-top:26px;
 	margin-bottom: 22px;
 }
-.nav-msg ul {
+.nav-msg ul{
+	/*display: none;*/
+	display: block;
 	text-align: center;
 	margin-left: 5px;
 }
@@ -92,7 +119,8 @@ a:hover {
 }
 .nav-write-btn {
 	margin-left: 8px;
-	text-align: center;	}
+	text-align: center;	
+}
 .nav-write-btn a{
 	font-size:12px;
 	border:1px solid #dcdcdc;
@@ -225,7 +253,7 @@ header {
 }
 .myphoto {
 	float:right;
-	margin-left:25px;
+	margin-left:25px;	
 }
 .myphoto img {
 	 border-radius:50%;
