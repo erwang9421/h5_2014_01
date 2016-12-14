@@ -27,24 +27,26 @@
             <a href="personal_register.html" style="padding-left:5px;" class="author">普通用户注册</a>
 
         </div>
+        <volist name="login" id="t">
         <div class="username" style="padding-top: 20px;">
-            <input type="text" placeholder="用户名" name="username">
+            <input type="text" placeholder="用户名" name="username" value="{$t.username}">
         </div>
         <div class="password" style="padding-top: 20px;" >
-            <input type="password"  placeholder="密码" name="pass">
+            <input type="password"  placeholder="密码" name="pass" value="{$t.pass}">
         </div>
         <div class="pw" style="padding-top: 20px;" >
-            <input type="password"  placeholder="确认密码" name="psd">
+            <input type="password"  placeholder="确认密码" name="psd" >
         </div>
         <div class="mail" style="padding-top: 20px;" >
-            <input type="text"  placeholder="邮箱" name="email">
+            <input type="text"  placeholder="邮箱" name="email" value="{$t.email}">
         </div>
         <div class="psd" 	style="padding-top: 20px;">
 
-            <input type="text"  placeholder="验证码" name="psd" style="width:180px;">
+            <input type="text"  placeholder="验证码" name="psd" style="width:180px;"  >
             <span style="display:inline-block;height:32px;width:78px;background-color:#D0D0D0;color:rgb(94,178,240);	position: relative;
 
-              top: -1px;padding-top:5px;" >1234</span>
+              top: -1px;padding-top:5px;" >1234</span> v
+
 
             <div>
 
