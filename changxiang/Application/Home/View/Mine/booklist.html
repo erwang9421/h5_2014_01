@@ -4,6 +4,7 @@
     <title>我的书单</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <link href="__PUBLIC__/front/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="__PUBLIC__/front/css/font-awesome.min.css" />
     <link rel="stylesheet" href="__PUBLIC__/front/css/bootstrap.min.css">
@@ -15,6 +16,19 @@
     <script src="__PUBLIC__/front/js/bootstrap.min.js"></script>
     <script src="__PUBLIC__/front/js/custom.js"></script>
     <script src="__PUBLIC__/front/js/alert-feedback.js"></script>
+=======
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/headernav.css" />
+    <link rel="stylesheet" href="css/booklist.css" />
+    <link rel="stylesheet" href="css/alert-feedback.css">
+    <link rel="stylesheet" href="css/alert-delete.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/alert-feedback.js"></script>
+>>>>>>> origin/master
 
     <script type="text/javascript">
         if (navigator.appName=="Microsoft Internet Explorer") {
@@ -78,6 +92,7 @@
                         </div>
                         <div class="scale-right">
                         <a href="mybookslists.html">最热50本外国文学作品</a>
+<<<<<<< HEAD
                         <img src="__PUBLIC__/front/images/close.png" alt="删除按钮" width="20" height="20" onclick="bookCollect()" />
                         </div>
                     </div> -->
@@ -91,12 +106,50 @@
                             <a href="__MODULE__/Mine/mybookslists">{$t.tagintroduction}</a>
                             <img src="__PUBLIC__/front/images/close.png" alt="删除按钮" width="20" height="20"  onclick="bookCollect()"/>
                             </div>
+=======
+                        <img src="images/close.png" alt="删除按钮" width="20" height="20" onclick="bookCollect()" />
+                        </div>
+                    </div>
+
+                    <div class="scale">
+                        <div class="scale-left">
+                            <a href="mybookslists.html">未加标签</a>
+                             <img src="images/close.png" alt="删除按钮" width="20" height="20" onclick="bookCollect()" />
+                        </div>
+                        <div class="scale-right">
+                        <a href="mybookslists.html">最热50本外国文学作品</a>
+                        <img src="images/close.png" alt="删除按钮" width="20" height="20"  onclick="bookCollect()"/>
+>>>>>>> origin/master
                         </div>
                     </volist>
 
+<<<<<<< HEAD
                     
 
                    
+=======
+                    <div class="scale">
+                        <div class="scale-left">
+                            <a  href="mybookslists.html">未加标签</a>
+                             <img src="images/close.png" alt="删除按钮" width="20" height="20" onclick="bookCollect()" />
+                        </div>
+                        <div class="scale-right">
+                        <a href="mybookslists.html">最热50本外国文学作品</a>
+                        <img src="images/close.png" alt="删除按钮" width="20" height="20" onclick="bookCollect()" />
+                        </div>
+                    </div>
+
+                    <div class="scale">
+                        <div class="scale-left">
+                            <a href="mybookslists.html">未加标签</a>
+                             <img src="images/close.png" alt="删除按钮" width="20" height="20" onclick="bookCollect()" />
+                        </div>
+                        <div class="scale-right">
+                        <a href="mybookslists.html">最热50本外国文学作品</a>
+                        <img src="images/close.png" alt="删除按钮" width="20" height="20" onclick="bookCollect()" />
+                        </div>
+                    </div>
+>>>>>>> origin/master
                 </div> <!--main结束-->
             </div>
         </div><!-- content结束 -->a
@@ -124,7 +177,11 @@
         document.body.appendChild(oMask);
         var cPass=document.createElement("div");
         cPass.id="collectB";
+<<<<<<< HEAD
         cPass.innerHTML="<div class='collectCon'><div class='alert-collect'><p><img src='__PUBLIC__/front/images/？.png'</p><br/><p id='colsuccess'>确实要删除书签吗？</p></div><div class='alert-collect-footer' ><button id='y'> 确定</button><button  id='n'>取消</button></div>";
+=======
+        cPass.innerHTML="<div class='collectCon'><div class='alert-collect'><p><img src='images/？.png'</p><br/><p id='colsuccess'>确实要删除书签吗？</p></div><div class='alert-collect-footer' ><button id='y'> 确定</button><button  id='n'>取消</button></div>";
+>>>>>>> origin/master
         document.body.appendChild(cPass);
 
 
@@ -165,7 +222,11 @@
 
             var Pass=document.createElement("div");
             Pass.id="collectc";
+<<<<<<< HEAD
             Pass.innerHTML="<div  id='yes1' >  <div class='alert-collect1'><p><img  src='__PUBLIC__/front/images/success.png'></p><br/><p id='colsuccess1'>文章删除成功\(^o^)/</p></div><div class='alert-collect-footer1'><button id='yes2'>确定</button></div></div>";
+=======
+            Pass.innerHTML="<div  id='yes1' >  <div class='alert-collect1'><p><img  src='images/success.png'></p><br/><p id='colsuccess1'>文章删除成功\(^o^)/</p></div><div class='alert-collect-footer1'><button id='yes2'>确定</button></div></div>";
+>>>>>>> origin/master
 
             document.body.appendChild(Pass);
             var dHeight=Pass.offsetHeight;
