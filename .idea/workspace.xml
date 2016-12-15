@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52c848ea-252d-4eb0-a8a7-fef6e7418171" name="Default" comment="后台view like fy">
+    <list default="true" id="52c848ea-252d-4eb0-a8a7-fef6e7418171" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="975ea999-5c71-40e0-9de0-b9fe3c37ccf6" name="Failed commit: Default" comment="修改侧栏的书评分类中的栏目" />
@@ -466,7 +466,7 @@
       <workItem from="1481619212183" duration="508000" />
       <workItem from="1481626279102" duration="631000" />
       <workItem from="1481675919872" duration="49000" />
-      <workItem from="1481765896206" duration="2109000" />
+      <workItem from="1481765896206" duration="2145000" />
     </task>
     <task id="LOCAL-00001" summary="zhaodnli">
       <created>1478084647853</created>
@@ -762,11 +762,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481767167060</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="后台view like fy">
+      <created>1481768013395</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1481768013395</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64172000" />
+    <option name="totallyTimeSpent" value="64208000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -845,9 +852,9 @@
     <MESSAGE value="thinkphp后台 author/bookcommenttag/user/zan 页面重新上传" />
     <MESSAGE value="修改后台layout部分内容" />
     <MESSAGE value="修改commentcontroller.class.php" />
-    <MESSAGE value="后台view like fy" />
     <MESSAGE value="后台view  fy" />
-    <option name="LAST_COMMIT_MESSAGE" value="后台view  fy" />
+    <MESSAGE value="后台view like fy" />
+    <option name="LAST_COMMIT_MESSAGE" value="后台view like fy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
