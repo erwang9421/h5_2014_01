@@ -5,20 +5,20 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link href="__PUBLIC__/front/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/front/css/font-awesome.min.css" />
     <!--     <link rel="stylesheet" href="css/default.min.css"> -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/headernav.css" />
+    <link rel="stylesheet" href="__PUBLIC__/front/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/front/css/headernav.css" />
 
-    <link href="css/font-awesnome.mi.css" rel="stylesheet">
-    <link  type="text/css" rel="stylesheet" href="css/editor.css"/>
-    <link  type="text/css" rel="stylesheet" href="css/editarticle.css" />
+    <link href="__PUBLIC__/front/css/font-awesnome.mi.css" rel="stylesheet">
+    <link  type="text/css" rel="stylesheet" href="__PUBLIC__/front/css/editor.css"/>
+    <link  type="text/css" rel="stylesheet" href="__PUBLIC__/front/css/editarticle.css" />
 
 
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="__PUBLIC__/front/js/jquery.js"></script>
+    <script src="__PUBLIC__/front/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/front/js/custom.js"></script>
 
     <script type="text/javascript">
         if (navigator.appName=="Microsoft Internet Explorer") {
@@ -50,14 +50,14 @@
         <!--aside-nav end（触发弹出侧栏）-->
         <header>
             <nav class="top-nav">
-                <img src="images/logo.png" width="115" class="logo" height="37" alt="logo" />
+                <img src="__PUBLIC__/front/images/logo.png" width="115" class="logo" height="37" alt="logo" />
                 <label for="search"></label>
                 <input type="text" id="search" placeholder="输入标签、作者、关键字搜索"/>
                 <div class="header-right">
                     <a href="#">写书评</a>
                     <div class="myphoto dropdown">
                         <div class=" dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown">
-                            <img src="images/myphoto.jpg" width="35" height="35" alt="我的头像" />
+                            <img src="__PUBLIC__/front/images/myphoto.jpg" width="35" height="35" alt="我的头像" />
                             <span>mono</span>
                         </div>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
@@ -72,7 +72,7 @@
         <div id="nav">
             <div class="nav-child">
                 <div class="row">
-                    <div class="col-md-6 col-md-offset-3"><a href="#"><img src="images/myphoto.jpg" width="74" height="74" alt="我的头像" class="nav-photo" /></a><span class="nav-username">mono</span></div>
+                    <div class="col-md-6 col-md-offset-3"><a href="#"><img src="__PUBLIC__/front/images/myphoto.jpg" width="74" height="74" alt="我的头像" class="nav-photo" /></a><span class="nav-username">mono</span></div>
                 </div>
                 <div class="row nav-msg">
                     <div class="col-md-10 col-md-offset-1">
@@ -259,187 +259,73 @@
         <!--侧导航内容 end-->
         <!--content start-->
         <div id="content">
-            <div class="content-left"></div>
-            <div class="content-right">
-                <div class="content-main-title">
-                    <ul class="main-title">
-                        <li><a href="index.html">首页</a></li>
-                        <li>&nbsp;/&nbsp;</li>
-                        <li>编辑书评</li>
-                    </ul>
-                </div>
+            <!--  <div class="content-left"></div>
+             <div class="content-right"> -->
+            <div class="content-main-title">
+                <ul class="main-title">
+                    <li><a href="index.html">首页</a></li>
+                    <li>&nbsp;/&nbsp;</li>
+                    <li>编辑书评</li>
+                </ul>
+            </div>
+            <form method="post" action="__MODULE__/Book/publish" enctype="multipart/form-data">
                 <div class="book">
                         <span class="bookname">
-                            <input type="text" class="inputtext" size="20px"  placeholder="图书名称" >
+                            <input type="text" class="inputtext" name="bookname" size="20px"  placeholder="图书名称" >
                         </span>
 
                     <span align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                        <select class="type">
-                            <option value="0">图书类型</option>
-                                <option value="1">文学</option>
-                                <option value="12">- 文集</option>
-                                <option value="13">- 纪实文学</option>
-                                <option value="14">- 文学理论</option>
-                                <option value="15">- 中国古诗词</option>
-                                <option value="16">- 戏剧</option>
-                                <option value="17">- 文集中国现当代诗歌</option>
-                                <option value="18">- 外国诗歌</option>
-                                <option value="19">- 民间文学</option>
-                                <option value="20">- 外国随笔</option>
-                                <option value="21">- 中国古代随笔</option>
-
-                                <option value="2">小说</option>
-                                <option value="22">- 侦探、推理、悬疑</option>
-                                <option value="23">- 恐怖</option>
-                                <option value="24">- 科幻</option>
-                                <option value="25">- 青春</option>
-                                <option value="26">- 武侠</option>
-                                <option value="27">- 历史</option>
-                                <option value="28">- 军事战争</option>
-                                <option value="29">- 世界名著</option>
-                                <option value="30">- 中国古典</option>
-                                <option value="31">- 小说合集</option>
-
-                                <option value="3">传记</option>
-                                <option value="32">- 财经人物</option>
-                                <option value="33">- 历代帝王</option>
-                                <option value="34">- 领袖首脑</option>
-                                <option value="35">- 军事人物</option>
-                                <option value="36">- 学者</option>
-                                <option value="37">- 政治人物</option>
-                                <option value="38">- 宗教人物</option>
-                                <option value="38">- 女性人物</option>
-                                <option value="39">- 娱乐明星</option>
-                                <option value="40">- 体育明星</option>
-                                <option value="41">- 科学家</option>
-
-                                <option value="4">社会科学</option>
-                                <option value="42">- 社会学</option>
-                                <option value="43">- 语言文学</option>
-                                <option value="44">- 教育</option>
-
-                                <option value="5">家居休闲</option>
-                                <option value="45">- 饮食文化</option>
-                                <option value="46">- 各类菜谱</option>
-                                <option value="47">- 主食菜谱</option>
-                                <option value="48">- 烘焙食品</option>
-                                <option value="49">- 风味小吃</option>
-                                <option value="50">- 美容与养生</option>
-                                <option value="51">- 药膳食疗</option>
-                                <option value="52">- 茶酒饮食</option>
-                                <option value="53">- 中华菜系</option>
-                                <option value="54">- 厨房秘笈</option>
-                                <option value="55">- 收纳</option>
-                                <option value="56">- 家居生活指南</option>
-                                <option value="57">- 饰品与装饰</option>
-
-                                <option value="6">励志与成功</option>
-                                <option value="58">- 心理学</option>
-                                <option value="59">- 成功学</option>
-                                <option value="60">- 心灵读物</option>
-                                <option value="61">- 个人修养</option>
-                                <option value="62">- 个人形象</option>
-                                <option value="63">- 性格与习惯</option>
-                                <option value="64">- 思维与智商</option>
-                                <option value="65">- 人际与社交</option>
-                                <option value="66">- 演讲与口才</option>
-                                <option value="67">- 青少年励志</option>
-                                <option value="68">- 女性励志</option>
-                                <option value="69">- 男性励志</option>
-
-
-                                <option value="7">艺术与摄影</option>
-                                <option value="70">- 文艺理论与评论</option>
-                                <option value="71">- 鉴赏收藏</option>
-                                <option value="72">- 设计</option>
-                                <option value="73">- 建筑</option>
-                                <option value="74">- 影视</option>
-                                <option value="75">- 动画</option>
-                                <option value="76">- 音乐</option>
-                                <option value="77">- 舞蹈</option>
-                                <option value="78">- 世界各国艺术概况</option>
-
-                                <option value="8">旅游与地图</option>
-                                <option value="79">- 旅游随笔</option>
-                                <option value="80">- 国内游</option>
-                                <option value="81">- 旅游摄影</option>
-                                <option value="82">- 户外探险</option>
-                                <option value="83">- 地图</option>
-
-                                <option value="9">计算机与互联网</option>
-                                <option value="84">- 计算机科学理论</option>
-                                <option value="85">- 数据库</option>
-                                <option value="86">- 操作系统</option>
-                                <option value="87">- IT产业与文化</option>
-                                <option value="88">- 考试与认证</option>
-                                <option value="89">- 网络与通讯</option>
-                                <option value="90">- 电子商务</option>
-
-                                <option value="10">历史</option>
-                                <option value="91">- 中国史</option>
-                                <option value="92">- 世界总史</option>
-                                <option value="93">- 欧洲史</option>
-                                <option value="94">- 美洲史</option>
-                                <option value="95">- 亚洲史</option>
-                                <option value="96">- 非洲史</option>
-                                <option value="97">- 文化史</option>
-                                <option value="98">- 文物考古</option>
-                                <option value="99">- 史学理论</option>
-                                <option value="100">- 普及读物</option>
-
-                                <option value="11">其他</option>
+                        <select class="type" name="bcid">
+                            <option name="typebcname">图书类型</option>
+                                <volist name="bookscategories" id="categories">
+                                <option value="{$categories.bcid}">{$categories.typebcname}</option>
+                            </volist>
                         </select>
                         </span>
 
                     <span class="bookauthor">
-                             <input type="text" class="inputtext" size="20px"  placeholder="图书作者" >
+                             <input type="text" class="inputtext" name="bookauthor" size="20px"  placeholder="图书作者" >
                         </span>
                     <span class="writetitle">
-                            <input type="text"  class="inputtext" size="20px"  placeholder="文章标题" >
+                            <input type="text"  class="inputtext" name="title" size="20px"  placeholder="文章标题" >
                         </span>
+                    <input type="hidden" name="addtime" value="{:date('Y-m-d H:i:s')}" size="5" class="inpMain"  />
+                    <input type="hidden" name="publishtime" value="{:date('Y-m-d H:i:s')}" size="5" class="inpMain"  />
                     <tr>
 
                         <span href="#">[图书名称、图书作者、文章标题必填]</span>
                 </div>
                 <div class="htmleaf-container">
                     <div class="container-fluid">
-                        <div class="row">
-                            <div class="container" >
-                                <div class="row">
-                                    <div class="col-lg-12 nopadding">
-                                        <img src="images/flower.png" class="flower" />
-                                        <textarea id="txtEditor"></textarea> </br>
-                                        <td><a href="drafts.html">
-                                            <input type="hidden" name="token" value="25bfda40" />
-                                            <input type="hidden" name="cat_id" value="" />
-                                            <input name="submit" class="btn" type="submit" value="保存" /></a>
-                                        </td>
-                                        <td><a href="index.html">
-                                            <input type="hidden" name="token" value="25bfda40" />
-                                            <input type="hidden" name="cat_id" value="" />
-                                            <input name="submit" class="btn" type="submit" value="发表" /></a>
-                                        </td>
+                        <!--    <div class="row"> -->
+                        <div class="container" >
+                            <!--  <div class="row"> -->
+                            <div class="col-lg-12 nopadding">
+                                <img src="__PUBLIC__/front/images/flower.png" class="flower" />
+                                <textarea id="txtEditor" name="content"></textarea> </br>
 
-
-                                    </div>
-                                </div>
+                                <td><a href="">
+                                    <input name="submit" class="btn" type="submit" value="保存" /></a>
+                                </td>
+                                <td><a href="">
+                                    <!-- <input type="hidden" name="token" value="25bfda40" />
+                                    <input type="hidden" name="cat_id" value="" /> -->
+                                    <input name="submit" class="btn" type="submit" value="发表" /></a>
+                                </td>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
+                <form>
         </div><!-- content结束 -->
-
-
 
         <footer>
             <p>copyright@hebeinormal university</p>
         </footer>
     </div><!--canvas end-->
 </div><!--container end-->
-<script src="js/1editor.js"></script>
-<script src="js/editor.js"></script>
+<script src="__PUBLIC__/front/js/1editor.js"></script>
+<script src="__PUBLIC__/front/js/editor.js"></script>
 <script type="text/javascript">
     $(document).ready( function() {
 
