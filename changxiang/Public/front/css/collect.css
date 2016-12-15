@@ -19,8 +19,7 @@
 	border-top:4px #5EB2F0 solid;
 	}
 #sug h5{
-	font-size: 14px;
-	font-family: '微软雅黑';
+	font: 14px bolder '微软雅黑';
 	font-weight: bolder;
 	padding-left: 12px;
     }
@@ -82,8 +81,7 @@
 	border-top:4px #5EB2F0 solid;
 	}
 #collect h5{
-	font-size: 14px;
-	font-family: '微软雅黑';
+	font: 14px bolder '微软雅黑';
 	font-weight: bolder;
 	padding-left: 12px;
     }
