@@ -50,9 +50,6 @@ class BookController extends Controller {
             }else{
                 $this->error("添加失败");
             }
-
-
-
         }
 
 }
