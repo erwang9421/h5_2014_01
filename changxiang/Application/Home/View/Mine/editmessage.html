@@ -50,10 +50,10 @@
                             <a href="#" id="name"><p>啊哈</p></a>
                             <div class="list">
                                 <ul>
-                                    <li><a href="myBookReview_all.html">文章</a></li>
-                                    <li><a href="myfans.html">粉丝</a></li>
-                                    <li><a href="myBookReview_all.html">收藏</a></li>
-                                    <li><a href="myattention.html">关注</a></li>
+                                    <li><a href="__MODULE__/Mine/myBookReview_all">文章</a></li>
+                                    <li><a href="__MODULE__/Mine/myfans">粉丝</a></li>
+                                    <li><a href="__MODULE__/Mine/myBookReview_all">收藏</a></li>
+                                    <li><a href="__MODULE__/Mine/myattention">关注</a></li>
                                 </ul>
                                 <ul>
                                     <li>20</li>
@@ -65,35 +65,37 @@
                         </div>
                         <div class="function">
                         <p class="function-top">作家，出版长篇小说《三重门》，创畅销纪录，并成 为一个优秀赛车手，是中国唯一一位拉力赛和场地赛 双料年度冠军。2010年被《时代周刊》评选为100名影响世界人物之一。其自编自导的处女座电影《后会无期》于2014年2月已开机.</p>
-                            <p id="distance"><a href="relevant.html">与我相关</a></p>
-                            <p><a href="drafts.html" >草稿箱</a></p>
-                            <p><a href="" id="click">修改信息</a></p>
-                            <p><a href="booklist.html">我的书单</a></p>
+                            <p id="distance"><a href="__MODULE__/Mine/relevant">与我相关</a></p>
+                            <p><a href="__MODULE__/Mine/drafts">草稿箱</a></p>
+                            <p><a href="__MODULE__/Mine/editmessage">修改信息</a></p>
+                            <p><a href="__MODULE__/Mine/mybookslists">我的书单</a></p>
                         </div>
                     </div> 
                     <ul class="main-title">
-                        <li><a href="index.html">首页</a></li>
+                        <li><a href="__MODULE__/Index/index">首页</a></li>
                         <li>&nbsp;/&nbsp;</li>
                         <li>修改个人信息</li>
                     </ul> 
                     <div class="main">    
                         <div class="scale">
+                        <form method="post" action="__MODULE__/Mine/update" enctype="multipart/form-data">
+                        <input type="hidden" name="id" value="{$user.id}">
                             <div class="operation">
-                                     <button type="submit" onclick="window.location.href='myBookReview_all.html'">保存</button>
+                                 <button type="submit" onclick="window.location.href='myBookReview_all.html'">保存</button>
                             </div>  
                             <div class="scale-message">
                                 <form class="form-horizontal writeform" role="form">
                                     <div class="form-group">
                                         <label for="username" class="col-sm-4 col-md-3 control-label">用户名：</label>
                                         <div class="col-sm-6">
-                                            <input type="text" class="form-control" id="username" placeholder="请输入用户名">
+                                            <input type="text" class="form-control" id="username" placeholder="请输入用户名" name="username" value="{$user.username}">
                                         </div>
                                         <a href="#" id="changePassword" hidefocus="true">修改密码</a>
                                     </div>
                                     <div class="form-group">
                                         <label for="userdetails" class="col-sm-4 col-md-3 control-label">简介：</label>
                                         <div class="col-sm-6">
-                                            <textarea class="form-control" rows="7" placeholder="你还没有填写简介呢~"></textarea>
+                                            <textarea class="form-control" rows="7" placeholder="你还没有填写简介呢~" name="introduction" value="{$user.introduction}"></textarea>
                                         </div>
                                     </div>
                                 </form>
@@ -107,7 +109,8 @@
                                     </form>
                                 </div>
                             </div>
-                        </div>
+                        </form>
+                        </div><!-- scale结束 -->
                     </div>
                 </div>
             </div><!-- content结束 --> 

@@ -12,10 +12,12 @@
     <link rel="stylesheet" href="__PUBLIC__/front/css/jquery.mCustomScrollbar.css" />
     <link rel="stylesheet" href="__PUBLIC__/front/css/mybookslists.css">
     <link rel="stylesheet" href="__PUBLIC__/front/css/alert-feedback.css">
-
-
-
 </head>
+<style type="text/css">
+    .mCSB_container{
+        width: 3500px;
+    }
+</style>
           <!--侧导航内容 end-->
 
             <!--content start-->
@@ -76,188 +78,38 @@
                 <div class="content-right">
                     <div class="content-right-bottom">
                         <div class="content-book-comments">
+                            <volist name="bookreview" id="br">
                             <div class="content-book-comment1 book-comment1">
-                            <div class="comment-top">
-                                <div class="row1">
-                                    <img src="__PUBLIC__/front/images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
-                                    <ul class="comment-msg1">
-                                        <li><span>MONO</span>&nbsp;&nbsp;&nbsp;<span>2016-12-21 08:13</span></li>
-                                        <li>
-                                            阅读<span> 11</span>
-                                            评论<span> 2</span>
-                                            写作<span> 1</span>
-                                            收藏<span> 1</span>
-                                        </li>
-                                    </ul>
+                                <img src="__PUBLIC__/front/images/close.png" alt="删除我的文章书评" width="20" height="20" class="close" onclick="bookCollect()">
+                                <div class="comment-top">
+                                    <div class="row1">
+                                        <img src="__PUBLIC__/front/images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
+                                        <ul class="comment-msg1">
+                                            <li><span>{$br.username}</span>&nbsp;&nbsp;&nbsp;<span>{$br.publishtime}</span></li>
+                                            <li>
+                                                阅读<span> 11</span>
+                                                评论<span> {$br.viewtimes}</span>
+                                                喜欢<span> {$br.likequantity}</span>
+                                                收藏<span> {$br.collecttimes}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="row2">
+                                        <ul class="comment-msg2">
+                                            <li>标签：<a href="__MODULE__/Index/tags">{$br.tagname}</a></li>
+                                            <li>评论图书：<a href="__MODULE__/Index/tagbook" name="bookname">《{$br.bookname}》</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="row2">
-                                    <ul class="comment-msg2">
-                                        <li>标签：<a href="tags.html">文学经典</a></li>
-                                        <li>评论图书：<a href="tagbook.html">《西游记》</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="comment-bottom">
-                                <h3>浅谈西游记</h3>
-                                <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
-                                《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
-                                <div class="comment-more-btn">
-                                    <a href="bookreviewcontent.html">浏览全文</a>
-                                </div>
-                            </div>
-                        </div><!--第一个书评-->
-                        <div class="content-book-comment1 book-comment2">
-                            <div class="comment-top">
-                                <div class="row1">
-                                    <img src="__PUBLIC__/front/images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" onclick="window.location.href=''"
-                                    />
-                                    <ul class="comment-msg1">
-                                        <li><span>MONO</span><span>2016-12-21 08:13</span></li>
-                                        <li>
-                                            阅读<span> 11</span>
-                                            评论<span> 2</span>
-                                            写作<span> 1</span>
-                                            收藏<span> 1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="row2">
-                                    <ul class="comment-msg2">
-                                        <li>标签：<a href="tags.html">文学经典</a></li>
-                                        <li>评论图书：<a href="tagbook.html">《漫长的中场休息》</a></li>
-                                    </ul>
+                                <div class="comment-bottom">
+                                    <h3>{$br.title}</h3>
+                                    <p>{$br.content}... </p>
+                                    <div class="comment-more-btn">
+                                        <a href="__MODULE__/Book/bookreviewcontent">浏览全文</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="comment-bottom">
-                                <h3>最孤独的魂外天游</h3>
-                               <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
-                                        《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
-                                <div class="comment-more-btn">
-                                    <a href="bookreviewcontent.html">浏览全文</a>
-                                </div>
-                            </div>
-                        </div><!--第二个书评-->
-
-                        <div class="content-book-comment1 book-comment3">
-                            <div class="comment-top">
-                                <div class="row1">
-                                    <img src="__PUBLIC__/front/images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
-                                    <ul class="comment-msg1">
-                                        <li><span>MONO</span><span>2016-12-21 08:13</span></li>
-                                        <li>
-                                            阅读<span> 11</span>
-                                            评论<span> 2</span>
-                                            写作<span> 1</span>
-                                            收藏<span> 1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="row2">
-                                    <ul class="comment-msg2">
-                                        <li>标签：<a href="#">文学经典</a></li>
-                                        <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="comment-bottom">
-                                <h3>最孤独的魂外天游</h3>
-                               <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
-                                        《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
-                                <div class="comment-more-btn">
-                                    <a href="bookreviewcontent.html">浏览全文</a>
-                                </div>
-                            </div>
-                        </div><!--第三个书评-->
-                        <div class="content-book-comment1 book-comment4">
-                            <div class="comment-top">
-                                <div class="row1">
-                                    <img src="__PUBLIC__/front/images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
-                                    <ul class="comment-msg1">
-                                        <li><span>MONO</span><span>2016-12-21 08:13</span></li>
-                                        <li>
-                                            阅读<span> 11</span>
-                                            评论<span> 2</span>
-                                            写作<span> 1</span>
-                                            收藏<span> 1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="row2">
-                                    <ul class="comment-msg2">
-                                        <li>标签：<a href="#">文学经典</a></li>
-                                        <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="comment-bottom">
-                                <h3>最孤独的魂外天游</h3>
-                               <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
-                                        《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
-                                <div class="comment-more-btn">
-                                    <a href="bookreviewcontent.html">浏览全文</a>
-                                </div>
-                            </div>
-                        </div><!--第四个书评-->
-                        <div class="content-book-comment1 book-comment5">
-                            <div class="comment-top">
-                                <div class="row1">
-                                    <img src="__PUBLIC__/front/images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
-                                    <ul class="comment-msg1">
-                                        <li><span>MONO</span><span>2016-12-21 08:13</span></li>
-                                        <li>
-                                            阅读<span> 11</span>
-                                            评论<span> 2</span>
-                                            写作<span> 1</span>
-                                            收藏<span> 1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="row2">
-                                    <ul class="comment-msg2">
-                                        <li>标签：<a href="#">文学经典</a></li>
-                                        <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="comment-bottom">
-                                <h3>最孤独的魂外天游</h3>
-                               <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
-                                        《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
-                                <div class="comment-more-btn">
-                                    <a href="bookreviewcontent.html">浏览全文</a>
-                                </div>
-                            </div>
-                        </div><!--第五个书评-->
-                        <div class="content-book-comment1 book-comment6">
-                            <div class="comment-top">
-                                <div class="row1">
-                                    <img src="__PUBLIC__/front/images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
-                                    <ul class="comment-msg1">
-                                        <li><span>MONO</span><span>2016-12-21 08:13</span></li>
-                                        <li>
-                                            阅读<span> 11</span>
-                                            评论<span> 2</span>
-                                            写作<span> 1</span>
-                                            收藏<span> 1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="row2">
-                                    <ul class="comment-msg2">
-                                        <li>标签：<a href="#">文学经典</a></li>
-                                        <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="comment-bottom">
-                                <h3>最孤独的魂外天游</h3>
-                               <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
-                                        《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
-                                <div class="comment-more-btn">
-                                    <a href="bookreviewcontent.html">浏览全文</a>
-                                </div>
-                            </div>
-                        </div><!--第六个书评-->
+                        </volist>
 
                          
                         </div><!--bookscontainer容器结束-->

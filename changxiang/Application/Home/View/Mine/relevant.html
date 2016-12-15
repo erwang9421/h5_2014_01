@@ -65,46 +65,78 @@
                         </div>
                         <div class="function">
                         <p class="function-top">作家，出版长篇小说《三重门》，创畅销纪录，并成 为一个优秀赛车手，是中国唯一一位拉力赛和场地赛 双料年度冠军。2010年被《时代周刊》评选为100名影响世界人物之一。其自编自导的处女座电影《后会无期》于2014年2月已开机.</p>
-                            <p id="distance"><a href="#" id="click">与我相关</a></p>
-                            <p><a href="drafts.html">草稿箱</a></p>
-                            <p><a href="editmessage.html">修改信息</a></p>
-                            <p><a href="booklist.html">我的书单</a></p>
+                            <p id="distance"><a href="__MODULE__/Mine/relevant" id="click">与我相关</a></p>
+                            <p><a href="__MODULE__/Mine/drafts">草稿箱</a></p>
+                            <p><a href="__MODULE__/Mine/editmessage">修改信息</a></p>
+                            <p><a href="__MODULE__/Mine/booklist">我的书单</a></p>
                         </div>
                     </div> 
                     <ul class="main-title">
-                        <li><a href="index.html">首页</a></li>
+                        <li><a href="__MODULE__/Index/index">首页</a></li>
                         <li>&nbsp;/&nbsp;</li>
                         <li>与我相关</li>
                     </ul> 
-                    <div class="main">
-                        <div class="scale">
-                            <img src="__PUBLIC__/front/images/myphoto.jpg" width="42" height="42" alt="用户头像">
-                            <p><a href="bookreview_all.html" class="username">阿里里&nbsp;&nbsp;</a>赞了我的书评</p>
-                            <div class="fill">
-                                <p><a href="bookreviewcontent.html">“最孤独的魂游天外”</a></p>
-                            </div>
-                            <p id="timer">2016-12-12&nbsp;15:54</p>
-                        </div>
+                    <div class="main">                      
                         <volist name="bookreview" id="br">
-                            
+                            <div class="scale">
+                                <img src="__PUBLIC__/front/images/myphoto.jpg" width="42" height="42" alt="用户头像">
+                                <p><a href="bookreview_all.html" class="username">{$br.username}&nbsp;&nbsp;</a>赞了我的书评</p>
+                                <div class="fill">
+                                    <p><a href="bookreviewcontent.html">“{$br.title}”</a></p>
+                                </div>
+                                <p id="timer">2016-12-12&nbsp;15:54</p>
+                            </div>
+                        </volist>
+
+                        <volist name="bookreview" id="b">
+                            <div class="scale">
+                                <img src="__PUBLIC__/front/images/myphoto.jpg" width="42" height="42" alt="用户头像">
+                                <p><a href="bookreview_all.html" class="username">{$b.username}&nbsp;&nbsp;</a>评论了我的评论</p>
+                                <div class="fill">
+                                    <div class="fill-1">
+                                        <p id="setc">{$b.replycontent}</p>
+                                    </div>
+                                    <p><a href="bookreviewcontent.html">——{$b.title}</a></p>
+                                    <p>我的评论：{$b.commentcontent}</p>
+                                    <div class="fill-2">
+                                        <p id="answer"><a href="#">回复</a></p>
+                                    </div>
+                                </div>
+                                <p class="time">2016-12-12&nbsp;15:54</p>
+                            </div>
+                        </volist>
+
+                        <volist name="bookreview" id="b">
+                            <div class="scale">
+                                <img src="__PUBLIC__/front/images/myphoto.jpg" width="42" height="42" alt="用户头像">
+                                <p><a href="bookreview_all.html" class="username">{$b.username}&nbsp;&nbsp;</a>评论了我的书评</p>
+                                <div class="fill">
+                                    <div class="fill-1">
+                                        <p id="setc">{$b.commentcontent}</p>
+                                    </div>
+                                    <p><a href="bookreviewcontent.html">“{$b.title}”</a></p>
+                                    <div class="fill-2">
+                                        <p id="answer"><a href="#">回复</a></p>
+                                    </div>
+                                </div>
+                                <p id="timer">2016-12-12&nbsp;15:54</p>
+                            </div>
+                        </volist>
+
+                        <volist name="bookreview" id="b">
+                            <div class="scale">
+                                <img src="__PUBLIC__/front/images/myphoto.jpg" width="42" height="42" alt="用户头像">
+                                <p><a href="bookreview_all.html" class="username">{$b.username}&nbsp;&nbsp;</a>赞了我的书评</p>
+                                <div class="fill">
+                                    <p><a href="bookreviewcontent.html">“{$b.title}”</a></p>
+                                </div>
+                                <p id="timer">2016-12-12&nbsp;15:54</p>
+                            </div>
                         </volist>
                         
-                        <div class="scale">
-                            <img src="__PUBLIC__/front/images/myphoto.jpg" width="42" height="42" alt="用户头像">
-                            <p><a href="bookreview_all.html" class="username">阿里里&nbsp;&nbsp;</a>评论了我的评论</p>
-                            <div class="fill">
-                                <div class="fill-1">
-                                    <p id="setc">没错</p>
-                                </div>
-                                <p><a href="bookreviewcontent.html">——做不大，是因为站得不够高</a></p>
-                                <p>我的评论：方太的儒道，的确是很多现代企业所缺失的软性的人文提升的重要方面，能够站得更高，才能长远视角。</p>
-                                <div class="fill-2">
-                                    <p id="answer"><a href="#">回复</a></p>
-                                </div>
-                            </div>
-                            <p class="time">2016-12-12&nbsp;15:54</p>
-                        </div>
-                        <div class="scale">
+                        
+                        
+                        <!-- <div class="scale">
                             <img src="__PUBLIC__/front/images/myphoto.jpg" width="42" height="42" alt="用户头像">
                             <p><a href="bookreview_all.html" class="username">阿里里&nbsp;&nbsp;</a>评论了我的书评</p>
                             <div class="fill">
@@ -117,57 +149,9 @@
                                 </div>
                             </div>
                             <p id="timer">2016-12-12&nbsp;15:54</p>
-                        </div>
-                        <div class="scale">
-                            <img src="__PUBLIC__/front/images/myphoto.jpg" width="42" height="42" alt="用户头像">
-                            <p><a href="bookreview_all.html" class="username">阿里里&nbsp;&nbsp;</a>评论了我的书评</p>
-                            <div class="fill">
-                                <div class="fill-1">
-                                    <p id="setc">世上没有完美的事物，唯有这样一些透明得让你忘记自己的时刻，能拥有这样的一瞬，便是天赐的幸福——这一句真棒</p>
-                                </div>
-                                <p><a href="bookreviewcontent.html">“最孤独的魂游天外”</a></p>
-                                <div class="fill-2">
-                                    <p id="answer"><a href="#">回复</a></p>
-                                </div>
-                            </div>
-                            <p id="timer">2016-12-12&nbsp;15:54</p>
-                        </div>
-                        <div class="scale">
-                            <img src="__PUBLIC__/front/images/myphoto.jpg" width="42" height="42" alt="用户头像">
-                            <p><a href="bookreview_all.html" class="username">阿里里&nbsp;&nbsp;</a>赞了我的书评</p>
-                            <div class="fill">
-                                <p><a href="bookreviewcontent.html">“最孤独的魂游天外”</a></p>
-                            </div>
-                            <p id="timer">2016-12-12&nbsp;15:54</p>
-                        </div>
-                        <div class="scale">
-                            <img src="__PUBLIC__/front/images/myphoto.jpg" width="42" height="42" alt="用户头像">
-                            <p><a href="bookreview_all.html" class="username">阿里里&nbsp;&nbsp;</a>评论了我的书评</p>
-                            <div class="fill">
-                                <div class="fill-1">
-                                    <p id="setc">世上没有完美的事物，唯有这样一些透明得让你忘记自己的时刻，能拥有这样的一瞬，便是天赐的幸福——这一句真棒</p>
-                                </div>
-                                <p><a href="bookreviewcontent.html">“最孤独的魂游天外”</a></p>
-                                <div class="fill-2">
-                                    <p id="answer"><a href="#">回复</a></p>
-                                </div>
-                            </div>
-                            <p id="timer">2016-12-12&nbsp;15:54</p>
-                        </div>
-                        <div class="scale">
-                            <img src="__PUBLIC__/front/images/myphoto.jpg" width="42" height="42" alt="用户头像">
-                            <p><a href="bookreview_all.html" class="username">阿里里&nbsp;&nbsp;</a>评论了我的书评</p>
-                            <div class="fill">
-                                <div class="fill-1">
-                                    <p id="setc">世上没有完美的事物，唯有这样一些透明得让你忘记自己的时刻，能拥有这样的一瞬，便是天赐的幸福——这一句真棒</p>
-                                </div>
-                                <p><a href="bookreviewcontent.html">“最孤独的魂游天外”</a></p>
-                                <div class="fill-2">
-                                    <p id="answer"><a href="#">回复</a></p>
-                                </div>
-                            </div>
-                            <p id="timer">2016-12-12&nbsp;15:54</p>
-                        </div>
+                        </div> -->
+                        
+                        
                     </div>
                 </div>
             </div><!-- content结束 --> 
