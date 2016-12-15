@@ -154,13 +154,14 @@
 }
 .scale-message {
 	width:90%;
-	height: 400px;
+	height: 300px;
 	margin-top: 5%;
 	left: 5%;
+	/*border: 1px solid red;*/
 }
 .writeform {
 	float: left;
-	width: 60%;
+	width: 5%;
 }
 .scale-message a {
 	float: left;

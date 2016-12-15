@@ -24,8 +24,9 @@
 	height: 100%;
 }
 .content-book-comment1{
-	width:300px;
+	width:5%;
 	height: 90%;
+	/*position: relative;*/
 	background-color: #f7f7f7;
 	border: 1px solid #dbdce0;
 	padding: 0.1% 0.1% 0.1% 0.1%;
