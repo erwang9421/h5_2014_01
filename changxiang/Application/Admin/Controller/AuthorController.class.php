@@ -95,7 +95,7 @@ class AuthorController extends Controller {
             $page->setConfig('prev','前一页');
             $page->setConfig('next','后一页');
             //进行分页数据查询，注意limit方法的参数要使用Page类的属性
-            $author=$authorModel->order('authorid desc')->page($nowPage.',9')->select();
+            $author=$authorModel->order('id desc')->page($nowPage.',9')->select();
             $show=$page->show();
             $this->assign('page',$show);
             $this->assign('author', $author);  //传值到模板
@@ -127,7 +127,7 @@ class AuthorController extends Controller {
                     exit("bad param!");
                 }
 
-                $data = M("author")->where("authorid=$id")->find();
+                $data = M("author")->where("id=$id")->find();
                 $this->assign("data", $data);
                 $this->display();
             }
@@ -147,7 +147,7 @@ class AuthorController extends Controller {
             }
             //单个删除
             else{
-                if($authorModel->where("authorid=$id")->delete())
+                if($authorModel->where("id=$id")->delete())
                     {
                         $this->success("用户删除成功",U("lists"));
                     }

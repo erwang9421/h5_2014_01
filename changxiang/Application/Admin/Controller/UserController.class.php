@@ -3,16 +3,11 @@ namespace Admin\Controller;
 use Think\Controller;
 class UserController extends Controller {
     public function __construct(){
- 		parent::__construct();
- 		/*if(!isLogin())
- 		{
- 			$this->error("请先登录","Admin/login");
- 		}*/
- 		/*if(get_username())
- 		{
- 			$sessionName=get_username();
- 		}*/
- 	}
+        parent::__construct();
+        if (!isLogin()) {
+            $this->error("请先登录",U("Admin/login"));
+        }
+    }
 
  	public function adduser(){
 		$this->display();
@@ -56,7 +51,8 @@ class UserController extends Controller {
                 {
                     $this->error('邮箱已被使用');
                 }
-                $data['userimage']=$info['userimage']['savepath'].$info['userimage']['savename']; 
+                $data['userimage']=$info['userimage']['savepath'].$info['userimage']['savename'];                
+
                 if ($userModel->add($data)) { //写入数据库
                     $this->success("添加成功！", U("lists"));            
                 }

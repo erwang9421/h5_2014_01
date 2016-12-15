@@ -1,0 +1,46 @@
+<form action="__MODULE__/Like/delete" method="get">
+ <div id="dcMain">
+   <!-- 当前位置 -->
+<div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>喜欢书评管理</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+       <h3>喜欢/收藏书评列表</h3>
+    <div id="list">
+    <form name="action" method="post" action="product.php?rec=action">
+    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+      <tr>
+        <th align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+        <th align="center">ID</th>
+        <th align="center">用户名</th>
+        <th align="center">书评标题</th>
+        <th align="center">收藏次数</th>
+        <th align="center">喜欢次数</th>
+        <th align="center">喜欢/收藏时间</th>
+        <th align="center">操作</th>
+      </tr>
+      <volist name="like" id="l">
+        <tr>
+        <td align="center"><input type="checkbox" name="likeId[]" value="{$l.likeid}" /></td>
+        <td align="center">{$l.likeid}</td>
+        <td align="center">{$l.username}</td>
+        <td align="center"><a href="product.php?rec=edit&id=15">{$l.title}</a></td>
+        <td align="center">{$l.collecttimes}</td>
+        <td align="center">{$l.likequantity}</td>
+        <td align="center">{$l.liketime}</td>
+        <td align="center">
+       <a href="__MODULE__/Like/editlikebookview/likeId/{$l.likeid}">查看</a> | <a href="__MODULE__/Like/delete/likeId/{$l.likeid}">删除</a>
+        </td>
+      </tr>
+      </volist>
+    </table>
+    <div class="action">
+    </form>
+    </div>
+    <br/>
+    <div class="input-group pull-left form">
+        <button type="submit" class="btn" style="background-color:#20B2AA;"> 批量删除</button>
+    </div>
+    <div class="clear"></div>
+    <div class="pager">
+    {$page}
+    </div>               </div>
+ </div>
+</form>

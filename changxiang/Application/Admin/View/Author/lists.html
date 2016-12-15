@@ -21,12 +21,12 @@
                         <th  align="center">收藏数</th>
                         <th  align="center">文章数</th>
                         <th  align="center">头像</th>
-                        <th width="80" align="center">操作</th>
+                        <th  align="center">操作</th>
                     </tr>
                     <volist name="author" id="vo">
                         <tr>
                             <td align="center"><input type="checkbox" name="id[]" value="{$vo.id}" class="checkbox" id="id[]" /></td>
-                            <td align="center">{$vo.authorid}</td>
+                            <td align="center">{$vo.id}</td>
                             <td align="center"><a href="product.php?rec=edit&id=5">{$vo.username}</a></td>
                             <td align="center">{$vo.pass|mb_substr=0,13,'utf-8'}</td>
                             <td align="center">{$vo.email|mb_substr=0,15,'utf-8'}</td>
@@ -36,9 +36,9 @@
                             <td align="center">{$vo.fan}</td>
                             <td align="center">{$vo.collection}</td>
                             <td align="center">{$vo.bookreview}</td>
-                            <td align="center">{$vo.authorimage|mb_substr=0,16,'utf-8'}</td>
+                            <td align="center">{$vo.authorimage|mb_substr=0,7,'utf-8'}</td>
                             <td align="center">
-                                <a href="__MODULE__/Author/edit?id='{$vo['authorid']}'">编辑</a> | <a href="__MODULE__/Author/delete?id='{$vo['authorid']}'">删除</a>
+                                <a href="__MODULE__/Author/edit?id='{$vo['id']}'">编辑</a> | <a href="__MODULE__/Author/delete?id='{$vo['id']}'">删除</a>
                             </td>
                         </tr>
                     </volist>
