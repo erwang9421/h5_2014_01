@@ -64,40 +64,44 @@
                             </div>
                         </div>
                         <div class="function">
-                            <p id="distance"><a href="relevant.html">与我相关</a></p>
-                            <p><a href="drafts.html">草稿箱</a></p>
-                            <p><a href="editmessage.html">修改信息</a></p>
-                            <p><a href="" id="click">我的书单</a></p>
+                            <p id="distance"><a href="__MODULE__/Mine/relevant">与我相关</a></p>
+                            <p><a href="__MODULE__/Mine/drafts">草稿箱</a></p>
+                            <p><a href="__MODULE__/Mine/editmessage">修改信息</a></p>
+                            <p><a href="__MODULE__/Mine/mybookslists" id="click">我的书单</a></p>
                         </div>
                     </div> 
                     <ul class="main-title">
-                        <li><a href="index.html">首页</a></li>
+                        <li><a href="__MODULE__/Index/index">首页</a></li>
                         <li>&nbsp;/&nbsp;</li>
                         <li>编辑书单信息</li>
                     </ul> 
                     <div class="main">    
                         <div class="scale">
+                        <form method="post" action="__MODULE__/Mine/updatebooklist" enctype="multipart/form-data">
+                        <input type="hidden" name="tagid" value="{$tag.tagid}">
+
                             <div class="operation">
-                                     <button type="submit" onclick="window.location.href='mybookslists.html'"
-                                     >保存</button>
+                                 <button type="submit" onclick="window.location.href='mybookslists.html'"
+                                 >保存</button>
                             </div>  
                             <div class="scale-message">
                                 <form class="form-horizontal writeform" role="form">
                                     <div class="form-group">
                                         <label for="username" class="col-sm-3 col-xs-4 control-label">书单名</label>
                                         <div class="col-sm-8  col-xs-8">
-                                            <input type="text" class="form-control" id="username" placeholder="请输入书单名称~">
+                                            <input type="text" class="form-control" id="username" placeholder="请输入书单名称~" name="tagname" value="{$tag.tagname}">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="userdetails" class="col-sm-3 col-xs-4  control-label">简介：</label>
                                         <div class="col-sm-8  col-xs-8">
-                                            <textarea class="form-control" rows="7" placeholder="填写简介~"></textarea>
+                                            <textarea class="form-control" rows="7" placeholder="填写简介~" name="tagintroduction" value="{$tag.tagintroduction}"></textarea>
                                         </div>
                                     </div>
                                 </form>
                             </div>
-                        </div>
+                        </form>
+                        </div><!-- scale结束 -->
                     </div>
                 </div>
             </div><!-- content结束 --> 

@@ -20,6 +20,7 @@
         width: 2600px;
     }
 </style>
+
            <!--侧导航内容 end-->
             <!--content start-->
 
@@ -56,8 +57,8 @@
                 <div class="content-right">
                     <div class="content-right-top">
                         <ol> 
-                            <li>我的收藏<a href="myCollect.html" class="active"></a></li>
-                            <li><a href="tags.html" class="tag">全部20</a></li> 
+                            <li>我的收藏<a href="__MODULE__/Mine/myCollect" class="active"></a></li>
+                            <li><a href="__MODULE__/Index/tags" class="tag">全部20</a></li> 
                             <span><a href="#" class="tags">未添加标签12</a></span>
                           <!--   <span><a href="#" class="tags">添加标签</a></span> -->
                             <span><a href="#" class="tags">了解html5必看的10本书<img src="__PUBLIC__/front/images/close.png" alt="删除按钮" width="15" height="15" onclick="bookCollect()"></a></span>
@@ -69,9 +70,9 @@
                             <div class="content-book-comment1 book-comment1">
                                 <div class="comment-top">
                                     <div class="row1">
-                                        <a href="bookreview_all.html"><img src="__PUBLIC__/front/images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" /></a>
+                                        <a href="__MODULE__/Mine/bookreview_all"><img src="__PUBLIC__/front/images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" /></a>
                                         <ul class="comment-msg1">
-                                            <li><span>{$br.username}</span>&nbsp;&nbsp;&nbsp;<span>{:date('Y-m-d H:i:s')}</span></li>
+                                            <li><span>{$br.username}</span>&nbsp;&nbsp;&nbsp;<span>{$br.publishtime}</span></li>
                                             <li>
                                                 阅读<span> 11</span>
                                                 评论<span> {$br.viewtimes}</span>
@@ -82,8 +83,8 @@
                                     </div>
                                     <div class="row2">
                                         <ul class="comment-msg2">
-                                            <li>标签：<a href="tags.html">{$br.tagname}文学经典</a></li>
-                                            <li>评论图书：<a href="tagbook.html" name="bookname">《{$br.bookname}》</a></li>
+                                            <li>标签：<a href="__MODULE__/Index/tags">{$br.tagname}</a></li>
+                                            <li>评论图书：<a href="__MODULE__/Index/tagbook" name="bookname">《{$br.bookname}》</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -91,13 +92,13 @@
                                     <h3>{$br.title}</h3>
                                     <p>{$br.content}... </p>
                                     <div class="comment-more-btn">
-                                        <a href="bookreviewcontent.html">浏览全文</a>
+                                        <a href="__MODULE__/Book/bookreviewcontent">浏览全文</a>
                                     </div>
                                 </div>
                             </div>
                             </volist>
 
-                            <!-- <div class="content-book-comment1 book-comment2">
+                             <div class="content-book-comment1 book-comment2">
                                 <div class="comment-top">
                                     <div class="row1">
                                         <a href="bookreview_all.html"><img src="__PUBLIC__/front/images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" /></a>
@@ -128,7 +129,7 @@
                                 </div>
                             </div>
 
-                            <div class="content-book-comment1 book-comment3">
+                           <!-- <div class="content-book-comment1 book-comment3">
                                 <div class="comment-top">
                                     <div class="row1">
                                         <a href="bookreview_all.html"><img src="__PUBLIC__/front/images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" /></a>a
