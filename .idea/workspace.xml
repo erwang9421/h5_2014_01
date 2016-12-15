@@ -1,27 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52c848ea-252d-4eb0-a8a7-fef6e7418171" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/BookCommentTagController.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changxiang/Public/front/css/shang.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/changxiang/Application/Home/View/Login/writer register.html" afterPath="" />
+    <list default="true" id="52c848ea-252d-4eb0-a8a7-fef6e7418171" name="Default" comment="上传thinkphp前台login模块中的登录页、并将登陆者信息放在Home/common/function.php中，调用getData()函数即可获取用户信息">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/allcode/css/shang.css" afterPath="$PROJECT_DIR$/allcode/css/shang.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/AuthorController.class.php" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/AuthorController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/CommentController.class.php" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/CommentController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/UserController.class.php" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/Controller/UserController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/Comment/lists.html" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/Comment/lists.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Admin/View/layout.html" afterPath="$PROJECT_DIR$/changxiang/Application/Admin/View/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/addmessage.html" afterPath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/addmessage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/booklist.html" afterPath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/booklist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/myBookReview_all.html" afterPath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/myBookReview_all.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/myCollect.html" afterPath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/myCollect.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/myattention.html" afterPath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/myattention.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/myfans.html" afterPath="$PROJECT_DIR$/changxiang/Application/Home/View/Mine/myfans.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Public/front/css/bookreviewcontent.css" afterPath="$PROJECT_DIR$/changxiang/Public/front/css/bookreviewcontent.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Public/front/css/collect.css" afterPath="$PROJECT_DIR$/changxiang/Public/front/css/collect.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Public/front/css/headernav.css" afterPath="$PROJECT_DIR$/changxiang/Public/front/css/headernav.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Public/front/css/style.css" afterPath="$PROJECT_DIR$/changxiang/Public/front/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Home/Controller/AuthorController.class.php" afterPath="$PROJECT_DIR$/changxiang/Application/Home/Controller/AuthorController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changxiang/Application/Home/View/Index/author_trend.html" afterPath="$PROJECT_DIR$/changxiang/Application/Home/View/Index/author_trend.html" />
     </list>
     <list id="975ea999-5c71-40e0-9de0-b9fe3c37ccf6" name="Failed commit: Default" comment="修改侧栏的书评分类中的栏目" />
     <ignored path="h5_2014_01.iws" />
@@ -45,7 +28,7 @@
     <favorites_list name="h5_2014_01" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -104,10 +87,11 @@
         <option value="$PROJECT_DIR$/allcode/index.html" />
         <option value="$PROJECT_DIR$/changxiang/Application/Home/View/Login/login.html" />
         <option value="$PROJECT_DIR$/changxiang/Application/Home/View/Index/index.html" />
-        <option value="$PROJECT_DIR$/changxiang/Application/Home/View/layout.html" />
         <option value="$PROJECT_DIR$/changxiang/Application/Admin/View/User/lists.html" />
         <option value="$PROJECT_DIR$/changxiang/Application/Admin/View/layout.html" />
         <option value="$PROJECT_DIR$/changxiang/Application/Admin/Controller/CommentController.class.php" />
+        <option value="$PROJECT_DIR$/changxiang/Application/Home/View/Login/author.html" />
+        <option value="$PROJECT_DIR$/changxiang/Application/Home/View/layout.html" />
       </list>
     </option>
   </component>
@@ -121,7 +105,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1378" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -149,138 +133,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
+              <option name="myItemId" value="changxiang-books" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
+              <option name="myItemId" value="changxiang-books" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="changxiang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="changxiang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="changxiang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="changxiang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5_2014_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="changxiang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mine" />
+              <option name="myItemId" value="changxiang-books" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -381,6 +255,8 @@
       <workItem from="1481619212183" duration="508000" />
       <workItem from="1481626279102" duration="631000" />
       <workItem from="1481675919872" duration="49000" />
+      <workItem from="1481720698193" duration="407000" />
+      <workItem from="1481760394020" duration="697000" />
     </task>
     <task id="LOCAL-00001" summary="zhaodnli">
       <created>1478084647853</created>
@@ -652,21 +528,21 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62063000" />
+    <option name="totallyTimeSpent" value="63167000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23426062" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2335821" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30156657" sideWeight="0.5083333" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26242235" sideWeight="0.49166667" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2618658" sideWeight="0.49166667" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28198433" sideWeight="0.49444443" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28062016" sideWeight="0.49444443" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -731,20 +607,14 @@
     <MESSAGE value="thinkphp后台 author/bookcommenttag/user/zan 页面重新上传" />
     <MESSAGE value="修改后台layout部分内容" />
     <MESSAGE value="修改commentcontroller.class.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改commentcontroller.class.php" />
+    <MESSAGE value="上传thinkphp前台login模块中的登录页、并将登陆者信息放在Home/common/function.php中，调用getData()函数即可获取用户信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="上传thinkphp前台login模块中的登录页、并将登陆者信息放在Home/common/function.php中，调用getData()函数即可获取用户信息" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/changxiang/Application/Admin/Controller/BookCommentController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/changxiang/Application/Admin/View/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1039,13 +909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changxiang/Application/Home/View/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/changxiang/Application/Home/View/Mine/booklist.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1057,7 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
           <caret line="254" column="9" selection-start-line="254" selection-start-column="9" selection-end-line="254" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1087,6 +949,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changxiang/Application/Home/View/Login/author.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="73" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changxiang/Application/Home/View/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="243" column="17" selection-start-line="243" selection-start-column="17" selection-end-line="243" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
