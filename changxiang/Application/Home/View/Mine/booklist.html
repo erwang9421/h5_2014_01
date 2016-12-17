@@ -85,11 +85,11 @@
                         <div class="scale">
                             <div class="scale-left">
                                 <a href="__MODULE__/Mine/mybookslists">{$t.tagname}</a>
-                                <a href="__MODULE__/Mine/delete/tagId/{$t.tagid}"><img src="__PUBLIC__/front/images/close.png" alt="删除按钮" width="20" height="20" onclick="bookCollect()" /></a>
+                                <a href=""><img src="__PUBLIC__/front/images/close.png" alt="删除按钮" width="20" height="20" onclick="bookCollect()" /></a>
                             </div>
                             <div class="scale-right">
                             <a href="__MODULE__/Mine/mybookslists">{$t.tagintroduction}</a>
-                            <a href="__MODULE__/Mine/delete/tagId/{$t.tagid}"><img src="__PUBLIC__/front/images/close.png" alt="删除按钮" width="20" height="20"  onclick="bookCollect()"/></a>
+                            <a href=""><img src="__PUBLIC__/front/images/close.png" alt="删除按钮" width="20" height="20"  onclick="bookCollect()"/></a>
                             </div>
                         </div>
                     </volist>
@@ -115,8 +115,16 @@
     //获取页面的可视区域高度和宽度
     var wHeight=document.documentElement.clientHeight;
     var wWidth=document.documentElement.clientWidth;
+    var url="__MODULE__/Mine/delete/tagId/{$t.tagid}";
+    console.log(url);
+    function del(){
+        if(confirm("确定要删除吗？")){
+            return true;
+        }else{
+        return false;
+        }
+    }
     function bookCollect(){
-
         var oMask=document.createElement("div");
         oMask.id="mask";
         oMask.style.height=sHeight+"px";
@@ -124,8 +132,13 @@
         document.body.appendChild(oMask);
         var cPass=document.createElement("div");
         cPass.id="collectB";
-        cPass.innerHTML="<div class='collectCon'><div class='alert-collect'><p><img src='__PUBLIC__/front/images/？.png'</p><br/><p id='colsuccess'>确实要删除书签吗？</p></div><div class='alert-collect-footer' ><button id='y'> 确定</button><button  id='n'>取消</button></div>";
+        cPass.innerHTML="<div class='collectCon'><form method='post' action='"+url+"' enctype='multipart/form-data'><input type='hidden' name='tagid' value='{$tag.tagid}'><div class='alert-collect'><p><img src='__PUBLIC__/front/images/？.png'</p><br/><p id='colsuccess'>确实要删除书签吗？</p></div><div class='alert-collect-footer' ><input type='submit' value='确定' id='y'><input type='button' value='取消'  id='n'></form></div>";
         document.body.appendChild(cPass);
+        if(confirm("确定要删除吗？")){
+            return true;
+        }else{
+        return false;
+        }
 
 
 //获取收藏框的宽和高

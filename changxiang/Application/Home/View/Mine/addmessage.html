@@ -77,27 +77,59 @@
                     <li>完善个人信息</li>
                 </ul>
                 <div class="main">
+                <!-- <form method="post" action="__MODULE__/Mine/doAdd" enctype="multipart/form-data" class="bigfrom"> -->
                     <div class="scale">
                     <form method="post" action="__MODULE__/Mine/doAdd" enctype="multipart/form-data">
                         <div class="operation">
                             <button type="submit" onclick="window.location.href='myBookReview_all.html'">保存</button>
                         </div>
                         <div class="scale-message">
-                            <form class="form-horizontal writeform" role="form">
+                            <div>
+                            <!-- <form class="form-horizontal" role="form"> -->
                                 <div class="form-group">
-                                    <label for="username" class="col-sm-4 col-md-3 control-label">用户名：</label>
-                                    <div class="col-sm-6">
+                                    <label for="username" class="col-sm-2 control-label" style="text-align:right;">用户名：</label>
+                                    <div class="col-sm-4">
                                         <input type="text" class="form-control" id="username" placeholder="请输入用户名" name="username">
                                     </div>
-                                    <a href="#" id="changePassword" hidefocus="true">修改密码</a>
+                                     <a id="modal-388228" href="#modal-container-388228" role="button"  data-toggle="modal">修改密码</a><br/>
+
+                                        <div class="modal fade" id="modal-container-388228" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top:10%;margin-left:10%;">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content passwordCon">
+                                                    <form method="post" action="__MODULE__/Mine/update/userId/{$user.id}">
+                                                    <input type='hidden' name='id' value='{$user.id}'>
+                                                        <div id='change'><h5>修改密码<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×&nbsp;&nbsp;&nbsp;&nbsp;</button></h5></div>
+                                                        <div class='alert-content'>
+                                                            <p id='pad'>旧密码</p>
+                                                            <input type='password' name='pass' value="{$user.pass}"><br/><br/>
+                                                            <p id='pad'>新密码</p>
+                                                            <input type='password' name='pass'>
+                                                            <p id='text-p'>
+                                                                <img src='__PUBLIC__/front/images/yes.png' height=17 width=17/>
+                                                            </p><br/><br/>
+                                                            <p id='qpass'>确认密码</p>
+                                                            <input type='password' name='pass'>
+                                                            <p id='text-p'>与新密码输入不一致</p>
+                                                        </div>
+                                                        <div class='alert-footer'>
+                                                            <input id='yes' type='submit' value='确定'>
+                                                            <input type="button" data-dismiss="modal" aria-hidden="true" value='取消' id='no'>
+                                                           <!--  <input type='button' value='取消' id='no'> -->
+                                                        </div>
+                                                    </form>                                
+                                                </div>                                               
+                                            </div>                                           
+                                        </div>
                                 </div>
+                                <!-- <p></p> -->
                                 <div class="form-group">
-                                    <label for="userdetails" class="col-sm-4 col-md-3 control-label">简介：</label>
-                                    <div class="col-sm-6">
-                                        <textarea class="form-control" rows="7" placeholder="你还没有填写简介呢~" name="introduction"></textarea>
+                                    <label for="userdetails" class="col-sm-2 control-label" style="text-align:right;">简介：</label>
+                                    <div class="col-sm-4">
+                                        <textarea class="form-control" rows="9" placeholder="你还没有填写简介呢~" name="introduction"></textarea>
                                     </div>
                                 </div>
-                            </form>
+                            <!-- </form> -->
+                            </div>
                             <div class="selectphoto">
                                 <img src="__PUBLIC__/front/images/selectphoto.jpg" width="140" height="140" id="ImgPr" alt="默认头像" class="img-thumbnail">
                                 <form role="form" class="selected-photo">
@@ -110,6 +142,7 @@
                         </div>
                     </form>
                     </div><!-- scale结束 -->
+                    <!-- </form> -->
                 </div>
             </div>
         </div><!-- content结束 -->
