@@ -10,10 +10,10 @@ window.onload=function(){
         //点击修改密码按钮
         var oBtn2=document.getElementById("sugPost");
             //点击意见反馈按钮
-        oBtn.onclick=function(){
-            openNew();
-            return false;
-        }
+        // oBtn.onclick=function(){
+        //     openNew();
+        //     return false;
+        // }
         oBtn2.onclick=function(){
             feedBack();
             return false;
@@ -26,7 +26,8 @@ window.onload=function(){
     document.body.appendChild(oMask);
     var cPass=document.createElement("div");
     cPass.id="changeP";
-    cPass.innerHTML="<div class='passwordCon'><div id='change'><h5>修改密码</h5></div><div class='alert-content'><p id='pad'>旧密码</p><input type='password' name='旧密码'><br/><br/><p id='pad'>新密码</p><input type='password' name='新密码'><p id='text-p'><img src='images/yes.png' height=17 width=17/></p><br/><br/><p id='qpass'>确认密码</p><input type='password' name='确认密码'><p id='text-p'>与新密码输入不一致</p></div><div class='alert-footer'><a href='#' id='yes'>确定</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='#' id='no'>取消</a></div></div>";
+
+    cPass.innerHTML="<div class='passwordCon'><form method='post' action='__MODULE__/Mine/update/userId/{$user.id}' enctype='multipart/form-data'><input type='hidden' name='id' value='{$user.id}'><div id='change'><h5>修改密码</h5></div><div class='alert-content'><p id='pad'>旧密码</p><input type='password' name='pass' value='{$user.pass}'><br/><br/><p id='pad'>新密码</p><input type='password' name='新密码'><p id='text-p'><img src='images/yes.png' height=17 width=17/></p><br/><br/><p id='qpass'>确认密码</p><input type='password' name='确认密码'><p id='text-p'>与新密码输入不一致</p></div><div class='alert-footer'><input id='yes' type='submit' value='确定'>&nbsp;&nbsp;&nbsp;&nbsp;<input type='button' value='取消' id='no'></div></form></div>";
     document.body.appendChild(cPass);
 
 //获取修改密码框的宽和高
