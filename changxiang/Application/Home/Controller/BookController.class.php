@@ -45,8 +45,17 @@ class BookController extends Controller {
 
 
         //图书分类的实现
+        $bookReviewModel = M("bookreview");//实例化书评对象
+        $category = $bookReviewModel -> join("books on bookreview.bookid = books.bookid") -> join("bookscategories on bookscategories.bcid = books.bcid") -> find($bookreviewid);
+        $this -> assign("category",$category);
+
+
         //图书名的实现
+        $books = $bookReviewModel -> join("books on bookreview.bookid = books.bookid") -> find($bookreviewid);
+        $this -> assign("bookName",$books);
+
         //图书作者的实现
+        $this -> assign("bookAuthor",$books);
 
 
 
