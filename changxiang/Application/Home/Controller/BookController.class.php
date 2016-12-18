@@ -57,16 +57,20 @@ class BookController extends Controller {
         //图书作者的实现
         $this -> assign("bookAuthor",$books);
 
-
-
-
-
-
-
         //显示书评标题以及书评内容
         $bookReviewModel = M('bookreview');
         $result = $bookReviewModel -> find($bookreviewid);
         $this -> assign("bookReview",$result);
+
+        //页面底部评论内容的动态获取
+        //实例化评论表对象模型
+        $comment = M("comments");
+        $commentResult = $comment -> where("bookreviewid = {$bookreviewid}") -> order("commenttime desc") -> select();
+        $this -> assign("commentResult",$commentResult);
+
+        //当前时间减去评论时间得到多少分钟之前发表的评论
+
+
 
         $this->display();
     }
