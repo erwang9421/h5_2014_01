@@ -181,12 +181,12 @@
                                     <a href="bookreview_all.html">
                                         <img src="__PUBLIC__/front/images/myphoto.jpg" class="myphoto2" alt="用户头像" width="44" height="44" /></a>
                                     <ul class="comment-msg1">
-                                        <li><span>MONO</span><span>2016-12-21 08:13</span></li>
+                                        <li><span name="username">{$bookReviewName.username}</span><span name="publishtime">{$bookReviewTime.publishtime}</span></li>
                                         <li>
                                             <span>阅读</span><span name="viewtimes">{$info.viewtimes}</span>
-                                            <span>评论</span><span> 2</span>
-                                            <span>喜欢</span><span> 1</span>
-                                            <span>收藏</span><span> 1</span>
+                                            <span>评论</span><span>{$commentCounts}</span>
+                                            <span>喜欢</span><span>{$likeCounts}</span>
+                                            <span>收藏</span><span>{$collectCounts}</span>
                                         </li>
                                     </ul>
                                     <div class="clear"></div>
