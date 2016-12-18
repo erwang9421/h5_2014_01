@@ -4,9 +4,42 @@ namespace Home\Controller;
 use Think\Controller;
 
 class BookController extends Controller {
-    //index.html页面点击浏览全文，传入书评的id，显示书评详情页
-    public function bookreviewcontent($bookreviewid){
 
+    //计算评论时间与当前时间差的函数
+    public  function time2Units ($time)
+    {
+        $year = floor($time / 60 / 60 / 24 / 365);
+        $time -= $year * 60 * 60 * 24 * 365;
+        $month = floor($time / 60 / 60 / 24 / 30);
+        $time -= $month * 60 * 60 * 24 * 30;
+        $week = floor($time / 60 / 60 / 24 / 7);
+        $time -= $week * 60 * 60 * 24 * 7;
+        $day = floor($time / 60 / 60 / 24);
+        $time -= $day * 60 * 60 * 24;
+        $hour = floor($time / 60 / 60);
+        $time -= $hour * 60 * 60;
+        $minute = floor($time / 60);
+        $time -= $minute * 60;
+        $second = $time;
+        $elapse = '';
+
+        $unitArr = array('年' =>'year', '个月'=>'month', '周'=>'week', '天'=>'day',
+            '小时'=>'hour', '分钟'=>'minute', '秒'=>'second'
+        );
+
+        foreach ( $unitArr as $cn => $u )
+        {
+            if ( $$u > 0 )
+            {
+                $elapse = $$u . $cn;
+                break;
+            }
+        }
+
+        return $elapse;
+    }
+   // index.html页面点击浏览全文，传入书评的id，显示书评详情页
+    public function bookreviewcontent($bookreviewid){
         //发表书评的用户名的实现
         $bookReviewModel = M("bookreview");
         $bookReviewName = $bookReviewModel -> join("users on bookreview.userid = users.id") -> find("{$bookreviewid}");
@@ -66,14 +99,21 @@ class BookController extends Controller {
         //实例化评论表对象模型
         $comment = M("comments");
         $commentResult = $comment -> where("bookreviewid = {$bookreviewid}") -> order("commenttime desc") -> select();
+
+        //当前时间-评论时间=时间差，即“多长时间之前发表的评论”
+        //for循环遍历数组，将commmenttime赋值为“多少小时或者多少年或者多少分钟或者多少秒”
+        for($i = 0; $i < count($commentResult,COUNT_NORMAL); $i++){
+            $past = strtotime($commentResult[$i]["commenttime"]);
+            $now = time();//当前日期
+            $diff = $now - $past;//相差值
+            $commentResult[$i]["commenttime"] = $this -> time2Units($diff);
+        }
+
         $this -> assign("commentResult",$commentResult);
-
-        //当前时间减去评论时间得到多少分钟之前发表的评论
-
-
 
         $this->display();
     }
+
 
 
      public function editarticle(){
