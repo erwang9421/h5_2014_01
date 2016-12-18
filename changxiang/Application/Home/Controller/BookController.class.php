@@ -96,9 +96,25 @@ class BookController extends Controller {
         $this -> assign("bookReview",$result);
 
         //页面底部评论内容的动态获取
-        //实例化评论表对象模型
+        //实例化comments对象模型
         $comment = M("comments");
-        $commentResult = $comment -> where("bookreviewid = {$bookreviewid}") -> order("commenttime desc") -> select();
+        //导入分页类
+        import('Org.Util.Page');
+        //查询满足要求的总记录数
+        $commentResult = $comment  -> where("bookreviewid = {$bookreviewid}") -> order("commenttime desc") -> select();
+        $count = count($commentResult,COUNT_NORMAL);
+        //实例化分页类，传入总记录数和每一页显示的记录数3
+        $page = new \Think\Page($count,3);
+        //进行分页数据查询 Page方法的参数的前面部分是当前的页数，使用$_GET['p']获取
+        $nowPage = isset($_GET['p'])?intval($_GET['p']):1;
+        $page -> setConfig('first','第一页');
+        $page -> setConfig('prev','前一页');
+        $page -> setConfig('next','后一页');
+        //进行分页数据查询，注意limit方法的参数要使用Page类的属性
+        $commentResult = $comment  -> where("bookreviewid = {$bookreviewid}") -> order("commenttime desc") -> page($nowPage.',3') -> select();
+        $show = $page -> show();//分页显示输出
+        $this -> assign('page',$show);//赋值分页输出
+
 
         //当前时间-评论时间=时间差，即“多长时间之前发表的评论”
         //for循环遍历数组，将commmenttime赋值为“多少小时或者多少年或者多少分钟或者多少秒”
@@ -109,12 +125,12 @@ class BookController extends Controller {
             $commentResult[$i]["commenttime"] = $this -> time2Units($diff);
         }
 
-        $this -> assign("commentResult",$commentResult);
+        //获取评论的条数
+        $this -> assign("commentQuantity",$count);
+        $this -> assign("commentResult",$commentResult);//赋值数据集
 
         $this->display();
     }
-
-
 
      public function editarticle(){
             // $this->show("前台默认");
