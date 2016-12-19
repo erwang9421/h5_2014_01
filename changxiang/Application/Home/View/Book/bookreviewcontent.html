@@ -269,20 +269,22 @@
                             <!-- 评论数目 -->
                             <div class="row reviewtimes">
                                 <div class="col-md-12">
-                                    <span>10条评论</span>
+                                    <span>{$commentQuantity}条评论</span>
                                 </div>
                             </div>
                             <!--评论内容输入框-->
                             <div class="row">
-                                <!--用户头像-->
-                                <div class="userphoto">
-                                    <a href=""><img src="__PUBLIC__/front/images/myphoto.jpg" alt="" width="35" height="35"></a>
-                                    <!--输入框-->
-                                    <input type="text" value="">
-                                    <a href=""><img src="__PUBLIC__/front/images/emoji.png" alt="" width="20" height="20" class="emoji"></a>
-                                    <!--评价按钮-->
-                                    <a href="" class="reviewbtn">评价</a>
-                                </div>
+                                <form action="">
+                                    <!--用户头像-->
+                                    <div class="userphoto">
+                                        <a href=""><img src="__PUBLIC__/front/images/myphoto.jpg" alt="" width="35" height="35"></a>
+                                        <!--输入框-->
+                                        <input type="text" value="">
+                                        <a href=""><img src="__PUBLIC__/front/images/emoji.png" alt="" width="20" height="20" class="emoji"></a>
+                                        <!--评价按钮-->
+                                        <a href="" class="reviewbtn">评价</a>
+                                    </div>
+                                </form>
                             </div>
                             <!--评论内容部分-->
                             <div class="row">
@@ -300,7 +302,7 @@
                                                     <p name="commentcontent">{$vo.commentcontent}</p>
                                                     <div>
                                                         <div class="timeagoleft">
-                                                            <span>35分钟前</span>
+                                                            <span name="commenttime">{$vo.commenttime}前</span>
                                                         </div>
                                                         <div class="timeagoright">
                                                             <img src="__PUBLIC__/front/images/delsupport.png" alt="">
@@ -318,7 +320,7 @@
                             <div class="row">
 
                                 <nav>
-                                    <ul class="pagination">
+                                    <!--<ul class="pagination">
                                         <li><a href="">&laquo;</a></li>
                                         <li class="active"><a href="">1</a></li>
                                         <li><a href="">2</a></li>
@@ -326,7 +328,8 @@
                                         <li><a href="">4</a></li>
                                         <li><a href="">5</a></li>
                                         <li><a href="">&raquo;</a></li>
-                                    </ul>
+                                    </ul>-->
+                                    {$page}
                                 </nav>
 
                             </div>

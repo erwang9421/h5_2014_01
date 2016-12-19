@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>他的书单内容</title>
+    <title>他的全部书评</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="__PUBLIC__/front/css/bootstrap.min.css">
     <link rel="stylesheet" href="__PUBLIC__/front/css/aside-nav.css" />
     <link rel="stylesheet" href="__PUBLIC__/front/css/jquery.mCustomScrollbar.css" />
-    <link rel="stylesheet" href="__PUBLIC__/front/css/mybookslists.css">
+    <link rel="stylesheet" href="__PUBLIC__/front/css/myBookReview_all.css" />
     <link rel="stylesheet" href="__PUBLIC__/front/css/alert-feedback.css">
+
 
 </head>
 <style type="text/css">
@@ -20,67 +21,53 @@
     }
 </style>
             <!--侧导航内容 end-->
-
             <!--content start-->
+
             <div id="content">
                 <div class="content-left">
-                    <div class="content-left-top">
-                        <p style="text-align: center;"><img src="__PUBLIC__/front/images/1c.jpg" width="70" height="70" alt="用户头像"/></p>
-                        <a href="" id="name"><p>fygd</p></a>
-                        <div class="content-left-top-msg">
-                            <ul>
-                                <li><a href="__MODULE__/Mine/myBookReview_all">文章</a></li>
-                                <li><a href="__MODULE__/Other/fans">粉丝</a></li>
-                                <li><a href="__MODULE__/Mine/myCollect">收藏</a></li>
-                                <li><a href="__MODULE__/Other/attention">关注</a></li>
-                            </ul>
-                            <br />
-                            <ul>
-                                <li>20</a></li>
-                                <li>88</li>
-                                <li>56</li>
-                                <li>28</li>
-                            </ul>
-                        </div>
-                    </div><!-- content-left-top结束 --> 
-                    <div class="content-left-bottom">
-                        <p class="btn-top" id="distance"><a href="__MODULE__/Other/privatemes">写私信</a></p>
-                        <p class="btn-others"><a href="#">加关注</a></p>
-                        <p class="btn-others"><a href="__MODULE__/Other/userbooklist">他的书单</a></p>
-                    </div><!-- content-left-bottom结束 --> 
-                </div><!-- content-left结束 --> 
-                <div class="content-left-right">
-                        <h5>他的书单</h5>
-                        <!-- 我的书单部分 -->
-                        <div>
-                            <h4>值得购买的获奖书目</h4>
-                            <div class="shareleft">
-
-                            </div>
-                            <div class="shareright">
-                                <div class="viewtimes">
-                                    <span>2万</span>
-                                </div>
-                                <div class="viewimage">
-                                    <img src="__PUBLIC__/front/images/view.jpg" alt="">
-                                </div>
-                                
-                            </div>
-                            <div class="introduce">
-                                <p><span class="shortintroduction">简介：</span>简介内容简介内容简介内容简介内容简介内容简介内容</p>
-                                <!-- 编辑按钮 -->
+                	<div class="roler">
+                        <div class="introduction">
+                            <p style="text-align: center;"><img src="__PUBLIC__/front/images/myphoto.jpg" width="70" height="70" alt="用户头像"/></p>
+                            <a href="author_trend.html" id="name"><p>啊哈</p></a>
+                            <div class="list">
+                                <ul>
+                                    <li><a href="bookreview_all.html">文章</a></li>
+                                    <li><a href="fans.html">粉丝</a></li>
+                                    <li><a href="collect.html">收藏</a></li>
+                                    <li><a href="attention.html">关注</a></li>
+                                </ul>
+                                <ul>
+                                    <li>20</li>
+                                    <li>5</li>
+                                    <li>56</li>
+                                    <li>1</li>
+                                </ul>
                             </div>
                         </div>
-                    </div><!-- content-left-right结束 --> 
+                        <div class="function">
+                            <p class="function-top">作家，出版长篇小说《三重门》，创畅销纪录，并成 为一个优秀赛车手，是中国唯一一位拉力赛和场地赛 双料年度冠军。2010年被《时代周刊》评选为100名影响世界人物之一。其自编自导的处女座电影《后会无期》于2014年2月已开机.</p>
+                            <p id="distance"><a href="private.html">写私信</a></p>
+                            <p><a href="fans.html" id="care">关注</a></p>
+                            <p><a href="userbooklist.html">他的书单</a></p>
+                        </div>
+                    </div>
+                </div>
                 <div class="content-right">
+                    <div class="content-right-top">
+                        <ol> 
+                            <li><a href="__MODULE__/Index/index">首页</a></li> 
+                            <li>&nbsp;/&nbsp;</li>
+                            <li><a href="bookreview_all.html" class="active">他的全部书评</a></li> 
+                        </ol>
+                    </div>
                     <form method="get" action="__MODULE__/Mine/deletebookreview">
                     <div class="content-right-bottom">
                         <div class="content-book-comments">
                             <volist name="bookreview" id="br">
                                 <div class="content-book-comment1 book-comment1" name="bookreviewId[]" value="{$br.bookreviewid}">
-                                    <a id="modal-8801" href="#modal-container-8801" role="button"  data-toggle="modal"><img src="__PUBLIC__/front/images/close.png" alt="删除我的文章书评" width="20" height="20" class="close"></a>
+                                    <a id="modal-8806" href="#modal-container-8806" role="button"  data-toggle="modal"><img src="__PUBLIC__/front/images/close.png" alt="删除我的文章书评" width="20" height="20" class="close"></a>
 
-                                    <div class="modal fade" id="modal-container-8801" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top:10%;margin-left:15%;">
+                                    <div class="modal fade" id="modal-container-8806" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top:10%;margin-left:10%;">
                                         <div class="modal-dialog">
                                             <div class="modal-content collectCon">
                                                 <div class='alert-collect'>
@@ -125,20 +112,22 @@
                                 </div>
                             </volist>
 
-
+                          
 
                         </div><!--bookscontainer结束-->
                     </div><!-- content-right-bottom结束 -->
-
                     </form>
-                </div><!-- content-right结束 --> 
+
+                </div><!-- content-book-comments-right结束 --> 
             </div><!-- content结束 --> 
+
+
             <footer>
                 <p>copyright@hebeinormal university</p>
             </footer>
         </div><!--canvas end-->
     </div><!--container end-->
-
+    
     <script src="__PUBLIC__/front/js/jquery.min.js"></script>
     <script src="__PUBLIC__/front/js/bootstrap.min.js"></script>
     <script src="__PUBLIC__/front/js/custom.js"></script>
