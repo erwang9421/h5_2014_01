@@ -76,9 +76,9 @@
 	line-height: 180%;
 	padding: 2% 7%;
 }
-.function p:first-child{
+/*.function p:first-child{
 	text-align: justify;
-}
+}*/
 .function p{
 	text-align: center;
 }
