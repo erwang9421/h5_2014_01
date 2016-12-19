@@ -234,7 +234,7 @@ body a{
 	margin-top: 88px;
 	border: 1px solid #F0F0F0; 
 	background-color: #FAFAFA;
-	/*overflow: hidden;*/
+	overflow: auto;
 }
 .content-right-bottom p{
 	color: #666;
@@ -308,6 +308,7 @@ body a{
 	bottom: 10%;
 	float: left;
 	overflow: hidden;
+	z-index: 300px;
 }
 .scale2 input{
     font-size: 1em;
