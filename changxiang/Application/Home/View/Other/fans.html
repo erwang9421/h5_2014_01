@@ -9,34 +9,11 @@
     <link rel="stylesheet" href="__PUBLIC__/front/css/bootstrap.min.css">
     <link rel="stylesheet" href="__PUBLIC__/front/css/headernav.css" />
     <link rel="stylesheet" href="__PUBLIC__/front/css/myfans.css">
-    <link rel="stylesheet" href="__PUBLIC__/front/css/alert-feedback.css">
-
 
     <script src="__PUBLIC__/front/js/jquery.js"></script>
     <script src="__PUBLIC__/front/js/bootstrap.min.js"></script>
     <script src="__PUBLIC__/front/js/custom.js"></script>    
-    <script src="__PUBLIC__/front/js/alert-feedback.js"></script>
 
-    <script type="text/javascript">
-        if (navigator.appName=="Microsoft Internet Explorer") {
-             function fPmVerticalRightOut() {
-                 var getItem = document.getElementById("pmVerticalRightOut").getElementsByTagName("li");
-                 for (var i=0; i<getItem.length; i++) {
-                     getItem[i].onmouseover=function() { 
-                         if(     this.className=="nav-second-menu"){
-                             this.className="nav-second-menuIe";
-                         }
-                     }
-                     getItem[i].onmouseout=function() { 
-                         if(     this.className=="nav-second-menuIe"){
-                             this.className="nav-second-menu";
-                         }
-                     }
-                 }
-             }
-             window.onload=fPmVerticalRightOut;
-        }
-    </script>
     <script type="text/javascript">
         $(document).ready(function(){
              $(".ad > a").click(function(){

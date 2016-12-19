@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="__PUBLIC__/front/css/aside-nav.css" />
     <link rel="stylesheet" href="__PUBLIC__/front/css/jquery.mCustomScrollbar.css" />
     <link rel="stylesheet" href="__PUBLIC__/front/css/mybookslists.css">
-    <link rel="stylesheet" href="__PUBLIC__/front/css/alert-feedback.css">
+    <link rel="stylesheet" href="__PUBLIC__/front/css/alert-delete.css">
 
 </head>
 <style type="text/css">
@@ -20,7 +20,6 @@
     }
 </style>
             <!--侧导航内容 end-->
-
             <!--content start-->
             <div id="content">
                 <div class="content-left">
@@ -125,8 +124,6 @@
                                 </div>
                             </volist>
 
-
-
                         </div><!--bookscontainer结束-->
                     </div><!-- content-right-bottom结束 -->
 
@@ -142,7 +139,6 @@
     <script src="__PUBLIC__/front/js/jquery.min.js"></script>
     <script src="__PUBLIC__/front/js/bootstrap.min.js"></script>
     <script src="__PUBLIC__/front/js/custom.js"></script>
-    <script src="__PUBLIC__/front/js/alert-feedback.js"></script>
 
     <script src="__PUBLIC__/front/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script>
@@ -157,26 +153,6 @@
                 });
             });
         })(jQuery);
-    </script>
-    <script type="text/javascript">
-        if (navigator.appName=="Microsoft Internet Explorer") {
-             function fPmVerticalRightOut() {
-                 var getItem = document.getElementById("pmVerticalRightOut").getElementsByTagName("li");
-                 for (var i=0; i<getItem.length; i++) {
-                     getItem[i].onmouseover=function() { 
-                         if(     this.className=="nav-second-menu"){
-                             this.className="nav-second-menuIe";
-                         }
-                     }
-                     getItem[i].onmouseout=function() { 
-                         if(     this.className=="nav-second-menuIe"){
-                             this.className="nav-second-menu";
-                         }
-                     }
-                 }
-             }
-             window.onload=fPmVerticalRightOut;
-        }
     </script>
 </body>
 </html>

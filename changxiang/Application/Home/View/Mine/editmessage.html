@@ -9,34 +9,11 @@
     <link rel="stylesheet" href="__PUBLIC__/front/css/bootstrap.min.css">
     <link rel="stylesheet" href="__PUBLIC__/front/css/headernav.css" />
     <link rel="stylesheet" href="__PUBLIC__/front/css/addmessage.css" />
-    <link rel="stylesheet" href="__PUBLIC__/front/css/passwordchange-alert.css">
-
 
     <script src="__PUBLIC__/front/js/jquery.js"></script>
     <script src="__PUBLIC__/front/js/bootstrap.min.js"></script>
     <script src="__PUBLIC__/front/js/custom.js"></script>
-    <script src="__PUBLIC__/front/js/passwordchange-alert.js"></script>
 
-    <script type="text/javascript">
-        if (navigator.appName=="Microsoft Internet Explorer") {
-             function fPmVerticalRightOut() {
-                 var getItem = document.getElementById("pmVerticalRightOut").getElementsByTagName("li");
-                 for (var i=0; i<getItem.length; i++) {
-                     getItem[i].onmouseover=function() { 
-                         if(     this.className=="nav-second-menu"){
-                             this.className="nav-second-menuIe";
-                         }
-                     }
-                     getItem[i].onmouseout=function() { 
-                         if(     this.className=="nav-second-menuIe"){
-                             this.className="nav-second-menu";
-                         }
-                     }
-                 }
-             }
-             window.onload=fPmVerticalRightOut;
-        }
-    </script>
 </head>
 
             <!--侧导航内容 end-->
@@ -125,7 +102,7 @@
                                 <div class="form-group">
                                     <label for="userdetails" class="col-sm-2 control-label" style="text-align:right;">简介：</label>
                                     <div class="col-sm-4">
-                                        <textarea class="form-control" rows="9" placeholder="你还没有填写简介呢~" name="introduction" value="{$user.introduction}"></textarea>
+                                        <textarea class="form-control" rows="9" placeholder="你还没有填写简介呢~" name="introduction">{$user.introduction}</textarea>
                                     </div>
                                 </div>
                             <!-- </form> -->
@@ -150,28 +127,6 @@
             </footer>
         </div><!--canvas end-->
     </div><!--container end-->
-    <script>
-    var url ="__MODULE__/Mine/update/userId/{$user.id}";
-    // console.log(url);
- $("#exampleInputFile").change(function() {
-        var $file = $(this);
-        var fileObj = $file[0];
-        var windowURL = window.URL || window.webkitURL;
-        var dataURL;
-        var $img = $("#ImgPr");
-        if(fileObj && fileObj.files && fileObj.files[0]){
-        dataURL = windowURL.createObjectURL(fileObj.files[0]);
-        $img.attr('src',dataURL);
-        }else{
-        dataURL = $file.val();
-        var imgObj = document.getElementById("ImgPr");
-        imgObj.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
-        imgObj.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = dataURL;
-          
-        }
-    });
-</script>
-
 </body>
 </html>
 
