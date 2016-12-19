@@ -16,9 +16,7 @@ class BookCategoryController extends Controller{
         $tag=$tagModel->order('addtime desc')->page($nowPage.',4')->select();
         $show=$page->show();
         $this->assign('page',$show);
-
         $this->assign("tag",$tag);
-
 		$this->display();
 	}
 	public function delete(){
@@ -29,12 +27,14 @@ class BookCategoryController extends Controller{
             foreach($id as $value){
                 M("Bookscategories")->delete($value);
             }  
-            $this->success("删除成功！");
+            // $this->success("删除成功！");
+            $this->redirect('lists',0);
         } 
         //单个删除
         else{
             if(M("Bookscategories")->delete($id)){
-                $this->success("删除成功！");
+                // $this->success("删除成功！");
+                $this->redirect('lists',0);
             }
         }       
     }
@@ -52,7 +52,8 @@ class BookCategoryController extends Controller{
 			$model=M("Bookscategories");
 			$model->create();
 			if ($model->save()) {
-				$this->success("修改成功",U("BookCategory/bookcategory"));
+				// $this->success("修改成功",U("BookCategory/bookcategory"));
+				$this->redirect('BookCategory/bookcategory',0);
 			}
 			else{
 				$this->error($model->getError());
@@ -73,7 +74,8 @@ class BookCategoryController extends Controller{
 			$this->error($tagsModel->getError());
 		}
 		if ($tagsModel->add()) {
-		    $this->success("添加成功",U("BookCategory/bookcategory"));
+		    // $this->success("添加成功",U("BookCategory/bookcategory"));
+		    $this->redirect('BookCategory/bookcategory',0);
 		}else{
 			$this->error("添加失败");
 		}

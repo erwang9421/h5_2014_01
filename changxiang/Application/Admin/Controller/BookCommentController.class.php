@@ -28,9 +28,6 @@ class BookCommentController extends Controller
         //SQL语句:join连接两个表，inner join从两个表中查询数据
         $sql = "select books.bookid,books.bookname,books.bookauthor,bookreview.userid,bookreview.bookreviewid,bookreview.title,bookreview.content,bookreview.publishtime from bookreview inner join books on bookreview.bookid = books.bookid order by bookreview.publishtime desc";
         $list = $bookReviewModel  -> page($nowPage.',5') -> query($sql) ;
-//        dump($list);
-//        exit;
-
         $show = $page -> show();//分页显示输出
         $this -> assign('page',$show);//赋值分页输出
         $this -> assign('list',$list);//赋值数据集
@@ -45,7 +42,8 @@ class BookCommentController extends Controller
             exit("未知的id");
         }
         if(M("bookreview")->delete($id)){
-            $this->success("删除成功！");
+            // $this->success("删除成功！");
+            $this->redirect('bookreview',0);
         }
     }
     public function addbookreview(){
@@ -89,7 +87,8 @@ class BookCommentController extends Controller
                     $data['publishtime'] = date('Y-m-d H:i:s',time());
                     //data方法直接生成要操作的数据对象，无需create方法或赋值方法生成数据对象
                     if($bookReviewModel -> data($data) -> add()){
-                        $this -> success("添加成功",U("BookComment/bookreview"));
+                        // $this -> success("添加成功",U("BookComment/bookreview"));
+                        $this->redirect('BookComment/bookreview',0);
                     }
                 }
                 else{
@@ -119,7 +118,9 @@ class BookCommentController extends Controller
             $bookreviewModel -> create($_POST,0);
             $books -> create($_POST,0);
             if($bookreviewModel -> save() && $books -> save()) {
-                   $this->success("修改成功", U("BookComment/bookreview"));
+                   // $this->success("修改成功", U("BookComment/bookreview"));
+                 $this->redirect('BookComment/bookreview',0);
+
             }
 
 //            dump($bookreviewModel -> create());

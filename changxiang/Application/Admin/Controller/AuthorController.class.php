@@ -18,8 +18,7 @@ class AuthorController extends Controller {
             $upload->maxSize=3145728 ;// 设置附件上传大小
             $upload->exts=array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
             $upload->rootPath  = THINK_PATH; // 设置附件上传根目录
-            $upload->savePath  ='../Public/uploads/authorimage/'; // 设置附件上传（子）目录
-            $upload->savePath  ='../Public/uploads/authorimage/'; // 设置附件上传（子）目录
+            $upload->savePath  ='../Public/uploads/userimage/'; // 设置附件上传（子）目录
             // 上传文件 
             $info   =   $upload->upload();
           /*  dump($info);
@@ -58,10 +57,10 @@ class AuthorController extends Controller {
                         $string = $path.$file['savename'];
                         $i.=$string.',';
                     }
-                    if($file['key']=='authorimage')
+                    if($file['key']=='userimage')
                     {
                         $path = substr($file['savepath'], 9);
-/*                      $file['savepath'] = '../Public/uploads/authorimage/image/';*/
+                        // $file['savepath'] = '../Public/uploads/authorimage/image/';*/
                         $string1 = $path.$file['savename'];
                         $j.=$string1.',';
                     }
@@ -73,10 +72,11 @@ class AuthorController extends Controller {
          
                 //设置thumb字段属性(目录+名字)
                $data['idcard']=$a;
-               $data['authorimage']=$b;
+               $data['userimage']=$b;
 
         		if ($authorModel->add($data)) { //写入数据库
-        			$this->success("添加成功！", U("lists"));
+        			// $this->success("添加成功！", U("lists"));
+                    $this->redirect('lists',0);
         		}
         		else {
         			$this->error("添加失败！");
@@ -108,7 +108,8 @@ class AuthorController extends Controller {
                 if($authorModel->create()) //创建对象
                 {
                     if($authorModel->save()){ //修改操作
-                        $this->success("修改成功", U("lists"));
+                        // $this->success("修改成功", U("lists"));
+                        $this->redirect('lists',0);
                     }
                     else
                     {
@@ -143,13 +144,15 @@ class AuthorController extends Controller {
                 foreach($id as $value){
                     M("author")->delete($value);
                 }
-                $this->success("用户删除成功",U("lists"));
+                // $this->success("用户删除成功",U("lists"));
+                $this->redirect('lists',0);
             }
             //单个删除
             else{
                 if($authorModel->where("id=$id")->delete())
                     {
-                        $this->success("用户删除成功",U("lists"));
+                        // $this->success("用户删除成功",U("lists"));
+                        $this->redirect('lists',0);
                     }
                 else
                     {
