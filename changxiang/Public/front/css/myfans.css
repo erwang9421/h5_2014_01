@@ -192,22 +192,3 @@
 	position:relative;
 	left: 10%;
 }
-.ad a:link{
-    color: #da7c66;
-    text-decoration: none;
-}
-.ad a:visited{
-    background-color: #B1B1B1;
-    text-decoration: none;
-
-}
-.ad a:active{
-    background-color: #da7c66;
-	color: #fff;
-	text-decoration: none;
-}
-.ad a:hover{
-	background-color: #da7c66;
-	color: #fff;
-	text-decoration: none;
-}

@@ -134,45 +134,46 @@
 }
 .scale{
 	width: 90%;
-	margin: 10px 5% 30px 5% ;
-	height: 55px;
+	margin: 0 5% 0 5%;
 	position: relative;
 }
-.scale-left, .scale-right {
+.scale1, .scale0 {
 	width: 40%;
+	margin-top: 10px;
+	margin-bottom: 30px;
 	background-color: rgb(247,247,247);
 	height: 55px;
 	line-height: 55px;
 }
-.scale-left {
+.scale1 {
 	margin-left:6%;
 	float: left;
     position: relative;
 }
-.scale-left a, .scale-right a{
+.scale1 a, .scale0 a{
 	width: 100%;
 	display: block;
 	height: 55px;
 	line-height: 60px;
 	text-align: center;
 }
-.scale-right {
+.scale0 {
 	margin-right:6%;
 	float: right;
 	position: relative;
 }
-.scale-right img , .scale-left img {
+.scale0 img , .scale1 img {
 	display: none;
 	position: absolute;
 }
-.scale-left a:hover {
+.scale1 a:hover {
 	text-decoration: none;
 }
-.scale-right a:hover {
+.scale0 a:hover {
 	text-decoration: none;
 	cursor: pointer;
 }
-.scale-left:hover img {
+.scale1:hover img {
 	display: block;
 	float: right;
 	position: absolute;
@@ -180,7 +181,7 @@
 	top: 9px;
 	z-index: 4;
 }
-.scale-right:hover img {
+.scale0:hover img {
 	display: block;
 	float: right;
 	position: absolute;
