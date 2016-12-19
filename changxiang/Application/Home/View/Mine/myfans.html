@@ -37,6 +37,26 @@
              window.onload=fPmVerticalRightOut;
         }
     </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+             $(".ad > a").click(function(){
+                    $color = $(this).css("color");
+                    $backgroundColor = $(this).css("background-color");
+                    if($color == "rgb(218, 124, 102)")
+                    {
+                       $(this).css({color:"white",backgroundColor:"rgb(218, 124, 102)"})
+                       $(this).html("已关注");
+                    }
+                    else{
+                        $(this).css({color:"rgb(218, 124, 102)",backgroundColor:"transparent"});
+                        //有个弹出框
+                        $(this).html("+关注");
+                    }
+             });//点击事件结束
+        })
+    </script>
+
+
 </head>
            <!--侧导航内容 end-->
             <!--content start-->
@@ -45,7 +65,7 @@
                 <div class="content-right">
                     <div class="roler">
                         <div class="introduction">
-                            <p style="text-align: center;"><a href="bookreview_all.html"><img src="__PUBLIC__/front/images/myphoto.jpg" width="70" height="70" alt="用户头像"/></a></p>
+                            <p style="text-align: center;"><a href="__MODULE__/Other/bookreview_all"><img src="__PUBLIC__/front/images/myphoto.jpg" width="70" height="70" alt="用户头像"/></a></p>
                             <a href="#" id="name"><p>啊哈</p></a>
                             <div class="list">
                                 <ul>
@@ -71,7 +91,7 @@
                         </div>
                     </div> 
                     <ul class="main-title">
-                        <li><a href="index.html">首页</a></li>
+                        <li><a href="__MODULE__/Index/index">首页</a></li>
                         <li>&nbsp;/&nbsp;</li>
                         <li>我的粉丝</li>
                     </ul>     
