@@ -65,35 +65,25 @@ class MineController extends Controller {
 
     	$this->display();
     }
-    public function delete(){
-        //全部删除
+    //删除标签
+    public function deletetag(){
         $id = $_GET['tagId'];
-        if($id){
-            $user=M('tags');
-            $data['tagid']=$id;
-            $rs=$user->where($data)->delete();
-            if($rs){
-                $this->success('删除成功!');
-            }else{
-                $this->error('删除失败!'); }
-        }else{
-            $this->error('删除失败!');
-        }
-        // dump($id);
-        // if(is_array($id)){
-        //     foreach($id as $value){
-        //         M("Tags")->delete($value);
-        //     }  
-        //     $this->success("删除成功！");
-        // } 
-        //单个删除
-        // else{
-        //     if(M("Tags")->delete($id)){
-        //         $this->success("删除成功！");
-        //     }
-        // }       
-    }
 
+        if(is_array($id)){
+            foreach($id as $value){
+                M("Tags")->delete($value);
+            }  
+            $this->success("删除成功！");
+        } 
+
+        else{
+            if(M("Tags")->delete($id)){
+                $this->success("删除成功！");
+            }
+        }       
+       
+    }
+   
     public function editbooklist(){
         $usersModel=D("tags");
         $id=$_GET['tagId'];
@@ -123,6 +113,23 @@ class MineController extends Controller {
     	$this->assign("bookreview",$bookreview);
 
     	$this->display();
+    }
+    public function deletearticle(){
+        $id = $_GET['id'];
+
+        if(is_array($id)){
+            foreach($id as $value){
+                M("Bookreview")->delete($value);
+            }  
+            $this->success("删除成功！");
+        } 
+
+        else{
+            if(M("Bookreview")->delete($id)){
+                $this->success("删除成功！");
+            }
+        }       
+       
     }
     public function editmessage(){
         $usersModel=D("users");
@@ -155,6 +162,9 @@ class MineController extends Controller {
     }
     public function myBookReview_all(){
     	$bookreviewModel=M("bookreview");
+        //浏览量的实现
+        // $output=$bookreviewModel->where(array('bookreviewid'=>$bookreviewid))->setInc('viewtimes',1);
+
         $bookreview=$bookreviewModel->join('users ON bookreview.userid=users.id')
         ->join('books ON bookreview.bookid=books.bookid')
         ->join('tags ON bookreview.tagid=tags.tagid')
@@ -162,6 +172,23 @@ class MineController extends Controller {
         $this->assign("bookreview",$bookreview);
 
     	$this->display();
+    }
+    public function deletebookreview(){
+        $id = $_GET['bookreviewId'];
+        
+        if(is_array($id)){
+            foreach($id as $value){
+                M("Bookreview")->delete($value);
+            }  
+            $this->success("删除成功！");
+        } 
+
+        else{
+            if(M("Bookreview")->delete($id)){
+                $this->success("删除成功！");
+            }
+        }       
+       
     }
     public function mybookslists(){
         $bookreviewModel=M("bookreview");
@@ -206,6 +233,13 @@ class MineController extends Controller {
 
     	$this->display();
     }
+   public function layout(){
+    $bookcategoryModel=M("bookscategories");
+    $bookscategories=$bookcategoryModel->select();
+    $this->assign("bookcategory",$bookscategories);
+    $this->display();
+
+}
 
 
     
