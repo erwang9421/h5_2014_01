@@ -97,6 +97,9 @@ class BookController extends Controller {
         //查询满足要求的总记录数
         $commentResult = $comment  -> where("bookreviewid = {$bookreviewid}") -> order("commenttime desc") -> select();
         $count = count($commentResult,COUNT_NORMAL);
+
+
+
         //实例化分页类，传入总记录数和每一页显示的记录数3
         $page = new \Think\Page($count,3);
         //进行分页数据查询 Page方法的参数的前面部分是当前的页数，使用$_GET['p']获取
@@ -106,18 +109,19 @@ class BookController extends Controller {
         $page -> setConfig('next','后一页');
         //进行分页数据查询，注意limit方法的参数要使用Page类的属性
         $commentResult = $comment  -> where("bookreviewid = {$bookreviewid}") -> order("commenttime desc") -> page($nowPage.',3') -> select();
-        $show = $page -> show();//分页显示输出
-        $this -> assign('page',$show);//赋值分页输出
-
         //当前时间-评论时间=时间差，即“多长时间之前发表的评论”
         //for循环遍历数组，将commmenttime赋值为“多少小时或者多少年或者多少分钟或者多少秒”
-        for($i = 0; $i < $count; $i++){
+        for($i = 0; $i < count($commentResult,COUNT_NORMAL); $i++){
             $past = strtotime($commentResult[$i]["commenttime"]); // 发布日期
             $now = time(); // 当前日期
             $diff = $now - $past;//相差值
 
             $commentResult[$i]["commenttime"] = $this -> time2Units($diff);
         }
+        $show = $page -> show();//分页显示输出
+        $this -> assign('page',$show);//赋值分页输出
+
+
 
          $this -> assign("commentResult",$commentResult);
          //获取评论的条数
