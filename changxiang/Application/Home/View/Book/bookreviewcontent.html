@@ -79,10 +79,10 @@
                                     <div class="comment-tag">
                                         <div>
                                             <span>图书分类：</span>
-                                            <a href="tags.html" name="typebcname">{$category.typebcname}</a>
+                                            <a href="__MODULE__/Index/tags?bcid={$bookName.bcid}" name="typebcname">{$category.typebcname}</a>
                                         </div>
                                         <div class="book">
-                                            <span name="bookname">评论图书：《{$bookName.bookname}》</span>
+                                            <span name="bookname">评论图书：《<a href="__MODULE__/Index/tagbook?bookid={$bookName.bookid}">{$bookName.bookname}</a>》</span>
                                             <span class="bookauthor">作者：{$bookAuthor.bookauthor}</span>
                                         </div>
                                     </div>

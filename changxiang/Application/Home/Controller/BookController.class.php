@@ -83,7 +83,6 @@ class BookController extends Controller {
          //图书名的实现
         $books = $bookReviewModel -> join("books on bookreview.bookid = books.bookid") -> find($bookreviewid);
         $this -> assign("bookName",$books);
-
         //图书作者的实现
         $this -> assign("bookAuthor",$books);
 
