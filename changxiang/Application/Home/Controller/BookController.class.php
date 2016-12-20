@@ -175,7 +175,7 @@ class BookController extends Controller {
         }
         $booksModel=M('bookreview')->join('books ON bookreview.bookid=books.bookid')
         ->join('tags ON bookreview.tagid=tags.tagid');
-        $book=$booksModel->create();
+        $data=$booksModel->create();
         if($booksModel->add($data)){
             $this->success('添加成功');
         }else{
