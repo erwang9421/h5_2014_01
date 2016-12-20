@@ -14,222 +14,238 @@
     <link rel="stylesheet" href="__PUBLIC__/front/css/collect.css" />
     <link rel="stylesheet" href="__PUBLIC__/front/css/shang.css" />
 
-    <script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.3.min.js"> </script>
-
     <script src="__PUBLIC__/front/js/jquery.js"></script>
     <script src="__PUBLIC__/front/js/bootstrap.min.js"></script>
     <script src="__PUBLIC__/front/js/custom.js"></script>
-    <script src="__PUBLIC__/front/js/collect.js"></script>
-
-
-    <script type="text/javascript">
-        if (navigator.appName=="Microsoft Internet Explorer") {
-            function fPmVerticalRightOut() {
-                var getItem = document.getElementById("pmVerticalRightOut").getElementsByTagName("li");
-                for (var i=0; i<getItem.length; i++) {
-                    getItem[i].onmouseover=function() {
-                        if(     this.className=="nav-second-menu"){
-                            this.className="nav-second-menuIe";
-                        }
-                    }
-                    getItem[i].onmouseout=function() {
-                        if(     this.className=="nav-second-menuIe"){
-                            this.className="nav-second-menu";
-                        }
-                    }
-                }
-            }
-            window.onload=fPmVerticalRightOut;
-        }
-    </script>
-
-
 
 </head>
-<body style="overflow:visible;overflow-y:hidden">
-<layout name="layout" />
-        <!--侧导航内容 end-->
-        <!--content start-->
-        <div id="content">
-            <div class="content-right">
-                <!--真正的内容部分-->
-                <div class="container-fluid">
+<!-- <body style="overflow:visible;overflow-y:hidden"> -->
+<!--侧导航内容 end-->
+<!--content start-->
+<div id="content">
+    <div class="content-right">
+        <!--真正的内容部分-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1  content-center">
                     <div class="row">
-                        <div class="col-md-10 col-md-offset-1  content-center">
-                            <div class="row">
-                                <ul class="breadcrumb">
-                                    <li><a href="__MODULE__/Index/index">首页</a></li>
-                                    <li class="active">书评内容</li>
-                                </ul>
+                        <ul class="breadcrumb">
+                            <li><a href="__MODULE__/Index/index">首页</a></li>
+                            <li class="active">书评内容</li>
+                        </ul>
+                    </div>
+                    <div class="row rowmsg">
+                        <div class="col-md-6 col-sm-6">
+                            <a href="bookreview_all.html">
+                                <img src="__PUBLIC__/front/images/myphoto.jpg" class="myphoto2" alt="用户头像" width="44" height="44" /></a>
+                            <ul class="comment-msg1">
+                                <li><span name="username">{$bookReviewName.username}</span><span name="publishtime">{$bookReviewTime.publishtime}</span></li>
+                                <li>
+                                    <span>阅读</span><span name="viewtimes">{$info.viewtimes}</span>
+                                    <span>评论</span><span>{$commentCounts}</span>
+                                    <span>喜欢</span><span>{$likeCounts}</span>
+                                    <span>收藏</span><span>{$collectCounts}</span>
+                                </li>
+                            </ul>
+                            <div class="clear"></div>
+                            <div class="comment-tag">
+                                <div>
+                                    <span>图书分类：</span>
+                                    <a href="__MODULE__/Index/tags?bcid={$bookName.bcid}" name="typebcname">{$category.typebcname}</a>
+                                </div>
+                                <div class="book">
+                                    <span name="bookname">评论图书：《<a href="__MODULE__/Index/tagbook?bookid={$bookName.bookid}">{$bookName.bookname}</a>》</span>
+                                    <span class="bookauthor">作者：{$bookAuthor.bookauthor}</span>
+                                </div>
                             </div>
-                            <div class="row rowmsg">
-                                <div class="col-md-6 col-sm-6">
-                                    <a href="bookreview_all.html">
-                                        <img src="__PUBLIC__/front/images/myphoto.jpg" class="myphoto2" alt="用户头像" width="44" height="44" /></a>
-                                    <ul class="comment-msg1">
-                                        <li><span name="username">{$bookReviewName.username}</span><span name="publishtime">{$bookReviewTime.publishtime}</span></li>
-                                        <li>
-                                            <span>阅读</span><span name="viewtimes">{$info.viewtimes}</span>
-                                            <span>评论</span><span>{$commentCounts}</span>
-                                            <span>喜欢</span><span>{$likeCounts}</span>
-                                            <span>收藏</span><span>{$collectCounts}</span>
-                                        </li>
-                                    </ul>
-                                    <div class="clear"></div>
-                                    <div class="comment-tag">
-                                        <div>
-                                            <span>图书分类：</span>
-                                            <a href="__MODULE__/Index/tags?bcid={$bookName.bcid}" name="typebcname">{$category.typebcname}</a>
-                                        </div>
-                                        <div class="book">
-                                            <span name="bookname">评论图书：《<a href="__MODULE__/Index/tagbook?bookid={$bookName.bookid}">{$bookName.bookname}</a>》</span>
-                                            <span class="bookauthor">作者：{$bookAuthor.bookauthor}</span>
-                                        </div>
-                                    </div>
 
-                                </div>
-                                <div class="col-md-6 col-sm-6 three-btn">
-                                    <button type="button" class="btn btn-default care" id="concern">关注</button>
-                                    <button type="button" class="btn btn-default collectbooksreview" id="collectBook">收藏书评</button>
-                                    <button class="btn btn-default thebookreview" id="bookSummary">本书简介</button>
-                                    <div class="clear"></div>
-                                    <div class="download">
-                                        <button type="button" class="btn btn-default">下载</button>
-                                        <button class="btn btn-default" id="printbtn">打印</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr />
-                            <div class="article">
-                                <h3 name="title">{$bookReview.title}</h3>
-                                <div name="content">
-                                    <p>{$bookReview.content}</p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">赏</a></p>
-                                <div class="hide_box"></div>
-                                <div class="shang_box">
-                                    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img src="__PUBLIC__/front/images/close%20.jpg" alt="取消" /></a>
-                                    <div class="shang_tit">
-                                        <p>感谢您的支持，我会继续努力的!</p>
-                                    </div>
-                                    <div class="shang_payimg">
-                                        <img src="__PUBLIC__/front/images/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
-                                    </div>
-                                    <div class="pay_explain">扫码打赏，你说多少就多少</div>
-                                    <div class="shang_payselect">
-                                        <div class="pay_item checked" data-id="alipay">
-                                            <span class="radiobox"></span>
-                                            <span class="pay_logo"><img src="__PUBLIC__/front/images/alipay.jpg" alt="支付宝" /></span>
+                        </div>
+                        <div class="col-md-6 col-sm-6 three-btn">
+                            <button type="button" class="btn btn-default care" id="concern">关注</button>
+
+                            <button type="button" class="btn btn-default collectbooksreview" id="modal-88" href="#modal-container-88" data-toggle="modal">收藏书评</button>
+                            <!-- 收藏书评弹出框fy -->
+                            <div class="modal fade" id="modal-container-88" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top:10%;margin-left:10%;">
+                                <div class="modal-dialog">
+                                    <div class="modal-content collectCon">
+                                        <div id='collect'><h5>收藏<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×&nbsp;&nbsp;&nbsp;&nbsp;</button></h5></div>
+                                        <div class='alert-collect'>
+                                            <p><img src='__PUBLIC__/front/images/success.png'></p><br/>
+                                            <p id='colsuccess'>收藏成功^_^</p>
                                         </div>
-                                        <div class="pay_item" data-id="weipay">
-                                            <span class="radiobox"></span>
-                                            <span class="pay_logo"><img src="__PUBLIC__/front/images/wechat.jpg" alt="微信" /></span>
+                                        <div class='bookname'>
+                                            <p id='warning'><img src='__PUBLIC__/front/images/warn.png' height='25' width='25'/>添加书单来管理你的收藏</p>
+                                            <p>我的书单：
+                                                <select id='book'>
+                                                    <option>了解近代史必看的几本书</option>
+                                                    <option>了解近代史必看的几本书</option>
+                                                    <option>了解近代史必看的几本书</option>
+                                                    <option>了解近代史必看的几本书</option>
+                                                </select>
+                                            </p>
+                                            <input type='text' placeholder='&nbsp;&nbsp;&nbsp;创建新书单' id='newbook'>
                                         </div>
-                                    </div>
-                                    <div class="shang_info">
-                                        <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+                                        <div class='alert-collect-footer'>
+                                            <input id='yes' type="submit" value='确定'>&nbsp;&nbsp;&nbsp;
+                                            <input type="button" data-dismiss="modal" aria-hidden="true" value='取消' id='no'>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <hr />
-                            <div class="row">
-                                <div class="col-md-1">
-                                    <button type="button" class="btn btn-default likebooksreview">
-                                        <img src="__PUBLIC__/front/images/heart.png" width="11px" height="auto">喜欢
-                                    </button>
-                                </div>
-                                <div class="col-md-7"></div>
-                                <div class="col-md-4">
-                                    <div class="sharebtn">
-                                        <div class="bdsharebuttonbox">
-                                            <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                            <button class="btn btn-default thebookreview" id="modal-8826" href="#modal-container-8826" data-toggle="modal">本书简介</button>
+                            <!-- 本书简介弹出框fy -->
+                            <div class="modal fade" id="modal-container-8826" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top:10%;margin-left:10%;">
+                                <div class="modal-dialog">
+                                    <div class="modal-content bookSummaryCon">
+                                        <a href='#'><img src='__PUBLIC__/front/images/close.png' height='32' width='32' id='close' data-dismiss="modal"/></a>
+                                        <div class='summaryContent'>
+                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;故事主要视角以19岁的比利•林恩为主，在伊拉克战场的硝烟炮火摸爬滚打一年多后，他所在的B班阴差阳错地迎来一次小小胜利，并因此机缘巧合地成为“美国英雄”，在感恩节回国探亲时期，他们进行了为期两周的“凯旋之旅”，然后继续前往伊拉克服完剩余11个月的兵役。主体情节发生在德克萨斯体育场内，达拉斯牛仔队主场迎战芝加哥熊队。按照美式橄榄球比赛规则，比赛分为四节，每节15分钟，第一、二节称为上半场，第三、四节称为下半场，上下半场之间有12分钟（大学赛20分钟）的中场休息。在这有限的十几分钟之内，何谓“漫长”？ 书名蕴含的相悖逻辑，基本指明了作品暗藏的时间脉络，也是最具亮点之处。</p>
+                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;整本书正面叙述的物理时间，只囊括一个白天，而这一天作为时间轴上的原点与核心，却吸附了无数往事，每扯开一缕思绪的线索，记忆之海便荡漾出无垠涟漪，通过章节之间的自然空白，巧妙回归时间原点，结尾实现完美闭合。于是，在这单一的场景中，时间绵延，空间扩增，通过“中场休息”这一横截面剖析出小至比利参军的前因后果、性格形成、家庭背景，大到整个美国社会的众生纷纭，着力一个微观层面，描摹社会全景与人物群像，是谓见微知著。作者在时间线上下功夫，打破线性叙事的基本结构，一方面顺应现代文艺作品的风潮，不再拘泥于古典叙事的窠臼，一方面也是沿袭了自《追忆似水年华》以来的意识流路线，以恒河一沙粒窥无限往生，更为著名的例子有詹姆斯•乔伊斯的《尤利西斯》、弗吉尼亚・伍尔夫 的《达洛维夫人》和伊恩•麦克尤恩的《星期六》，都是一天之内的脑海风暴与思想旅行。</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- 对书评的评论部分 -->
-                            <!-- 评论数目 -->
-                            <div class="row reviewtimes">
-                                <div class="col-md-12">
-                                    <span>{$commentQuantity}条评论</span>
+
+
+                            <div class="clear"></div>
+                            <div class="download">
+                                <button type="button" class="btn btn-default">下载</button>
+                                <button class="btn btn-default" id="printbtn">打印</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="article">
+                        <h3 name="title">{$bookReview.title}</h3>
+                        <div name="content">
+                            <p>{$bookReview.content}</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">赏</a></p>
+                        <div class="hide_box"></div>
+                        <div class="shang_box">
+                            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img src="__PUBLIC__/front/images/close%20.jpg" alt="取消" /></a>
+                            <div class="shang_tit">
+                                <p>感谢您的支持，我会继续努力的!</p>
+                            </div>
+                            <div class="shang_payimg">
+                                <img src="__PUBLIC__/front/images/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+                            </div>
+                            <div class="pay_explain">扫码打赏，你说多少就多少</div>
+                            <div class="shang_payselect">
+                                <div class="pay_item checked" data-id="alipay">
+                                    <span class="radiobox"></span>
+                                    <span class="pay_logo"><img src="__PUBLIC__/front/images/alipay.jpg" alt="支付宝" /></span>
+                                </div>
+                                <div class="pay_item" data-id="weipay">
+                                    <span class="radiobox"></span>
+                                    <span class="pay_logo"><img src="__PUBLIC__/front/images/wechat.jpg" alt="微信" /></span>
                                 </div>
                             </div>
-                            <!--评论内容输入框-->
-                            <div class="row">
-                                <form action="">
-                                    <!--用户头像-->
-                                    <div class="userphoto">
-                                        <a href=""><img src="__PUBLIC__/front/images/myphoto.jpg" alt="" width="35" height="35"></a>
-                                        <!--输入框-->
-                                        <input type="text" value="">
-                                        <a href=""><img src="__PUBLIC__/front/images/emoji.png" alt="" width="20" height="20" class="emoji"></a>
-                                        <!--评价按钮-->
-                                        <a href="" class="reviewbtn">评价</a>
-                                    </div>
-                                </form>
+                            <div class="shang_info">
+                                <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
                             </div>
-                            <!--评论内容部分-->
-                            <div class="row">
-                                <ul class="list-group">
-                                    <volist name="commentResult" id="vo">
-                                        <li class="list-group-item">
-                                            <div class="row">
-                                                <div class="reviewleft">
-                                                    <a href=""><img src="__PUBLIC__/front/images/myphoto.jpg" class="otheruserphoto" width="35" height="35" alt="我的头像"/></a>
-                                                    <div class="author">
-                                                        <a href="">阿念:</a>
-                                                    </div>
+                        </div>
+                    </div>
+
+                    <hr />
+                    <div class="row">
+                        <div class="col-md-1">
+                            <button type="button" class="btn btn-default likebooksreview">
+                                <img src="__PUBLIC__/front/images/heart.png" width="11px" height="auto">喜欢
+                            </button>
+                        </div>
+                        <div class="col-md-7"></div>
+                        <div class="col-md-4">
+                            <div class="sharebtn">
+                                <div class="bdsharebuttonbox">
+                                    <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 对书评的评论部分 -->
+                    <!-- 评论数目 -->
+                    <div class="row reviewtimes">
+                        <div class="col-md-12">
+                            <span>{$commentQuantity}条评论</span>
+                        </div>
+                    </div>
+                    <!--评论内容输入框-->
+                    <div class="row">
+                        <form action="">
+                            <!--用户头像-->
+                            <div class="userphoto">
+                                <a href=""><img src="__PUBLIC__/front/images/myphoto.jpg" alt="" width="35" height="35"></a>
+                                <!--输入框-->
+                                <input type="text" value="">
+                                <a href=""><img src="__PUBLIC__/front/images/emoji.png" alt="" width="20" height="20" class="emoji"></a>
+                                <!--评价按钮-->
+                                <a href="" class="reviewbtn">评价</a>
+                            </div>
+                        </form>
+                    </div>
+                    <!--评论内容部分-->
+                    <div class="row">
+                        <ul class="list-group">
+                            <volist name="commentResult" id="vo">
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="reviewleft">
+                                            <a href=""><img src="__PUBLIC__/front/images/myphoto.jpg" class="otheruserphoto" width="35" height="35" alt="我的头像"/></a>
+                                            <div class="author">
+                                                <a href="">阿念:</a>
+                                            </div>
+                                        </div>
+                                        <div class="reviewright">
+                                            <p name="commentcontent">{$vo.commentcontent}</p>
+                                            <div>
+                                                <div class="timeagoleft">
+                                                    <span name="commenttime">{$vo.commenttime}前</span>
                                                 </div>
-                                                <div class="reviewright">
-                                                    <p name="commentcontent">{$vo.commentcontent}</p>
-                                                    <div>
-                                                        <div class="timeagoleft">
-                                                            <span name="commenttime">{$vo.commenttime}前</span>
-                                                        </div>
-                                                        <div class="timeagoright">
-                                                            <img src="__PUBLIC__/front/images/delsupport.png" alt="">
-                                                            <span>1</span>
-                                                            <a href="">回复</a>
-                                                        </div>
-                                                    </div>
+                                                <div class="timeagoright">
+                                                    <img src="__PUBLIC__/front/images/delsupport.png" alt="">
+                                                    <span>1</span>
+                                                    <a href="">回复</a>
                                                 </div>
                                             </div>
-                                        </li>
-                                    </volist>
-                                </ul>
-                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </volist>
+                        </ul>
+                    </div>
 
-                            <div class="row">
+                    <div class="row">
 
-                                <nav>
-                                    <!--<ul class="pagination">
-                                        <li><a href="">&laquo;</a></li>
-                                        <li class="active"><a href="">1</a></li>
-                                        <li><a href="">2</a></li>
-                                        <li><a href="">3</a></li>
-                                        <li><a href="">4</a></li>
-                                        <li><a href="">5</a></li>
-                                        <li><a href="">&raquo;</a></li>
-                                    </ul>-->
-                                    {$page}
-                                </nav>
+                        <nav>
+                            <!--<ul class="pagination">
+                                <li><a href="">&laquo;</a></li>
+                                <li class="active"><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                                <li><a href="">5</a></li>
+                                <li><a href="">&raquo;</a></li>
+                            </ul>-->
+                            {$page}
+                        </nav>
 
-                            </div>
-                        </div> <!--content center end-->
-                    </div><!--row end-->
-                    <footer>
-                        <p>copyright@hebeinormal university</p>
-                    </footer>
-                </div><!-- container-fluid -->
-            </div><!--contnet rigt end-->
-        </div><!-- content结束 -->
+                    </div>
+                </div> <!--content center end-->
+            </div><!--row end-->
+            <footer>
+                <p>copyright@hebeinormal university</p>
+            </footer>
+        </div><!-- container-fluid -->
+    </div><!--contnet rigt end-->
+</div><!-- content结束 -->
 
 
 
-    </div><!--canvas end-->
+</div><!--canvas end-->
 </div><!--container end-->
 <script src="__PUBLIC__/front/js/jquery.min.js"></script>
 <script type="text/javascript">
