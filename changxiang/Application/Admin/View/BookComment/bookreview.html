@@ -1,56 +1,64 @@
-
-    <div id="dcMain">
-        <!-- 当前位置 -->
-        <div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>书评列表</strong> </div>
-        <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-            <h3><a href="__MODULE__/BookComment/addbookreview" class="actionBtn add">添加书评</a>书评列表</h3>
-
-            <div id="list">
-                <form name="action" method="post" action="#">
-                    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
-                        <tr>
-                            <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
-                            <th align="center">评论图书</th>
-                            <th align="center">图书作者</th>
-                            <th align="center">图书类型</th>
-                            <th align="center">用户id</th>
-                            <th align="center">书评标题</th>
-                            <th align="center">书评内容</th>
-                            <th align="center">发表时间</th>
-                            <th align="center">收藏量</th>
-                            <th align="center">喜欢量</th>
-                            <th align="center">浏览量</th>
-                            <th align="center">评论量</th>
-                            <th align="center">书评状态</th>
-                            <th align="center">操作</th>
-                        </tr>
-                        <volist name="list" id="vo">
-                            <tr>
-
-                                <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
-                                <td align="center">{$vo.bookname}</td>
-                                <td align="center">{$vo.bookauthor}</td>
-                                <td align="center">图书类型名称</td>
-                                <td align="center">{$vo.userid}</td>
-                                <td align="center">{$vo.title}</td>
-                                <td align="center">{$vo.content}</td>
-                                <td align="center">{$vo.publishtime}</td>
-                                <td align="center"></td>
-                                <td align="center"></td>
-                                <td align="center"></td>
-                                <td align="center"></td>
-                                <td align="center">
-                                    <input name='chkall' type='radio' onclick='selectcheckbox(this.form)' value='check'>已发表&nbsp;
-                                    <input name='chkall' type='radio'  onclick='selectcheckbox(this.form)' value='check'>草稿箱
-                                </td>
-                                <td align="center">
-                                    <a href="__MODULE__/BookComment/editbookreview?bookreviewid={$vo.bookreviewid}&bookid={$vo.bookid}">编辑</a> | <a href="__MODULE__/BookComment/delbookreview/bookreviewid/{$vo.bookreviewid}">删除</a>
-                                </td>
-                            </tr>
-                        </volist>
-                    </table>
-                </form>
-                {$page}
-            </div>
-        </div>
+<div id="dcMain">
+    <!-- 当前位置 -->
+    <div id="urHere">
+        <a href="index.html">畅评首页</a>
+        <b>></b><strong>书评列表</strong> 
     </div>
+    <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+        <h3><a href="__MODULE__/BookComment/addbookreview" class="actionBtn add">添加书评</a>书评列表</h3>
+        <div id="list">
+            <form name="action" method="post" action="#">
+                <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+                    <tr>
+                        <th align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+                        <th align="center">评论图书</th>
+                        <th align="center">图书作者</th>
+                        <th align="center">图书类型</th>
+                        <th align="center">用户名</th>
+                        <th align="center">书评标题</th>
+                        <!-- <th align="center">书评内容</th> -->
+                        <th align="center">发表时间</th>
+                        <!-- <th align="center">收藏量</th>
+                        <th align="center">喜欢量</th>
+                        <th align="center">浏览量</th>
+                        <th align="center">评论量</th> -->
+                        <th align="center">书评状态</th>
+                        <th align="center">操作</th>
+                    </tr>
+                    <volist name="list" id="vo">
+                        <tr>
+
+                            <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
+                            <td align="center">{$vo.bookname}</td>
+                            <td align="center">{$vo.bookauthor}</td>
+                            <td align="center">图书类型名称</td>
+                            <td align="center">{$vo.username}</td>
+                            <td align="center">{$vo.title}</td>
+                            <!-- <td align="center">{$vo.content}</td> -->
+                            <td align="center">{$vo.publishtime}</td>
+                            <!-- <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td> -->
+                            <td align="center">
+                                <input name='chkall' type='radio' onclick='selectcheckbox(this.form)' value='check'>已发表&nbsp;
+                                <input name='chkall' type='radio'  onclick='selectcheckbox(this.form)' value='check'>草稿箱
+                            </td>
+                            <td align="center">
+                                <a href="__MODULE__/BookComment/editbookreview?bookreviewid={$vo.bookreviewid}&bookid={$vo.bookid}">查看</a> | <a href="__MODULE__/BookComment/delbookreview/bookreviewid/{$vo.bookreviewid}">删除</a>
+                            </td>
+                        </tr>
+                    </volist>
+                </table>
+                <br/>
+                <div class="input-group pull-left form">
+                    <button type="submit" class="btn" style="background-color:#20B2AA;"> 批量删除</button>
+                </div>
+            </form>
+        </div>
+        <div class="clear"></div>
+            <div class="pager">
+                {$page}     
+            </div>         
+    </div><!-- mainbox over -->
+</div>

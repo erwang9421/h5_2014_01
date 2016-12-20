@@ -1,88 +1,93 @@
 <div id="dcMain">
- <!-- 当前位置 -->
- <div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>添加作家</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
- <h3><a href="__MODULE__/Author/lists" class="actionBtn">作家列表</a>添加作家</h3>
- <form action="__MODULE__/Author/doAdd" method="post" enctype="multipart/form-data">
-  <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
-   <tr>
-    <td width="90" align="center">用户名</td>
-    <td id="nameParent">
-     <input type="text" name="username" value="" id="Username" size="80" class="inpMain" onblur="isUser(document.getElementById('Username').value);" onfocus="isUser1();"/>
-    </td>
-   </tr>
-   <tr>
-    <td width="90" align="center">密码</td>
-    <td>
-     <input type="text" class="inpMain" placeholder="" name="pass">
-    </td>
-   </tr>
-   <tr>
-   <tr>
-    <td align="center">身份证件照</td>
-    <td>
-     <input type="file" name="idcard[]" multiple/>
-
-   </tr>
-   <td align="center">邮箱</td>
-   <td id="emailParent">
-    <input type="text" name="email" value="" size="50" id="Email" class="inpMain" onblur="isEmail(document.getElementById('Email').value);">
-   </td>
-   </tr>
-   <tr>
-    <td align="center">头像</td>
-    <td>
-      <input type="file" name="userimage[]" size="38" class="inpFlie" />
-
-   </tr>
-   <tr>
-    <td align="center">个人简介</td>
-    <td>
-     <textarea name="introduction" cols="60" rows="4" class="textArea" ></textarea>
-    </td>
-   </tr>
-   <tr>
-    <td></td>
-    <td>
-     <input type="hidden" name="token" value="21307217" />
-     <input type="hidden" name="id" value="">
-     <input name="submit" class="btn" type="submit" value="提交" />
-    </td>
-   </tr>
-  </table>
- </form>
-</div></div>
+  <!-- 当前位置 -->
+  <div id="urHere">
+    <a href="__MODULE__/Index/index">畅评首页</a>
+    <b>></b><strong>添加作家</strong> 
+  </div>   
+  <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+    <h3><a href="__MODULE__/Author/lists" class="actionBtn">作家列表</a>添加作家</h3>
+    <form action="__MODULE__/Author/doAdd" method="post" enctype="multipart/form-data">
+      <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+        <tr>
+          <td width="90" align="center">用户名</td>
+          <td id="nameParent">
+            <input type="text" name="username" value="" id="Username" size="80" class="inpMain" onblur="isUser(document.getElementById('Username').value);" onfocus="isUser1();"/>
+          </td>
+        </tr>
+        <tr>
+          <td width="90" align="center">密码</td>
+          <td>
+            <input type="text" class="inpMain" placeholder="" name="pass">
+          </td>
+        </tr>
+        <tr>
+          <td width="90" align="center">确认密码</td>
+          <td>
+            <input type="text" class="inpMain" placeholder="" name="pass">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">身份证件照</td>
+          <td>
+            <input type="file" name="idcard[]" multiple/>
+        </tr>
+        <tr>
+          <td align="center">邮箱</td>
+          <td id="emailParent">
+            <input type="text" name="email" value="" size="50" id="Email" class="inpMain" onblur="isEmail(document.getElementById('Email').value);">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">头像</td>
+          <td>
+            <input type="file" name="userimage[]" size="38" class="inpFlie" />
+        </tr>
+        <tr>
+          <td align="center">个人简介</td>
+          <td>
+            <textarea name="introduction" cols="60" rows="4" class="textArea" ></textarea>
+          </td>
+         </tr>
+         <tr>
+          <td></td>
+          <td>
+           <input type="hidden" name="token" value="21307217" />
+           <input type="hidden" name="id" value="">
+           <input name="submit" class="btn" type="submit" value="提交" />
+          </td>
+         </tr>
+      </table>
+    </form>
+    <div class="clear"></div>
+  </div>
+</div>
 <script type="text/javascript">
-
- //检查用户名是否合法
- var nameSpan = document.createElement("span");
- var objdiv1=document.getElementById("nameParent");
- objdiv1.appendChild(nameSpan);
- nameSpan.innerHTML ="用户名由小写英文字母、中文、数字组成";
- function isUser1() {
+   //检查用户名是否合法
+  var nameSpan = document.createElement("span");
+  var objdiv1=document.getElementById("nameParent");
+  objdiv1.appendChild(nameSpan);
   nameSpan.innerHTML ="用户名由小写英文字母、中文、数字组成";
- }
- function isUser(str) {
-  var reg =/^[\u4e00-\u9fa5]{1,6}|[a-zA-Z]{1,12}$/;
-  if(reg.test(str) == false) {
-   var str = nameSpan.innerHTML ="用户名输入错误";
+  function isUser1() {
+    nameSpan.innerHTML ="用户名由小写英文字母、中文、数字组成";
   }
-  else {
-   var str = nameSpan.innerHTML ="";
+  function isUser(str) {
+    var reg =/^[\u4e00-\u9fa5]{1,6}|[a-zA-Z]{1,12}$/;
+    if(reg.test(str) == false) {
+     var str = nameSpan.innerHTML ="用户名输入错误";
+    }else {
+     var str = nameSpan.innerHTML ="";
+    }
   }
- }
-
-
- //检查email邮箱
- var doc = document.createElement("span");
- var objdiv=document.getElementById("emailParent");
- objdiv.appendChild(doc);/*再将元素加到指定DIV中！*/
- function isEmail(str){
-  var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
-  if(reg.test(str) == false) {
-   var str = doc.innerHTML ="邮箱输入错误";
+   //检查email邮箱
+  var doc = document.createElement("span");
+  var objdiv=document.getElementById("emailParent");
+  objdiv.appendChild(doc);/*再将元素加到指定DIV中！*/
+  function isEmail(str){
+    var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+    if(reg.test(str) == false) {
+     var str = doc.innerHTML ="邮箱输入错误";
+    }else {
+     var str = doc.innerHTML ="";
+    }
   }
-  else {
-   var str = doc.innerHTML ="";
-  }
- }
 </script>

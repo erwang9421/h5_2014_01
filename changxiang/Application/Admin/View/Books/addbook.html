@@ -1,59 +1,57 @@
- <div id="dcMain">
+<div id="dcMain">
    <!-- 当前位置 -->
-<div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>添加图书</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-            <h3><a href="__MODULE__/Books/lists" class="actionBtn">图书列表</a>添加图书</h3>
+  <div id="urHere">
+    <a href="__MODULE__/Index/index">畅评首页</a>
+    <b>></b><strong>添加图书</strong> 
+  </div>   
+  <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+    <h3><a href="__MODULE__/Books/lists" class="actionBtn">图书列表</a>添加图书</h3>
     <form method="post" action="__MODULE__/Books/doAdd" enctype="multipart/form-data">
-    
-     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
-      <tr>
-       <td width="80" align="center">图书名称</td>
-       <td>
-
-       <!--  echo($books['bookname']); -->
-
-        <input type="text" name="bookname" size="40" class="inpMain"  />
-       </td>
-      </tr>
-      <tr>
-       <td align="center">图书作者</td>
-       <td>
-        <input type="text" name="bookauthor" size="40" class="inpMain"  />
-       </td>
-      </tr>
-      <tr>
-       <td align="center">图书类型</td>
-       <td>
-        <select name="bcid">
-         <!-- <option value="0">未分类</option> -->
+      <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+        <tr>
+          <td width="80" align="center">图书名称</td>
+          <td>
+          <!--  echo($books['bookname']); -->
+            <input type="text" name="bookname" size="40" class="inpMain"  />
+          </td>
+        </tr>
+        <tr>
+          <td align="center">图书作者</td>
+          <td>
+            <input type="text" name="bookauthor" size="40" class="inpMain"  />
+          </td>
+        </tr>
+        <tr>
+          <td align="center">图书类型</td>
+          <td>
+          <select name="bcid">
+            <!-- <option value="0">未分类</option> -->
               <volist name="tags" id="t">
                 <option value="{$t.bcid}">- {$t.typebcname}</option>
               </volist>
-                          </select>
-       </td>
-      </tr>
-      <tr>
-       <td align="center">图书简介</td>
-       <td>
-        <textarea name="bookcontent" cols="60" rows="4" class="textArea" ></textarea>
-       </td>
-      </tr>
-      <tr>
-       <td align="center">添加时间</td>
-       <td>
-        <input type="text" name="addtime" value="{:date('Y-m-d H:i:s')}" size="5" class="inpMain"  />
-       </td>
-      </tr>
-      <tr>
-       <td></td>
-       <td>
-        <input type="hidden" name="token" value="25bfda40" />
-        <input type="hidden" name="cat_id" />
-        <!-- <input type="hidden" name="id" value="{$books.bookid}"> -->
-
-        <input name="submit" class="btn" type="submit" value="提交" />
-       </td>
-      </tr>
-     </table>
+          </select>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">图书简介</td>
+          <td>
+            <textarea name="bookcontent" cols="60" rows="4" class="textArea" ></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">添加时间</td>
+          <td>
+            <input type="text" name="addtime" value="{:date('Y-m-d H:i:s')}" size="5" class="inpMain"  />
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input name="submit" class="btn" type="submit" value="提交" />
+          </td>
+        </tr>
+      </table>
     </form>
- </div>
+    <div class="clear"></div>
+  </div><!-- mainbox over -->
 </div> 

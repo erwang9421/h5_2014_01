@@ -1,57 +1,46 @@
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>畅享书评后台管理系统-粉丝管理</title>
-</head>
 <form action="__MODULE__/Fans/delete" >
- <div id="dcMain">
+  <div id="dcMain">
    <!-- 当前位置 -->
-<div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>粉丝管理</strong> </div>
-     <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-        <h3>粉丝列表</h3>
-    
-        <div id="list">
-    <form name="action" method="post" action="">
-    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
-      <tr>
-          <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
-          <th width="80" align="center">ID</th>
-          <th align="center">用户名</th>
-          <th align="center">粉丝名</th>
-          <th  align="center">关注时间</th>
-          <th align="center">操作</th>
-      </tr>
-
-
-      <volist name="fans" id="f">
-            <tr>
-                 <td align="center"><input type="checkbox" name="id[]" value="{$f.id}" class="checkbox" id="id[]" /></td>
-                <td align="center">{$f.id}</td>
-                <td align="center">{$f.username}</a></td>
-                <td align="center">{$f.fanname}</a></td>
-                <td align="center">{$f.attentiontime}</td>
-                <td align="center">
-                <a href="__MODULE__/Fans/delete/delete?id='{$f['id']}'">删除</a>
-                </td>
+    <div id="urHere">
+      <a href="index.html">畅评首页</a>
+      <b>></b><strong>粉丝管理</strong> 
+    </div>
+    <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+      <h3>粉丝列表</h3>
+      <div id="list">
+        <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+          <tr>
+              <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+              <th width="80" align="center">ID</th>
+              <th align="center">用户名</th>
+              <th align="center">粉丝名</th>
+              <th  align="center">关注时间</th>
+              <th align="center">操作</th>
           </tr>
-        </volist>
-    </table>
-                <br/>
-                <div class="input-group pull-left form">
-                    <button type="button" class="btn" style="background-color:#20B2AA;">批量删除</button>
-                </div>
-                <!-- <div class="action"> -->
-            </form>
+          <volist name="fans" id="f">
+            <tr>
+              <td align="center"><input type="checkbox" name="id[]" value="{$f.id}" class="checkbox" id="id[]" /></td>
+              <td align="center">{$f.id}</td>
+              <td align="center">{$f.username}</a></td>
+              <td align="center">{$f.fanname}</a></td>
+              <td align="center">{$f.attentiontime}</td>
+              <td align="center">
+                <a href="__MODULE__/Fans/delete/delete?id='{$f['id']}'">删除</a>
+              </td>
+            </tr>
+          </volist>
+        </table>
+        <br/>
+        <div class="input-group pull-left form">
+          <button type="button" class="btn" style="background-color:#20B2AA;">批量删除</button>
         </div>
-        <div class="clear"></div>
-
-        <!--  <ul class="pagination pull-right" style="float:left;margin-left:960px;">
-             {$page}
-         </ul> -->
-
-        <div class="pager"><!-- 总计 5 个记录，共 1 页，当前第 1 页 |  -->
-            <!-- <a href="book.html">第一页</a> 上一页 下一页 <a href="book.html">最末页</a> -->
-            {$page}
-        </div>               </div>
-</div>
+      </div><!-- list over -->
+      
+      <div class="clear"></div>
+      <div class="pager"><!-- 总计 5 个记录，共 1 页，当前第 1 页 |  -->
+          <!-- <a href="book.html">第一页</a> 上一页 下一页 <a href="book.html">最末页</a> -->
+          {$page}
+      </div>               
+    </div>
+  </div>
 </form>

@@ -1,38 +1,38 @@
- <div id="dcMain">
+<div id="dcMain">
    <!-- 当前位置 -->
-<div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>添加图书分类</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-            <h3><a href="__MODULE__/BookCategory/bookcategory" class="actionBtn">图书分类列表</a>添加图书分类</h3>
+  <div id="urHere">
+    <a href="__MODULE__/Index/index">畅评首页</a>
+    <b>></b><strong>添加图书分类</strong> 
+  </div>   
+  <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+    <h3><a href="__MODULE__/BookCategory/bookcategory" class="actionBtn">图书分类列表</a>添加图书分类</h3>
     <form method="post" action="__MODULE__/BookCategory/doAdd" enctype="multipart/form-data">
-    
-     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
-      <tr>
-       <td width="80" align="center">图书分类名称</td>
-       <td>
-        <input type="text" name="typebcname" size="40" class="inpMain"  />
-       </td>
-      </tr>
-      <tr>
-       <td align="center">父级ID</td>
-       <td>
-        <input type="text" name="pid" size="40" class="inpMain"  />
-       </td>
-      </tr>
-    
-       <td align="center">添加时间</td>
-       <td>
-        <input type="text" name="addtime" size="5" class="inpMain" value="{:date('Y-m-d H:i:s')}"  />
-       </td>
-      </tr>
-      <tr>
-       <td></td>
-       <td>
-        <input type="hidden" name="token" value="25bfda40" />
-        <input type="hidden" name="cat_id" />
-        <input name="submit" class="btn" type="submit" value="提交" />
-       </td>
-      </tr>
-     </table>
-
+      <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+        <tr>
+          <td width="80" align="center">图书分类名称</td>
+          <td>
+            <input type="text" name="typebcname" size="40" class="inpMain"  />
+          </td>
+        </tr>
+        <tr>
+          <td align="center">父级ID</td>
+          <td>
+            <input type="text" name="pid" size="40" class="inpMain"  />
+          </td>
+        </tr>
+          <td align="center">添加时间</td>
+          <td>
+            <input type="text" name="addtime" size="5" class="inpMain" value="{:date('Y-m-d H:i:s')}"  />
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input name="submit" class="btn" type="submit" value="提交" />
+          </td>
+        </tr>
+      </table>
     </form>
- </div>
+    <div class="clear"></div>
+  </div>
 </div> 

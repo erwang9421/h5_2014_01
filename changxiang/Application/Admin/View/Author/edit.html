@@ -1,72 +1,68 @@
 <div id="dcMain">
     <!-- 当前位置 -->
-    <div id="urHere"><a href="#">畅评首页</a><b>></b><strong>编辑信息</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-    <h3><a href="__MODULE__/Author/lists" class="actionBtn">返回列表</a>编辑信息</h3>
-    <form action="" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="{$data.id}">
-        <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
-            <tr>
-                <td width="90" align="center">用户名</td>
-                <td>
-                    <input type="text" name="username" value="{$data.username}" size="80" class="inpMain" />
-                </td>
-            </tr>
-            <tr>
-                <td width="90" align="center">密码</td>
-                <td>
-                    <input type="text" class="inpMain" placeholder="" name="pass" value="{$data.pass}">
-                </td>
-            </tr>
-            <tr>
-                <td align="center">身份证件照</td>
-                <td>
-                    <!-- <input type="file" name="idcard" enctype="multipart/form-data" value="{$data.idcard}"  size="38" class="inpFlie" /> -->
-                    <?php
+    <div id="urHere">
+        <a href="#">畅评首页</a>
+        <b>></b><strong>查看信息</strong> 
+    </div>   
+    <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+        <h3><a href="__MODULE__/Author/lists" class="actionBtn">返回列表</a>查看信息</h3>
+        <form action="" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="{$data.id}">
+            <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+                <tr>
+                    <td width="90" align="center">用户名</td>
+                    <td>
+                        <input type="text" name="username" value="{$data.username}" size="80" class="inpMain" />
+                    </td>
+                </tr>
+                <tr>
+                    <td width="90" align="center">密码</td>
+                    <td>
+                        <input type="text" class="inpMain" placeholder="" name="pass" value="{$data.pass}">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td align="center">身份证件照</td>
+                    <td>
+                        <!-- <input type="file" name="idcard" enctype="multipart/form-data" value="{$data.idcard}"  size="38" class="inpFlie" /> -->
+                        <?php
                             $a = $data['idcard'];
                             $arr = explode(",",$a);
                             foreach ($arr as $key => $value) {     
-                            $photo = "<img src='__PUBLIC__$value' alt='' width='220'>"; 
+                                $photo = "<img src='__PUBLIC__$value' alt='' width='220'>"; 
                                 echo $photo ;
                             }
-                    ?>
-
-            </tr>
-            <tr>
-                <td align="center">邮箱</td>
-                <td>
-                    <input type="text" name="email" value="{$data.email}" size="50" class="inpMain" />
-                </td>
-            </tr>
-            <tr>
-                <td align="center">头像</td>
-                <td>
-                    <!-- <input type="file" name="authorimage" value="{$data.authorimage}" size="38" class="inpFlie" /> -->
-                    <?php
+                        ?>
+                </tr>
+                <tr>
+                    <td align="center">邮箱</td>
+                    <td>
+                        <input type="text" name="email" value="{$data.email}" size="50" class="inpMain" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">头像</td>
+                    <td>
+                        <!-- <input type="file" name="authorimage" value="{$data.authorimage}" size="38" class="inpFlie" /> -->
+                        <?php
                             $b = $data['userimage'];
                             $arr = explode(",",$b);
-
-                            foreach ($arr as $key => $value) {
-                                
+                            foreach ($arr as $key => $value) {                               
                                 echo "<img src='__PUBLIC__$value' alt='' width='97'>";
                             }
-                    ?>
+                        ?>
 
-            </tr>
-            <tr>
-                <td align="center">个人简介</td>
-                <td>
-                    <textarea name="introduction" cols="60" rows="4" class="textArea" >{$data.introduction}</textarea>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="hidden" name="token" value="21307217" />
-                    <input type="hidden"  value="">
-                    <input name="submit" class="btn" type="submit" value="提交" />
-                </td>
-            </tr>
-        </table>
-    </form>
-</div>
+                </tr>
+                <tr>
+                    <td align="center">个人简介</td>
+                    <td>
+                        <textarea name="introduction" cols="60" rows="4" class="textArea" >{$data.introduction}</textarea>
+                    </td>
+                </tr>
+               
+            </table>
+        </form>
+        <div class="clear"></div>
+    </div>
 </div>

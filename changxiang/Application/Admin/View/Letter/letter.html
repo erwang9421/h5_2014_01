@@ -1,46 +1,47 @@
- <form action="__MODULE__/Letter/delete" method="get">
- <div id="dcMain">
-   <!-- 当前位置 -->
-<div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>私信列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-        <h3>私信列表</h3>
-   
-    <div id="list">
-    <form name="action" method="post" action="product.php?rec=action">
-    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
-      <tr>
-        <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
-        <th width="40" align="center">ID</th>
-        <th align="center">接收用户名</th>
-        <th align="center">发送用户名</th>
-        <th align="center">私信内容</th>
-       <th  align="center">私信时间</th>
-        <th width="80" align="center">操作</th>
-      </tr>
-      <volist name="letter" id="l">
-        <tr>
-        <td align="center"><input type="checkbox" name="letterId[]" value="{$l.messageid}" /></td>
-        <td align="center">{$l.messageid}</td>
-        <td align="center">{$l.username}</td>
-        <td align="center">{$l.username}</td>
-        <td style="font-size:14px">{$l.content|mb_substr=0,18,'utf-8'}</td>
-        <td align="center">{$l.messagetime}</td>
-        <td align="center">
-        <a href="__MODULE__/Letter/editletter/letterId/{$l.messageid}">查看</a> | <a href="__MODULE__/Letter/delete/letterId/{$l.messageid}">删除</a>
-        </td>
-      </tr>
-      </volist>
-
-    </table>
-    <div class="action"></div>
-    </form>
+<form action="__MODULE__/Letter/delete" method="get">
+    <div id="dcMain">
+        <!-- 当前位置 -->
+        <div id="urHere">
+            <a href="__MODULE__/Index/index">畅评首页</a>
+            <b>></b><strong>私信列表</strong> 
+        </div>   
+        <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+            <h3>私信列表</h3>
+            <div id="list">
+                <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+                  <tr>
+                    <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+                    <th width="40" align="center">ID</th>
+                    <th align="center">接收用户名</th>
+                    <th align="center">发送用户名</th>
+                    <th align="center">私信内容</th>
+                   <th  align="center">私信时间</th>
+                    <th width="80" align="center">操作</th>
+                  </tr>
+                  <volist name="letter" id="l">
+                    <tr>
+                    <td align="center"><input type="checkbox" name="letterId[]" value="{$l.messageid}" /></td>
+                    <td align="center">{$l.messageid}</td>
+                    <td align="center">{$l.username}</td>
+                    <td align="center">{$l.username}</td>
+                    <td style="font-size:14px">{$l.content|mb_substr=0,18,'utf-8'}</td>
+                    <td align="center">{$l.messagetime}</td>
+                    <td align="center">
+                    <a href="__MODULE__/Letter/editletter/letterId/{$l.messageid}">查看</a> | <a href="__MODULE__/Letter/delete/letterId/{$l.messageid}">删除</a>
+                    </td>
+                  </tr>
+                  </volist>
+                </table>
+                <br/>
+                <div class="input-group pull-left form">
+                    <button type="submit" class="btn" style="background-color:#20B2AA;"> 批量删除</button>
+                </div>
+            </div>
+            
+            <div class="clear"></div>
+            <div class="pager"><!-- 总计 5 个记录，共 1 页，当前第 1 页 | <a href="letter.html">第一页</a> 上一页 下一页 <a href="letter.html">最末页</a> -->
+            {$page}
+            </div>              
+        </div><!-- mainbox over -->
     </div>
-    <br/>
-    <div class="input-group pull-left form">
-        <button type="submit" class="btn" style="background-color:#20B2AA;"> 批量删除</button>
-    </div>
-    <div class="clear"></div>
-    <div class="pager"><!-- 总计 5 个记录，共 1 页，当前第 1 页 | <a href="letter.html">第一页</a> 上一页 下一页 <a href="letter.html">最末页</a> -->
-    {$page}
-    </div>               </div>
- </div>
- </form>
+</form>

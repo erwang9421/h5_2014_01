@@ -22,9 +22,10 @@ class CommentController extends Controller {
         //将用户表和评论表进行关联
         $this -> assign("result",$result);
         //进行分页数据查询，注意limit方法的参数要使用Page类的属性
-        $list2 = $commentsModel->join('bookreview ON comments.bookreviewid = bookreview.bookreviewid')->join( 'author ON comments.commentname = author.username' )->select();
-        $list3 = $commentsModel->join('bookreview ON comments.bookreviewid = bookreview.bookreviewid')->join( 'users ON comments.commentname = users.username' )->select();
+        $list2 = $commentsModel->join('bookreview ON comments.bookreviewid = bookreview.bookreviewid')->join( 'author ON comments.commentuserid = author.id' )->select();
+        $list3 = $commentsModel->join('bookreview ON comments.bookreviewid = bookreview.bookreviewid')->join( 'users ON comments.commentuserid = users.id' )->select();
         $list4 =array_merge($list2,$list3);
+        // dump($list4);
         $show = $page -> show();//分页显示输出
         $this -> assign('page',$show);//赋值分页输出
         $this -> assign('list',$list4);//赋值数据集
