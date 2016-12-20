@@ -86,6 +86,7 @@ class BookController extends Controller {
 
         //图书作者的实现
         $this -> assign("bookAuthor",$books);
+
         //页面底部评论内容的动态获取
         //实例化评论表对象模型
         //实例化comments对象模型
@@ -100,17 +101,16 @@ class BookController extends Controller {
         $page = new \Think\Page($count,3);
         //进行分页数据查询 Page方法的参数的前面部分是当前的页数，使用$_GET['p']获取
         $nowPage = isset($_GET['p'])?intval($_GET['p']):1;
-                $page -> setConfig('first','第一页');
-                $page -> setConfig('prev','前一页');
-                $page -> setConfig('next','后一页');
-                //进行分页数据查询，注意limit方法的参数要使用Page类的属性
-                $commentResult = $comment  -> where("bookreviewid = {$bookreviewid}") -> order("commenttime desc") -> page($nowPage.',3') -> select();
-                $show = $page -> show();//分页显示输出
-                $this -> assign('page',$show);//赋值分页输出
+        $page -> setConfig('first','第一页');
+        $page -> setConfig('prev','前一页');
+        $page -> setConfig('next','后一页');
+        //进行分页数据查询，注意limit方法的参数要使用Page类的属性
+        $commentResult = $comment  -> where("bookreviewid = {$bookreviewid}") -> order("commenttime desc") -> page($nowPage.',3') -> select();
+        $show = $page -> show();//分页显示输出
+        $this -> assign('page',$show);//赋值分页输出
 
-
-            //当前时间-评论时间=时间差，即“多长时间之前发表的评论”
-            //for循环遍历数组，将commmenttime赋值为“多少小时或者多少年或者多少分钟或者多少秒”
+        //当前时间-评论时间=时间差，即“多长时间之前发表的评论”
+        //for循环遍历数组，将commmenttime赋值为“多少小时或者多少年或者多少分钟或者多少秒”
         for($i = 0; $i < $count; $i++){
             $past = strtotime($commentResult[$i]["commenttime"]); // 发布日期
             $now = time(); // 当前日期
@@ -123,7 +123,7 @@ class BookController extends Controller {
          //获取评论的条数
          $this -> assign("commentQuantity",$count);
 
-        $this->display();
+         $this->display();
     }
 
      public function editarticle(){
