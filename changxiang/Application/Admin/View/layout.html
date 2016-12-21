@@ -1,93 +1,103 @@
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>畅想书评后台管理系统-用户列表</title>
-<meta name="Copyright" content="Douco Design." />
-<link href="__PUBLIC__/end/css/public.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="__PUBLIC__/end/js/jquery.min.js"></script>
-<script type="text/javascript" src="__PUBLIC__/end/js/global.js"></script>
-<script type="text/javascript" src="__PUBLIC__/end/js/jquery.tab.js"></script>
-<script type="text/javascript" src="__PUBLIC__/end/js/jquery.autotextarea.js"></script>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>畅想书评后台管理系统-用户列表</title>
+    <meta name="Copyright" content="Douco Design." />
 
-</head>
-<body>
-<div id="dcWrap"> <div id="dcHead">
- <div id="head">
-  <div class="logo"><a href="index.html"><img src="__PUBLIC__/end/images/1.png" alt="logo" height="30"></a></div>
-  <div class="nav">
-   <ul>畅享书评后台管理系统
-   </ul>
-   <ul class="navRight">
-    <li class="noRight"><a href="__MODULE__/Admin/editmanager">您好，fygd</a>
-     
-    </li>
-   <li class="noRight"><a href="__MODULE__/Admin/login">退出</a></li>
-   </ul>
-  </div>
- </div>
-</div>
-<!-- dcHead 结束 --> 
-<div id="dcLeft"><div id="menu">
- <ul class="top">
-  <li><a href="__MODULE__/Index/index"><i class="home"></i><em>首页</em></a></li>
- </ul>
+    <link href="__PUBLIC__/end/css/public.css" rel="stylesheet" type="text/css">
 
-<ul>
-  <li><a href="__MODULE__/Admin/manager"><i class="manager"></i><em>管理员管理</em></a></li>
- </ul>
+    <script type="text/javascript" src="__PUBLIC__/end/js/jquery.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/end/js/global.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/end/js/jquery.tab.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/end/js/jquery.autotextarea.js"></script>
 
+  </head>
+  <style type="text/css">
+    @media screen and (max-width: 1024px) {
+      .tableBasic th ,td,th input{
+        font-size: 6px;
+      }
+      .menu ul li a em{
+        font-size: 8px;
+      }
+    }
+</style>
+  <body>
+    <div id="dcWrap"> 
+      <div id="dcHead">
+        <div id="head">
+          <div class="logo">
+            <a href="index.html">
+              <img src="__PUBLIC__/end/images/1.png" alt="logo" height="30">
+            </a>
+          </div><!-- logo over -->
+          <div class="nav">
+            <ul>畅享书评后台管理系统</ul>
+            <ul class="navRight">
+              <li class="noRight"><a href="__MODULE__/Admin/editmanager">您好，fygd</a></li>
+              <li class="noRight"><a href="__MODULE__/Admin/login">退出</a></li>
+            </ul>
+          </div><!-- nav over -->
+       </div><!-- head over -->
+      </div><!-- dcHead 结束 --> 
+      <div id="dcLeft">
+        <div id="menu">
+          <ul class="top">
+            <li><a href="__MODULE__/Index/index"><i class="home"></i><em>首页</em></a></li>
+          </ul>
+          <ul>
+            <li><a href="__MODULE__/Admin/manager"><i class="manager"></i><em>管理员管理</em></a></li>
+          </ul>
+          <ul>
+            <li><a href="__MODULE__/Author/lists"><i class="user"></i><em>作家列表</em></a></li>
+            <li><a href="__MODULE__/Author/add"><i class="page"></i><em>添加作家</em></a></li>
+          </ul>
+          <ul>
+            <li><a href="__MODULE__/User/lists"><i class="user"></i><em>用户列表</em></a></li>
+            <li><a href="__MODULE__/User/adduser"><i class="page"></i><em>添加用户</em></a></li>
+          </ul>
+          <ul>
+            <li><a href="__MODULE__/Books/lists"><i class="product"></i><em>图书列表</em></a></li>
+            <li><a href="__MODULE__/Books/addbook"><i class="articleCat"></i><em>添加图书</em></a></li>
+          </ul>
+          <ul>
+            <li><a href="__MODULE__/BookComment/bookreview"><i class="productCat"></i><em>书评列表</em></a></li>
+            <li><a href="__MODULE__/BookComment/addbookreview"><i class="guestbook"></i><em>添加书评</em></a></li>
+          </ul>
+          <ul>
+            <li><a href="__MODULE__/BookCategory/bookcategory"><i class="menuPage"></i><em>图书分类</em></a></li>
+            <li><a href="__MODULE__/Tag/tag"><i class="nav"></i><em>书评标签</em></a></li>
+          </ul>
+          <ul>
+            <li><a href="__MODULE__/Comment/lists"><i class="order"></i><em>评论管理</em></a></li>
+          </ul>
+          <ul>
+            <li><a href="__MODULE__/Like/likebookview"><i class="theme"></i><em>喜欢/收藏</em></a></li>
+          </ul>
+          <ul>
+            <li><a href="__MODULE__/Letter/letter"><i class="caseCat"></i><em>私信管理</em></a></li>
+          </ul>
+          <ul>
+            <li><a href="__MODULE__/Zan/lists"><i class="show"></i><em>点赞管理</em></a></li>
+          </ul>
+          <ul>
+            <li><a href="__MODULE__/Fans/lists"><i class="pse"></i><em>粉丝管理</em></a></li>
+          </ul>
+        </div>
+      </div><!-- dcLeft over -->
 
- <ul>
-  <li><a href="__MODULE__/User/lists"><i class="user"></i><em>用户列表</em></a></li>
-  <li><a href="__MODULE__/User/adduser"><i class="page"></i><em>添加用户</em></a></li>
- </ul>
- <ul>
-  <li><a href="__MODULE__/Author/lists"><i class="user"></i><em>作家列表</em></a></li>
-  <li><a href="__MODULE__/Author/add"><i class="page"></i><em>添加作家</em></a></li>
- </ul>
- <ul>
-  <li><a href="__MODULE__/Books/lists"><i class="product"></i><em>图书列表</em></a></li>
-  <li><a href="__MODULE__/Books/addbook"><i class="articleCat"></i><em>添加图书</em></a></li>
- </ul>
- <ul>
-  <li><a href="__MODULE__/BookComment/bookreview"><i class="productCat"></i><em>书评列表</em></a></li>
-  <li><a href="__MODULE__/BookComment/addbookreview"><i class="guestbook"></i><em>添加书评</em></a></li>
- </ul>
- <ul>
-  <li><a href="__MODULE__/BookCategory/bookcategory"><i class="menuPage"></i><em>图书标签</em></a></li>
-  <li><a href="__MODULE__/Tag/tag"><i class="nav"></i><em>书评标签</em></a></li>
- </ul>
+      {__CONTENT__}
 
-<ul>
-  <li><a href="__MODULE__/BookComment/bookview"><i class="order"></i><em>评论管理</em></a></li>
- </ul>
- <ul>
-   <li><a href="__MODULE__/Like/likebookview"><i class="theme"></i><em>喜欢/收藏</em></a></li>
- </ul>
- <ul>
-  <li><a href="__MODULE__/Letter/letter"><i class="caseCat"></i><em>私信管理</em></a></li>
- </ul>
- <ul>
-  <li><a href="__MODULE__/Zan/lists"><i class="show"></i><em>点赞管理</em></a></li>
- </ul>
- <ul>
-  <li><a href="__MODULE__/Fans/lists"><i class="pse"></i><em>粉丝管理</em></a></li>
- </ul>
-  
-</div></div>
-
-{__CONTENT__}
-
-
- <div class="clear"></div>
-<div id="dcFooter">
- <div id="footer">
-  <div class="line"></div>
-  <ul>
-    畅所欲言，享你所想  |  畅想书评网站后台管理系统
-  </ul>
- </div>
-</div><!-- dcFooter 结束 -->
-<div class="clear"></div> </div>
-</body>
+      <div class="clear"></div>
+      <div id="dcFooter">
+        <div id="footer">
+          <div class="line"></div>
+          <ul>
+            畅所欲言，享你所想  |  畅想书评网站后台管理系统
+          </ul>
+         </div>
+      </div><!-- dcFooter 结束 -->
+      <div class="clear"></div> 
+    </div>
+  </body>
 </html>

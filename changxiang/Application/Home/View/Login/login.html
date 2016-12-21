@@ -1,60 +1,54 @@
+{__NOLAYOUT__}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>登录页</title>
-    <link rel="stylesheet" href="css/login.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/front/css/login.css" />
+    <link rel="stylesheet" href="__PUBLIC__/front/css/bootstrap.min.css">
     <script src="__PUBLIC__/front/js/jquery.js"></script>
     <script src="__PUBLIC__/front/js/bootstrap.min.js"></script>
-    <script src="__PUBLIC__/front/js/登录页.js"></script>
 
 
 </head>
 <body>
-<div class="page" style="background-image: url('images/background1.jpg');">
+<div class="page">
     <div class="header">
         <a href="personal register.html"><button type="button" class="bt" >注册</button></a>
     </div>
     <div class="images"  >
-        <img src="images/text.png">
+        <img src="__PUBLIC__/front/images/text.png">
     </div>
     <div class="content" style="padding-top:10px;">
+    <form action="__MODULE__/Login/checkId" method="post" enctype="multipart/form-data">
         <div class="username" >
-            <input type="password" placeholder="用户名"  name="username">
+            <input type="text" placeholder="用户名"  name="username">
         </div>
         <div class="password" >
-            <input type="password"  placeholder="密码" name="password">
+            <input type="password"  placeholder="密码" name="pass">
         </div>
         <div class="psd" style="padding-top:20px;" 	>
-
             <input type="text"  placeholder="验证码" name="psd" style="width:180px;">
-            <span style="display:inline-block;height:32px;width:78px;background-color:#D0D0D0;color:rgb(94,178,240);	position: relative;
-
-              top: -1px;padding-top:5px;" >1234</span>
-
+            <span style="display:inline-block;height:32px;width:78px;background-color:#D0D0D0;color:rgb(94,178,240);	position: relative; top: -1px;padding-top:5px;" >1234</span>
             <div style="margin-left:-120px;padding-top:10px;">
                 <input name="" type="checkbox" value="" checked="checked" style="width:15px;height:12px;" >
                 <a style="color:rgb(94,178,240);font-size:small;">记住密码</a>
                 <a style="  color: red;font-size: small;">忘记密码？</a>
             </div>
             <div class="btn">
-                <a href="index.html">  <button type="button"  onclick="test()" style="border-radius:8px;">登录</button></a>
+                <a href="index.html">  <button type="submit" style="border-radius:8px;">登录</button></a>
             </div>
         </div>
-
-
-        <div class="footer" style="margin-top:20px;position: relative;left:-60px;">
+         <div class="footer" style="margin-top:20px;position: relative;left:-60px;">
             <p style="font-size:small;display:inline;"> 其他登录：</p>
             <div style="display:inline">
-                <img  src="images/weixin.png">
-                <img  src="images/weibo.png">
-                <img  src="images/QQ.png">
+                <img  src="__PUBLIC__/front/images/weixin.png">
+                <img  src="__PUBLIC__/front/images/weibo.png">
+                <img  src="__PUBLIC__/front/images/QQ.png">
             </div>
         </div>
+    </form>
     </div>
  </div>
 </body>
-
-
 </html>

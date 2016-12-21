@@ -76,9 +76,9 @@
 	line-height: 180%;
 	padding: 2% 7%;
 }
-.function p:first-child{
+/*.function p:first-child{
 	text-align: justify;
-}
+}*/
 .function p{
 	text-align: center;
 }
@@ -112,6 +112,10 @@
 	height:100%;
 	float: left;
 	position: relative;
+}
+.bigform{
+	width: 100%;
+	/*border: 1px solid blue;*/
 }
 .main-title {
 	border:none;
@@ -154,36 +158,44 @@
 }
 .scale-message {
 	width:90%;
-	height: 400px;
+	height: 85%;
 	margin-top: 5%;
-	left: 5%;
+	/*left: 1%;*/
+	/*border: 1px solid red;*/
 }
-.writeform {
+/*.writeform {
 	float: left;
-	width: 60%;
-}
+	width: 25%;
+}*/
 .scale-message a {
 	float: left;
 	line-height: 32px;
 }
-.selectphoto{
-	width: 40%;
+/*.selectmes{
+	clear: both;
+	width: 78%;
 	float: left;
+}*/
+.selectphoto{
+	width: 20%;
+	float: left;
+	margin-left: 20%;
+	/*margin-right: 1%;*/
+	/*margin-bottom: 1%;*/
 }
 .selectphoto img{
-	float: left;
-	margin-left: 100px;
+	/*float: left;*/
+	/*margin-left: 4%;*/
 }
 .selected-photo {
-	margin-top: 10px;
-	float: right;
-
+	/*margin-top: 2px;*/
+	/*float: right;*/
+	/*margin-left: 4%;*/
 }
 .edit-font {
 	font-size:30px;
+	/*margin-left: 85%;*/
 }
-
-
 
 /*修改密码弹出框样式*/
 #change h5{
@@ -270,9 +282,6 @@
 	background:#fff center center no-repeat;
 	border-top:4px #5EB2F0 solid;
 	}
-
-
-
 
 
 /*意见反馈弹出框样式*/

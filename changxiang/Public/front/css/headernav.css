@@ -33,7 +33,7 @@ a:hover {
 }
 /*canvas样式*/
 #canvas {
-	padding: 0;
+    padding: 0;
 }
 /*canvas里面 侧栏按钮样式*/
 .aside-nav {
@@ -83,11 +83,11 @@ a:hover {
 	text-align: center;
 	margin-left: 5px;
 }
-.nav-msg ul li {
+.nav-msg ul li { 
 	font-size: 12px;
-	float: left;
-	width:56px;
-	text-align: center;
+    float: left;
+    width:56px;
+    text-align: center;
 }
 .nav-write-btn {
 	margin-left: 8px;
@@ -108,56 +108,56 @@ a:hover {
 	display: none;
 }
 .nav-menu .nav-book-classify:hover .nav-second-menu {
-	display:block;
-	border:1px solid #dcdcdc;
-	background-color: rgb(253,253,253);
-	width: 145px;
-	line-height: 40px;
-	left:291px;
-	/* height:auto;*/
-	top:-100px;
-	position:absolute;
+	display:block; 
+ 	border:1px solid #dcdcdc;
+ 	background-color: rgb(253,253,253);
+ 	width: 145px;
+    line-height: 40px;  
+    left:291px; 
+   /* height:auto;*/
+    top:-100px;  
+    position:absolute;
 }
 .nav-menu .nav-third-menu {
 	display: none;
 }
 .nav-menu .nav-second-menu li {
-	position:relative;
+    position:relative;
 }
 .nav-menu .nav-second-menu li:hover .nav-third-menu {
-	display:block;
-	border:1px solid #dcdcdc;
-	width: 375px;
-	padding: 10px;
-	background-color: rgb(253,253,253);
-	line-height: 40px;
-	left:143px;
-	/*height: auto;*/
-	top:-1px;
-	position:absolute;
+	display:block; 
+ 	border:1px solid #dcdcdc;
+ 	width: 375px;
+ 	padding: 10px;
+ 	background-color: rgb(253,253,253);
+    line-height: 40px;  
+    left:143px; 
+    /*height: auto;*/
+    top:-1px; 
+    position:absolute;
 }
 .nav-menu .nav-second-menu li:hover .nav-third-menu a{
 	float: left;
-	margin-left: 12px;
-	margin-right: 12px;
-}
+    margin-left: 12px;
+    margin-right: 12px;
+}   
 .nav-menu .nav-second-menu li:hover .nav-third-menu a:hover {
-	color: #000;
-}
+    color: #000;
+}  
 .nav-menu ul {
 	margin: 0;
 }
 .nav-menu li {
 	height: 40px;
-	line-height: 40px;
-	width: 100%;
+    line-height: 40px;
+    width: 100%;
 	display: block;
 }
 .nav-book-classify {
 	position: relative;
 }
 .nav-menu li:hover {
-	background-color: rgb(242,242,242);
+	background-color: rgb(242,242,242); 
 }
 .nav-menu li a {
 	color: #666;
@@ -212,7 +212,7 @@ header {
 }
 .header-right {
 	float:right;
-}
+}	
 .header-right a {
 	height:20px;
 	line-height:44px;
@@ -227,9 +227,9 @@ header {
 	margin-left:25px;
 }
 .myphoto img {
-	border-radius:50%;
-	margin-top:4px;
-}
+	 border-radius:50%;
+	 margin-top:4px;
+	}
 .myphoto span {
 	font-size:12px;
 	line-height:44px;
@@ -242,9 +242,9 @@ header {
 	text-align: center;
 }
 .dropdown-menu {
-	margin-top: 5px;
-	min-width: 110px;
-	left: -30px;
+margin-top: 5px;
+min-width: 110px;
+left: -30px;
 }
 /*canvas里面 content样式*/
 #content {
@@ -263,9 +263,9 @@ footer {
 	z-index: -1;
 }
 footer p{
-	color: #999;
-	font-size: 12px;
-	text-align: center;
-	margin-top: 0.5%;/*比例按宽度算*/
-	margin-bottom: 0;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 0.5%;/*比例按宽度算*/
+    margin-bottom: 0;
 }

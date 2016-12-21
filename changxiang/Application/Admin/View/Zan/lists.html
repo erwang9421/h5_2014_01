@@ -1,48 +1,45 @@
- <div id="dcMain">
-   <!-- 当前位置 -->
-<div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>点赞管理</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-       <h3><!-- <a href="__MODULE__/Zan/add" class="actionBtn add">添加赞</a -->点赞列表</h3>
-    
-        <div id="list">
-    <form name="action" method="post" action="">
-    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
-      <tr>
-        <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
-        <th width="80" align="center">ID</th>
-        <th  align="center">被赞者</th>
-        <th  align="center">点赞者</th>
-        <th  align="center">点赞时间</th>
-        <th  align="center">操作</th>
-      </tr>
-      <volist name="support" id="vo">
-      <tr>
-        <td align="center"><input type="checkbox" name="supportid[]" value="{$vo.supportid}" class="checkbox" id="supportid[]" /></td>
-        <td align="center">{$vo.supportid}</td>
-        <td align="center">{$vo.commentname}</td>
-        <td align="center">{$vo.supportusername}</td>
-        <td align="center">{$vo.publishtime}</td>
-        <td align="center">
-        <a href="__MODULE__/Zan/delete?id='{$vo['supportid']}'">删除</a>
-      </td>
-      </tr>
-      </volist>
-    </table>
-                <br/>
-                <div class="input-group pull-left form">
-                    <button type="button" class="btn" style="background-color:#20B2AA;">批量删除</button>
-                </div>
-                <!-- <div class="action"> -->
-            </form>
+<div id="dcMain">
+  <!-- 当前位置 -->
+  <div id="urHere">
+    <a href="__MODULE__/Index/index">畅评首页</a>
+    <b>></b><strong>点赞管理</strong> 
+  </div>   
+  <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+    <h3><!-- <a href="__MODULE__/Zan/add" class="actionBtn add">添加赞</a -->点赞列表</h3>
+    <div id="list">
+      <form action="__MODULE__/Zan/delete">
+        <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+          <tr>
+            <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+            <th width="80" align="center">ID</th>
+            <th  align="center">被赞者</th>
+            <th  align="center">点赞者</th>
+            <th  align="center">点赞时间</th>
+            <th  align="center">操作</th>
+          </tr>
+          <volist name="support" id="vo">
+            <tr>
+              <td align="center"><input type="checkbox" name="id[]" value="{$vo.supportid}" class="checkbox" /></td>
+              <td align="center">{$vo.supportid}</td>
+              <td align="center">{$vo.commentname}</td>
+              <td align="center">{$vo.supportusername}</td>
+              <td align="center">{$vo.publishtime}</td>
+              <td align="center">
+                <a href="__MODULE__/Zan/delete?id='{$vo['supportid']}'">删除</a>
+              </td>
+            </tr>
+          </volist>
+        </table>
+        <br/>
+        <div class="input-group pull-left form">
+            <button type="submit" class="btn" style="background-color:#20B2AA;">批量删除</button>
         </div>
-        <div class="clear"></div>
-
-        <!--  <ul class="pagination pull-right" style="float:left;margin-left:960px;">
-             {$page}
-         </ul> -->
-
-        <div class="pager"><!-- 总计 5 个记录，共 1 页，当前第 1 页 |  -->
-            <!-- <a href="book.html">第一页</a> 上一页 下一页 <a href="book.html">最末页</a> -->
-            {$page}
-        </div>               </div>
+      </form>
+    </div><!-- list over -->
+    <div class="clear"></div>
+    <div class="pager"><!-- 总计 5 个记录，共 1 页，当前第 1 页 |  -->
+        <!-- <a href="book.html">第一页</a> 上一页 下一页 <a href="book.html">最末页</a> -->
+        {$page}
+    </div>               
+  </div><!-- mainbox over -->
 </div>
-</form>

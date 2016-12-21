@@ -5,147 +5,33 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/aside-nav.css" />
-    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
-    <link rel="stylesheet" href="css/mybookslists.css">
-    <link rel="stylesheet" href="css/alert-feedback.css">
-
-
+    <link href="__PUBLIC__/front/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/front/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="__PUBLIC__/front/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/front/css/aside-nav.css" />
+    <link rel="stylesheet" href="__PUBLIC__/front/css/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="__PUBLIC__/front/css/mybookslists.css">
 
 </head>
-<body>
-    <div id="container">
-        <div id="canvas">
-            <div class="aside-nav toggle-nav">
-                <a href="#"><i class="icon-align-justify icon-large"></i></a>
-            </div>
-            <!--aside-nav end（触发弹出侧栏）-->
-            <header>
-                <nav class="top-nav">
-                    <a href="index.html"><img src="images/logo.png" width="115" class="logo" height="37" alt="logo" /></a>
-                    <label for="search"></label>
-                    <input type="text" id="search" placeholder="输入标签、作者、关键字搜索"/>
-                    <div class="header-right">
-                        <a href="editarticle.html">写书评</a>
-                        <div class="myphoto dropdown">
-                            <div class=" dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown">
-                                <img src="images/myphoto.jpg" width="35" height="35" alt="我的头像" /> 
-                                <span>mono</span>
-                            </div>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">账号设置</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">退出</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </header><!--header end-->
-            <!--侧导航内容 start-->
-            <div id="nav">
-                <div class="nav-child">
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-3"><a href="myBookReview_all.html"><img src="images/myphoto.jpg" width="74" height="74" alt="我的头像" class="nav-photo" /></a><span class="nav-username">mono</span></div>
-                    </div>
-                    <div class="row nav-msg">
-                        <div class="col-md-10 col-md-offset-1">
-                            <ul>
-                                <li><a href="myBookReview_all.html">文章</a></li>
-                                <li><a href="fans.html">粉丝</a></li>
-                                <li><a href="myCollect.html">收藏</a></li>
-                                <li><a href="attention.html">关注</a></li>
-                            </ul>
-                            <br />
-                            <ul>
-                                <li>20</li>
-                                <li>5</li>
-                                <li>56</li>
-                                <li>1</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4 col-md-offset-4">
-                            <div class="nav-write-btn">
-                                <a href="editarticle.html">写书评</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row nav-menu">
-                        <div class="col-md-12">
-                            <ul class="pmVerticalRightOut" id="pmVerticalRightOut">
-                                <li><a href="index.html">首页</a></li>
-                                <li class="nav-book-classify"><a href="#" >书评分类</a>
-                                    <ul class="nav-second-menu">
-                                        <li><a href="tags.html">文学</a>
-                                            <ul class="nav-third-menu">
-                                                <a href="tags.html">文集</a>
-                                                <a href="tags.html">纪实文学</a>
-                                                <a href="tags.html">文学理论</a>
-                                                <a href="tags.html">中国古诗词</a>
-                                                <a href="tags.html">戏剧</a></li>
-                                                <a href="tags.html">文集中国现当代诗歌</a>
-                                                <a href="tags.html">外国诗歌</a>
-                                                <a href="tags.html">民间文学</a>
-                                                <a href="tags.html">外国随笔</a>
-                                                <a href="tags.html">中国古代随笔</a>
-                                            </ul>
-                                        </li>
-                                        <li><a href="tags.html">小说</a>
-                                            <ul class="nav-third-menu">
-                                                <a href="#">a</a>
-                                                <a href="#">b</a>
-                                                <a href="#">c</a>
-                                                <a href="#">d</a>
-                                                <a href="#">e</a>
-                                                <a href="#">f</a>
-                                                <a href="#">j</a>
-                                                <a href="#">h</a>
-                                                <a href="#">i</a>
-                                                <a href="#">g</a>
-                                            </ul>
-                                        </li>
-                                        <li><a href="tags.html">哲学</a></li>
-                                        <li><a href="tags.html">社会科学</a></li>
-                                        <li><a href="tags.html">文化</a></li>
-                                        <li><a href="tags.html">教育</a></li>
-                                        <li><a href="tags.html">艺术</a></li>
-                                        <li><a href="tags.html">自然科学</a></li>
-                                         <li><a href="tags.html">工业技术</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="author_trend.html">作家专栏</a></li>
-                                <li><a href="recommendation.html">推荐书评</a></li>
-                                <li><a href="hot search.html">图书热榜</a></li>
-                                <li><a href="booklist.html">推荐书单</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="nav-feedback-btn">
-                            <a href="#" id="sugPost" hidefocus="true">意见反馈</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!--侧导航内容 end-->
+<style type="text/css">
+    .mCSB_container{
+        width: 3500px;
+    }
+</style>
+          <!--侧导航内容 end-->
 
             <!--content start-->
             <div id="content">
                 <div class="content-left">
                     <div class="content-left-top">
-                        <p style="text-align: center;"><img src="images/1c.jpg" width="70" height="70" alt="用户头像"/></p>
+                        <p style="text-align: center;"><img src="__PUBLIC__/front/images/1c.jpg" width="70" height="70" alt="用户头像"/></p>
                         <a href="" id="name"><p>fygd</p></a>
                         <div class="content-left-top-msg">
                             <ul>
-                                <li><a href="myBookReview_all.html">文章</a></li>
-                                <li><a href="fans.html">粉丝</a></li>
-                                <li><a href="myCollect.html">收藏</a></li>
-                                <li><a href="attention.html">关注</a></li>
+                                <li><a href="__MODULE__/Mine/myBookReview_all">文章</a></li>
+                                <li><a href="__MODULE__/Other/fans">粉丝</a></li>
+                                <li><a href="__MODULE__/Mine/myCollect">收藏</a></li>
+                                <li><a href="__MODULE__/Other/attention">关注</a></li>
                             </ul>
                             <br />
                             <ul>
@@ -157,10 +43,10 @@
                         </div>
                     </div><!-- content-left-top结束 --> 
                     <div class="content-left-bottom">
-                        <p class="btn-top"><a href="relevant.html">与我相关</a></p>
-                        <p class="btn-others"><a href="drafts.html">草稿箱</a></p>
-                        <p class="btn-others"><a href="editmessage.html">修改信息</a></p>
-                        <p class="btn-others"><a href="" id="mybookslists">我的书单</a></p>
+                        <p class="btn-top"><a href="__MODULE__/Mine/relevant">与我相关</a></p>
+                        <p class="btn-others"><a href="__MODULE__/Mine/drafts">草稿箱</a></p>
+                        <p class="btn-others"><a href="__MODULE__/Mine/editmessage">修改信息</a></p>
+                        <p class="btn-others"><a href="__MODULE__/Mine/mybookslists" id="mybookslists">我的书单</a></p>
                     </div><!-- content-left-bottom结束 --> 
                 </div><!-- content-left结束 --> 
                 <div class="content-left-right">
@@ -176,7 +62,7 @@
                                     <span>2万</span>
                                 </div>
                                 <div class="viewimage">
-                                    <img src="images/view.jpg" alt="">
+                                    <img src="__PUBLIC__/front/images/view.jpg" alt="">
                                 </div>
                                 
                             </div>
@@ -184,201 +70,69 @@
                                 <p><span class="shortintroduction">简介：</span>简介内容简介内容简介内容简介内容简介内容简介内容</p>
                                 <!-- 编辑按钮 -->
                                 <div class="editbtn">
-                                    <a href="editbooklist.html"><img src="images/edit.png" alt="编辑"></a>
+                                    <a href="__MODULE__/Mine/editbooklist"><img src="__PUBLIC__/front/images/edit.png" alt="编辑"></a>
                                 </div>
                             </div>
                         </div>
                     </div><!-- content-left-right结束 --> 
                 <div class="content-right">
+                    <form method="get" action="__MODULE__/Mine/deletebookreview">
                     <div class="content-right-bottom">
                         <div class="content-book-comments">
-                            <div class="content-book-comment1 book-comment1">
-                            <div class="comment-top">
-                                <div class="row1">
-                                    <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
-                                    <ul class="comment-msg1">
-                                        <li><span>MONO</span>&nbsp;&nbsp;&nbsp;<span>2016-12-21 08:13</span></li>
-                                        <li>
-                                            阅读<span> 11</span>
-                                            评论<span> 2</span>
-                                            写作<span> 1</span>
-                                            收藏<span> 1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="row2">
-                                    <ul class="comment-msg2">
-                                        <li>标签：<a href="tags.html">文学经典</a></li>
-                                        <li>评论图书：<a href="tagbook.html">《西游记》</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="comment-bottom">
-                                <h3>浅谈西游记</h3>
-                                <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
-                                《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
-                                <div class="comment-more-btn">
-                                    <a href="bookreviewcontent.html">浏览全文</a>
-                                </div>
-                            </div>
-                        </div><!--第一个书评-->
-                        <div class="content-book-comment1 book-comment2">
-                            <div class="comment-top">
-                                <div class="row1">
-                                    <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" onclick="window.location.href=''"
-                                    />
-                                    <ul class="comment-msg1">
-                                        <li><span>MONO</span><span>2016-12-21 08:13</span></li>
-                                        <li>
-                                            阅读<span> 11</span>
-                                            评论<span> 2</span>
-                                            写作<span> 1</span>
-                                            收藏<span> 1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="row2">
-                                    <ul class="comment-msg2">
-                                        <li>标签：<a href="tags.html">文学经典</a></li>
-                                        <li>评论图书：<a href="tagbook.html">《漫长的中场休息》</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="comment-bottom">
-                                <h3>最孤独的魂外天游</h3>
-                               <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
-                                        《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
-                                <div class="comment-more-btn">
-                                    <a href="bookreviewcontent.html">浏览全文</a>
-                                </div>
-                            </div>
-                        </div><!--第二个书评-->
+                            <volist name="bookreview" id="br">
+                                <div class="content-book-comment1 book-comment1" name="bookreviewId[]" value="{$br.bookreviewid}">
+                                    <a id="modal-8801" href="#modal-container-8801" role="button"  data-toggle="modal"><img src="__PUBLIC__/front/images/close.png" alt="删除我的文章书评" width="20" height="20" class="close"></a>
 
-                        <div class="content-book-comment1 book-comment3">
-                            <div class="comment-top">
-                                <div class="row1">
-                                    <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
-                                    <ul class="comment-msg1">
-                                        <li><span>MONO</span><span>2016-12-21 08:13</span></li>
-                                        <li>
-                                            阅读<span> 11</span>
-                                            评论<span> 2</span>
-                                            写作<span> 1</span>
-                                            收藏<span> 1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="row2">
-                                    <ul class="comment-msg2">
-                                        <li>标签：<a href="#">文学经典</a></li>
-                                        <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="comment-bottom">
-                                <h3>最孤独的魂外天游</h3>
-                               <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
-                                        《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
-                                <div class="comment-more-btn">
-                                    <a href="bookreviewcontent.html">浏览全文</a>
-                                </div>
-                            </div>
-                        </div><!--第三个书评-->
-                        <div class="content-book-comment1 book-comment4">
-                            <div class="comment-top">
-                                <div class="row1">
-                                    <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
-                                    <ul class="comment-msg1">
-                                        <li><span>MONO</span><span>2016-12-21 08:13</span></li>
-                                        <li>
-                                            阅读<span> 11</span>
-                                            评论<span> 2</span>
-                                            写作<span> 1</span>
-                                            收藏<span> 1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="row2">
-                                    <ul class="comment-msg2">
-                                        <li>标签：<a href="#">文学经典</a></li>
-                                        <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="comment-bottom">
-                                <h3>最孤独的魂外天游</h3>
-                               <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
-                                        《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
-                                <div class="comment-more-btn">
-                                    <a href="bookreviewcontent.html">浏览全文</a>
-                                </div>
-                            </div>
-                        </div><!--第四个书评-->
-                        <div class="content-book-comment1 book-comment5">
-                            <div class="comment-top">
-                                <div class="row1">
-                                    <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
-                                    <ul class="comment-msg1">
-                                        <li><span>MONO</span><span>2016-12-21 08:13</span></li>
-                                        <li>
-                                            阅读<span> 11</span>
-                                            评论<span> 2</span>
-                                            写作<span> 1</span>
-                                            收藏<span> 1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="row2">
-                                    <ul class="comment-msg2">
-                                        <li>标签：<a href="#">文学经典</a></li>
-                                        <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="comment-bottom">
-                                <h3>最孤独的魂外天游</h3>
-                               <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
-                                        《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
-                                <div class="comment-more-btn">
-                                    <a href="bookreviewcontent.html">浏览全文</a>
-                                </div>
-                            </div>
-                        </div><!--第五个书评-->
-                        <div class="content-book-comment1 book-comment6">
-                            <div class="comment-top">
-                                <div class="row1">
-                                    <img src="images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
-                                    <ul class="comment-msg1">
-                                        <li><span>MONO</span><span>2016-12-21 08:13</span></li>
-                                        <li>
-                                            阅读<span> 11</span>
-                                            评论<span> 2</span>
-                                            写作<span> 1</span>
-                                            收藏<span> 1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="row2">
-                                    <ul class="comment-msg2">
-                                        <li>标签：<a href="#">文学经典</a></li>
-                                        <li>评论图书：<a href="#">《漫长的中场休息》</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="comment-bottom">
-                                <h3>最孤独的魂外天游</h3>
-                               <p>一提到《西一样，再一次拿出那本在书架上已微微发黄的《西游记》，爱不释手，道一杯香茗，没翻开几页，随着吴承恩爷爷的精彩描绘，就被其中的情节给吸引住了。<br />读了《西游记》我深有感触，文中曲折的情节和唐僧师徒的离奇经历给我留下了深刻的印象。<br />
-                                        《西游记》向人们展示了一个绚多彩的神魔世界，人们无不在作者丰富而大胆的艺术想象面前惊叹不已。然而，任何一部文学作品都是一定社会生活的反映... </p>
-                                <div class="comment-more-btn">
-                                    <a href="bookreviewcontent.html">浏览全文</a>
-                                </div>
-                            </div>
-                        </div><!--第六个书评-->
+                                    <div class="modal fade" id="modal-container-8801" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top:10%;margin-left:15%;">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content collectCon">
+                                                <div class='alert-collect'>
+                                                    <p><img src='__PUBLIC__/front/images/？.png'></p><br/>
+                                                    <p id='colsuccess'>确实要删除书评吗？</p>
+                                                </div>
+                                                <div class='alert-collect-footer'>
+                                                    <a href="__MODULE__/Mine/deletebookreview/bookreviewId/{$br.bookreviewid}" id='y' type='submit' value='确定'>确定</a>
+                                                    <input type="button" data-dismiss="modal" aria-hidden="true" value='取消' id='n'>
+                                                </div>                 
+                                            </div> 
+                                        </div>                                           
+                                    </div>
 
-                         
-                        </div><!--bookscontainer容器结束-->
+                                    <div class="comment-top">
+                                        <div class="row1">
+                                            <img src="__PUBLIC__/front/images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
+                                            <ul class="comment-msg1">
+                                                <li><span>{$br.username}</span>&nbsp;&nbsp;&nbsp;<span>{$br.publishtime}</span></li>
+                                                <li>
+                                                    阅读<span> {$br.viewtimes}</span>
+                                                    评论<span> {$br.commenttimes}</span>
+                                                    喜欢<span> {$br.likequantity}</span>
+                                                    收藏<span> {$br.collecttimes}</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="row2">
+                                            <ul class="comment-msg2">
+                                                <li>标签：<a href="__MODULE__/Index/tags">{$br.tagname}</a></li>
+                                                <li>评论图书：<a href="__MODULE__/Index/tagbook" name="bookname">《{$br.bookname}》</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="comment-bottom">
+                                        <h3>{$br.title}</h3>
+                                        <p>{$br.content}... </p>
+                                        <div class="comment-more-btn">
+                                            <a href="__MODULE__/Book/bookreviewcontent/bookreviewid/{$br.bookreviewid}">浏览全文</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </volist>
 
-                    </div><!-- content-right-bottom结束 --> 
+
+                        </div><!--bookscontainer结束-->
+                    </div><!-- content-right-bottom结束 -->
+
+                    </form>
                 </div><!-- content-right结束 --> 
             </div><!-- content结束 --> 
             <footer>
@@ -387,12 +141,11 @@
         </div><!--canvas end-->
     </div><!--container end-->
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/alert-feedback.js"></script>
+    <script src="__PUBLIC__/front/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/front/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/front/js/custom.js"></script>
 
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="__PUBLIC__/front/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script>
         (function($){
             $(window).load(function(){           
@@ -405,26 +158,6 @@
                 });
             });
         })(jQuery);
-    </script>
-    <script type="text/javascript">
-        if (navigator.appName=="Microsoft Internet Explorer") {
-             function fPmVerticalRightOut() {
-                 var getItem = document.getElementById("pmVerticalRightOut").getElementsByTagName("li");
-                 for (var i=0; i<getItem.length; i++) {
-                     getItem[i].onmouseover=function() { 
-                         if(     this.className=="nav-second-menu"){
-                             this.className="nav-second-menuIe";
-                         }
-                     }
-                     getItem[i].onmouseout=function() { 
-                         if(     this.className=="nav-second-menuIe"){
-                             this.className="nav-second-menu";
-                         }
-                     }
-                 }
-             }
-             window.onload=fPmVerticalRightOut;
-        }
     </script>
 </body>
 </html>

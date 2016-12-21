@@ -1,0 +1,47 @@
+<div id="dcMain">
+   <!-- 当前位置 -->
+  <div id="urHere">
+    <a href="__MODULE__/Index/index">畅评首页</a>
+    <b>></b><strong>评论管理</strong> 
+  </div>   
+  <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+    <h3><a href="__MODULE__/Comment/add" class="actionBtn add">添加评论</a>评论列表</h3>
+    <div id="list">
+      <form action="__MODULE__/Comment/delete">
+        <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+          <tr>
+            <th align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+            <th align="center">ID</th>
+            <th align="center">书评名</th>
+            <th align="center">评论用户</th>
+            <th align="center">评论内容</th>
+            <th align="center">发表时间</th>
+            <th align="center">操作</th>
+          </tr>
+          <volist name="list" id="vo">
+            <tr>
+              <td align="center"><input type="checkbox" name="id[]" value="{$vo.commentid}" /></td>
+              <td align="center">{$vo.commentid}</td>
+              <td align="center">{$vo.title}</td>
+              <td align="center">{$vo.commentname}</td>
+              <td>{$vo.commentcontent}</td>
+              <td align="center">{$vo.commenttime}</td>
+              <td align="center">
+                  <a href="__MODULE__/Comment/edit?id='{$vo['commentid']}'">查看</a> | <a href="__MODULE__/Comment/delete?id='{$vo['commentid']}'">删除</a>
+              </td>
+            </tr>
+          </volist>
+        </table>
+        <br/>
+        <div class="input-group pull-left form">
+            <button type="submit" class="btn" style="background-color:#20B2AA;">批量删除</button>
+        </div>
+      </form>
+    </div><!-- list over -->
+    <div class="clear"></div>
+    <div class="pager"><!-- 总计 5 个记录，共 1 页，当前第 1 页 |  -->
+        <!-- <a href="book.html">第一页</a> 上一页 下一页 <a href="book.html">最末页</a> -->
+        {$page}
+    </div>               
+  </div><!-- mainbox over -->
+</div>

@@ -1,48 +1,51 @@
 <form action="__MODULE__/Books/delete"  method="get">
- <div id="dcMain">
-   <!-- 当前位置 -->
-<div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>图书列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-        <h3><a href="__MODULE__/Books/addbook" class="actionBtn add">添加图书</a>图书列表</h3>
-   
-    <div id="list">
-    <!-- <form name="action" method="post" > -->
-    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
-      <tr>
-        <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
-        <th width="40" align="center">ID</th>
-        <th width="60" align="center">图书名称</th>
-        <th width="150" align="center">图书作者</th>
-        <th width="100" align="center">图书类型</th>
-        <th width="300" align="center">图书简介</th>
-       <th width="100" align="center">添加时间</th>
-        <th width="80" align="center">操作</th>
-      </tr>
+    <div id="dcMain">
+        <!-- 当前位置 -->
+        <div id="urHere">
+            <a href="__MODULE__/Index/index">畅评首页</a>
+            <b>></b><strong>图书列表</strong> 
+        </div>   
 
-        <volist name="booklist" id="b">
-            <tr>
-                <td align="center"><input type="checkbox" name="booksId[]" value="{$b.bookid}" id='chkall' /></td>
-                <td align="center">{$b.bookid}</td>
-                <td align="center"><a href="product.php?rec=edit&id=15">{$b.bookname}</a></td>
-                <td align="center"><a href="product.php?cat_id=3">{$b.bookauthor}</a></td>
-                <td align="center">{$b.typebcname}</td>
-                <td style="font-size:14px">{$b.bookcontent|mb_substr=0,66,'utf-8'}</td>
-                <td align="center">{$b.addtime}</td>
-                <td align="center">
-                 <a href="__MODULE__/Books/editbook/booksId/{$b.bookid}">编辑</a> | <a href="__MODULE__/Books/delete/booksId/{$b.bookid}">删除</a>
-                </td>
-            </tr>
-        </volist>
-      
-    </table>
-    <br/>
-    <div class="input-group pull-left form">
-        <button type="submit" class="btn" style="background-color:#20B2AA;"> 批量删除</button>
+        <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+            <h3><a href="__MODULE__/Books/addbook" class="actionBtn add">添加图书</a>图书列表</h3>
+            <div id="list">
+                <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+                    <tr>
+                        <th align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+                        <th align="center">ID</th>
+                        <th align="center">图书名称</th>
+                        <th align="center">图书作者</th>
+                        <th align="center">图书类型</th>
+                        <th align="center">图书简介</th>
+                        <th align="center">添加时间</th>
+                        <th align="center">操作</th>
+                    </tr>
+
+                    <volist name="booklist" id="b">
+                        <tr>
+                            <td align="center"><input type="checkbox" name="booksId[]" value="{$b.bookid}" id='chkall' /></td>
+                            <td align="center">{$b.bookid}</td>
+                            <td align="center"><a href="product.php?rec=edit&id=15">{$b.bookname}</a></td>
+                            <td align="center"><a href="product.php?cat_id=3">{$b.bookauthor}</a></td>
+                            <td align="center">{$b.typebcname}</td>
+                            <td >{$b.bookcontent|mb_substr=0,8,'utf-8'}</td>
+                            <td align="center">{$b.addtime}</td>
+                            <td align="center">
+                             <a href="__MODULE__/Books/editbook/booksId/{$b.bookid}">编辑</a> | <a href="__MODULE__/Books/delete/booksId/{$b.bookid}">删除</a>
+                            </td>
+                        </tr>
+                    </volist> 
+                </table>
+                <br/>
+                <div class="input-group pull-left form">
+                    <button type="submit" class="btn" style="background-color:#20B2AA;"> 批量删除</button>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="pager">
+                {$page}     
+            </div>               
+        </div><!-- mainbox over -->
     </div>
-    </div>
-    <div class="clear"></div>
-    <div class="pager">
-    {$page}     
-    </div>               </div>
- </div>
- </form>
+</form>
  

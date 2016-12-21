@@ -15,7 +15,8 @@ class AdminController extends Controller{
 			// dump($result);
 			if ($result>0) {
 				session("adminname",I("post.adminname"));
-				$this->success("登录成功",U("Index/index"));
+				$this->redirect('Index/index',0);
+				// $this->success("登录成功",U("Index/index"));
 			}
 			else{
 				$this->error("用户名或密码不正确");
@@ -49,7 +50,8 @@ class AdminController extends Controller{
 			$model->create();
 			
 			if ($model->save()) {
-				$this->success("修改成功",U("Admin/manager"));
+				$this->redirect('Admin/manager',0);
+				// $this->success("修改成功",U("Admin/manager"));
 			}
 			else{
 				$this->error($model->getError());

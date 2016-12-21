@@ -1,38 +1,43 @@
 <form action="__MODULE__/BookCategory/delete"  method="get">
- <div id="dcMain">
-   <!-- 当前位置 -->
-<div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>图书分类管理</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-<h3><a href="__MODULE__/BookCategory/addbookcategory" class="actionBtn add">添加图书分类</a>图书列表分类</h3>
-    <div id="list">
-    <form name="action" method="post" action="">
-    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
-      <tr>
-        <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
-        <th width="40" align="center">ID</th>
-        <th width="160" align="center">图书分类</th>
-       <th width="200" align="center">添加日期</th>
-        <th width="100" align="center">操作</th>
-      </tr>
-      <volist name="tag" id="t">
-        <tr>
-        <td align="center"><input type="checkbox" name="tagId[]" value="{$t.bcid}" /></td>
-        <td align="center">{$t.bcid}</td>
-        <td align="center">{$t.typebcname}</td>
-        <td align="center">{$t.addtime}</td>
-        <td align="center">
-        <a href="__MODULE__/BookCategory/editbookcategory/tagId/{$t.bcid}">编辑</a> | <a href="__MODULE__/BookCategory/delete/tagId/{$t.bcid}">删除</a>
-        </td>
-      </tr>
-      </volist>
-    </table>
-    <br/>
-    <div class="input-group pull-left form">
-        <button type="submit" class="btn" style="background-color:#20B2AA;"> 批量删除</button>
-    </div>
-    <div class="clear"></div>
-    <div class="pager">
-    {$page}
-    </div>               </form></div>
- </div>
- </div></form>
+  <div id="dcMain">
+    <!-- 当前位置 -->
+    <div id="urHere">
+      <a href="__MODULE__/Index/index">畅评首页</a>
+      <b>></b><strong>图书分类管理</strong> 
+    </div>   
+    <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+      <h3><a href="__MODULE__/BookCategory/addbookcategory" class="actionBtn add">添加图书分类</a>图书列表分类</h3>
+      <div id="list">
+        <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+          <tr>
+            <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+            <th align="center">ID</th>
+            <th align="center">图书分类</th>
+            <th  align="center">添加日期</th>
+            <th width="100" align="center">操作</th>
+          </tr>
+          <volist name="tag" id="t">
+            <tr>
+              <td align="center"><input type="checkbox" name="tagId[]" value="{$t.bcid}" /></td>
+              <td align="center">{$t.bcid}</td>
+              <td align="center">{$t.typebcname}</td>
+              <td align="center">{$t.addtime}</td>
+              <td align="center">
+              <a href="__MODULE__/BookCategory/editbookcategory/tagId/{$t.bcid}">编辑</a> | <a href="__MODULE__/BookCategory/delete/tagId/{$t.bcid}">删除</a>
+              </td>
+            </tr>
+          </volist>
+        </table>
+        <br/>
+        <div class="input-group pull-left form">
+          <button type="submit" class="btn" style="background-color:#20B2AA;"> 批量删除</button>
+        </div>
+        <div class="clear"></div>
+        <div class="pager">
+          {$page}
+        </div>               
+      </div>
+    </div><!-- mainbox over -->
+  </div>
+</form>
  

@@ -1,0 +1,49 @@
+ <div id="dcMain">
+   <!-- 当前位置 -->
+
+<div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>查看喜欢书评</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+            <h3><a href="__MODULE__/Like/likebookview" class="actionBtn">喜欢列表</a>查看喜欢书评</h3>
+    <form action="" method="post">
+    <input type="hidden" name="likeid" value="{$like.likeid}">
+
+     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+      <tr>
+       <td width="80" align="center">用户名</td>
+       <td>
+        <input type="text" name="username" value="{$like.username}" size="40" class="inpMain" />
+       </td>
+      </tr>      
+      <tr>
+       <td align="center">书评标题</td>
+       <td>
+        <input type="text" name="title" value="{$like.title}" size="5" class="inpMain" />
+       </td>
+      </tr>
+      <tr>
+       <td width="80" align="center">收藏次数</td>
+       <td>
+        <input type="text" name="collecttimes" value="{$like.collecttimes}" size="40" class="inpMain" />
+       </td>
+      </tr>
+      <tr>
+       <td width="80" align="center">喜欢次数</td>
+       <td>
+        <input type="text" name="likequantity" value="{$like.likequantity}" size="40" class="inpMain" />
+       </td>
+      </tr>
+       <tr>
+       <td align="center">喜欢/收藏时间</td>
+       <td>
+        <input type="text" name="liketime" value="{$like.liketime}" size="5" class="inpMain" />
+       </td>
+      </tr>
+
+        <!-- <input type="hidden" name="token" value="25bfda40" />
+        <input type="hidden" name="cat_id" value="" />
+        <input name="submit" class="btn" type="submit" value="提交" /> -->
+       </td>
+      </tr>
+     </table>
+    </form>
+ </div>
+ </div>

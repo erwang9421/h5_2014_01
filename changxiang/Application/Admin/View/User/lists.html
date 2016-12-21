@@ -1,62 +1,58 @@
 <div id="dcMain">
     <!-- 当前位置 -->
-    <div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>用户列表</strong> </div>
+    <div id="urHere">
+        <a href="__MODULE__/Index/index">畅评首页</a>
+        <b>></b>
+        <strong>用户列表</strong> 
+    </div>
     <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
         <h3><a href="__MODULE__/User/adduser" class="actionBtn add">添加用户</a>用户列表</h3>
-
         <div id="list">
-            <form name="action" method="post" action="">
-
+            <form action="__MODULE__/User/delete">
                 <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
                     <tr>
-                        <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
-                        <th width="40" align="center">ID</th>
-                        <th align="center">用户名</th>
-                        <th align="center">密码</th>
-                        <th  align="center">邮箱</th>
-                        <th  align="center">个人简介</th>
-                        <th  align="center">关注数</th>
-                        <th  align="center">粉丝数</th>
-                        <th  align="center">收藏数</th>
-                        <th  align="center">文章数</th>
-                        <th  align="center">头像</th>
-                        <th width="80" align="center">操作</th>
+                        <th><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+                        <th>ID</th>
+                        <th >用户名</th>
+                        <!-- <th >密码</th> -->
+                        <th >邮箱</th>
+                        <th >个人简介</th>
+                        <th >关注数</th>
+                        <th >粉丝数</th>
+                        <th >收藏数</th>
+                        <th >文章数</th>
+                        <!-- <th >头像</th> -->
+                        <th >操作</th>
                     </tr>
                     <volist name="user" id="vo">
                         <tr>
-                            <td align="center"><input type="checkbox" name="id[]" value="{$vo.id}" class="checkbox" id="id[]" /></td>
+                            <td align="center"><input type="checkbox" name="id[]" value="{$vo.id}" class="checkbox" /></td>
                             <td align="center">{$vo.id}</td>
                             <td align="center"><a href="product.php?rec=edit&id=5">{$vo.username}</a></td>
-                            <td align="center">{$vo.pass|mb_substr=0,13,'utf-8'}</td>
-                            <td align="center">{$vo.email|mb_substr=0,15,'utf-8'}</td>
-                            <td align="center">{$vo.introduction|mb_substr=0,10,'utf-8'}</td>
+                            <!-- <td align="center">{$vo.pass|mb_substr=0,13,'utf-8'}</td> -->
+                            <td align="center">{$vo.email|mb_substr=0,10,'utf-8'}</td>
+                            <td>{$vo.introduction|mb_substr=0,5,'utf-8'}</td>
                             <td align="center">{$vo.attention}</td>
                             <td align="center">{$vo.fan}</td>
                             <td align="center">{$vo.collection}</td>
                             <td align="center">{$vo.bookreview}</td>
-                            <td align="center">{$vo.userimage|mb_substr=0,16,'utf-8'}</td>
+                            <!-- <td align="center">{$vo.userimage|mb_substr=0,7,'utf-8'}</td> -->
                             <td align="center">
-                                <a href="__MODULE__/User/edituser?id='{$vo['id']}'">编辑</a> | <a href="__MODULE__/User/delete?id='{$vo['id']}'">删除</a>
+                                <a href="__MODULE__/User/edituser?id='{$vo['id']}'">查看</a> | <a href="__MODULE__/User/delete?id='{$vo['id']}'">删除</a> | <a href="__MODULE__/User/close?id='{$vo['id']}'">禁言</a>
                             </td>
                         </tr>
                     </volist>
                 </table>
                 <br/>
                 <div class="input-group pull-left form">
-                    <button type="button" class="btn" style="background-color:#20B2AA;">批量删除</button>
+                    <button type="submit" class="btn btn-danger" style="background-color:#20B2AA;"> 批量删除</button>
                 </div>
-                <!-- <div class="action"> -->
             </form>
-        </div>
+        </div><!-- list over -->
         <div class="clear"></div>
-
-        <!--  <ul class="pagination pull-right" style="float:left;margin-left:960px;">
-             {$page}
-         </ul> -->
-
         <div class="pager"><!-- 总计 5 个记录，共 1 页，当前第 1 页 |  -->
             <!-- <a href="book.html">第一页</a> 上一页 下一页 <a href="book.html">最末页</a> -->
             {$page}
-        </div>               </div>
+        </div>               
+    </div><!-- mainbox over -->
 </div>
-</form>
