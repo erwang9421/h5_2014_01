@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>hotseach</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="__PUBLIC__/front/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/front/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="__PUBLIC__/front/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="__PUBLIC__/front/css/aside-nav.css" />
+    <link rel="stylesheet" href="__PUBLIC__/front/css/alert-feedback.css" />
+    <link rel="stylesheet" href="__PUBLIC__/front/css/hotsearch.css" />
+   
+</head>
+<layout name="layout" />
+        <!--content start-->
+        <div  >
+            <div class="top" >
+                <a style="color:black;" href="index.html">首页/</a>
+                <a style="color:#FF7575;">图书热榜</a>
+            </div>
+            <!--header end-->
+            </header>
+            <div id="content" style="overflow:Scroll;overflow-x:hidden;">
+               
+    
+
+    <volist name="indexlist" id="vo">
+                    <div class="recommend" >
+                        <div class="p" 	style="margin-top: 2%;" >
+                            <a href="__MODULE__/Index/tagbook?bookid={$vo.bookid}"><h3 style="padding:30px;"  > {$vo.bookname}</h3></a>
+                            <p>{$vo.bookauthor}</p>
+                        </div>
+                        <div class="myphoto1 "  style="margin-top: 2%;"	>
+                            <div class="img"  style="margin-top:10px;margin-left:5px;" >
+                                <a href="bookreview_all.html">  <img src="__PUBLIC__/{$vo.userimage}" width="35" height="35" alt="我的头像"  style="border-radius: 35px;" /></a>
+                                <input type="text" readonly="readonly" class="momo" value="{$vo.username}" >
+                                <input type="text" readonly="readonly" class="time" value="{$vo.publishtime}"   >
+                                <input type="text" readonly="readonly" value= "标签:"  class="biaoqian">
+                                <input type="text" readonly="readonly" value= "{$vo.typebcname}"  class="write">
+                                <!--<?php-->
+                                        <!--$a = $vo['child2'];-->
+                                        <!--foreach ($a as $key => $value) { -->
+                                            <!--$bcid = $value['bcid'];-->
+                                            <!--echo "<a href='__MODULE__/Index/tags/id/$bcid'>";-->
+                                            <!--echo $value['typebcname'];-->
+                                            <!--echo "</a>";-->
+                                        <!--}-->
+                                <!--?>-->
+
+                                
+
+                                <span style="border:0px;background-color:#F5F5F5;padding-left:80px;">评论图书：</span>
+                                <a href="__MODULE__/Index/tagbook">{$vo.bookname}</a>
+                            </div>
+                            <div style="padding-top:25px;" >
+                                <a href="__MODULE__/Book/bookreviewcontent"> <input readonly="readonly"  value="{$vo.title}"  class="mune"></a>
+
+                                <p class="look" ><a style="color:black;" href="__MODULE__/Book/bookreviewcontent?bookreviewid={$vo.bookreviewid}">阅读</a></p>
+
+
+                            </div>
+                            <div class="bottom" style="padding-top:5px;">
+                                <ul >
+                                    <li style="float:left;padding-left:10px;">阅读 11</a></li>
+                                    <li style="float:left;padding-left:12px;">评论 2</a></li>
+                                    <li style="float:left;padding-left:12px;">喜欢 1</a></li>
+                                    <li style="float:left;padding-left:12px;">收藏 1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+</volist>
+
+            </div><!-- content结束 -->
+            <footer>
+                <p>copyright@hebeinormal university</p>
+            </footer>
+        </div><!--canvas end-->
+    </div><!--container end-->
+  </div>
+   <script src="__PUBLIC__/front/js/jquery.js"></script>
+    <script src="__PUBLIC__/front/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/front/js/custom.js"></script>
+    <script src="__PUBLIC__/front/js/alert-feedback.js"></script>
+
+   <script type="text/javascript">
+    if (navigator.appName=="Microsoft Internet Explorer") {
+        function fPmVerticalRightOut() {
+            var getItem = document.getElementById("pmVerticalRightOut").getElementsByTagName("li");
+            for (var i=0; i<getItem.length; i++) {
+                getItem[i].onmouseover=function() {
+                    if(     this.className=="nav-second-menu"){
+                        this.className="nav-second-menuIe";
+                    }
+                }
+                getItem[i].onmouseout=function() {
+                    if(     this.className=="nav-second-menuIe"){
+                        this.className="nav-second-menu";
+                    }
+                }
+            }
+        }
+        window.onload=fPmVerticalRightOut;
+    }
+</script>
+</body>
+</html>
+
