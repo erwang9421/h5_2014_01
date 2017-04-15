@@ -10,6 +10,10 @@
           <option name="url" value="https://github.com/zhaodanli123/h5_2014_01.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/erwang9421/AngularJS.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="C:\Users\wangning\Desktop\eg" />
