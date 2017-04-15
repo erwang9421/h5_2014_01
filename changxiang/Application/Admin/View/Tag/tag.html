@@ -1,41 +1,46 @@
 <form action="__MODULE__/Tag/delete"  method="get">
- <div id="dcMain">
-   <!-- 当前位置 -->
-<div id="urHere"><a href="__MODULE__/Index/index">畅评首页</a><b>></b><strong>书评标签管理</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-<h3><!--<a href="__MODULE__/Tag/addtag" class="actionBtn add"> 添加书评标签 </a>-->书评标签列表</h3>
-    <div id="list">
-    <form name="action" method="post" action="">
-    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
-      <tr>
-        <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
-        <th width="40" align="center">ID</th>
-        <th align="center">书评标签</th>
-        <th align="center">用户名</th>
-        <th align="center">书评标签简介</th>
-        <th align="center">添加日期</th>
-        <th width="100" align="center">操作</th>
-      </tr>
-      <volist name="tag" id="t">
-        <tr>
-        <td align="center"><input type="checkbox" name="tagId[]" value="{$t.tagid}" /></td>
-        <td align="center">{$t.tagid}</td>
-        <td align="center">{$t.tagname}</td>
-        <td align="center">{$t.username}</td>
-        <td align="center">{$t.tagintroduction|mb_substr=0,8,'utf-8'}</td>  
-        <td align="center">{$t.tagtime}</td>
-        <td align="center">
-        <a href="__MODULE__/Tag/edittag/tagId/{$t.tagid}">查看</a> | <a href="__MODULE__/Tag/delete/tagId/{$t.tagid}">删除</a>
-        </td>
-      </tr>
-      </volist>
-    </table>
-    <br/>
-    <div class="input-group pull-left form">
-        <button type="submit" class="btn" style="background-color:#20B2AA;"> 批量删除</button>
-    </div>
-    <div class="clear"></div>
-    <div class="pager">
-    {$page}
-    </div>              </form> </div>
- </div>
-</div> </form>
+    <div id="dcMain">
+        <!-- 当前位置 -->
+        <div id="urHere">
+            <a href="__MODULE__/Index/index">畅评首页</a>
+            <b>></b><strong>书评标签管理</strong> 
+        </div>   
+        <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+            <h3><!--<a href="__MODULE__/Tag/addtag" class="actionBtn add"> 添加书评标签 </a>-->书评标签列表</h3>
+            <div id="list">
+                <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+                    <tr>
+                        <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+                        <th width="40" align="center">ID</th>
+                        <th align="center">书评标签</th>
+                        <th align="center">用户名</th>
+                        <th align="center">书评标签简介</th>
+                        <th align="center">添加日期</th>
+                        <th width="100" align="center">操作</th>
+                    </tr>
+                    <volist name="tag" id="t">
+                        <tr>
+                            <td align="center"><input type="checkbox" name="tagId[]" value="{$t.tagid}" /></td>
+                            <td align="center">{$t.tagid}</td>
+                            <td align="center">{$t.tagname}</td>
+                            <td align="center">{$t.username}</td>
+                            <td>{$t.tagintroduction|mb_substr=0,8,'utf-8'}</td>  
+                            <td align="center">{$t.tagtime}</td>
+                            <td align="center">
+                            <a href="__MODULE__/Tag/edittag/tagId/{$t.tagid}">查看</a> | <a href="__MODULE__/Tag/delete/tagId/{$t.tagid}">删除</a>
+                            </td>
+                        </tr>
+                    </volist>
+                </table>
+                <br/>
+                <div class="input-group pull-left form">
+                    <button type="submit" class="btn" style="background-color:#20B2AA;"> 批量删除</button>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="pager">
+            {$page}
+            </div>            
+        </div>
+    </div> 
+</form>

@@ -1,84 +1,86 @@
-
- <div id="dcMain">
+<div id="dcMain">
    <!-- 当前位置 -->
-<div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>添加书评</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-            <h3>添加书评</h3>
+  <div id="urHere">
+    <a href="index.html">畅评首页</a>
+    <b>></b><strong>添加书评</strong> 
+  </div>   
+  <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+    <h3>添加书评</h3>
     <form action="__MODULE__/BookComment/doaddbookreview" method="post" enctype="multipart/form-data">
-     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
-      <tr>
-       <td width="90" align="center">图书名称</td>
-       <td>
-        <input type="text" name="bookname" value="" size="80" class="inpMain" />
-       </td>
-      </tr>
-      <tr>
-          <td width="90" align="center">图书作者</td>
-             <td>
-                 <input type="text" name="bookauthor" value="" size="80" class="inpMain" />
-            </td>
-      </tr>
-      <tr>
-       <td width="90" align="center">书评标题</td>
-       <td>
-        <input type="text" name="title" value="" size="80" class="inpMain" />
-       </td>
-      </tr>
-      <tr>
-       <td align="center">用户ID</td>
-       <td>
-        <input type="text" name="userid" value="" size="40" class="inpMain" />
-       </td>
-      </tr>
-            <tr>
-       <td align="center" valign="top">书评内容</td>
-       <td>
-        <!-- KindEditor -->
-			<link rel="stylesheet" href="__PUBLIC__/end/js/kindeditor/themes/default/default.css" />
-			<link rel="stylesheet" href="__PUBLIC__/end/js/kindeditor/plugins/code/prettify.css" />
-			<script charset="utf-8" src="__PUBLIC__/end/js/kindeditor/kindeditor.js"></script>
-			<script charset="utf-8" src="__PUBLIC__/end/js/kindeditor/lang/zh_CN.js"></script>
-			<script charset="utf-8" src="__PUBLIC__/end/js/kindeditor/plugins/code/prettify.js"></script>
-        <script>
-					KindEditor.ready(function(K) {
-						var editor1 = K.create('textarea[name="content"]', {
-							cssPath : '../plugins/code/prettify.css',
-							uploadJson : '../php/upload_json.php',
-							fileManagerJson : '../php/file_manager_json.php',
-							allowFileManager : true,
-							afterCreate : function() {
-								var self = this;
-								K.ctrl(document, 13, function() {
-									self.sync();
-									K('form[name=example]')[0].submit();
-								});
-								K.ctrl(self.edit.doc, 13, function() {
-									self.sync();
-									K('form[name=example]')[0].submit();
-								});
-							}
-						});
-						prettyPrint();
-					});
-			</script>
-
-        <!-- /KindEditor -->
-        <textarea id="content" name="content" style="width:780px;height:400px;" class="textArea"></textarea>
-       </td>
-      </tr>
-      <tr>
-       <td align="center">发表时间</td>
-       <td>
-        <input type="text" name="publishtime" value="<?php echo date('Y-m-d H:i:s',time());?>" size="5" class="inpMain" />
-       </td>
-      </tr>
-       <td></td>
-       <td>
-        <input type="hidden" name="token" value="21307217" />
-        <input type="hidden" name="id" value="">
-        <input name="submit" class="btn" type="submit" value="添加" />
-       </td>
-      </tr>
+      <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+        <tr>
+          <td align="center">图书名称</td>
+          <td>
+            <input type="text" name="bookname" value="" size="80" class="inpMain" />
+          </td>
+        </tr>
+        <tr>
+          <td align="center">图书作者</td>
+          <td>
+            <input type="text" name="bookauthor" value="" size="80" class="inpMain" />
+          </td>
+        </tr>
+        <tr>
+          <td align="center">书评标题</td>
+          <td>
+            <input type="text" name="title" value="" size="80" class="inpMain" />
+          </td>
+        </tr>
+        <tr>
+          <td align="center">用户ID</td>
+          <td>
+            <input type="text" name="userid" value="" size="40" class="inpMain" />
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">书评内容</td>
+          <td>
+            <!-- KindEditor -->
+      			<link rel="stylesheet" href="__PUBLIC__/end/js/kindeditor/themes/default/default.css" />
+      			<link rel="stylesheet" href="__PUBLIC__/end/js/kindeditor/plugins/code/prettify.css" />
+      			<script charset="utf-8" src="__PUBLIC__/end/js/kindeditor/kindeditor.js"></script>
+      			<script charset="utf-8" src="__PUBLIC__/end/js/kindeditor/lang/zh_CN.js"></script>
+      			<script charset="utf-8" src="__PUBLIC__/end/js/kindeditor/plugins/code/prettify.js"></script>
+            <script>
+    					KindEditor.ready(function(K) {
+    						var editor1 = K.create('textarea[name="content"]', {
+    							cssPath : '../plugins/code/prettify.css',
+    							uploadJson : '../php/upload_json.php',
+    							fileManagerJson : '../php/file_manager_json.php',
+    							allowFileManager : true,
+    							afterCreate : function() {
+    								var self = this;
+    								K.ctrl(document, 13, function() {
+    									self.sync();
+    									K('form[name=example]')[0].submit();
+    								});
+    								K.ctrl(self.edit.doc, 13, function() {
+    									self.sync();
+    									K('form[name=example]')[0].submit();
+    								});
+    							}
+    						});
+    						prettyPrint();
+    					});
+    			  </script>
+            <!-- /KindEditor -->
+            <textarea id="content" name="content" style="width:780px;height:400px;" class="textArea"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">发表时间</td>
+          <td>
+            <input type="text" name="publishtime" value="<?php echo date('Y-m-d H:i:s',time());?>" size="5" class="inpMain" />
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input name="submit" class="btn" type="submit" value="添加" />
+          </td>
+        </tr>
      </table>
     </form>
-           </div>
- </div>
+    <div class="clear"></div>
+  </div>
+</div>

@@ -1,3 +1,7 @@
+body{
+	overflow:visible;
+	overflow-y:hidden;
+}
 #nav {
 	z-index: 100;
 }

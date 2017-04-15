@@ -9,34 +9,11 @@
     <link rel="stylesheet" href="__PUBLIC__/front/css/bootstrap.min.css">
     <link rel="stylesheet" href="__PUBLIC__/front/css/headernav.css" />
     <link rel="stylesheet" href="__PUBLIC__/front/css/addmessage.css" />
-    <link rel="stylesheet" href="__PUBLIC__/front/css/passwordchange-alert.css">
-
 
     <script src="__PUBLIC__/front/js/jquery.js"></script>
     <script src="__PUBLIC__/front/js/bootstrap.min.js"></script>
     <script src="__PUBLIC__/front/js/custom.js"></script>
-    <script src="__PUBLIC__/front/js/passwordchange-alert.js"></script>
 
-    <script type="text/javascript">
-        if (navigator.appName=="Microsoft Internet Explorer") {
-             function fPmVerticalRightOut() {
-                 var getItem = document.getElementById("pmVerticalRightOut").getElementsByTagName("li");
-                 for (var i=0; i<getItem.length; i++) {
-                     getItem[i].onmouseover=function() { 
-                         if(     this.className=="nav-second-menu"){
-                             this.className="nav-second-menuIe";
-                         }
-                     }
-                     getItem[i].onmouseout=function() { 
-                         if(     this.className=="nav-second-menuIe"){
-                             this.className="nav-second-menu";
-                         }
-                     }
-                 }
-             }
-             window.onload=fPmVerticalRightOut;
-        }
-    </script>
 </head>
 
             <!--侧导航内容 end-->
@@ -84,31 +61,62 @@
                                  <button type="submit" onclick="window.location.href='myBookReview_all.html'">保存</button>
                             </div>  
                             <div class="scale-message">
-                                <form class="form-horizontal writeform" role="form">
-                                    <div class="form-group">
-                                        <label for="username" class="col-sm-4 col-md-3 control-label">用户名：</label>
-                                        <div class="col-sm-6">
-                                            <input type="text" class="form-control" id="username" placeholder="请输入用户名" name="username" value="{$user.username}">
-                                        </div>
-                                        <a href="#" id="changePassword" hidefocus="true">修改密码</a>
+                            <div>
+                            <!-- <form class="form-horizontal" role="form"> -->
+                                <div class="form-group">
+                                    <label for="username" class="col-sm-2 control-label" style="text-align:right;">用户名：</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="username" placeholder="请输入用户名" name="username" value="{$user.username}">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="userdetails" class="col-sm-4 col-md-3 control-label">简介：</label>
-                                        <div class="col-sm-6">
-                                            <textarea class="form-control" rows="7" placeholder="你还没有填写简介呢~" name="introduction" value="{$user.introduction}"></textarea>
+                                     <a id="modal-388228" href="#modal-container-388228" role="button"  data-toggle="modal">修改密码</a><br/>
+
+                                        <div class="modal fade" id="modal-container-388228" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top:10%;margin-left:10%;">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content passwordCon">
+                                                    <form method="post" action="__MODULE__/Mine/update/userId/{$user.id}">
+                                                    <input type='hidden' name='id' value='{$user.id}'>
+                                                        <div id='change'><h5>修改密码<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×&nbsp;&nbsp;&nbsp;&nbsp;</button></h5></div>
+                                                        <div class='alert-content'>
+                                                            <p id='pad'>旧密码</p>
+                                                            <input type='password' name='pass' value="{$user.pass}"><br/><br/>
+                                                            <p id='pad'>新密码</p>
+                                                            <input type='password' name='pass'>
+                                                            <p id='text-p'>
+                                                                <img src='__PUBLIC__/front/images/yes.png' height=17 width=17/>
+                                                            </p><br/><br/>
+                                                            <p id='qpass'>确认密码</p>
+                                                            <input type='password' name='pass'>
+                                                            <p id='text-p'>与新密码输入不一致</p>
+                                                        </div>
+                                                        <div class='alert-footer'>
+                                                            <input id='yes' type='submit' value='确定'>
+                                                            <input type="button" data-dismiss="modal" aria-hidden="true" value='取消' id='no'>
+                                                           <!--  <input type='button' value='取消' id='no'> -->
+                                                        </div>
+                                                    </form>                                
+                                                </div>                                               
+                                            </div>                                           
                                         </div>
+                                </div>
+                                <!-- <p></p> -->
+                                <div class="form-group">
+                                    <label for="userdetails" class="col-sm-2 control-label" style="text-align:right;">简介：</label>
+                                    <div class="col-sm-4">
+                                        <textarea class="form-control" rows="9" placeholder="你还没有填写简介呢~" name="introduction">{$user.introduction}</textarea>
+                                    </div>
+                                </div>
+                            <!-- </form> -->
+                            </div>
+                            <div class="selectphoto">
+                                <img src="__PUBLIC__/front/images/selectphoto.jpg" width="140" height="140" id="ImgPr" alt="默认头像" class="img-thumbnail">
+                                <form role="form" class="selected-photo">
+                                    <div class="form-group">
+                                        <label for="exampleInputFile" class="sr-only"></label>
+                                        <a class="chooseimg" href="#"><input type="file" id="exampleInputFile"></a>
                                     </div>
                                 </form>
-                                <div class="selectphoto">
-                                    <img src="__PUBLIC__/front/images/selectphoto.jpg" width="140" height="140" id="ImgPr" alt="默认头像" class="img-thumbnail">
-                                    <form role="form" class="selected-photo">
-                                        <div class="form-group">
-                                            <label for="exampleInputFile" class="sr-only"></label>
-                                            <a class="chooseimg" href="#"><input type="file" id="exampleInputFile"></a>
-                                        </div>
-                                    </form>
-                                </div>
                             </div>
+                        </div>
                         </form>
                         </div><!-- scale结束 -->
                     </div>
@@ -119,26 +127,6 @@
             </footer>
         </div><!--canvas end-->
     </div><!--container end-->
-    <script>
- $("#exampleInputFile").change(function() {
-        var $file = $(this);
-        var fileObj = $file[0];
-        var windowURL = window.URL || window.webkitURL;
-        var dataURL;
-        var $img = $("#ImgPr");
-        if(fileObj && fileObj.files && fileObj.files[0]){
-        dataURL = windowURL.createObjectURL(fileObj.files[0]);
-        $img.attr('src',dataURL);
-        }else{
-        dataURL = $file.val();
-        var imgObj = document.getElementById("ImgPr");
-        imgObj.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
-        imgObj.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = dataURL;
-          
-        }
-    });
-</script>
-
 </body>
 </html>
 

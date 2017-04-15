@@ -11,7 +11,7 @@
                     <label for="search"></label>
                     <input type="text" id="search" placeholder="输入标签、作者、关键字搜索"/>
                     <div class="header-right">
-                       <a href="editarticle.html">写书评</a>
+                       <a href="__MODULE__/Book/editarticle">写书评</a>
                         <div class="myphoto dropdown">
                             <div class=" dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown">
                                 <img src="__PUBLIC__/front/images/myphoto.jpg" width="35" height="35" alt="我的头像" /> 
@@ -34,9 +34,9 @@
                     <div class="row nav-msg">
                         <div class="col-md-10 col-md-offset-1">
                             <ul>
-                               <li><a href="myBookReview_all.html">文章</a></li>
-                                <li><a href="myfans.html">粉丝</a></li>
-                                <li><a href="myCollect.html">收藏</a></li>
+                               <li><a href="__MODULE__/Mine/myBookReview_all">文章</a></li>
+                                <li><a href="__MODULE__/Mine/myfans">粉丝</a></li>
+                                <li><a href="__MODULE__/Mine/myCollect">收藏</a></li>
                                 <li><a href="myattention.html">关注</a></li>
                             </ul>
                             <br />
@@ -59,9 +59,38 @@
                     <div class="row nav-menu">
                         <div class="col-md-12">
                             <ul class="pmVerticalRightOut" id="pmVerticalRightOut">
+                                <volist name="bookcategory" id="bc">
+                                    <li>11</li>   
+                                </volist>
                                 <li><a href="#">首页</a></li>
                                 <li class="nav-book-classify"><a href="#" >书评分类</a>
                                     <ul class="nav-second-menu">
+                                        <?php 
+                                            $dsn="mysql:host=localhost;dbname=cxbookreview";
+                                            $dbUser='root';
+                                            $dbPswd='123456';
+                                            $pdo=new PDO($dsn,$dbUser,$dbPswd);
+
+                                            $sql="set names utf8";
+                                            $pdo->exec($sql);
+
+                                            if(!$pdo){
+                                                echo '连接失败';
+                                            }
+                                            //2有结果的查询
+                                            $sql="select * from bookscategories";
+                                            $sta=$pdo->query($sql);
+                                            $urls=$sta->fetchAll();
+                                            for ($i=0; $i <count($urls) ; $i++) { 
+                                               //循环读取二维数组中的数据
+                                                ?>
+                                                <li>
+                                                    <a href="<?php echo $urls[$i]['url'];?>"><?php echo $urls[$i]['name'];?></a>
+                                                </li>
+                                                <?php
+                                            }
+                                        ?>
+                                        
                                         <li><a href="tags.html">文学</a>
                                             <ul class="nav-third-menu">
                                                 <a href="tags.html">文集</a>

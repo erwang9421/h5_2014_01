@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>添加书评页面</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="__PUBLIC__/front/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/front/css/font-awesome.min.css" />
+    <!--     <link rel="stylesheet" href="css/default.min.css"> -->
+    <link rel="stylesheet" href="__PUBLIC__/front/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/front/css/headernav.css" />
+
+    <link href="__PUBLIC__/front/css/font-awesnome.mi.css" rel="stylesheet">
+    <link  type="text/css" rel="stylesheet" href="__PUBLIC__/front/css/editor.css"/>
+    <link  type="text/css" rel="stylesheet" href="__PUBLIC__/front/css/editarticle.css" />
+
+
+    <script src="__PUBLIC__/front/js/jquery.js"></script>
+    <script src="__PUBLIC__/front/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/front/js/custom.js"></script>
+
+</head>
+        <!--侧导航内容 end-->
+        <!--content start-->
+        <div id="content">
+           <!--  <div class="content-left"></div>
+            <div class="content-right"> -->
+                <div class="content-main-title">
+                    <ul class="main-title">
+                        <li><a href="__MODULE__/Index/index">首页</a></li>
+                        <li>&nbsp;/&nbsp;</li>
+                        <li>写书评</li>
+                    </ul>
+                </div>
+
+     <form method="post" action="__MODULE__/Book/doAdd" enctype="multipart/form-data">
+                <div class="book">
+                    <span class="bookname">
+                        <input type="text" class="inputtext" name="bookname" size="20px"  placeholder="图书名称" >
+                    </span>
+                    <span align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <select class="type" name="bcid">
+                            <!-- <option name="typebcname">图书类型</option> -->
+                            <volist name="bookscategories" id="categories">
+                                <option value="{$categories.bcid}">{$categories.typebcname}</option>
+                                <!-- <input type="hidden" name="typebcname"> -->
+                            </volist>
+                        </select>
+                    </span>
+
+                    <span class="bookauthor">
+                        <!-- <input type="hidden" name="bookid"> -->
+                        <input type="text" class="inputtext" name="bookauthor" size="20px"  placeholder="图书作者" >
+                    </span>
+                    <span class="writetitle">
+                        <input type="text"  class="inputtext" name="title" size="20px"  placeholder="文章标题" >
+                    </span>
+
+                    <input type="hidden" name="savetime" value="{:date('Y-m-d H:i:s')}" size="5" class="inpMain"  />
+                    <input type="hidden" name="publishtime" value="{:date('Y-m-d H:i:s')}" size="5" class="inpMain"  />
+                    <!-- <tr> -->
+
+                    <span href="#">[图书名称、图书作者、文章标题必填]</span>
+                </div>
+                <div class="htmleaf-container">
+                    <div class="container-fluid">
+                        <div class="container" >
+                            <div class="col-lg-12 nopadding">
+                                <img src="__PUBLIC__/front/images/flower.png" class="flower" />
+                                 
+                                <!-- <textarea id="txtEditor" name="content"></textarea> </br> -->
+                                <input  name="content" id="txtEditor" value="" type="text"><br/>
+                            
+                                <td><a href="">
+                                <input name="saveId[]" class="btn" type="submit"  value="保存" id="savetext"></a>
+                                </td>
+                                <td><a href="">
+                                <input name="publishId[]" class="btn" type="submit" value="发表" id="settext"/></a>
+                                </td>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                </form>
+        </div><!-- content结束 -->
+
+        <footer>
+            <p>copyright@hebeinormal university</p>
+        </footer>
+    </div><!--canvas end-->
+</div><!--container end-->
+<script src="__PUBLIC__/front/js/1editor.js"></script>
+<script src="__PUBLIC__/front/js/editor.js"></script>
+
+<script type="text/javascript">
+    $(document).ready( function() {
+        $("#txtEditor").Editor();
+        $("#settext").click(function(){
+            var content = $("#txtEditor").Editor("getText");
+            // $data={"content":content}
+            alert(content);
+            // $('#txtEditor').val=content;
+            $('#txtEditor').val(content);   
+        });  
+        $("#savetext").click(function(){
+            var content = $("#txtEditor").Editor("getText");
+            alert(content);
+            // $('#txtEditor').val=content;
+            $('#txtEditor').val(content);   
+        });  
+    });
+</script>
+</body>
+</html>
+
+
+
+

@@ -9,34 +9,11 @@
     <link rel="stylesheet" href="__PUBLIC__/front/css/bootstrap.min.css">
     <link rel="stylesheet" href="__PUBLIC__/front/css/headernav.css" />
     <link rel="stylesheet" href="__PUBLIC__/front/css/drafts.css" />
-    <link rel="stylesheet" href="__PUBLIC__/front/css/alert-feedback.css">
-
 
     <script src="__PUBLIC__/front/js/jquery.js"></script>
     <script src="__PUBLIC__/front/js/bootstrap.min.js"></script>
     <script src="__PUBLIC__/front/js/custom.js"></script>
-    <script src="__PUBLIC__/front/js/alert-feedback.js"></script>
 
-    <script type="text/javascript">
-        if (navigator.appName=="Microsoft Internet Explorer") {
-             function fPmVerticalRightOut() {
-                 var getItem = document.getElementById("pmVerticalRightOut").getElementsByTagName("li");
-                 for (var i=0; i<getItem.length; i++) {
-                     getItem[i].onmouseover=function() { 
-                         if(     this.className=="nav-second-menu"){
-                             this.className="nav-second-menuIe";
-                         }
-                     }
-                     getItem[i].onmouseout=function() { 
-                         if(     this.className=="nav-second-menuIe"){
-                             this.className="nav-second-menu";
-                         }
-                     }
-                 }
-             }
-             window.onload=fPmVerticalRightOut;
-        }
-    </script>
 </head>
            <!--侧导航内容 end-->
             <!--content start-->
@@ -76,38 +53,25 @@
                         <li>&nbsp;/&nbsp;</li>
                         <li>草稿箱</li>
                     </ul> 
-                    <div class="main">
-                        <!-- <div class="scale">
-                            <div class="scale-top">
-                                <ul>
-                                    <li>评论图书：<a href="tagbook.html">《漫长的中场休息》</a></li>
-                                    <li>作者：<a href="#">本·方登</a></li>
-                                </ul>   
-                                <div class="operation">
-                                    <a href="#">删除</a>
-                                    <a href="editarticle.html">编辑</a>
-                                </div>
-                            </div>
-                            <div class="scale-content"><a href="bookreviewcontent.html">"最孤独的魂外天游"</a></div>
-                        </div> -->
-                        <volist name="bookreview" id="br">
-                            <div class="scale">
-                                <div class="scale-top">
-                                    <ul>
-                                        <li>评论图书：<a href="tagbook.html">《{$br.bookname}》</a></li>
-                                        <li>作者：<a href="#">{$br.bookauthor}</a></li>
-                                    </ul>   
-                                    <div class="operation">
-                                        <a href="#">删除</a>
-                                        <a href="__MODULE__/Book/editarticle/id/{$br.bookreviewid}">编辑</a>
+                    <form method="get" action="__MODULE__/Mine/deletearticle">
+                        <div class="main">
+                            <volist name="bookreview" id="br">
+                                <div class="scale">
+                                    <div class="scale-top">
+                                        <ul>
+                                            <li>评论图书：<a href="tagbook.html">《{$br.bookname}》</a></li>
+                                            <li>作者：<a href="#">{$br.bookauthor}</a></li>
+                                        </ul>   
+                                        <div class="operation">
+                                            <a href="__MODULE__/Mine/deletearticle/id/{$br.bookreviewid}">删除</a>
+                                            <a href="__MODULE__/Book/editarticle/id/{$br.bookreviewid}">编辑</a>
+                                        </div>
                                     </div>
+                                    <div class="scale-content"><a href="__MODULE__/Book/bookreviewcontent">"{$br.title}"</a></div>
                                 </div>
-                                <div class="scale-content"><a href="bookreviewcontent.html">"{$br.title}"</a></div>
-                            </div>
-                        </volist>
-                     
-                        <!-- 分页 -->
-                    </div>
+                            </volist>                   
+                        </div>
+                    </form>
                 </div>
             </div><!-- content结束 --> 
             <footer>

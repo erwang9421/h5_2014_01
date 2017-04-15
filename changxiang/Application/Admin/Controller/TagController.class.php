@@ -5,7 +5,7 @@ class TagController extends Controller{
 	public function __construct(){
         parent::__construct();
         if (!isLogin()) {
-            $this->error("请先登录",U("Admin/login"));
+            $this->redirect('Admin/login',0);
         }
     }
     public function tag(){
@@ -48,36 +48,17 @@ class TagController extends Controller{
             foreach($id as $value){
                 M("Tags")->delete($value);
             }  
-            $this->success("删除成功！");
+            // $this->success("删除成功！");
+            $this->redirect('Tag/tag',0);
         } 
         //单个删除
         else{
             if(M("Tags")->delete($id)){
-                $this->success("删除成功！");
+                // $this->success("删除成功！");
+                $this->redirect('Tag/tag',0);
             }
         }       
     }
-    //添加
-	public function addtag(){
-		
-		$this->display();
-	}
-	//添加书评标签
-	public function doAdd(){
-		if (!IS_POST) {
-			exit("bad request请求");
-		}
-		$tagsModel=D("tags");
-		if (!$tagsModel->create()) {
-			$this->error($tagsModel->getError());
-		}
-		if ($tagsModel->add()) {
-		    $this->success("添加成功",U("Tag/tag"));
-		}else{
-			$this->error("添加失败");
-		}
-
-	}
 
 
 

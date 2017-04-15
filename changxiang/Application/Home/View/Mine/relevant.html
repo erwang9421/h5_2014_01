@@ -10,34 +10,11 @@
     <link rel="stylesheet" href="__PUBLIC__/front/css/bootstrap.min.css">
     <link rel="stylesheet" href="__PUBLIC__/front/css/headernav.css" />
     <link rel="stylesheet" href="__PUBLIC__/front/css/relevant.css" />
-    <link rel="stylesheet" href="__PUBLIC__/front/css/alert-feedback.css">
-
 
     <script src="__PUBLIC__/front/js/jquery.js"></script>
     <script src="__PUBLIC__/front/js/bootstrap.min.js"></script>
     <script src="__PUBLIC__/front/js/custom.js"></script>
-    <script src="__PUBLIC__/front/js/alert-feedback.js"></script>
 
-    <script type="text/javascript">
-        if (navigator.appName=="Microsoft Internet Explorer") {
-             function fPmVerticalRightOut() {
-                 var getItem = document.getElementById("pmVerticalRightOut").getElementsByTagName("li");
-                 for (var i=0; i<getItem.length; i++) {
-                     getItem[i].onmouseover=function() { 
-                         if(     this.className=="nav-second-menu"){
-                             this.className="nav-second-menuIe";
-                         }
-                     }
-                     getItem[i].onmouseout=function() { 
-                         if(     this.className=="nav-second-menuIe"){
-                             this.className="nav-second-menu";
-                         }
-                     }
-                 }
-             }
-             window.onload=fPmVerticalRightOut;
-        }
-    </script>
 </head>
             <!--侧导航内容 end-->
             <!--content start-->
@@ -80,9 +57,9 @@
                         <volist name="bookreview" id="br">
                             <div class="scale">
                                 <img src="__PUBLIC__/front/images/myphoto.jpg" width="42" height="42" alt="用户头像">
-                                <p><a href="bookreview_all.html" class="username">{$br.username}&nbsp;&nbsp;</a>赞了我的书评</p>
+                                <p><a href="__MODULE__/Other/bookreview_all" class="username">{$br.username}&nbsp;&nbsp;</a>赞了我的书评</p>
                                 <div class="fill">
-                                    <p><a href="bookreviewcontent.html">“{$br.title}”</a></p>
+                                    <p><a href="__MODULE__/Book/bookreviewcontent">“{$br.title}”</a></p>
                                 </div>
                                 <p id="timer">2016-12-12&nbsp;15:54</p>
                             </div>
@@ -91,12 +68,12 @@
                         <volist name="bookreview" id="b">
                             <div class="scale">
                                 <img src="__PUBLIC__/front/images/myphoto.jpg" width="42" height="42" alt="用户头像">
-                                <p><a href="bookreview_all.html" class="username">{$b.username}&nbsp;&nbsp;</a>评论了我的评论</p>
+                                <p><a href="__MODULE__/Other/bookreview_all" class="username">{$b.username}&nbsp;&nbsp;</a>评论了我的评论</p>
                                 <div class="fill">
                                     <div class="fill-1">
                                         <p id="setc">{$b.replycontent}</p>
                                     </div>
-                                    <p><a href="bookreviewcontent.html">——{$b.title}</a></p>
+                                    <p><a href="__MODULE__/Book/bookreviewcontent">——{$b.title}</a></p>
                                     <p>我的评论：{$b.commentcontent}</p>
                                     <div class="fill-2">
                                         <p id="answer"><a href="#">回复</a></p>
@@ -109,12 +86,12 @@
                         <volist name="bookreview" id="b">
                             <div class="scale">
                                 <img src="__PUBLIC__/front/images/myphoto.jpg" width="42" height="42" alt="用户头像">
-                                <p><a href="bookreview_all.html" class="username">{$b.username}&nbsp;&nbsp;</a>评论了我的书评</p>
+                                <p><a href="__MODULE__/Other/bookreview_all" class="username">{$b.username}&nbsp;&nbsp;</a>评论了我的书评</p>
                                 <div class="fill">
                                     <div class="fill-1">
                                         <p id="setc">{$b.commentcontent}</p>
                                     </div>
-                                    <p><a href="bookreviewcontent.html">“{$b.title}”</a></p>
+                                    <p><a href="__MODULE__/Book/bookreviewcontent">“{$b.title}”</a></p>
                                     <div class="fill-2">
                                         <p id="answer"><a href="#">回复</a></p>
                                     </div>
@@ -126,16 +103,14 @@
                         <volist name="bookreview" id="b">
                             <div class="scale">
                                 <img src="__PUBLIC__/front/images/myphoto.jpg" width="42" height="42" alt="用户头像">
-                                <p><a href="bookreview_all.html" class="username">{$b.username}&nbsp;&nbsp;</a>赞了我的书评</p>
+                                <p><a href="__MODULE__/Other/bookreview_all" class="username">{$b.username}&nbsp;&nbsp;</a>赞了我的书评</p>
                                 <div class="fill">
-                                    <p><a href="bookreviewcontent.html">“{$b.title}”</a></p>
+                                    <p><a href="__MODULE__/Book/bookreviewcontent">“{$b.title}”</a></p>
                                 </div>
                                 <p id="timer">2016-12-12&nbsp;15:54</p>
                             </div>
                         </volist>
-                        
-                        
-                        
+                           
                         <!-- <div class="scale">
                             <img src="__PUBLIC__/front/images/myphoto.jpg" width="42" height="42" alt="用户头像">
                             <p><a href="bookreview_all.html" class="username">阿里里&nbsp;&nbsp;</a>评论了我的书评</p>
@@ -155,7 +130,6 @@
                     </div>
                 </div>
             </div><!-- content结束 --> 
-
 
             <footer>
                 <p>copyright@hebeinormal university</p>

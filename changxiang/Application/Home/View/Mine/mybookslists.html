@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="__PUBLIC__/front/css/aside-nav.css" />
     <link rel="stylesheet" href="__PUBLIC__/front/css/jquery.mCustomScrollbar.css" />
     <link rel="stylesheet" href="__PUBLIC__/front/css/mybookslists.css">
-    <link rel="stylesheet" href="__PUBLIC__/front/css/alert-feedback.css">
+
 </head>
 <style type="text/css">
     .mCSB_container{
@@ -70,51 +70,69 @@
                                 <p><span class="shortintroduction">简介：</span>简介内容简介内容简介内容简介内容简介内容简介内容</p>
                                 <!-- 编辑按钮 -->
                                 <div class="editbtn">
-                                    <a href="editbooklist.html"><img src="__PUBLIC__/front/images/edit.png" alt="编辑"></a>
+                                    <a href="__MODULE__/Mine/editbooklist"><img src="__PUBLIC__/front/images/edit.png" alt="编辑"></a>
                                 </div>
                             </div>
                         </div>
                     </div><!-- content-left-right结束 --> 
                 <div class="content-right">
+                    <form method="get" action="__MODULE__/Mine/deletebookreview">
                     <div class="content-right-bottom">
                         <div class="content-book-comments">
                             <volist name="bookreview" id="br">
-                            <div class="content-book-comment1 book-comment1">
-                                <img src="__PUBLIC__/front/images/close.png" alt="删除我的文章书评" width="20" height="20" class="close" onclick="bookCollect()">
-                                <div class="comment-top">
-                                    <div class="row1">
-                                        <img src="__PUBLIC__/front/images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
-                                        <ul class="comment-msg1">
-                                            <li><span>{$br.username}</span>&nbsp;&nbsp;&nbsp;<span>{$br.publishtime}</span></li>
-                                            <li>
-                                                阅读<span> 11</span>
-                                                评论<span> {$br.viewtimes}</span>
-                                                喜欢<span> {$br.likequantity}</span>
-                                                收藏<span> {$br.collecttimes}</span>
-                                            </li>
-                                        </ul>
+                                <div class="content-book-comment1 book-comment1" name="bookreviewId[]" value="{$br.bookreviewid}">
+                                    <a id="modal-8801" href="#modal-container-8801" role="button"  data-toggle="modal"><img src="__PUBLIC__/front/images/close.png" alt="删除我的文章书评" width="20" height="20" class="close"></a>
+
+                                    <div class="modal fade" id="modal-container-8801" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top:10%;margin-left:15%;">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content collectCon">
+                                                <div class='alert-collect'>
+                                                    <p><img src='__PUBLIC__/front/images/？.png'></p><br/>
+                                                    <p id='colsuccess'>确实要删除书评吗？</p>
+                                                </div>
+                                                <div class='alert-collect-footer'>
+                                                    <a href="__MODULE__/Mine/deletebookreview/bookreviewId/{$br.bookreviewid}" id='y' type='submit' value='确定'>确定</a>
+                                                    <input type="button" data-dismiss="modal" aria-hidden="true" value='取消' id='n'>
+                                                </div>                 
+                                            </div> 
+                                        </div>                                           
                                     </div>
-                                    <div class="row2">
-                                        <ul class="comment-msg2">
-                                            <li>标签：<a href="__MODULE__/Index/tags">{$br.tagname}</a></li>
-                                            <li>评论图书：<a href="__MODULE__/Index/tagbook" name="bookname">《{$br.bookname}》</a></li>
-                                        </ul>
+
+                                    <div class="comment-top">
+                                        <div class="row1">
+                                            <img src="__PUBLIC__/front/images/myphoto.jpg" width="44" height="44" alt="我的头像" class="comment-photo" />
+                                            <ul class="comment-msg1">
+                                                <li><span>{$br.username}</span>&nbsp;&nbsp;&nbsp;<span>{$br.publishtime}</span></li>
+                                                <li>
+                                                    阅读<span> {$br.viewtimes}</span>
+                                                    评论<span> {$br.commenttimes}</span>
+                                                    喜欢<span> {$br.likequantity}</span>
+                                                    收藏<span> {$br.collecttimes}</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="row2">
+                                            <ul class="comment-msg2">
+                                                <li>标签：<a href="__MODULE__/Index/tags">{$br.tagname}</a></li>
+                                                <li>评论图书：<a href="__MODULE__/Index/tagbook" name="bookname">《{$br.bookname}》</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="comment-bottom">
+                                        <h3>{$br.title}</h3>
+                                        <p>{$br.content}... </p>
+                                        <div class="comment-more-btn">
+                                            <a href="__MODULE__/Book/bookreviewcontent/bookreviewid/{$br.bookreviewid}">浏览全文</a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="comment-bottom">
-                                    <h3>{$br.title}</h3>
-                                    <p>{$br.content}... </p>
-                                    <div class="comment-more-btn">
-                                        <a href="__MODULE__/Book/bookreviewcontent">浏览全文</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </volist>
+                            </volist>
 
-                         
-                        </div><!--bookscontainer容器结束-->
 
-                    </div><!-- content-right-bottom结束 --> 
+                        </div><!--bookscontainer结束-->
+                    </div><!-- content-right-bottom结束 -->
+
+                    </form>
                 </div><!-- content-right结束 --> 
             </div><!-- content结束 --> 
             <footer>
@@ -126,7 +144,6 @@
     <script src="__PUBLIC__/front/js/jquery.min.js"></script>
     <script src="__PUBLIC__/front/js/bootstrap.min.js"></script>
     <script src="__PUBLIC__/front/js/custom.js"></script>
-    <script src="__PUBLIC__/front/js/alert-feedback.js"></script>
 
     <script src="__PUBLIC__/front/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script>
@@ -141,26 +158,6 @@
                 });
             });
         })(jQuery);
-    </script>
-    <script type="text/javascript">
-        if (navigator.appName=="Microsoft Internet Explorer") {
-             function fPmVerticalRightOut() {
-                 var getItem = document.getElementById("pmVerticalRightOut").getElementsByTagName("li");
-                 for (var i=0; i<getItem.length; i++) {
-                     getItem[i].onmouseover=function() { 
-                         if(     this.className=="nav-second-menu"){
-                             this.className="nav-second-menuIe";
-                         }
-                     }
-                     getItem[i].onmouseout=function() { 
-                         if(     this.className=="nav-second-menuIe"){
-                             this.className="nav-second-menu";
-                         }
-                     }
-                 }
-             }
-             window.onload=fPmVerticalRightOut;
-        }
     </script>
 </body>
 </html>

@@ -1,7 +1,10 @@
-
 <div id="dcMain">
     <!-- 当前位置 -->
-    <div id="urHere"><a href="index.html">畅评首页</a><b>></b><strong>编辑书评</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+    <div id="urHere">
+        <a href="index.html">畅评首页</a>
+        <b>></b><strong>编辑书评</strong> 
+    </div>   
+    <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
     <h3>编辑书评</h3>
     <form action="" method="post" enctype="multipart/form-data">
         <!--create方法通过获取表单的隐藏域数据添加主键信息-->
@@ -9,19 +12,19 @@
         <input type="hidden" name="bookreviewid" value="{$result.bookreviewid}" >
         <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
             <tr>
-                <td width="90" align="center">图书名称</td>
+                <td align="center">图书名称</td>
                 <td>
                     <input type="text" name="bookname" value="{$result.bookname}" size="80" class="inpMain" />
                 </td>
             </tr>
             <tr>
-                <td width="90" align="center">图书作者</td>
+                <td align="center">图书作者</td>
                 <td>
                     <input type="text" name="bookauthor" value="{$result.bookauthor}" size="80" class="inpMain" />
                 </td>
             </tr>
             <tr>
-                <td width="90" align="center">书评标题</td>
+                <td align="center">书评标题</td>
                 <td>
                     <input type="text" name="title" value="{$result.title}" size="80" class="inpMain" />
                 </td>
@@ -76,8 +79,6 @@
             </tr>
             <td></td>
             <td>
-                <input type="hidden" name="token" value="21307217" />
-                <input type="hidden" name="id" value="">
                 <input name="submit" class="btn" type="submit" value="保存" />
             </td>
             </tr>

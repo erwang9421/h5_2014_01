@@ -11,5 +11,13 @@ class IndexController extends Controller {
     	if (!isLogin()) {
     		$this->error("请先登录",U("Admin/login"));
     	}
+        if (isLogin()) {
+            //登录次数
+            $new=M("Admin");
+            $output=$new->where(array('id'=>$id))->setInc('logintimes',1);
+            $newscount=$new->find($id);
+            $this->assign('admincount',$newscount);
+        }
     }
+
 }
